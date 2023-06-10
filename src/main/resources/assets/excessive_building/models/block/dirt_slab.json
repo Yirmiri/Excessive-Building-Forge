@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "minecraft:block/dirt",
+    "top": "minecraft:block/dirt",
+    "side": "minecraft:block/dirt"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "excessive_building:block/polished_brimstone_tiles",
+    "top": "excessive_building:block/polished_brimstone_tiles",
+    "side": "excessive_building:block/polished_brimstone_tiles"
+  },
+  "render_type": "solid"
+}

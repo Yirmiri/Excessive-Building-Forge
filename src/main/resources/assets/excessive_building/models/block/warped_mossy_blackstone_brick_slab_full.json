@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "excessive_building:block/warped_mossy_blackstone_bricks",
+    "top": "excessive_building:block/warped_mossy_blackstone_bricks",
+    "side": "excessive_building:block/warped_mossy_blackstone_bricks"
+  },
+  "render_type": "solid"
+}

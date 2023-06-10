@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "excessive_building:block/oak_mosaic",
+    "east": "excessive_building:block/construction_table_side",
+    "north": "excessive_building:block/construction_table_front",
+    "particle": "excessive_building:block/construction_table_front",
+    "south": "excessive_building:block/construction_table_front",
+    "up": "excessive_building:block/construction_table_top",
+    "west": "excessive_building:block/construction_table_side"
+  }
+}

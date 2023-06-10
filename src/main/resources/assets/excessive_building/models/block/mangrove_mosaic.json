@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "excessive_building:block/mangrove_mosaic",
+    "particle": "excessive_building:block/mangrove_mosaic"
+  },
+  "render_type": "solid"
+}

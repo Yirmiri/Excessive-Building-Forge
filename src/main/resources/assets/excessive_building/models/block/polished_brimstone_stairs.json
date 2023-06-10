@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "excessive_building:block/polished_brimstone",
+    "top": "excessive_building:block/polished_brimstone",
+    "side": "excessive_building:block/polished_brimstone"
+  },
+  "render_type": "solid"
+}

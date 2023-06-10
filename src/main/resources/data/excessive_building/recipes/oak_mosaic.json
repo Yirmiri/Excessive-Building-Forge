@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mosaic",
+  "pattern": [
+    " # ",
+    " # "
+    ],
+  "key": {
+    "#": {
+      "item": "minecraft:oak_slab"
+    }
+  },
+  "result": {
+    "count": 1,
+    "item": "excessive_building:oak_mosaic"
+  }
+}

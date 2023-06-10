@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mosaic_slab",
+  "pattern": [
+    "###"
+    ],
+  "key": {
+    "#": {
+      "item": "excessive_building:birch_mosaic"
+    }
+  },
+  "result": {
+    "count": 6,
+    "item": "excessive_building:birch_mosaic_slab"
+  }
+}

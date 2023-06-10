@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "@": {
+      "item": "minecraft:nether_brick"
+    },
+    "#": {
+      "item": "excessive_building:fiery_crystal"
+    }
+  },
+  "pattern": [
+    "@#@",
+    "#@#",
+    "@#@"
+  ],
+  "result": {
+    "item": "excessive_building:brimstone_window"
+  }
+}

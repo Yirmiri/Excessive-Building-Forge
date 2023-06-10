@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "excessive_building:fiery_crystal_block",
+    "excessive_building:lapis_lazuli_bricks",
+    "excessive_building:lapis_lazuli_brick_stairs",
+    "excessive_building:lapis_lazuli_brick_slab",
+    "excessive_building:lapis_lazuli_brick_vertical_stairs"
+  ]
+}

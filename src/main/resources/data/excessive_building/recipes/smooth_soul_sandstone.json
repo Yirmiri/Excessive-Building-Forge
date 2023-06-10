@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "excessive_building:soul_sandstone"
+  },
+  "result": "excessive_building:smooth_soul_sandstone"
+}

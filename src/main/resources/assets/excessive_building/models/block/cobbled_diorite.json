@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "excessive_building:block/cobbled_diorite",
+    "particle": "excessive_building:block/cobbled_diorite"
+  },
+  "render_type": "solid"
+}

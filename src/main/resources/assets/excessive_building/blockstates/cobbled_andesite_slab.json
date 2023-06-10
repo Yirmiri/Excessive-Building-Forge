@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/cobbled_andesite_slab"
+    },
+    "type=top": {
+      "model": "excessive_building:block/cobbled_andesite_slab_top"
+    },
+    "type=double": {
+      "model": "excessive_building:block/cobbled_andesite_slab_full"
+    }
+  }
+}

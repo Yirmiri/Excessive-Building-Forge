@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "excessive_building:blackstone_bricks"
+    },
+    {
+      "item": "minecraft:twisted_vines"
+    }
+  ],
+  "result": {
+    "item": "excessive_building:warped_mossy_blackstone_bricks"
+  }
+}

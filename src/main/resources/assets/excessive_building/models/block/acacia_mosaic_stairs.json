@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "excessive_building:block/acacia_mosaic",
+    "top": "excessive_building:block/acacia_mosaic",
+    "side": "excessive_building:block/acacia_mosaic"
+  },
+  "render_type": "solid"
+}

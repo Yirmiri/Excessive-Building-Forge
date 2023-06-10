@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "excessive_building:golden_bricks",
+    "excessive_building:golden_brick_stairs",
+    "excessive_building:golden_brick_slab",
+    "excessive_building:golden_brick_vertical_stairs"
+  ]
+}

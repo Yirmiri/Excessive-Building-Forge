@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "excessive_building:block/asphalt",
+    "particle": "excessive_building:block/asphalt"
+  },
+  "render_type": "solid"
+}

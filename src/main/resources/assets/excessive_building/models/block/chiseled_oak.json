@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "minecraft:block/oak_planks",
+    "side": "excessive_building:block/chiseled_oak",
+    "top": "minecraft:block/oak_planks"
+  }
+}

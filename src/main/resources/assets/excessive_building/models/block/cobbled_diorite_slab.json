@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "excessive_building:block/cobbled_diorite",
+    "top": "excessive_building:block/cobbled_diorite",
+    "side": "excessive_building:block/cobbled_diorite"
+  },
+  "render_type": "solid"
+}

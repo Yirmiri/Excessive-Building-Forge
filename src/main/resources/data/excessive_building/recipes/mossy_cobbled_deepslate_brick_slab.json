@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###"
+    ],
+  "key": {
+    "#": {
+      "item": "excessive_building:mossy_cobbled_deepslate_bricks"
+    }
+  },
+  "result": {
+    "count": 6,
+    "item": "excessive_building:mossy_cobbled_deepslate_brick_slab"
+  }
+}

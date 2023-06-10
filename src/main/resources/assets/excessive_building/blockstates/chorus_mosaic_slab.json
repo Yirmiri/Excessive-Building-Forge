@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_buildingt:block/chorus_mosaic_slab"
+    },
+    "type=double": {
+      "model": "excessive_buildingt:block/chorus_mosaic"
+    },
+    "type=top": {
+      "model": "excessive_buildingt:block/chorus_mosaic_slab_top"
+    }
+  }
+}

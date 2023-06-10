@@ -1,0 +1,178 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Literally just a secret .txt file of every single update's changelog
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release 1.1.0 (1.19.4, 1.19.2 Forge)
+Major Update!
+
+  Additions
+•   Added vertical stairs for all stair variants in vanilla + Excessive Building, do expect mod compat in the future aswell!
+•   Added crafting table variants for each wood type
+•   Added smooth stone tiles (more tiles coming soon in the future!)
+
+  Changes
+•   Fiery crystals clusters will spawn less frequently
+•   Removed cobbled blocks from the natural blocks creative tab
+
+  Bug Fixes
+•   Cobbled granite, diorite, and andesite stairs, slabs, and walls can no longer be used as "stone crafting materials" (this allowed them to have the properties of normal cobblestone blocks, ex: stone age advancement,
+repairing/crafting stone tools, and other stuff)
+•   Piglins will now like golden brick block variants (stairs, slabs, walls, and the new vertical stairs)
+
+  Notes
+•   [IMPORTANT] This will be the last major update to support 1.19.4, 1.19.2, and 1.18.2, these versions will only be updated on occasion (possibly never at all) and will no longer be supported on every single content update
+•   Changed Excessive Building logo
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release 1.0.0 (1.19.4, 1.19.2 Forge)
+ITS RELEASE UPDATE, WHOOOO (thanks for 1k downloads <3)
+
+  Bug Fixes
+•   Fixed a crash that occured when loading this mod with other specific mods
+
+  Notes
+•   Now that I have finished this mod I can work on other mods and projects but expect full feature updates, ports, and more in the future, this mod will also be constantly updated to the latest release asap!
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Beta 0.1.5 (1.19.4, 1.19.2, Forge)
+Major Update
+
+  Additions
+•   Added: Polished Granite, Andesite, and Diorite bricks
+•   Added: Cobbled Granite, Andesite, and Diorite (can be used for cobbled recipes)
+•   Added: Crimson/Warped Mossy Blackstone Bricks
+•   Added: Crimson/Warped Mossy Polished Blackstone Bricks
+•   Added: Smooth Stone Bricks
+•   Added: Smooth Bricks
+•   Added: Lapis Bricks
+•   Added: New recipe to craft brimstone (can still be found naturally in the world)
+•   ↸╎∷ℸ ̣  ᓵᔑリ リ𝙹∴ ʖᒷ !¡⚍ℸ ̣  ╎リ ᔑ ∷𝙹∴ ᔑℸ ̣  ℸ ̣ ⍑ᒷ ʖ𝙹ℸ ̣ ℸ ̣ 𝙹ᒲ 𝙹⎓ ᔑ crafting ℸ ̣ ᔑʖꖎᒷ
+
+  Changes
+•   Granite, Andesite, and Diorite now drop their cobbled variants without silk touch
+•   Golden Bricks now have the same hardness as gold blocks
+•   Golden Bricks can now be used to power beacons
+•   Golden Bricks now attract piglins
+•   Slightly tweaked construction worker texture
+•   Tweaked and added some trades to construction workers
+•   Updated logo to be to date with current textures and increase resolution quality
+
+  Bug Fixes
+•   Fixed missing texture issue for zombie construction worker villagers
+
+  Notes
+•   Textures for cobbled blocks and polished bricks may change in the future
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Beta 0.1.4.1 (1.19.4, Forge)
+Minor Update
+
+  Changes
+•   The Excessive Building tab now has the logo as the icon rather than an alchemist shelf
+
+  Bug Fixes
+•   Fixed Excessive Building tab not translating when changing language
+•   Fixed a common crash that occurred when running the mod on a server
+
+  Upcoming News
+•   A full Fabric port of the mod is in progress and should be released in the coming week(s), this port is based off of this version (beta 0.1.4.1) and will include 100% of all content up to this version, I plan on updating it aswell,
+haven't had time to say it anywhere else but thanks for downloading the mod, glad to see people enjoy it <3, see yall next update!
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Beta 0.1.4 (1.19.4, Forge)
+Major Update
+
+  Additions
+•   Added: New chiseled variants to all wood types
+•   Added: Obsidian Bricks and Obsidian Tile blocks
+•   Added: Recipe groups, existing recipes also got recipe groups; mosaic, mosaic stairs, mosaic slab, and the new chiseled planks
+•   Added: 100% support for Mexican Spanish (es_mx), more translations will be added in the future however do note these may not be 100% correct!
+
+  Changes
+•   Tweaked texture faces of construction table to have mirrored textures on opposite faces
+•   Removed Bamboo Mosaic from the language files as its no longer needed
+•   Construction Worker Villagers now sell chiseled wood
+•   Construction Worker Villagers no longer buy Blackstone Bricks
+•   Construction Worker Villagers now buy Fiery Crystals for Emeralds
+•   Tweaked description of the mod
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Beta 0.1.3 (1.19.4, Forge)
+Major Update
+
+  Additions
+•   Added: Soul Sandstone blockset (their double slabs don't create soul fire intentionally, normal blocks do however)
+•   Added: Blue Nether Brick blockset
+•   Added: Brimstone, a new stone type that can be found generating in Netherrack
+•   Added: Brimstone blockset
+•   Added: Fiery crystal which is used to craft new light blocks
+•   Added: Fiery crystal blocks that can be found generating in the Basalt Deltas
+•   Added: Construction table that can be used for villagers to work at
+•   Added: Construction worker villager who sell building blocks to the player (more trades will be added in the future, a special village house will also be added in a coming update dedicated for the villager profession)
+•   Added: Asphalt which when walked on increases movement speed by +20% (does not stack with swiftness), these can be purchased at master level trades from Construction Workers
+
+  Changes
+•   Desaturated greens on Mossy Deepslate blocks
+•   Updated Forge version to at least 45.0.43 for 1.19.4
+•   Reorganized Excessive Building creative tab to better match the Building Blocks tab
+
+  Bug Fixes
+•   Fixed an issue causing sandstone and Red Sandstone Brick Slabs to be uncraftable at a crafting table
+•   Fixed an issue causing blocks that requires a tool to mine to be dropped even when mined by hand
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Beta 0.1.2 (1.19.4, Forge)
+Major Update
+
+  Additions
+•   Added: Mosaic Cherry wood (only obtainable if 1.20 features are enabled)
+•   Added: Mossy Cobbled Bricks (excluding blackstone... for now)
+•   Added: Mossy Deepslate Bricks
+•   Added: Sandstone and Red Sandstone Bricks
+•   Added: stairs and slabs for Golden Bricks
+
+  Bug Fixes
+•   Fixed mosaic woods being uncraftable (can now be crafted using plank slabs)
+•   Fixed wall blocks dropping slabs
+
+Extra Note: Currently recipe book does not grant recipes when the materials required for an Excessive Building recipe is picked up, this will be fixed in (hopefully) next update - edit as of 5/14/23... i forgot ;w;
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Beta 0.1.1 (1.19.4, Forge)
+Major Update
+
+  Additions
+•   Added: mosaic wood and Cobbled Bricks/Golden Bricks to "Building Blocks" creative tab
+•   Added: shelf variants to "Functional Blocks" creative tab
+•   Added: "Nether Wood" sounds to nether mosaic woods
+
+  Changes
+•   Version updated to 1.19.4
+•   "Potion Shelf" texture to better match new potion colors
+•   "Alchemist Shelf" texture to better match new potion colors
+
+  Removals
+•   Removed Bamboo wood (this is due to the ability to enable them with experimental settings)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Beta 0.1.0 (1.19.2, Forge)
+Major Update
+
+  Additions
+•   Added: Mosaic Wood
+•   Added: Bamboo Wood (these will be removed when 1.19.4 releases)
+•   Added: Cobbled Bricks
+•   Added: Shelf Variants
+•   Added: Golden Bricks
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

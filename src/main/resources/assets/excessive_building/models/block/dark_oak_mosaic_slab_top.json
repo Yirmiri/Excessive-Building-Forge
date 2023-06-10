@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "excessive_building:block/dark_oak_mosaic",
+    "top": "excessive_building:block/dark_oak_mosaic",
+    "side": "excessive_building:block/dark_oak_mosaic"
+  },
+  "render_type": "solid"
+}

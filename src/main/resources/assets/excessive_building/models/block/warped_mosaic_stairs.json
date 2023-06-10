@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "excessive_building:block/warped_planks",
+    "top": "excessive_building:block/warped_planks",
+    "side": "excessive_building:block/warped_planks"
+  },
+  "render_type": "solid"
+}

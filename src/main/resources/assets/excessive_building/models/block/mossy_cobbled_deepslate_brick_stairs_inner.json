@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "excessive_building:block/mossy_cobbled_deepslate_bricks",
+    "top": "excessive_building:block/mossy_cobbled_deepslate_bricks",
+    "side": "excessive_building:block/mossy_cobbled_deepslate_bricks"
+  },
+  "render_type": "solid"
+}

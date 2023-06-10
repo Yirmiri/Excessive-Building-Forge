@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "excessive_building:fiery_crystal_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "excessive_building:fiery_crystal"
+  }
+}

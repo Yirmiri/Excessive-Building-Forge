@@ -1,0 +1,32 @@
+{
+  "values": [
+    "excessive_building:cobblestone_brick_wall",
+    "excessive_building:blackstone_brick_wall",
+    "excessive_building:cobbled_deepslate_brick_wall",
+    "excessive_building:mossy_cobblestone_brick_wall",
+    "excessive_building:mossy_cobbled_deepslate_brick_wall",
+    "excessive_building:mossy_deepslate_brick_wall",
+    "excessive_building:sandstone_brick_wall",
+    "excessive_building:red_sandstone_brick_wall",
+    "excessive_building:soul_sandstone_wall",
+    "excessive_building:soul_sandstone_brick_wall",
+    "excessive_building:blue_nether_brick_wall",
+    "excessive_building:polished_brimstone_wall",
+    "excessive_building:polished_brimstone_brick_wall",
+    "excessive_building:cracked_polished_brimstone_brick_wall",
+    "excessive_building:polished_brimstone_tile_wall",
+    "excessive_building:polished_granite_brick_wall",
+    "excessive_building:polished_diorite_brick_wall",
+    "excessive_building:polished_andesite_brick_wall",
+    "excessive_building:cobbled_granite_wall",
+    "excessive_building:cobbled_diorite_wall",
+    "excessive_building:cobbled_andesite_wall",
+    "excessive_building:crimson_mossy_polished_blackstone_brick_wall",
+    "excessive_building:warped_mossy_polished_blackstone_brick_wall",
+    "excessive_building:crimson_mossy_blackstone_brick_wall",
+    "excessive_building:warped_mossy_blackstone_brick_wall",
+    "excessive_building:smooth_stone_brick_wall",
+    "excessive_building:smooth_brick_wall",
+    "excessive_building:smooth_stone_tile_wall"
+  ]
+}
