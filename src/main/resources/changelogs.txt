@@ -23,9 +23,11 @@ repairing/crafting stone tools, and other stuff)
 •   Piglins will now like golden brick block variants (stairs, slabs, walls, and the new vertical stairs)
 
   Notes
-•   [IMPORTANT] This will be the last major update to support 1.19.4, 1.19.2, and 1.18.2, these versions will only be updated on occasion (possibly never at all) and will no longer be supported on every single content update
+•   [IMPORTANT] This will be the last major update to support 1.19.4 and 1.18.2, these versions will still be updated but only on occasion (possibly never at all)
 •   Changed Excessive Building logo
 •   Source code, issue tracker, and wiki have now been set up!
+•   This will be the last major content update for some time, will be porting to 1.20 whenever a stable release of Forge is out, as for Fabric I may be working on that in the future but for now I wanna
+start working on some other projects/other mods :) will still make more updates in the future for sure though!
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
