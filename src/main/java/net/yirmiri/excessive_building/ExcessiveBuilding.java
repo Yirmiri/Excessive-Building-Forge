@@ -34,9 +34,7 @@ public class ExcessiveBuilding {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            ModVillagers.registerPOIs();
-        });
+        event.enqueueWork(ModVillagers::registerPOIs);
     }
 
     private void addCreative(CreativeModeTabEvent.BuildContents event) {
