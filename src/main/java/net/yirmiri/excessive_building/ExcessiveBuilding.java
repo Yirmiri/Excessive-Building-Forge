@@ -15,7 +15,6 @@ import net.yirmiri.excessive_building.item.ModCreativeModeTab;
 import net.yirmiri.excessive_building.item.ModItems;
 import net.yirmiri.excessive_building.villager.ModVillagers;
 
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(ExcessiveBuilding.MOD_ID)
 public class ExcessiveBuilding {
     public static final String MOD_ID = "excessive_building";
