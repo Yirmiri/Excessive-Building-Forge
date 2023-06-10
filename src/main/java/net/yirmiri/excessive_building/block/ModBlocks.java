@@ -1015,7 +1015,7 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> COBBLESTONE_BRICK_VERTICAL_STAIRS = registerBlock("cobblestone_brick_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(2f).explosionResistance(6f).sound(SoundType.DEEPSLATE_TILES).requiresCorrectToolForDrops()));
+                    .strength(2f).explosionResistance(6f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS = registerBlock("cobbled_deepslate_brick_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.of(Material.STONE)
