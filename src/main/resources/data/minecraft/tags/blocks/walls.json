@@ -27,6 +27,9 @@
     "excessive_building:warped_mossy_blackstone_brick_wall",
     "excessive_building:smooth_stone_brick_wall",
     "excessive_building:smooth_brick_wall",
-    "excessive_building:smooth_stone_tile_wall"
+    "excessive_building:smooth_stone_tile_wall",
+    "excessive_building:nether_tile_wall",
+    "excessive_building:red_nether_tile_wall",
+    "excessive_building:blue_nether_tile_wall"
   ]
 }

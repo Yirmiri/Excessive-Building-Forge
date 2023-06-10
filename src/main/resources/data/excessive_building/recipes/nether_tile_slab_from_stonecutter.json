@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 2,
+  "ingredient": {
+    "item": "excessive_building:nether_tiles"
+  },
+  "result": "excessive_building:nether_tile_slab"
+}

@@ -183,6 +183,21 @@
     "excessive_building:prismarine_vertical_stairs",
     "excessive_building:dark_prismarine_vertical_stairs",
     "excessive_building:prismarine_brick_vertical_stairs",
-    "excessive_building:brick_vertical_stairs"
+    "excessive_building:brick_vertical_stairs",
+    "excessive_building:nether_tile_wall",
+    "excessive_building:red_nether_tile_wall",
+    "excessive_building:blue_nether_tile_wall",
+    "excessive_building:nether_tiles",
+    "excessive_building:nether_tile_stairs",
+    "excessive_building:nether_tile_vertical_stairs",
+    "excessive_building:nether_tile_slab",
+    "excessive_building:red_nether_tiles",
+    "excessive_building:red_nether_tile_stairs",
+    "excessive_building:red_nether_tile_vertical_stairs",
+    "excessive_building:red_nether_tile_slab",
+    "excessive_building:blue_nether_tiles",
+    "excessive_building:blue_nether_tile_stairs",
+    "excessive_building:blue_nether_tile_vertical_stairs",
+    "excessive_building:blue_nether_tile_slab"
   ]
 }
