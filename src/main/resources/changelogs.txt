@@ -6,6 +6,9 @@ Literally just a secret .txt file of every single update's changelog
 
 Version Release 1.1.2 (1.19.4, 1.19.2 Forge)
 
+  Changes
+•   Tweaked polished granite bricks texture slightly
+
   Bug Fixes
 •   Fixed an issue that caused mossy variants of polished and non polished blackstone bricks from being crafted
 •   Fixed an issue that caused block variants of mossy blackstone bricks and non blackstone bricks from being crafted
