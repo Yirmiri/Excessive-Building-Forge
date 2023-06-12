@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "excessive_building:block/sulphuric_brimstone",
+    "top": "excessive_building:block/sulphuric_brimstone",
+    "side": "excessive_building:block/sulphuric_brimstone"
+  },
+  "render_type": "solid"
+}

@@ -191,6 +191,10 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.BRIMSTONE_STAIRS);
             event.accept(ModBlocks.BRIMSTONE_VERTICAL_STAIRS);
             event.accept(ModBlocks.BRIMSTONE_SLAB);
+            event.accept(ModBlocks.SULPHURIC_BRIMSTONE);
+            event.accept(ModBlocks.SULPHURIC_BRIMSTONE_STAIRS);
+            event.accept(ModBlocks.SULPHURIC_BRIMSTONE_VERTICAL_STAIRS);
+            event.accept(ModBlocks.SULPHURIC_BRIMSTONE_SLAB);
             event.accept(ModBlocks.POLISHED_BRIMSTONE);
             event.accept(ModBlocks.POLISHED_BRIMSTONE_STAIRS);
             event.accept(ModBlocks.POLISHED_BRIMSTONE_VERTICAL_STAIRS);
@@ -488,6 +492,10 @@ public class ExcessiveBuilding {
                 event.accept(ModBlocks.BRIMSTONE_STAIRS);
                 event.accept(ModBlocks.BRIMSTONE_VERTICAL_STAIRS);
                 event.accept(ModBlocks.BRIMSTONE_SLAB);
+                event.accept(ModBlocks.SULPHURIC_BRIMSTONE);
+                event.accept(ModBlocks.SULPHURIC_BRIMSTONE_STAIRS);
+                event.accept(ModBlocks.SULPHURIC_BRIMSTONE_VERTICAL_STAIRS);
+                event.accept(ModBlocks.SULPHURIC_BRIMSTONE_SLAB);
                 event.accept(ModBlocks.POLISHED_BRIMSTONE);
                 event.accept(ModBlocks.POLISHED_BRIMSTONE_STAIRS);
                 event.accept(ModBlocks.POLISHED_BRIMSTONE_VERTICAL_STAIRS);

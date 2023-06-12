@@ -293,6 +293,10 @@
   "block.excessive_building.blue_nether_tile_vertical_stairs": "Blue Nether Tile Vertical Stairs",
   "block.excessive_building.blue_nether_tile_slab": "Blue Nether Tile Slab",
   "block.excessive_building.blue_nether_tile_wall": "Blue Nether Tile Wall",
+  "block.excessive_building.sulphuric_brimstone": "Sulphuric Brimstone",
+  "block.excessive_building.sulphuric_brimstone_stairs": "Sulphuric Brimstone Stairs",
+  "block.excessive_building.sulphuric_brimstone_vertical_stairs": "Sulphuric Brimstone Vertical Stairs",
+  "block.excessive_building.sulphuric_brimstone_slab": "Sulphuric Brimstone Slab",
 
   "item.excessive_building.fiery_crystal": "Fiery Crystal",
 

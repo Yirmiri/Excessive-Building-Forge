@@ -4,6 +4,22 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release 1.1.1 (1.19.4, 1.19.2 Forge)
+Hotfix Update
+
+  Additions
+•   Added sulphuric brimstone (block variants will come soon), sulphuric brimstone generates in the basalt deltas
+
+  Changes
+•   Changed the Excessive Building logo
+
+  Bug Fixes
+•   Fixed a bug that caused pickaxes not work properly (1.19.4-1.19.2)
+•   Fixed a bug that caused axes not work properly (1.19.2)
+•   Fixed a bug that caused potion shelves to have their new 1.19.3+ appearance (1.19.2)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release 1.1.0 (1.19.4, 1.19.2 Forge)
 Major Update!
 

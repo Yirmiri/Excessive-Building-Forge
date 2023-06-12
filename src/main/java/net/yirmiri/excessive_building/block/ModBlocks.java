@@ -1169,6 +1169,19 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLUE_NETHER_TILE_VERTICAL_STAIRS = registerBlock("blue_nether_tile_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(ModBlocks.NETHER_TILES.get())));
 
+    public static final RegistryObject<Block> SULPHURIC_BRIMSTONE = registerBlock("sulphuric_brimstone",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(1.5f).explosionResistance(6f).sound(SoundType.BASALT).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> SULPHURIC_BRIMSTONE_STAIRS = registerBlock("sulphuric_brimstone_stairs",
+            () -> new StairBlock(() -> ModBlocks.BLUE_NETHER_TILES.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.SULPHURIC_BRIMSTONE.get())));
+
+    public static final RegistryObject<Block> SULPHURIC_BRIMSTONE_SLAB = registerBlock("sulphuric_brimstone_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(ModBlocks.SULPHURIC_BRIMSTONE.get())));
+
+    public static final RegistryObject<Block> SULPHURIC_BRIMSTONE_VERTICAL_STAIRS = registerBlock("sulphuric_brimstone_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(ModBlocks.SULPHURIC_BRIMSTONE.get())));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
