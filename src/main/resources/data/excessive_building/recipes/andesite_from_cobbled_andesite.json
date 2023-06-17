@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "excessive_building:cobbled_andesite"
+  },
+  "result": "minecraft:andesite"
+}

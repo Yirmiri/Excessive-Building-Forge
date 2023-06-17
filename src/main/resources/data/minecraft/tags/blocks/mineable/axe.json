@@ -80,6 +80,15 @@
     "excessive_building:mangrove_mosaic_vertical_stairs",
     "excessive_building:cherry_mosaic_vertical_stairs",
     "excessive_building:crimson_mosaic_vertical_stairs",
-    "excessive_building:warped_mosaic_vertical_stairs"
+    "excessive_building:warped_mosaic_vertical_stairs",
+    "excessive_building:colored_spruce_crafting_table",
+    "excessive_building:colored_birch_crafting_table",
+    "excessive_building:colored_jungle_crafting_table",
+    "excessive_building:colored_acacia_crafting_table",
+    "excessive_building:colored_dark_oak_crafting_table",
+    "excessive_building:colored_mangrove_crafting_table",
+    "excessive_building:colored_cherry_crafting_table",
+    "excessive_building:colored_crimson_crafting_table",
+    "excessive_building:colored_warped_crafting_table"
   ]
 }

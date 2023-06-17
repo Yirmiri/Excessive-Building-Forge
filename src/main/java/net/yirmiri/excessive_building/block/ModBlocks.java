@@ -1182,6 +1182,42 @@ public class ModBlocks {
     public static final RegistryObject<Block> SULPHURIC_BRIMSTONE_VERTICAL_STAIRS = registerBlock("sulphuric_brimstone_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(ModBlocks.SULPHURIC_BRIMSTONE.get())));
 
+    public static final RegistryObject<Block> COLORED_BIRCH_CRAFTING_TABLE = registerBlock("colored_birch_crafting_table",
+            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> COLORED_SPRUCE_CRAFTING_TABLE = registerBlock("colored_spruce_crafting_table",
+            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> COLORED_JUNGLE_CRAFTING_TABLE = registerBlock("colored_jungle_crafting_table",
+            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> COLORED_ACACIA_CRAFTING_TABLE = registerBlock("colored_acacia_crafting_table",
+            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> COLORED_DARK_OAK_CRAFTING_TABLE = registerBlock("colored_dark_oak_crafting_table",
+            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> COLORED_MANGROVE_CRAFTING_TABLE = registerBlock("colored_mangrove_crafting_table",
+            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
+
+    public static final RegistryObject<Block> COLORED_CHERRY_CRAFTING_TABLE = registerBlock("colored_cherry_crafting_table",
+            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(2.5f).explosionResistance(2.5f).sound(SoundType.CHERRY_WOOD)));
+
+    public static final RegistryObject<Block> COLORED_CRIMSON_CRAFTING_TABLE = registerBlock("colored_crimson_crafting_table",
+            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.of(Material.NETHER_WOOD)
+                    .strength(2.5f).explosionResistance(2.5f).sound(SoundType.NETHER_WOOD)));
+
+    public static final RegistryObject<Block> COLORED_WARPED_CRAFTING_TABLE = registerBlock("colored_warped_crafting_table",
+            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.of(Material.NETHER_WOOD)
+                    .strength(2.5f).explosionResistance(2.5f).sound(SoundType.NETHER_WOOD)));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);
