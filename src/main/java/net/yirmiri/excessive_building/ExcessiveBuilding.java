@@ -3,17 +3,15 @@ package net.yirmiri.excessive_building;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.yirmiri.excessive_building.block.ModBlocks;
 import net.yirmiri.excessive_building.item.ModCreativeModeTab;
 import net.yirmiri.excessive_building.item.ModItems;
-import net.yirmiri.excessive_building.villager.ModVillagers;
 
 @Mod(ExcessiveBuilding.MOD_ID)
 public class ExcessiveBuilding {
@@ -24,21 +22,16 @@ public class ExcessiveBuilding {
 
         ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
-        ModVillagers.register(modEventBus);
+        ModCreativeModeTab.register(modEventBus);
 
-        modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::addCreative);
 
         MinecraftForge.EVENT_BUS.register(this);
 
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(ModVillagers::registerPOIs);
-    }
-
-    private void addCreative(CreativeModeTabEvent.BuildContents event) {
-        if(event.getTab() == ModCreativeModeTab.EXCESSIVE_BUILDING) {
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTab() == ModCreativeModeTab.EXCESSIVE_BUILDING.get()) {
             event.accept(ModBlocks.CHISELED_OAK);
             event.accept(ModBlocks.OAK_MOSAIC);
             event.accept(ModBlocks.OAK_MOSAIC_STAIRS);
@@ -348,7 +341,7 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS);
 
         }
-            if(event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
+            if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
                 event.accept(ModBlocks.CHISELED_OAK);
                 event.accept(ModBlocks.OAK_MOSAIC);
                 event.accept(ModBlocks.OAK_MOSAIC_STAIRS);
@@ -630,12 +623,12 @@ public class ExcessiveBuilding {
                 event.accept(ModBlocks.QUARTZ_VERTICAL_STAIRS);
                 event.accept(ModBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS);
             }
-                if(event.getTab() == CreativeModeTabs.NATURAL_BLOCKS) {
+                if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
                     event.accept(ModBlocks.SOUL_SANDSTONE);
                     event.accept(ModBlocks.BRIMSTONE);
                     event.accept(ModBlocks.FIERY_CRYSTAL_BLOCK);
     }
-        if(event.getTab() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
             event.accept(ModBlocks.BRIMSTONE_WINDOW);
             event.accept(ModBlocks.BRIMSTONE_LANTERN);
             event.accept(ModBlocks.ASPHALT);
@@ -666,7 +659,7 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.COLORED_WARPED_CRAFTING_TABLE);
             event.accept(ModBlocks.CONSTRUCTION_TABLE);
         }
-        if(event.getTab() == CreativeModeTabs.INGREDIENTS) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.FIERY_CRYSTAL);
         }
 }

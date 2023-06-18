@@ -2,6 +2,12 @@
 
 Literally just a secret .txt file of every single update's changelog
 
+Version Release 1.2.1 (1.20.1)
+
+  Changes
+•   Updated to 1.20.1, skipped 1.20
+•   Temporarily moved construction worker to stone mason
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Version Release 1.2.0 (1.19.4, 1.19.2)

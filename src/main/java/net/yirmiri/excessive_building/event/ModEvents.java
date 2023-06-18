@@ -2,6 +2,7 @@ package net.yirmiri.excessive_building.event;
 
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -9,10 +10,9 @@ import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.yirmiri.excessive_building.block.ModBlocks;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.block.ModBlocks;
 import net.yirmiri.excessive_building.item.ModItems;
-import net.yirmiri.excessive_building.villager.ModVillagers;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ public class ModEvents {
 
     @SubscribeEvent
     public static void addCustomTrades(VillagerTradesEvent event) {
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.COBBLESTONE_BRICKS.get(), 24);
             int villagerLevel = 2;
@@ -32,7 +32,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.COBBLED_DEEPSLATE_BRICKS.get(), 24);
             int villagerLevel = 2;
@@ -42,7 +42,7 @@ public class ModEvents {
                     stack, 16, 5, 0.05F));
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.POLISHED_GRANITE_BRICKS.get(), 24);
             int villagerLevel = 2;
@@ -52,7 +52,7 @@ public class ModEvents {
                     stack, 16, 5, 0.05F));
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.POLISHED_ANDESITE_BRICKS.get(), 24);
             int villagerLevel = 2;
@@ -62,7 +62,7 @@ public class ModEvents {
                     stack, 16, 5, 0.05F));
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.POLISHED_DIORITE_BRICKS.get(), 24);
             int villagerLevel = 2;
@@ -72,7 +72,7 @@ public class ModEvents {
                     stack, 16, 5, 0.05F));
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.OAK_MOSAIC.get(), 24);
             int villagerLevel = 1;
@@ -83,7 +83,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.SPRUCE_MOSAIC.get(), 24);
             int villagerLevel = 1;
@@ -94,7 +94,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.BIRCH_MOSAIC.get(), 24);
             int villagerLevel = 1;
@@ -105,7 +105,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.ACACIA_MOSAIC.get(), 24);
             int villagerLevel = 1;
@@ -116,7 +116,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.DARK_OAK_MOSAIC.get(), 24);
             int villagerLevel = 1;
@@ -127,7 +127,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.ASPHALT.get(), 12);
             int villagerLevel = 5;
@@ -138,7 +138,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.SCAFFOLDING, 18);
             int villagerLevel = 4;
@@ -149,7 +149,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(Items.EMERALD, 1);
             int villagerLevel = 3;
@@ -160,7 +160,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.CHISELED_OAK.get(), 24);
             int villagerLevel = 3;
@@ -171,7 +171,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.CHISELED_SPRUCE.get(), 24);
             int villagerLevel = 3;
@@ -182,7 +182,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.CHISELED_BIRCH.get(), 24);
             int villagerLevel = 3;
@@ -193,7 +193,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.CHISELED_ACACIA.get(), 24);
             int villagerLevel = 3;
@@ -204,7 +204,7 @@ public class ModEvents {
 
         }
 
-        if(event.getType() == ModVillagers.CONSTRUCTION_WORKER.get()) {
+        if(event.getType() == VillagerProfession.MASON) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
             ItemStack stack = new ItemStack(ModBlocks.CHISELED_DARK_OAK.get(), 24);
             int villagerLevel = 3;
