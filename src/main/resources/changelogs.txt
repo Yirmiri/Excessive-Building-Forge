@@ -2,6 +2,22 @@
 
 Literally just a secret .txt file of every single update's changelog
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release 1.2.2 (1.20.1, 1.19.4, 1.19.2)
+
+  Bug Fixes
+•   Fixed recipes regarding polished brick blocks (specifically granite, andesite, and diorite) [All Versions]
+•   Fixed cobbled blocks not crafting everything from cobble (this was due to them not being apart of the forge:cobblestone tag) [All Versions]
+•   Fixed the excessive building tab being named "excessive_building_tab" rather than "Excessive Building" [1.20.1]
+
+  Notes
+•   Happy 3,000 downloads, or well right now 2.8k but I doubt an update will be ready around the time of reaching it.
+•   This will be the final update for quite sometime, I will add more content and port this mod sometime in the future but for now I think its time to work on something new <3.
+Thanks for checking out Excessive Building, I will see you guys soon B), happy building!
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release 1.2.1 (1.20.1)
 
   Changes

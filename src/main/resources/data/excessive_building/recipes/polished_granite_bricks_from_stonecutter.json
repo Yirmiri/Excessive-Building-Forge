@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "excessive_building:polished_granite"
+    "item": "minecraft:polished_granite"
   },
   "result": "excessive_building:polished_granite_bricks"
 }

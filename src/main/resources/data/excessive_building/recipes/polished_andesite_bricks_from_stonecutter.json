@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "count": 1,
   "ingredient": {
-    "item": "excessive_building:polished_andesite"
+    "item": "minecraft:polished_andesite"
   },
   "result": "excessive_building:polished_andesite_bricks"
 }
