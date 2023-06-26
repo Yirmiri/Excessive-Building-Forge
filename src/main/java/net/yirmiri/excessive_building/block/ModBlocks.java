@@ -1280,6 +1280,15 @@ public class ModBlocks {
     public static final RegistryObject<Block> DIAMOND_BRICK_VERTICAL_STAIRS = registerBlock("diamond_brick_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
 
+    public static final RegistryObject<Block> CHISELED_SANDSTONE_BRICKS = registerBlock("chiseled_sandstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.SANDSTONE_BRICKS.get()).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CHISELED_RED_SANDSTONE_BRICKS = registerBlock("chiseled_red_sandstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.RED_SANDSTONE_BRICKS.get()).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CHISELED_SOUL_SANDSTONE_BRICKS = registerBlock("chiseled_soul_sandstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.SOUL_SANDSTONE_BRICKS.get()).requiresCorrectToolForDrops()));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);

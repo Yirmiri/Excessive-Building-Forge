@@ -203,6 +203,9 @@
     "excessive_building:sulphuric_brimstone",
     "excessive_building:sulphuric_brimstone_stairs",
     "excessive_building:sulphuric_brimstone_vertical_stairs",
-    "excessive_building:sulphuric_brimstone_slab"
+    "excessive_building:sulphuric_brimstone_slab",
+    "excessive_building:chiseled_sandstone_bricks",
+    "excessive_building:chiseled_red_sandstone_bricks",
+    "excessive_building:chiseled_soul_sandstone_bricks"
   ]
 }

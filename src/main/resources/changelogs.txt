@@ -11,6 +11,7 @@ Major Update
 •   Added new crystal glass blocks for amethyst, fiery crystal, and prismarine crystals
 •   Added crystal glass panes (variants above)
 •   Added diamond and iron bricks (can also be used for beacon blocks)
+•   Added chiseled sandstone bricks
 •   Added stairs, vertical stairs, and slabs for obsidian bricks and obsidian tiles
 
   Changes

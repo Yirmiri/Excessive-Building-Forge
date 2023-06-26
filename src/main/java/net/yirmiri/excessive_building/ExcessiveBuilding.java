@@ -160,11 +160,13 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.SANDSTONE_BRICK_VERTICAL_STAIRS);
             event.accept(ModBlocks.SANDSTONE_BRICK_SLAB);
             event.accept(ModBlocks.SANDSTONE_BRICK_WALL);
+            event.accept(ModBlocks.CHISELED_SANDSTONE_BRICKS);
             event.accept(ModBlocks.RED_SANDSTONE_BRICKS);
             event.accept(ModBlocks.RED_SANDSTONE_BRICK_STAIRS);
             event.accept(ModBlocks.RED_SANDSTONE_BRICK_VERTICAL_STAIRS);
             event.accept(ModBlocks.RED_SANDSTONE_BRICK_SLAB);
             event.accept(ModBlocks.RED_SANDSTONE_BRICK_WALL);
+            event.accept(ModBlocks.CHISELED_RED_SANDSTONE_BRICKS);
             event.accept(ModBlocks.SOUL_SANDSTONE);
             event.accept(ModBlocks.SOUL_SANDSTONE_STAIRS);
             event.accept(ModBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS);
@@ -175,6 +177,7 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.SOUL_SANDSTONE_BRICK_VERTICAL_STAIRS);
             event.accept(ModBlocks.SOUL_SANDSTONE_BRICK_SLAB);
             event.accept(ModBlocks.SOUL_SANDSTONE_BRICK_WALL);
+            event.accept(ModBlocks.CHISELED_SOUL_SANDSTONE_BRICKS);
             event.accept(ModBlocks.CHISELED_SOUL_SANDSTONE);
             event.accept(ModBlocks.SMOOTH_SOUL_SANDSTONE);
             event.accept(ModBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS);
@@ -490,11 +493,13 @@ public class ExcessiveBuilding {
                 event.accept(ModBlocks.SANDSTONE_BRICK_VERTICAL_STAIRS);
                 event.accept(ModBlocks.SANDSTONE_BRICK_SLAB);
                 event.accept(ModBlocks.SANDSTONE_BRICK_WALL);
+                event.accept(ModBlocks.CHISELED_SANDSTONE_BRICKS);
                 event.accept(ModBlocks.RED_SANDSTONE_BRICKS);
                 event.accept(ModBlocks.RED_SANDSTONE_BRICK_STAIRS);
                 event.accept(ModBlocks.RED_SANDSTONE_BRICK_VERTICAL_STAIRS);
                 event.accept(ModBlocks.RED_SANDSTONE_BRICK_SLAB);
                 event.accept(ModBlocks.RED_SANDSTONE_BRICK_WALL);
+                event.accept(ModBlocks.CHISELED_RED_SANDSTONE_BRICKS);
                 event.accept(ModBlocks.SOUL_SANDSTONE);
                 event.accept(ModBlocks.SOUL_SANDSTONE_STAIRS);
                 event.accept(ModBlocks.SOUL_SANDSTONE_VERTICAL_STAIRS);
@@ -505,6 +510,7 @@ public class ExcessiveBuilding {
                 event.accept(ModBlocks.SOUL_SANDSTONE_BRICK_VERTICAL_STAIRS);
                 event.accept(ModBlocks.SOUL_SANDSTONE_BRICK_SLAB);
                 event.accept(ModBlocks.SOUL_SANDSTONE_BRICK_WALL);
+                event.accept(ModBlocks.CHISELED_SOUL_SANDSTONE_BRICKS);
                 event.accept(ModBlocks.CHISELED_SOUL_SANDSTONE);
                 event.accept(ModBlocks.SMOOTH_SOUL_SANDSTONE);
                 event.accept(ModBlocks.SMOOTH_SOUL_SANDSTONE_STAIRS);

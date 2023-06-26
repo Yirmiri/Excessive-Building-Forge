@@ -326,6 +326,9 @@
   "block.excessive_building.obsidian_tile_stairs": "Obsidian Tile Stairs",
   "block.excessive_building.obsidian_tile_vertical_stairs": "Obsidian Tile Vertical Stairs",
   "block.excessive_building.obsidian_tile_slab": "Obsidian Tile Slab",
+  "block.excessive_building.chiseled_sandstone_bricks": "Chiseled Sandstone Bricks",
+  "block.excessive_building.chiseled_soul_sandstone_bricks": "Chiseled Soul Sandstone Bricks",
+  "block.excessive_building.chiseled_red_sandstone_bricks": "Chiseled Red Sandstone Bricks",
 
   "item.excessive_building.fiery_crystal": "Fiery Crystal",
 
