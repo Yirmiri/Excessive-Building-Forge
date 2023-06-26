@@ -270,10 +270,10 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.FIERY_CRYSTAL_BLOCK);
             event.accept(ModItems.FIERY_CRYSTAL);
             event.accept(ModBlocks.FIERY_GLASS);
-            event.accept(ModBlocks.FIERY_GLASS_PANE);
             event.accept(ModBlocks.PRISMARINE_GLASS);
-            event.accept(ModBlocks.PRISMARINE_GLASS_PANE);
             event.accept(ModBlocks.AMETHYST_GLASS);
+            event.accept(ModBlocks.FIERY_GLASS_PANE);
+            event.accept(ModBlocks.PRISMARINE_GLASS_PANE);
             event.accept(ModBlocks.AMETHYST_GLASS_PANE);
             event.accept(ModBlocks.ASPHALT);
             event.accept(ModBlocks.EMPTY_SHELF);
@@ -633,10 +633,10 @@ public class ExcessiveBuilding {
             }
         if(event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
             event.accept(ModBlocks.FIERY_GLASS);
-            event.accept(ModBlocks.FIERY_GLASS_PANE);
             event.accept(ModBlocks.PRISMARINE_GLASS);
-            event.accept(ModBlocks.PRISMARINE_GLASS_PANE);
             event.accept(ModBlocks.AMETHYST_GLASS);
+            event.accept(ModBlocks.FIERY_GLASS_PANE);
+            event.accept(ModBlocks.PRISMARINE_GLASS_PANE);
             event.accept(ModBlocks.AMETHYST_GLASS_PANE);
             }
                 if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {

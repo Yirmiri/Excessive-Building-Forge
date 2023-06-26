@@ -1,5 +1,5 @@
 {
-  "parent": "excessive_building:block/template_glass_pane_noside_alt",
+  "parent": "minecraft:block/template_glass_pane_noside_alt",
   "textures": {
     "pane": "excessive_building:block/fiery_glass"
   }
