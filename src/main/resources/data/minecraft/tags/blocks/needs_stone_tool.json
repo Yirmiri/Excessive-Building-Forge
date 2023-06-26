@@ -5,6 +5,10 @@
     "excessive_building:lapis_lazuli_bricks",
     "excessive_building:lapis_lazuli_brick_stairs",
     "excessive_building:lapis_lazuli_brick_slab",
-    "excessive_building:lapis_lazuli_brick_vertical_stairs"
+    "excessive_building:lapis_lazuli_brick_vertical_stairs",
+    "excessive_building:iron_bricks",
+    "excessive_building:iron_brick_stairs",
+    "excessive_building:iron_brick_slab",
+    "excessive_building:iron_brick_vertical_stairs"
   ]
 }

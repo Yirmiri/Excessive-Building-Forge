@@ -2,6 +2,12 @@
   "replace": false,
   "values": [
     "excessive_building:obsidian_bricks",
-    "excessive_building:obsidian_tiles"
+    "excessive_building:obsidian_tiles",
+    "excessive_building:obsidian_brick_vertical_stairs",
+    "excessive_building:obsidian_tile_vertical_stairs",
+    "excessive_building:obsidian_brick_stairs",
+    "excessive_building:obsidian_tile_stairs",
+    "excessive_building:obsidian_brick_slab",
+    "excessive_building:obsidian_tile_slab"
   ]
 }

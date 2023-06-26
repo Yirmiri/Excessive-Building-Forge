@@ -10,6 +10,8 @@ Major Update
   Additions
 •   Added new crystal glass blocks for amethyst, fiery crystal, and prismarine crystals
 •   Added crystal glass panes (variants above)
+•   Added diamond and iron bricks (can also be used for beacon blocks)
+•   Added stairs, vertical stairs, and slabs for obsidian bricks and obsidian tiles
 
   Changes
 •   Removed cobbled stone recipes from smelting (these were an accident that I probably made at 3AM, I have no clue how this got created)

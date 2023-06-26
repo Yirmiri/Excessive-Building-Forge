@@ -1236,6 +1236,50 @@ public class ModBlocks {
     public static final RegistryObject<Block> PRISMARINE_GLASS_PANE = registerBlock("prismarine_glass_pane",
             () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.GLASS).noOcclusion()));
 
+    public static final RegistryObject<Block> OBSIDIAN_TILE_STAIRS = registerBlock("obsidian_tile_stairs",
+            () -> new StairBlock(() -> ModBlocks.OBSIDIAN_TILES.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.OBSIDIAN_TILES.get())));
+
+    public static final RegistryObject<Block> OBSIDIAN_TILE_SLAB = registerBlock("obsidian_tile_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(ModBlocks.OBSIDIAN_TILES.get())));
+
+    public static final RegistryObject<Block> OBSIDIAN_TILE_VERTICAL_STAIRS = registerBlock("obsidian_tile_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(ModBlocks.OBSIDIAN_TILES.get())));
+
+    public static final RegistryObject<Block> OBSIDIAN_BRICK_STAIRS = registerBlock("obsidian_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.OBSIDIAN_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(ModBlocks.OBSIDIAN_BRICKS.get())));
+
+    public static final RegistryObject<Block> OBSIDIAN_BRICK_SLAB = registerBlock("obsidian_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(ModBlocks.OBSIDIAN_BRICKS.get())));
+
+    public static final RegistryObject<Block> OBSIDIAN_BRICK_VERTICAL_STAIRS = registerBlock("obsidian_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(ModBlocks.OBSIDIAN_BRICKS.get())));
+
+    public static final RegistryObject<Block> IRON_BRICKS = registerBlock("iron_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
+                    .strength(5f).explosionResistance(6f).sound(SoundType.METAL).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> IRON_BRICK_STAIRS = registerBlock("iron_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.IRON_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> IRON_BRICK_SLAB = registerBlock("iron_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> IRON_BRICK_VERTICAL_STAIRS = registerBlock("iron_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final RegistryObject<Block> DIAMOND_BRICKS = registerBlock("diamond_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)
+                    .strength(5f).explosionResistance(6f).sound(SoundType.METAL).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> DIAMOND_BRICK_STAIRS = registerBlock("diamond_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.DIAMOND_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+
+    public static final RegistryObject<Block> DIAMOND_BRICK_SLAB = registerBlock("diamond_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+
+    public static final RegistryObject<Block> DIAMOND_BRICK_VERTICAL_STAIRS = registerBlock("diamond_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK)));
+
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
                 RegistryObject<T> toReturn = BLOCKS.register(name, block);

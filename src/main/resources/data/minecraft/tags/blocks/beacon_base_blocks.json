@@ -1,5 +1,7 @@
 {
   "values": [
-    "excessive_building:golden_bricks"
+    "excessive_building:golden_bricks",
+    "excessive_building:diamond_bricks",
+    "excessive_building:iron_bricks"
   ]
 }
