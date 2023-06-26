@@ -306,6 +306,12 @@
   "block.excessive_building.colored_cherry_crafting_table": "Colored Cherry Crafting Table",
   "block.excessive_building.colored_warped_crafting_table": "Colored Crimson Crafting Table",
   "block.excessive_building.colored_crimson_crafting_table": "Colored Warped Crafting Table",
+  "block.excessive_building.fiery_glass": "Fiery Glass",
+  "block.excessive_building.amethyst_glass": "Amethyst Glass",
+  "block.excessive_building.prismarine_glass": "Prismarine Glass",
+  "block.excessive_building.fiery_glass_pane": "Fiery Glass Pane",
+  "block.excessive_building.amethyst_glass_pane": "Amethyst Glass Pane",
+  "block.excessive_building.prismarine_glass_pane": "Prismarine Glass Pane",
 
   "item.excessive_building.fiery_crystal": "Fiery Crystal",
 

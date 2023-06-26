@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "excessive_building:block/prismarine_glass",
+    "particle": "excessive_building:block/prismarine_glass"
+  }
+}

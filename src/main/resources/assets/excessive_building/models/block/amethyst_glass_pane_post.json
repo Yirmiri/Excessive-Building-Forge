@@ -1,0 +1,7 @@
+{
+  "parent": "excessive_building:block/template_glass_pane_post",
+  "textures": {
+    "edge": "excessive_building:block/amethyst_glass_pane_top",
+    "pane": "excessive_building:block/amethyst_glass"
+  }
+}

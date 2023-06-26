@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mosaic",
+  "pattern": [
+    "###",
+    "###"
+    ],
+  "key": {
+    "#": {
+      "item": "excessive_building:prismarine_glass"
+    }
+  },
+  "result": {
+    "count": 6,
+    "item": "excessive_building:prismarine_glass_pane"
+  }
+}

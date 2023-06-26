@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "excessive_building:block/amethyst_glass",
+    "particle": "excessive_building:block/amethyst_glass"
+  }
+}

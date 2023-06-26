@@ -1,5 +1,7 @@
 package net.yirmiri.excessive_building;
 
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -267,6 +269,12 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.LAPIS_LAZULI_BRICK_SLAB);
             event.accept(ModBlocks.FIERY_CRYSTAL_BLOCK);
             event.accept(ModItems.FIERY_CRYSTAL);
+            event.accept(ModBlocks.FIERY_GLASS);
+            event.accept(ModBlocks.FIERY_GLASS_PANE);
+            event.accept(ModBlocks.PRISMARINE_GLASS);
+            event.accept(ModBlocks.PRISMARINE_GLASS_PANE);
+            event.accept(ModBlocks.AMETHYST_GLASS);
+            event.accept(ModBlocks.AMETHYST_GLASS_PANE);
             event.accept(ModBlocks.ASPHALT);
             event.accept(ModBlocks.EMPTY_SHELF);
             event.accept(ModBlocks.EMPTY_POTION_SHELF);
@@ -623,6 +631,14 @@ public class ExcessiveBuilding {
                 event.accept(ModBlocks.QUARTZ_VERTICAL_STAIRS);
                 event.accept(ModBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS);
             }
+        if(event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
+            event.accept(ModBlocks.FIERY_GLASS);
+            event.accept(ModBlocks.FIERY_GLASS_PANE);
+            event.accept(ModBlocks.PRISMARINE_GLASS);
+            event.accept(ModBlocks.PRISMARINE_GLASS_PANE);
+            event.accept(ModBlocks.AMETHYST_GLASS);
+            event.accept(ModBlocks.AMETHYST_GLASS_PANE);
+            }
                 if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
                     event.accept(ModBlocks.SOUL_SANDSTONE);
                     event.accept(ModBlocks.BRIMSTONE);
@@ -669,6 +685,13 @@ public class ExcessiveBuilding {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+
+                ItemBlockRenderTypes.setRenderLayer(ModBlocks.FIERY_GLASS.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.AMETHYST_GLASS.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.PRISMARINE_GLASS.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.FIERY_GLASS_PANE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.AMETHYST_GLASS_PANE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(ModBlocks.PRISMARINE_GLASS_PANE.get(), RenderType.translucent());
 
         }
     }
