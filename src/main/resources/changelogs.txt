@@ -4,7 +4,19 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release 1.2.2 (1.20.1, 1.19.4, 1.19.2)
+Version Release 1.2.2 (1.19.2 Fabric)
+Port Update
+
+  Changes
+•   Created Fabric port of the mod currently for version 1.19.2 (1.19.4 and 1.20.1 will release after Fabric betas are finished just so I don't have to juggle 3 versions.. and maybe 1.18.2 if I have time)
+•   Currently some features have not been ported yet because I'm tired asf rn (in all seriousness though they will be added in the future)
+these features are: Vertical stairs, light blocks, construction workers, any function table (including construction table), natural generation of fiery crystal and brimstone (still can be crafted), and asphalt blocks, DO expect these
+to release eventually.. whenever I can get to it <3
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release 1.2.2 (1.20.1, 1.19.4, 1.19.2 Forge)
+Hotfix Update
 
   Bug Fixes
 •   Fixed recipes regarding polished brick blocks (specifically granite, andesite, and diorite) [All Versions]
@@ -18,7 +30,8 @@ Thanks for checking out Excessive Building, I will see you guys soon B), happy b
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release 1.2.1 (1.20.1)
+Version Release 1.2.1 (1.20.1 Forge)
+Port Update
 
   Changes
 •   Updated to 1.20.1, skipped 1.20
@@ -26,7 +39,8 @@ Version Release 1.2.1 (1.20.1)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release 1.2.0 (1.19.4, 1.19.2)
+Version Release 1.2.0 (1.19.4, 1.19.2 Forge)
+Small Update
 
   Additions
 •   Added colored crafting tables, these are to help remove the limitations of creativity set colors normal variants have
@@ -44,6 +58,7 @@ Version Release 1.2.0 (1.19.4, 1.19.2)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Version Release 1.1.2 (1.19.4, 1.19.2 Forge)
+Hotfix Update
 
   Changes
 •   Tweaked polished granite bricks texture slightly
