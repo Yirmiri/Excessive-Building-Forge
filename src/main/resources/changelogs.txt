@@ -4,7 +4,7 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release 1.3.0 (1.20.1, 1.19.4, 1.19.2 Forge)
+Version Release 1.3.0 (1.20.1, 1.19.2 Forge)
 Major Update
 
   Additions
@@ -22,7 +22,7 @@ Major Update
 •   Updated cobbled granite texture (will probably fully change cobbled stones in the future but for now this should be closer to the colors I want)
 
   Bug Fixes
-•   Fixed a bug that caused the name of the Excessive Building tab to not register
+•   Fixed a bug that caused the name of the Excessive Building tab to not register (1.20.1)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
