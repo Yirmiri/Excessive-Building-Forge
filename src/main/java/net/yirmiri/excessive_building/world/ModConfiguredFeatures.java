@@ -15,9 +15,8 @@ import net.yirmiri.excessive_building.block.ModBlocks;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class ModConfiguredFeatures {
-    public static final ResourceKey<ConfiguredFeature<?, ?>> FIERY_CRYSTAL_BLOCK_KEY = registerKey("fiery_crystal_block");
-
-    public static final ResourceKey<ConfiguredFeature<?, ?>> BRIMSTONE_KEY = registerKey("brimstone");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FIERY_CRYSTAL_BLOCK_KEY = registerKey("fiery_crystal_block_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BRIMSTONE_KEY = registerKey("brimstone_key");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
@@ -25,6 +24,7 @@ public class ModConfiguredFeatures {
 
         register(context, FIERY_CRYSTAL_BLOCK_KEY, Feature.ORE, new OreConfiguration(basaltReplaceables,
                 ModBlocks.FIERY_CRYSTAL_BLOCK.get().defaultBlockState(), 10));
+
         register(context, BRIMSTONE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
                 ModBlocks.BRIMSTONE.get().defaultBlockState(), 64));
     }

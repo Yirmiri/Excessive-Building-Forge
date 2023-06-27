@@ -12,12 +12,16 @@ Major Update
 •   Added crystal glass panes (variants above)
 •   Added diamond and iron bricks (can also be used for beacon blocks)
 •   Added chiseled sandstone bricks
+•   Added soul magma blocks
 •   Added stairs, vertical stairs, and slabs for quartz bricks, obsidian bricks, and obsidian tiles
 
   Changes
 •   Removed cobbled stone recipes from smelting (these were an accident that I probably made at 3AM, I have no clue how this got created)
 •   Updated fiery crystal texture
 •   Updated cobbled granite texture (will probably fully change cobbled stones in the future but for now this should be closer to the colors I want)
+
+  Bug Fixes
+•   Fixed a bug that caused the name of the Excessive Building tab to not register
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

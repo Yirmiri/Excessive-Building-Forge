@@ -287,6 +287,8 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.QUARTZ_BRICK_STAIRS);
             event.accept(ModBlocks.QUARTZ_BRICK_VERTICAL_STAIRS);
             event.accept(ModBlocks.QUARTZ_BRICK_SLAB);
+            event.accept(ModBlocks.QUARTZ_ORE);
+            event.accept(ModBlocks.SOUL_MAGMA_BLOCK);
             event.accept(ModBlocks.FIERY_CRYSTAL_BLOCK);
             event.accept(ModItems.FIERY_CRYSTAL);
             event.accept(ModBlocks.FIERY_GLASS);
@@ -682,6 +684,8 @@ public class ExcessiveBuilding {
                 if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
                     event.accept(ModBlocks.SOUL_SANDSTONE);
                     event.accept(ModBlocks.BRIMSTONE);
+                    event.accept(ModBlocks.QUARTZ_ORE);
+                    event.accept(ModBlocks.SOUL_MAGMA_BLOCK);
                     event.accept(ModBlocks.FIERY_CRYSTAL_BLOCK);
     }
         if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
@@ -717,6 +721,9 @@ public class ExcessiveBuilding {
         }
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.FIERY_CRYSTAL);
+        }
+        if(event.getTabKey() == CreativeModeTabs.OP_BLOCKS) {
+            event.accept(ModBlocks.DIRT_SLAB);
         }
 }
 
