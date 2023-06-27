@@ -12,7 +12,8 @@ Major Update
 •   Added crystal glass panes (variants above)
 •   Added diamond and iron bricks (can also be used for beacon blocks)
 •   Added chiseled sandstone bricks
-•   Added soul magma blocks
+•   Added quartz ore (can be found generating in stone layers of the world)
+•   Added soul magma (can be found generating in soul blocks in lower layers of the Nether)
 •   Added stairs, vertical stairs, and slabs for quartz bricks, obsidian bricks, and obsidian tiles
 
   Changes
