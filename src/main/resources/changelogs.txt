@@ -12,7 +12,7 @@ Major Update
 •   Added crystal glass panes (variants above)
 •   Added diamond and iron bricks (can also be used for beacon blocks)
 •   Added chiseled sandstone bricks
-•   Added stairs, vertical stairs, and slabs for obsidian bricks and obsidian tiles
+•   Added stairs, vertical stairs, and slabs for quartz bricks, obsidian bricks, and obsidian tiles
 
   Changes
 •   Removed cobbled stone recipes from smelting (these were an accident that I probably made at 3AM, I have no clue how this got created)

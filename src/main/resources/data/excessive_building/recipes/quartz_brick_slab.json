@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "mosaic_slab",
+  "pattern": [
+    "###"
+    ],
+  "key": {
+    "#": {
+      "item": "minecraft:quartz_bricks"
+    }
+  },
+  "result": {
+    "count": 6,
+    "item": "excessive_building:quartz_brick_slab"
+  }
+}

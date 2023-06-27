@@ -284,6 +284,9 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.DIAMOND_BRICK_STAIRS);
             event.accept(ModBlocks.DIAMOND_BRICK_VERTICAL_STAIRS);
             event.accept(ModBlocks.DIAMOND_BRICK_SLAB);
+            event.accept(ModBlocks.QUARTZ_BRICK_STAIRS);
+            event.accept(ModBlocks.QUARTZ_BRICK_VERTICAL_STAIRS);
+            event.accept(ModBlocks.QUARTZ_BRICK_SLAB);
             event.accept(ModBlocks.FIERY_CRYSTAL_BLOCK);
             event.accept(ModItems.FIERY_CRYSTAL);
             event.accept(ModBlocks.FIERY_GLASS);
@@ -617,6 +620,9 @@ public class ExcessiveBuilding {
                 event.accept(ModBlocks.DIAMOND_BRICK_STAIRS);
                 event.accept(ModBlocks.DIAMOND_BRICK_VERTICAL_STAIRS);
                 event.accept(ModBlocks.DIAMOND_BRICK_SLAB);
+                event.accept(ModBlocks.QUARTZ_BRICK_STAIRS);
+                event.accept(ModBlocks.QUARTZ_BRICK_VERTICAL_STAIRS);
+                event.accept(ModBlocks.QUARTZ_BRICK_SLAB);
                 event.accept(ModBlocks.FIERY_CRYSTAL_BLOCK);
                 event.accept(ModBlocks.ASPHALT);
                 event.accept(ModBlocks.OAK_VERTICAL_STAIRS);
