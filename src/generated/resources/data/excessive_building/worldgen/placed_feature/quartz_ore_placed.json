@@ -1,9 +1,9 @@
 {
-  "feature": "excessive_building:fiery_crystal_block_key",
+  "feature": "excessive_building:quartz_ore_key",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 10
+      "count": 8
     },
     {
       "type": "minecraft:in_square"
@@ -16,7 +16,7 @@
           "absolute": 48
         },
         "min_inclusive": {
-          "absolute": 12
+          "absolute": 0
         }
       }
     },

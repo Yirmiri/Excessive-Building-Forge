@@ -697,6 +697,7 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.WATER_POTION_SHELF);
             event.accept(ModBlocks.POTION_SHELF);
             event.accept(ModBlocks.ALCHEMIST_SHELF);
+            event.accept(ModBlocks.SOUL_MAGMA_BLOCK);
             event.accept(ModBlocks.OAK_CRAFTING_TABLE);
             event.accept(ModBlocks.SPRUCE_CRAFTING_TABLE);
             event.accept(ModBlocks.COLORED_SPRUCE_CRAFTING_TABLE);

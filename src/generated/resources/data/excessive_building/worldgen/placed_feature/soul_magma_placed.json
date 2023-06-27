@@ -1,5 +1,5 @@
 {
-  "feature": "excessive_building:fiery_crystal_block_key",
+  "feature": "excessive_building:soul_magma_key",
   "placement": [
     {
       "type": "minecraft:count",
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 48
+          "absolute": 40
         },
         "min_inclusive": {
-          "absolute": 12
+          "absolute": 0
         }
       }
     },
