@@ -334,6 +334,9 @@
   "block.excessive_building.quartz_brick_slab": "Quartz Brick Slab",
   "block.excessive_building.quartz_ore": "Quartz Ore",
   "block.excessive_building.soul_magma_block": "Soul Magma Block",
+  "block.excessive_building.cracked_cobblestone_bricks": "Cracked Cobblestone Bricks",
+  "block.excessive_building.cracked_cobbled_deepslate_bricks": "Cracked Cobbled Deepslate Bricks",
+  "block.excessive_building.cracked_blackstone_bricks": "Cracked Blackstone Bricks",
 
   "item.excessive_building.fiery_crystal": "Fiery Crystal",
 

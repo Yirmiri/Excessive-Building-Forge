@@ -21,7 +21,6 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, ExcessiveBuilding.MOD_ID);
 
-
             public static final RegistryObject<Block> OAK_MOSAIC = registerBlock("oak_mosaic",
                     () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
                             .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
@@ -1304,6 +1303,15 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> SOUL_MAGMA_BLOCK = registerBlock("soul_magma_block",
             () -> new MagmaBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CRACKED_COBBLESTONE_BRICKS = registerBlock("cracked_cobblestone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.COBBLESTONE_BRICKS.get()).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CRACKED_COBBLED_DEEPSLATE_BRICKS = registerBlock("cracked_cobbled_deepslate_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.COBBLED_DEEPSLATE_BRICKS.get()).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CRACKED_BLACKSTONE_BRICKS = registerBlock("cracked_blackstone_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.BLACKSTONE_BRICKS.get()).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {

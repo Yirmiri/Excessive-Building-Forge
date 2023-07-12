@@ -95,6 +95,7 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.MOSSY_COBBLESTONE_BRICK_VERTICAL_STAIRS);
             event.accept(ModBlocks.MOSSY_COBBLESTONE_BRICK_SLAB);
             event.accept(ModBlocks.MOSSY_COBBLESTONE_BRICK_WALL);
+            event.accept(ModBlocks.CRACKED_COBBLESTONE_BRICKS);
             event.accept(ModBlocks.SMOOTH_STONE_BRICKS);
             event.accept(ModBlocks.SMOOTH_STONE_BRICK_STAIRS);
             event.accept(ModBlocks.SMOOTH_STONE_BRICK_VERTICAL_STAIRS);
@@ -145,6 +146,7 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS);
             event.accept(ModBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_SLAB);
             event.accept(ModBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_WALL);
+            event.accept(ModBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
             event.accept(ModBlocks.MOSSY_DEEPSLATE_BRICKS);
             event.accept(ModBlocks.MOSSY_DEEPSLATE_BRICK_STAIRS);
             event.accept(ModBlocks.MOSSY_DEEPSLATE_BRICK_VERTICAL_STAIRS);
@@ -250,6 +252,7 @@ public class ExcessiveBuilding {
             event.accept(ModBlocks.WARPED_MOSSY_BLACKSTONE_BRICK_VERTICAL_STAIRS);
             event.accept(ModBlocks.WARPED_MOSSY_BLACKSTONE_BRICK_SLAB);
             event.accept(ModBlocks.WARPED_MOSSY_BLACKSTONE_BRICK_WALL);
+            event.accept(ModBlocks.CRACKED_BLACKSTONE_BRICKS);
             event.accept(ModBlocks.CRIMSON_MOSSY_POLISHED_BLACKSTONE_BRICKS);
             event.accept(ModBlocks.CRIMSON_MOSSY_POLISHED_BLACKSTONE_BRICK_STAIRS);
             event.accept(ModBlocks.CRIMSON_MOSSY_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS);
@@ -433,6 +436,7 @@ public class ExcessiveBuilding {
                 event.accept(ModBlocks.MOSSY_COBBLESTONE_BRICK_VERTICAL_STAIRS);
                 event.accept(ModBlocks.MOSSY_COBBLESTONE_BRICK_SLAB);
                 event.accept(ModBlocks.MOSSY_COBBLESTONE_BRICK_WALL);
+                event.accept(ModBlocks.CRACKED_COBBLESTONE_BRICKS);
                 event.accept(ModBlocks.SMOOTH_STONE_BRICKS);
                 event.accept(ModBlocks.SMOOTH_STONE_BRICK_STAIRS);
                 event.accept(ModBlocks.SMOOTH_STONE_BRICK_VERTICAL_STAIRS);
@@ -483,6 +487,7 @@ public class ExcessiveBuilding {
                 event.accept(ModBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_VERTICAL_STAIRS);
                 event.accept(ModBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_SLAB);
                 event.accept(ModBlocks.MOSSY_COBBLED_DEEPSLATE_BRICK_WALL);
+                event.accept(ModBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
                 event.accept(ModBlocks.MOSSY_DEEPSLATE_BRICKS);
                 event.accept(ModBlocks.MOSSY_DEEPSLATE_BRICK_STAIRS);
                 event.accept(ModBlocks.MOSSY_DEEPSLATE_BRICK_VERTICAL_STAIRS);
@@ -588,6 +593,7 @@ public class ExcessiveBuilding {
                 event.accept(ModBlocks.WARPED_MOSSY_BLACKSTONE_BRICK_VERTICAL_STAIRS);
                 event.accept(ModBlocks.WARPED_MOSSY_BLACKSTONE_BRICK_SLAB);
                 event.accept(ModBlocks.WARPED_MOSSY_BLACKSTONE_BRICK_WALL);
+                event.accept(ModBlocks.CRACKED_BLACKSTONE_BRICKS);
                 event.accept(ModBlocks.CRIMSON_MOSSY_POLISHED_BLACKSTONE_BRICKS);
                 event.accept(ModBlocks.CRIMSON_MOSSY_POLISHED_BLACKSTONE_BRICK_STAIRS);
                 event.accept(ModBlocks.CRIMSON_MOSSY_POLISHED_BLACKSTONE_BRICK_VERTICAL_STAIRS);
