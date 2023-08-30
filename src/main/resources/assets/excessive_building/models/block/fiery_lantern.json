@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "excessive_building:block/fiery_lantern",
+    "particle": "excessive_building:block/fiery_lantern"
+  },
+  "render_type": "solid"
+}

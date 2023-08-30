@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "excessive_building:block/snow_bricks",
+    "top": "excessive_building:block/snow_bricks",
+    "side": "excessive_building:block/snow_bricks"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "excessive_building:block/polished_sulfuric_brimstone_tiles",
+    "top": "excessive_building:block/polished_sulfuric_brimstone_tiles",
+    "side": "excessive_building:block/polished_sulfuric_brimstone_tiles"
+  },
+  "render_type": "solid"
+}

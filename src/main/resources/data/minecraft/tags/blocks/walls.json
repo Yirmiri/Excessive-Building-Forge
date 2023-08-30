@@ -30,6 +30,9 @@
     "excessive_building:smooth_stone_tile_wall",
     "excessive_building:nether_tile_wall",
     "excessive_building:red_nether_tile_wall",
-    "excessive_building:blue_nether_tile_wall"
+    "excessive_building:blue_nether_tile_wall",
+    "excessive_building:polished_sulfuric_brimstone_wall",
+    "excessive_building:polished_sulfuric_brimstone_brick_wall",
+    "excessive_building:polished_sulfuric_brimstone_tile_wall"
   ]
 }

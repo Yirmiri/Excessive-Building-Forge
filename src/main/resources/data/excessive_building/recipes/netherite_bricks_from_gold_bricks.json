@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "netherite_bricks",
+  "ingredients": [
+    {
+      "item": "minecraft:ancient_debris"
+    },
+    {
+      "item": "minecraft:ancient_debris"
+    },
+    {
+      "item": "minecraft:ancient_debris"
+    },
+    {
+      "item": "minecraft:ancient_debris"
+    },
+    {
+      "item": "excessive_building:golden_bricks"
+    },
+    {
+      "item": "excessive_building:golden_bricks"
+    },
+    {
+      "item": "excessive_building:golden_bricks"
+    },
+    {
+      "item": "excessive_building:golden_bricks"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "excessive_building:netherite_bricks"
+  }
+}

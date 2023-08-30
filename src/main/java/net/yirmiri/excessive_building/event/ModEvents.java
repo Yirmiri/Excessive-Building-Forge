@@ -155,7 +155,7 @@ public class ModEvents {
             int villagerLevel = 3;
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(ModItems.FIERY_CRYSTAL.get(), 12),
+                    new ItemStack(ModItems.FIERY_CRYSTAL_SHARDS.get(), 12),
                     stack, 16, 20, 0.05F));
 
         }

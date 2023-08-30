@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "excessive_building:block/dripstone_tiles",
+    "top": "excessive_building:block/dripstone_tiles",
+    "side": "excessive_building:block/dripstone_tiles"
+  },
+  "render_type": "solid"
+}

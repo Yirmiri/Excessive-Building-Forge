@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "minecraft:calcite"
+  },
+  "result": "excessive_building:calcite_bricks"
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "excessive_building:block/magenta_terracotta_tiles",
+    "top": "excessive_building:block/magenta_terracotta_tiles",
+    "side": "excessive_building:block/magenta_terracotta_tiles"
+  },
+  "render_type": "solid"
+}

@@ -8,6 +8,10 @@
     "excessive_building:obsidian_brick_stairs",
     "excessive_building:obsidian_tile_stairs",
     "excessive_building:obsidian_brick_slab",
-    "excessive_building:obsidian_tile_slab"
+    "excessive_building:obsidian_tile_slab",
+    "excessive_building:netherite_bricks",
+    "excessive_building:netherite_brick_stairs",
+    "excessive_building:netherite_brick_slab",
+    "excessive_building:cracked_obsidian_bricks"
   ]
 }

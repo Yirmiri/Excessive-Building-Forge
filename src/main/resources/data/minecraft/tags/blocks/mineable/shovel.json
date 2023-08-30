@@ -1,6 +1,9 @@
 {
   "replace": false,
   "values": [
-    "excessive_building:dirt_slab"
+    "excessive_building:dirt_slab",
+    "excessive_building:snow_bricks",
+    "excessive_building:snow_brick_stairs",
+    "excessive_building:snow_brick_slab"
   ]
 }

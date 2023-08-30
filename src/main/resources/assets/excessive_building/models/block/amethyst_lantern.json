@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "excessive_building:block/amethyst_lantern_top",
+    "side": "excessive_building:block/amethyst_lantern",
+	"bottom": "excessive_building:block/amethyst_lantern_top"
+  }
+}

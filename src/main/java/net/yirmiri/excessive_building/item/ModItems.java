@@ -11,7 +11,7 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ExcessiveBuilding.MOD_ID);
 
-    public static final RegistryObject<Item> FIERY_CRYSTAL = ITEMS.register("fiery_crystal",
+    public static final RegistryObject<Item> FIERY_CRYSTAL_SHARDS = ITEMS.register("fiery_crystal_shards",
             () -> new Item(new Item.Properties()));
 
         public static void register(IEventBus eventBus) {

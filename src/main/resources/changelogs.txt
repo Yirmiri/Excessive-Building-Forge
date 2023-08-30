@@ -4,9 +4,64 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release 1.4 (1.20.1 Forge)
+Major Update
+
+  Additions
+•   Added advancements (more are planned for the future)
+	•   Bricked Up - Obtain all cobbled bricks
+	•   Bad Financial Decisions - Obtain all resource bricks
+	•   Lumen Large - Obtain all lanterns
+•   Added terracotta tiles + 17 other colored variants
+•   Added quartz tiles
+•   Added calcite, tuff, and dripstone bricks & tiles + cracked calcite bricks
+•   Added cobbled andesite, diorite, and granite bricks + cracked variants
+•   Added cracked variants of obsidian bricks and smooth bricks
+•   Added fiery and amethyst lanterns (fiery lanterns have a unique light level of 11)
+•   Added polished sulfuric blocks, bricks, and tiles
+•   Added netherite bricks (can be used on beacons like other resource bricks)
+•   Added polished brimstone pillar (more pillar blocks are planned in the future)
+•   Added snow bricks & mud tiles
+•   Added stonecutter recipes for resource bricks
+
+  Changes
+•   Updated the textures of obsidian bricks, obsidian tiles, andesite/diorite/granite bricks/cobbled blocks, and fiery crystal blocks to better match the artistic level of newer blocks
+•   Changed the block id of "sulphuric_brimstone" to "sulfuric_brimstone" *NOTE: testing has been done but just in case its highly recommended to backup if you have builds that you care about made with this block*
+•   Changed the item id of "fiery_crystal" to "fiery_crystal_shards" *NOTE: testing has been done but just in case its highly recommended to backup if you have fiery crystals that you care about*
+•   Changed the display name of "Fiery Crystal" to "Fiery Crystal Shards"
+•   Removed secret blocks from the operator utilities tab
+•   Sulfuric brimstone now requires brimstone rather than netherrack for its recipe
+•   Crystal glass panes now craft into 16 rather than 6
+•   Fiery crystals can now be crafted using amethyst and blaze powder
+•   Reorganized the creative inventory slightly
+
+  Bug Fixes
+•   Fixed a bug that caused cobbled stones from turning into smooth stones when smelted (1.20.1 Forge)
+
+  Notes
+•   A Fabric port to 1.20.1 is now being worked on and should be done soon!
+•   After the port to Fabric I plan to add as many of the missing features from Forge to Fabric (the goal is 100% of features but I can't promise)
+•   After the parity update I plan to update both Forge & Fabric with the same features at the same time :)
+•   A 1.19.2 Forge port of this update will also be released as fast as possible, after this update though only 1.20.1+ will be supported
+•   I also just wanted to say thank you so much for 10,000+ total downloads, I never thought this mod would reach this point, I plan to start working on more mods too so stay tuned for those!
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release 1.3.0.2 (1.19.2 Fabric)
+Hotfix Update
+
+  Changes
+•   Updated the textures of obsidian bricks, obsidian tiles, andesite/diorite/granite bricks/cobbled blocks, to better match the artistic level of newer blocks
+
+  Bug Fixes
+•   Fixed a bug that caused villagers to lose their jobs (1.19.2 Fabric)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release 1.3.0.1 (1.20.1, 1.19.2, Forge) (1.19.2 Fabric)
 Minor Update
 
+  Additions
 •   Added cracked cobbled bricks
 
   Changes

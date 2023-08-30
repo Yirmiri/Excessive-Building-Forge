@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "excessive_building:block/quartz_tiles",
+    "top": "excessive_building:block/quartz_tiles",
+    "side": "excessive_building:block/quartz_tiles"
+  },
+  "render_type": "solid"
+}

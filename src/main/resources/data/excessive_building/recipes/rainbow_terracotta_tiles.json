@@ -1,0 +1,37 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "excessive_building:red_terracotta_tiles"
+        },
+        {
+            "item": "excessive_building:orange_terracotta_tiles"
+        },
+        {
+            "item": "excessive_building:yellow_terracotta_tiles"
+        },
+        {
+            "item": "excessive_building:green_terracotta_tiles"
+        },
+        {
+            "item": "excessive_building:lime_terracotta_tiles"
+        },
+        {
+            "item": "excessive_building:light_blue_terracotta_tiles"
+        },
+        {
+            "item": "excessive_building:blue_terracotta_tiles"
+        },
+        {
+            "item": "excessive_building:purple_terracotta_tiles"
+        },
+        {
+            "item": "excessive_building:pink_terracotta_tiles"
+        }
+    ],
+    "result": {
+        "item": "excessive_building:rainbow_terracotta_tiles",
+        "count": 9
+    },
+    "group": "terracotta_tiles"
+}

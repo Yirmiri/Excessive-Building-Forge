@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "netherite_bricks",
+  "pattern": [
+    " ##",
+    " ##"
+    ],
+  "key": {
+    "#": {
+      "item": "minecraft:netherite_block"
+    }
+  },
+  "result": {
+    "count": 16,
+    "item": "excessive_building:netherite_bricks"
+  }
+}

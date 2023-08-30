@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "excessive_building:block/red_terracotta_tiles",
+    "top": "excessive_building:block/red_terracotta_tiles",
+    "side": "excessive_building:block/red_terracotta_tiles"
+  },
+  "render_type": "solid"
+}

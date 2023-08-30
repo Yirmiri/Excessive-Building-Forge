@@ -1,0 +1,53 @@
+{
+  "display": {
+    "icon": {
+      "item": "excessive_building:amethyst_lantern"
+    },
+    "title": {
+      "translate": "advancements.adventure.lanterns.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.lanterns.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "lanterns": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:sea_lantern"
+            ]
+          },
+          {
+            "items": [
+              "excessive_building:amethyst_lantern"
+            ]
+          },
+          {
+            "items": [
+              "excessive_building:fiery_lantern"
+            ]
+          },
+          {
+            "items": [
+              "excessive_building:brimstone_lantern"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lanterns"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
