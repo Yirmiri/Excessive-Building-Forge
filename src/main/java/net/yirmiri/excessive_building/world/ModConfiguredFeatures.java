@@ -13,7 +13,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguratio
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
-import net.yirmiri.excessive_building.block.ModBlocks;
+import net.yirmiri.excessive_building.block.EBBlocks;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 import java.util.List;
@@ -30,19 +30,19 @@ public class ModConfiguredFeatures {
         RuleTest basaltReplaceables = new BlockMatchTest(Blocks.BASALT);
         RuleTest soulReplaceables = new TagMatchTest(BlockTags.SOUL_FIRE_BASE_BLOCKS);
 
-        List<OreConfiguration.TargetBlockState> overworldQuartzOres = List.of(OreConfiguration.target(stoneReplaceables, ModBlocks.QUARTZ_ORE.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> overworldQuartzOres = List.of(OreConfiguration.target(stoneReplaceables, EBBlocks.QUARTZ_ORE.get().defaultBlockState()));
 
         register(context, QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
-                ModBlocks.QUARTZ_ORE.get().defaultBlockState(), 8));
+                EBBlocks.QUARTZ_ORE.get().defaultBlockState(), 8));
 
         register(context, FIERY_CRYSTAL_BLOCK_KEY, Feature.ORE, new OreConfiguration(basaltReplaceables,
-                ModBlocks.FIERY_CRYSTAL_BLOCK.get().defaultBlockState(), 10));
+                EBBlocks.FIERY_CRYSTAL_BLOCK.get().defaultBlockState(), 10));
 
         register(context, BRIMSTONE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
-                ModBlocks.BRIMSTONE.get().defaultBlockState(), 64));
+                EBBlocks.BRIMSTONE.get().defaultBlockState(), 64));
 
         register(context, SOUL_MAGMA_KEY, Feature.ORE, new OreConfiguration(soulReplaceables,
-                ModBlocks.SOUL_MAGMA_BLOCK.get().defaultBlockState(), 16));
+                EBBlocks.SOUL_MAGMA_BLOCK.get().defaultBlockState(), 16));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

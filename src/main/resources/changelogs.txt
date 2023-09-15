@@ -4,7 +4,50 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release 1.4 (1.20.1 Forge)
+Version Release 1.4.2 (1.20.1, 1.18.2 Forge)
+Small Update
+
+  Additions
+•   Added wall variants to blocks that were forgotten about in 1.4.0 (expect vertical stairs aswell, I just didn't have time)
+•   Added wood wall blocks + stripped variants
+•   Added 1 new advancement
+•   The mod now has Ukrainian translations thanks to unroman :)
+
+  Changes
+•   Changed partygoer description
+•   Changed rainbow terracotta tiles texture
+•   Amethyst and fiery crystal lanterns now make chiming sounds
+
+  Compatibility
+•   Added recipe compatibility with "Corail Woodcutter" for mosaic & chiseled planks and empty shelves (1.20.1, 1.18.2 Forge)
+
+  Bug Fixes
+•   Fixed a small leftover causing the partygoer and lumen large achievements to have the same criteria... not a big bug really (1.20.1 Forge)
+•   Fixed a bug causing some blocks not being craftable (1.18.2, 1.20.1 Forge)
+•   Fixed a bug causing some natural blocks not generating (1.18.2 Forge)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release 1.4.1 (1.20.1 Forge)
+Hotfix Update
+
+  Additions
+•   Added advancements
+	•   Partygoer - Make the correct party escort submission postion block...
+
+  Bug Fixes
+•   Fixed various bugs caused by item id renames (1.20.1 Forge)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release 1.4.0 (1.18.2 Forge)
+Major Update
+
+•   Read previous changelogs for a full list of features (90%+ of features have been ported over)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release 1.4.0 (1.20.1 Forge)
 Major Update
 
   Additions
@@ -30,7 +73,8 @@ Major Update
 •   Changed the item id of "fiery_crystal" to "fiery_crystal_shards" *NOTE: testing has been done but just in case its highly recommended to backup if you have fiery crystals that you care about*
 •   Changed the display name of "Fiery Crystal" to "Fiery Crystal Shards"
 •   Removed secret blocks from the operator utilities tab
-•   Sulfuric brimstone now requires brimstone rather than netherrack for its recipe
+•   Brimstone window now requires polished brimstone rather than nether brick for it's recipe
+•   Sulfuric brimstone now requires brimstone rather than netherrack for it's recipe
 •   Crystal glass panes now craft into 16 rather than 6
 •   Fiery crystals can now be crafted using amethyst and blaze powder
 •   Reorganized the creative inventory slightly

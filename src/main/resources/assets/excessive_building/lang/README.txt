@@ -1,1 +1,0 @@
-Note that I no longer support other languages outside of en_us, you are free to help create translations for the mod and you will be given credit if you'd like however <3

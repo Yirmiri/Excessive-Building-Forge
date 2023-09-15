@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:soul_sandstone"
+      "item": "excessive_building:soul_sandstone"
     },
     "@": {
       "item": "minecraft:magma_cream"

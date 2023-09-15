@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "@": {
-      "item": "minecraft:nether_brick"
+      "item": "excessive_building:polished_brimstone"
     },
     "#": {
       "item": "excessive_building:fiery_crystal_shards"

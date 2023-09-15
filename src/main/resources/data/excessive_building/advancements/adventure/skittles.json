@@ -1,0 +1,53 @@
+{
+  "display": {
+    "icon": {
+      "item": "excessive_building:amethyst_lantern"
+    },
+    "title": {
+      "translate": "advancements.adventure.skittles.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.skittles.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "skittles": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "excessive_building:rainbow_stained_glass"
+            ]
+          },
+          {
+            "items": [
+              "excessive_building:rainbow_stained_glass_pane"
+            ]
+          },
+          {
+            "items": [
+              "excessive_building:rainbow_wool"
+            ]
+          },
+          {
+            "items": [
+              "excessive_building:rainbow_carpet"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "skittles"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

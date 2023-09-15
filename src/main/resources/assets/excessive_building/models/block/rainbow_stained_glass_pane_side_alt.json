@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_glass_pane_side_alt",
+  "textures": {
+    "edge": "excessive_building:block/rainbow_stained_glass_pane_top",
+    "pane": "excessive_building:block/rainbow_stained_glass"
+  },
+  "render_type": "translucent"
+}

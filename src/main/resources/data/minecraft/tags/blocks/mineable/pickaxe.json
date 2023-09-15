@@ -348,6 +348,15 @@
     "excessive_building:polished_sulfuric_brimstone_wall",
     "excessive_building:polished_sulfuric_brimstone_brick_wall",
     "excessive_building:polished_sulfuric_brimstone_tile_wall",
-    "excessive_building:polished_brimstone_pillar"
+    "excessive_building:polished_brimstone_pillar",
+    "excessive_building:calcite_brick_wall",
+    "excessive_building:calcite_tile_wall",
+    "excessive_building:tuff_brick_wall",
+    "excessive_building:tuff_tile_wall",
+    "excessive_building:dripstone_brick_wall",
+    "excessive_building:dripstone_tile_wall",
+    "excessive_building:cobbled_granite_brick_wall",
+    "excessive_building:cobbled_andesite_brick_wall",
+    "excessive_building:cobbled_diorite_brick_wall"
   ]
 }

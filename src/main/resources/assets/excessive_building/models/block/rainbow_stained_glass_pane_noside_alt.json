@@ -1,0 +1,7 @@
+{
+  "parent": "block/template_glass_pane_noside_alt",
+  "textures": {
+    "pane": "excessive_building:block/rainbow_stained_glass"
+  },
+  "render_type": "translucent"
+}
