@@ -6,19 +6,19 @@ import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.CraftingMenu;
 import net.minecraft.world.level.block.Block;
 
-public class ModCraftingMenu
+public class EBCraftingMenu
         extends CraftingMenu
 {
     private final ContainerLevelAccess access;
 
     private final Block block;
 
-    public ModCraftingMenu(int id, Inventory playerInventoryIn, Block blockIn)
+    public EBCraftingMenu(int id, Inventory playerInventoryIn, Block blockIn)
     {
         this(id, playerInventoryIn, ContainerLevelAccess.NULL, blockIn);
     }
 
-    public ModCraftingMenu(int aSuper, Inventory inv, ContainerLevelAccess containerLevelAccess, Block blockIn)
+    public EBCraftingMenu(int aSuper, Inventory inv, ContainerLevelAccess containerLevelAccess, Block blockIn)
     {
 
         super(aSuper, inv, containerLevelAccess);

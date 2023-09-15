@@ -11,10 +11,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.block.variants.ModCraftingTableBlock;
+import net.yirmiri.excessive_building.block.variants.EBCraftingTableBlock;
 import net.yirmiri.excessive_building.block.variants.SpeedBlock;
 import net.yirmiri.excessive_building.block.variants.VerticalStairBlock;
-import net.yirmiri.excessive_building.item.ModItems;
+import net.yirmiri.excessive_building.item.EBItems;
 
 import java.util.function.Supplier;
 
@@ -735,47 +735,47 @@ public class EBBlocks {
                     .strength(3f).explosionResistance(3f).sound(SoundType.NETHER_BRICKS).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> OAK_CRAFTING_TABLE = registerBlock("oak_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> BIRCH_CRAFTING_TABLE = registerBlock("birch_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> SPRUCE_CRAFTING_TABLE = registerBlock("spruce_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> JUNGLE_CRAFTING_TABLE = registerBlock("jungle_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> ACACIA_CRAFTING_TABLE = registerBlock("acacia_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> DARK_OAK_CRAFTING_TABLE = registerBlock("dark_oak_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> MANGROVE_CRAFTING_TABLE = registerBlock("mangrove_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> CHERRY_CRAFTING_TABLE = registerBlock("cherry_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.CHERRY_WOOD)));
 
     public static final RegistryObject<Block> BAMBOO_CRAFTING_TABLE = registerBlock("bamboo_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.BAMBOO_WOOD)));
 
     public static final RegistryObject<Block> CRIMSON_CRAFTING_TABLE = registerBlock("crimson_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.NETHER_WOOD)));
 
     public static final RegistryObject<Block> WARPED_CRAFTING_TABLE = registerBlock("warped_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.NETHER_WOOD)));
 
     public static final RegistryObject<Block> SMOOTH_STONE_TILES = registerBlock("smooth_stone_tiles",
@@ -1171,39 +1171,39 @@ public class EBBlocks {
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.NETHER_TILES.get())));
 
     public static final RegistryObject<Block> COLORED_BIRCH_CRAFTING_TABLE = registerBlock("colored_birch_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> COLORED_SPRUCE_CRAFTING_TABLE = registerBlock("colored_spruce_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> COLORED_JUNGLE_CRAFTING_TABLE = registerBlock("colored_jungle_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> COLORED_ACACIA_CRAFTING_TABLE = registerBlock("colored_acacia_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> COLORED_DARK_OAK_CRAFTING_TABLE = registerBlock("colored_dark_oak_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> COLORED_MANGROVE_CRAFTING_TABLE = registerBlock("colored_mangrove_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> COLORED_CHERRY_CRAFTING_TABLE = registerBlock("colored_cherry_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.CHERRY_WOOD)));
 
     public static final RegistryObject<Block> COLORED_CRIMSON_CRAFTING_TABLE = registerBlock("colored_crimson_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.NETHER_WOOD)));
 
     public static final RegistryObject<Block> COLORED_WARPED_CRAFTING_TABLE = registerBlock("colored_warped_crafting_table",
-            () -> new ModCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
+            () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.NETHER_WOOD)));
 
     public static final RegistryObject<Block> FIERY_GLASS = registerBlock("fiery_glass",
@@ -1777,7 +1777,7 @@ public class EBBlocks {
             }
 
             private static <B extends Block> void registryBlockItem(String name, RegistryObject<B> block) {
-                ModItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+                EBItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
             }
 
             public static void register(IEventBus eventBus) {

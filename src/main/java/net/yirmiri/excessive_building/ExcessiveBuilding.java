@@ -16,8 +16,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.yirmiri.excessive_building.block.EBBlocks;
-import net.yirmiri.excessive_building.container.ModCreativeModeTab;
-import net.yirmiri.excessive_building.item.ModItems;
+import net.yirmiri.excessive_building.creative.EBItemGroups;
+import net.yirmiri.excessive_building.item.EBItems;
 
 @Mod(ExcessiveBuilding.MOD_ID)
 public class ExcessiveBuilding {
@@ -27,16 +27,47 @@ public class ExcessiveBuilding {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         EBBlocks.register(modEventBus);
-        ModItems.register(modEventBus);
-        ModCreativeModeTab.register(modEventBus);
+        EBItems.register(modEventBus);
+        EBItemGroups.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         MinecraftForge.EVENT_BUS.register(this);
 
     }
 
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    public static class ClientModEvents {
+        @SubscribeEvent
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            ItemBlockRenderTypes.setRenderLayer(EBBlocks.FIERY_GLASS.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(EBBlocks.AMETHYST_GLASS.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(EBBlocks.PRISMARINE_GLASS.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(EBBlocks.FIERY_GLASS_PANE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(EBBlocks.AMETHYST_GLASS_PANE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(EBBlocks.PRISMARINE_GLASS_PANE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(EBBlocks.RAINBOW_STAINED_GLASS.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(EBBlocks.RAINBOW_STAINED_GLASS_PANE.get(), RenderType.translucent());
+        }
+
+        private void setup(final FMLCommonSetupEvent event) {
+            event.enqueueWork(() -> {
+                AxeItem.STRIPPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPPABLES)
+                        .put(EBBlocks.OAK_WOOD_WALL.get(), EBBlocks.STRIPPED_OAK_WOOD_WALL.get())
+                        .put(EBBlocks.SPRUCE_WOOD_WALL.get(), EBBlocks.STRIPPED_SPRUCE_WOOD_WALL.get())
+                        .put(EBBlocks.BIRCH_WOOD_WALL.get(), EBBlocks.STRIPPED_BIRCH_WOOD_WALL.get())
+                        .put(EBBlocks.JUNGLE_WOOD_WALL.get(), EBBlocks.STRIPPED_JUNGLE_WOOD_WALL.get())
+                        .put(EBBlocks.ACACIA_WOOD_WALL.get(), EBBlocks.STRIPPED_ACACIA_WOOD_WALL.get())
+                        .put(EBBlocks.DARK_OAK_WOOD_WALL.get(), EBBlocks.STRIPPED_DARK_OAK_WOOD_WALL.get())
+                        .put(EBBlocks.CHERRY_WOOD_WALL.get(), EBBlocks.STRIPPED_CHERRY_WOOD_WALL.get())
+                        .put(EBBlocks.MANGROVE_WOOD_WALL.get(), EBBlocks.STRIPPED_MANGROVE_WOOD_WALL.get())
+                        .put(EBBlocks.CRIMSON_HYPHAE_WALL.get(), EBBlocks.STRIPPED_CRIMSON_HYPHAE_WALL.get())
+                        .put(EBBlocks.WARPED_HYPHAE_WALL.get(), EBBlocks.STRIPPED_WARPED_HYPHAE_WALL.get()).build();
+            });
+        }
+    }
+
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTab() == ModCreativeModeTab.EXCESSIVE_BUILDING.get()) {
+        if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get()) {
             event.accept(EBBlocks.CHISELED_OAK);
             event.accept(EBBlocks.OAK_MOSAIC);
             event.accept(EBBlocks.OAK_MOSAIC_STAIRS);
@@ -419,7 +450,7 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.FIERY_CRYSTAL_BLOCK);
             event.accept(EBBlocks.FIERY_LANTERN);
             event.accept(EBBlocks.AMETHYST_LANTERN);
-            event.accept(ModItems.FIERY_CRYSTAL_SHARDS);
+            event.accept(EBItems.FIERY_CRYSTAL_SHARDS);
             event.accept(EBBlocks.FIERY_GLASS);
             event.accept(EBBlocks.PRISMARINE_GLASS);
             event.accept(EBBlocks.AMETHYST_GLASS);
@@ -1016,41 +1047,7 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.CONSTRUCTION_TABLE);
         }
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.FIERY_CRYSTAL_SHARDS);
-        }
-    }
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-
-            ItemBlockRenderTypes.setRenderLayer(EBBlocks.FIERY_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(EBBlocks.AMETHYST_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(EBBlocks.PRISMARINE_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(EBBlocks.FIERY_GLASS_PANE.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(EBBlocks.AMETHYST_GLASS_PANE.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(EBBlocks.PRISMARINE_GLASS_PANE.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(EBBlocks.RAINBOW_STAINED_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(EBBlocks.RAINBOW_STAINED_GLASS_PANE.get(), RenderType.translucent());
-
-        }
-
-        private void setup(final FMLCommonSetupEvent event) {
-            event.enqueueWork(() -> {
-                AxeItem.STRIPPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPPABLES)
-                        .put(EBBlocks.OAK_WOOD_WALL.get(), EBBlocks.STRIPPED_OAK_WOOD_WALL.get())
-                        .put(EBBlocks.SPRUCE_WOOD_WALL.get(), EBBlocks.STRIPPED_SPRUCE_WOOD_WALL.get())
-                        .put(EBBlocks.BIRCH_WOOD_WALL.get(), EBBlocks.STRIPPED_BIRCH_WOOD_WALL.get())
-                        .put(EBBlocks.JUNGLE_WOOD_WALL.get(), EBBlocks.STRIPPED_JUNGLE_WOOD_WALL.get())
-                        .put(EBBlocks.ACACIA_WOOD_WALL.get(), EBBlocks.STRIPPED_ACACIA_WOOD_WALL.get())
-                        .put(EBBlocks.DARK_OAK_WOOD_WALL.get(), EBBlocks.STRIPPED_DARK_OAK_WOOD_WALL.get())
-                        .put(EBBlocks.CHERRY_WOOD_WALL.get(), EBBlocks.STRIPPED_CHERRY_WOOD_WALL.get())
-                        .put(EBBlocks.MANGROVE_WOOD_WALL.get(), EBBlocks.STRIPPED_MANGROVE_WOOD_WALL.get())
-                        .put(EBBlocks.CRIMSON_HYPHAE_WALL.get(), EBBlocks.STRIPPED_CRIMSON_HYPHAE_WALL.get())
-                        .put(EBBlocks.WARPED_HYPHAE_WALL.get(), EBBlocks.STRIPPED_WARPED_HYPHAE_WALL.get()).build();
-            });
+            event.accept(EBItems.FIERY_CRYSTAL_SHARDS);
         }
     }
 }

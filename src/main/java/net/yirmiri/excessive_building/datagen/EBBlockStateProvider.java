@@ -7,8 +7,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
-public class ModBlockStateProvider extends BlockStateProvider {
-    public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+public class EBBlockStateProvider extends BlockStateProvider {
+    public EBBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
         super(output, ExcessiveBuilding.MOD_ID, exFileHelper);
     }
 

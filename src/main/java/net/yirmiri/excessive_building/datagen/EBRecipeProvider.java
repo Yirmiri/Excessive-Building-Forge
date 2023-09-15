@@ -7,8 +7,8 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
 
-public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    public ModRecipeProvider(PackOutput output) {
+public class EBRecipeProvider extends RecipeProvider implements IConditionBuilder {
+    public EBRecipeProvider(PackOutput output) {
         super(output);
     }
 

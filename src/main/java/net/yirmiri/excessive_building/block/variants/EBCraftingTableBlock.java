@@ -13,12 +13,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.CraftingTableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.yirmiri.excessive_building.container.ModCraftingMenu;
+import net.yirmiri.excessive_building.container.EBCraftingMenu;
 
-public class ModCraftingTableBlock extends CraftingTableBlock {
+public class EBCraftingTableBlock extends CraftingTableBlock {
 
     public static final Component TITLE = Component.translatable("container.crafting");
-    public ModCraftingTableBlock(Properties properties) {
+    public EBCraftingTableBlock(Properties properties) {
         super(properties);
     }
 
@@ -40,6 +40,6 @@ public class ModCraftingTableBlock extends CraftingTableBlock {
     public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
         return new SimpleMenuProvider((id, inventory, player) ->
         {
-            return new ModCraftingMenu(id, inventory, ContainerLevelAccess.create(level, pos), this); }, TITLE);
+            return new EBCraftingMenu(id, inventory, ContainerLevelAccess.create(level, pos), this); }, TITLE);
     }
 }

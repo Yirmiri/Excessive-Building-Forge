@@ -6,18 +6,18 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.world.ModConfiguredFeatures;
-import net.yirmiri.excessive_building.world.ModPlacedFeatures;
+import net.yirmiri.excessive_building.world.EBConfiguredFeatures;
+import net.yirmiri.excessive_building.world.EBPlacedFeatures;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
-public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
+public class EBWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
-            .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
-            .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+            .add(Registries.CONFIGURED_FEATURE, EBConfiguredFeatures::bootstrap)
+            .add(Registries.PLACED_FEATURE, EBPlacedFeatures::bootstrap);
 
-    public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
+    public EBWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(ExcessiveBuilding.MOD_ID));
     }
 }

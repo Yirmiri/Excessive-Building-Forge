@@ -18,7 +18,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 import java.util.List;
 
-public class ModConfiguredFeatures {
+public class EBConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ_ORE_KEY = registerKey("quartz_ore_key");
     public static final ResourceKey<ConfiguredFeature<?, ?>> FIERY_CRYSTAL_BLOCK_KEY = registerKey("fiery_crystal_block_key");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BRIMSTONE_KEY = registerKey("brimstone_key");

@@ -9,8 +9,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
-public class ModItemModelProvider extends ItemModelProvider {
-    public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+public class EBItemModelProvider extends ItemModelProvider {
+    public EBItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, ExcessiveBuilding.MOD_ID, existingFileHelper);
     }
 

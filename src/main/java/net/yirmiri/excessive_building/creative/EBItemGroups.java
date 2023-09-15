@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.container;
+package net.yirmiri.excessive_building.creative;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.EBBlocks;
 
-public class ModCreativeModeTab {
+public class EBItemGroups {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ExcessiveBuilding.MOD_ID);
 
         public static RegistryObject<CreativeModeTab> EXCESSIVE_BUILDING = CREATIVE_MODE_TABS.register("excessive_building_tab", () ->

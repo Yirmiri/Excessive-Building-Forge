@@ -17,6 +17,8 @@ Small Update
 •   Changed partygoer description
 •   Changed rainbow terracotta tiles texture
 •   Amethyst and fiery crystal lanterns now make chiming sounds
+•   Stone Masons no longer sell wooden blocks
+•   Changed and reorganized a bit of inner stuff so please report any issues :>
 
   Compatibility
 •   Added recipe compatibility with "Corail Woodcutter" for mosaic & chiseled planks and empty shelves (1.20.1, 1.18.2 Forge)

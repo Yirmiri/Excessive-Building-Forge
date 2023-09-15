@@ -12,7 +12,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 import java.util.concurrent.CompletableFuture;
 
 @Mod.EventBusSubscriber(modid = ExcessiveBuilding.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class DataGenerators {
+public class EBDataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
@@ -20,9 +20,9 @@ public class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(true, new ModRecipeProvider(packOutput));
-        generator.addProvider(true, new ModItemModelProvider(packOutput, existingFileHelper));
-        generator.addProvider(true, new ModBlockStateProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeServer(), new ModWorldGenProvider(packOutput, lookupProvider));
+        generator.addProvider(true, new EBRecipeProvider(packOutput));
+        generator.addProvider(true, new EBItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(true, new EBBlockStateProvider(packOutput, existingFileHelper));
+        generator.addProvider(event.includeServer(), new EBWorldGenProvider(packOutput, lookupProvider));
     }
 }
