@@ -1710,64 +1710,64 @@ public class EBBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.DRIPSTONE_TILES.get()).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> OAK_WOOD_WALL = registerBlock("oak_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
     public static final RegistryObject<Block> STRIPPED_OAK_WOOD_WALL = registerBlock("stripped_oak_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> SPRUCE_WOOD_WALL = registerBlock("spruce_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
     public static final RegistryObject<Block> STRIPPED_SPRUCE_WOOD_WALL = registerBlock("stripped_spruce_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> BIRCH_WOOD_WALL = registerBlock("birch_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
     public static final RegistryObject<Block> STRIPPED_BIRCH_WOOD_WALL = registerBlock("stripped_birch_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> JUNGLE_WOOD_WALL = registerBlock("jungle_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
     public static final RegistryObject<Block> STRIPPED_JUNGLE_WOOD_WALL = registerBlock("stripped_jungle_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> ACACIA_WOOD_WALL = registerBlock("acacia_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
     public static final RegistryObject<Block> STRIPPED_ACACIA_WOOD_WALL = registerBlock("stripped_acacia_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> DARK_OAK_WOOD_WALL = registerBlock("dark_oak_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
     public static final RegistryObject<Block> STRIPPED_DARK_OAK_WOOD_WALL = registerBlock("stripped_dark_oak_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> MANGROVE_WOOD_WALL = registerBlock("mangrove_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)));
 
     public static final RegistryObject<Block> STRIPPED_MANGROVE_WOOD_WALL = registerBlock("stripped_mangrove_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)));
 
     public static final RegistryObject<Block> CHERRY_WOOD_WALL = registerBlock("cherry_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_WOOD)));
 
     public static final RegistryObject<Block> STRIPPED_CHERRY_WOOD_WALL = registerBlock("stripped_cherry_wood_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CHERRY_WOOD).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CHERRY_WOOD)));
 
     public static final RegistryObject<Block> CRIMSON_HYPHAE_WALL = registerBlock("crimson_hyphae_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_HYPHAE)));
 
     public static final RegistryObject<Block> STRIPPED_CRIMSON_HYPHAE_WALL = registerBlock("stripped_crimson_hyphae_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_HYPHAE).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_CRIMSON_HYPHAE)));
 
     public static final RegistryObject<Block> WARPED_HYPHAE_WALL = registerBlock("warped_hyphae_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_HYPHAE)));
 
     public static final RegistryObject<Block> STRIPPED_WARPED_HYPHAE_WALL = registerBlock("stripped_warped_hyphae_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE).requiresCorrectToolForDrops()));
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_WARPED_HYPHAE)));
 
 
     private static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {

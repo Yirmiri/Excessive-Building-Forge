@@ -28,6 +28,9 @@ Small Update
 •   Fixed a bug causing some blocks not being craftable (1.18.2, 1.20.1 Forge)
 •   Fixed a bug causing some natural blocks not generating (1.18.2 Forge)
 
+  Notes
+•   Fabric is next ;)
+
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Version Release 1.4.1 (1.20.1 Forge)
