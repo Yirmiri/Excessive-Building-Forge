@@ -4,12 +4,14 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release 1.4.2 (1.20.1, 1.18.2 Forge)
-Small Update
+Version Release 1.4.2 (Forge: 1.18.2|1.20.1) (Fabric: 1.18.2|1.19.2|1.20.1)
+Medium Sized Update
+
+•   Recoded the entire Fabric port which now features 100% of all content from Forge and will now be updated at the same time for all the supported versions with the bonus of 1.18.2/1.19.2/1.20.1 releases!
 
   Additions
 •   Added wall variants to blocks that were forgotten about in 1.4.0 (expect vertical stairs aswell, I just didn't have time)
-•   Added wood wall blocks + stripped variants
+•   Added new secret blocks :P
 •   Added 1 new advancement
 •   The mod now has Ukrainian translations thanks to unroman :)
 
@@ -21,15 +23,11 @@ Small Update
 •   Changed and reorganized a bit of inner stuff so please report any issues :>
 
   Compatibility
-•   Added recipe compatibility with "Corail Woodcutter" for mosaic & chiseled planks and empty shelves (1.20.1, 1.18.2 Forge)
+•   Added recipe compatibility with "Corail Woodcutter" for mosaic & chiseled planks and empty shelves (Forge: 1.18.2|1.20.1) (Fabric: 1.18.2|1.19.2|1.20.1)
 
   Bug Fixes
-•   Fixed a small leftover causing the partygoer and lumen large achievements to have the same criteria... not a big bug really (1.20.1 Forge)
-•   Fixed a bug causing some blocks not being craftable (1.18.2, 1.20.1 Forge)
-•   Fixed a bug causing some natural blocks not generating (1.18.2 Forge)
-
-  Notes
-•   Fabric is next ;)
+•   Fixed a small leftover causing the partygoer and lumen large achievements to have the same criteria... not a big bug really (Forge: 1.18.2|1.20.1)
+•   Fixed a bug causing some blocks not being craftable (Forge: 1.18.2|1.20.1)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

@@ -52,16 +52,7 @@ public class ExcessiveBuilding {
         private void setup(final FMLCommonSetupEvent event) {
             event.enqueueWork(() -> {
                 AxeItem.STRIPPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPPABLES)
-                        .put(EBBlocks.OAK_WOOD_WALL.get(), EBBlocks.STRIPPED_OAK_WOOD_WALL.get())
-                        .put(EBBlocks.SPRUCE_WOOD_WALL.get(), EBBlocks.STRIPPED_SPRUCE_WOOD_WALL.get())
-                        .put(EBBlocks.BIRCH_WOOD_WALL.get(), EBBlocks.STRIPPED_BIRCH_WOOD_WALL.get())
-                        .put(EBBlocks.JUNGLE_WOOD_WALL.get(), EBBlocks.STRIPPED_JUNGLE_WOOD_WALL.get())
-                        .put(EBBlocks.ACACIA_WOOD_WALL.get(), EBBlocks.STRIPPED_ACACIA_WOOD_WALL.get())
-                        .put(EBBlocks.DARK_OAK_WOOD_WALL.get(), EBBlocks.STRIPPED_DARK_OAK_WOOD_WALL.get())
-                        .put(EBBlocks.CHERRY_WOOD_WALL.get(), EBBlocks.STRIPPED_CHERRY_WOOD_WALL.get())
-                        .put(EBBlocks.MANGROVE_WOOD_WALL.get(), EBBlocks.STRIPPED_MANGROVE_WOOD_WALL.get())
-                        .put(EBBlocks.CRIMSON_HYPHAE_WALL.get(), EBBlocks.STRIPPED_CRIMSON_HYPHAE_WALL.get())
-                        .put(EBBlocks.WARPED_HYPHAE_WALL.get(), EBBlocks.STRIPPED_WARPED_HYPHAE_WALL.get()).build();
+                .build();
             });
         }
     }
@@ -529,26 +520,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.PURPUR_VERTICAL_STAIRS);
             event.accept(EBBlocks.QUARTZ_VERTICAL_STAIRS);
             event.accept(EBBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS);
-            event.accept(EBBlocks.OAK_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_OAK_WOOD_WALL);
-            event.accept(EBBlocks.SPRUCE_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_SPRUCE_WOOD_WALL);
-            event.accept(EBBlocks.BIRCH_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_BIRCH_WOOD_WALL);
-            event.accept(EBBlocks.JUNGLE_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_JUNGLE_WOOD_WALL);
-            event.accept(EBBlocks.ACACIA_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_ACACIA_WOOD_WALL);
-            event.accept(EBBlocks.DARK_OAK_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_DARK_OAK_WOOD_WALL);
-            event.accept(EBBlocks.MANGROVE_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_MANGROVE_WOOD_WALL);
-            event.accept(EBBlocks.CHERRY_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_CHERRY_WOOD_WALL);
-            event.accept(EBBlocks.CRIMSON_HYPHAE_WALL);
-            event.accept(EBBlocks.STRIPPED_CRIMSON_HYPHAE_WALL);
-            event.accept(EBBlocks.WARPED_HYPHAE_WALL);
-            event.accept(EBBlocks.STRIPPED_WARPED_HYPHAE_WALL);
 
         }
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
@@ -924,26 +895,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.PURPUR_VERTICAL_STAIRS);
             event.accept(EBBlocks.QUARTZ_VERTICAL_STAIRS);
             event.accept(EBBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS);
-            event.accept(EBBlocks.OAK_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_OAK_WOOD_WALL);
-            event.accept(EBBlocks.SPRUCE_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_SPRUCE_WOOD_WALL);
-            event.accept(EBBlocks.BIRCH_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_BIRCH_WOOD_WALL);
-            event.accept(EBBlocks.JUNGLE_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_JUNGLE_WOOD_WALL);
-            event.accept(EBBlocks.ACACIA_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_ACACIA_WOOD_WALL);
-            event.accept(EBBlocks.DARK_OAK_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_DARK_OAK_WOOD_WALL);
-            event.accept(EBBlocks.MANGROVE_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_MANGROVE_WOOD_WALL);
-            event.accept(EBBlocks.CHERRY_WOOD_WALL);
-            event.accept(EBBlocks.STRIPPED_CHERRY_WOOD_WALL);
-            event.accept(EBBlocks.CRIMSON_HYPHAE_WALL);
-            event.accept(EBBlocks.STRIPPED_CRIMSON_HYPHAE_WALL);
-            event.accept(EBBlocks.WARPED_HYPHAE_WALL);
-            event.accept(EBBlocks.STRIPPED_WARPED_HYPHAE_WALL);
         }
         if (event.getTabKey() == CreativeModeTabs.COLORED_BLOCKS) {
             event.accept(EBBlocks.TERRACOTTA_TILES);

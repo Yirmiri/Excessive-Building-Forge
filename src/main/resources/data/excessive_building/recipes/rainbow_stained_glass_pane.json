@@ -1,0 +1,41 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#OY",
+        "LGR",
+        "BPZ"
+    ],
+    "key": {
+        "#": {
+            "item": "minecraft:red_stained_glass_pane"
+        },
+        "O": {
+            "item": "minecraft:orange_stained_glass_pane"
+        },
+        "Y": {
+            "item": "minecraft:yellow_stained_glass_pane"
+        },
+        "L": {
+            "item": "minecraft:lime_stained_glass_pane"
+        },
+        "G": {
+            "item": "minecraft:green_stained_glass_pane"
+        },
+        "R": {
+            "item": "minecraft:light_blue_stained_glass_pane"
+        },
+        "B": {
+            "item": "minecraft:blue_stained_glass_pane"
+        },
+        "P": {
+            "item": "minecraft:purple_stained_glass_pane"
+        },
+        "Z": {
+            "item": "minecraft:pink_stained_glass_pane"
+        }
+    },
+    "result": {
+        "item": "excessive_building:rainbow_stained_glass_pane",
+        "count": 9
+    }
+}

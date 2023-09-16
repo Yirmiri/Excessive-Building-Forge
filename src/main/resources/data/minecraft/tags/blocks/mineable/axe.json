@@ -89,26 +89,6 @@
     "excessive_building:colored_mangrove_crafting_table",
     "excessive_building:colored_cherry_crafting_table",
     "excessive_building:colored_crimson_crafting_table",
-    "excessive_building:colored_warped_crafting_table",
-    "excessive_building:oak_wood_wall",
-    "excessive_building:stripped_oak_wood_wall",
-    "excessive_building:spruce_wood_wall",
-    "excessive_building:stripped_spruce_wood_wall",
-    "excessive_building:birch_wood_wall",
-    "excessive_building:stripped_birch_wood_wall",
-    "excessive_building:jungle_wood_wall",
-    "excessive_building:stripped_jungle_wood_wall",
-    "excessive_building:acacia_wood_wall",
-    "excessive_building:stripped_acacia_wood_wall",
-    "excessive_building:dark_oak_wood_wall",
-    "excessive_building:stripped_dark_oak_wood_wall",
-    "excessive_building:mangrove_wood_wall",
-    "excessive_building:stripped_mangrove_wood_wall",
-    "excessive_building:cherry_wood_wall",
-    "excessive_building:stripped_cherry_wood_wall",
-    "excessive_building:crimson_hyphae_wall",
-    "excessive_building:stripped_crimson_hyphae_wall",
-    "excessive_building:warped_hyphae_wall",
-    "excessive_building:stripped_warped_hyphae_wall"
+    "excessive_building:colored_warped_crafting_table"
   ]
 }
