@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "excessive_building:block/smooth_basketweave_bricks",
+    "top": "excessive_building:block/smooth_basketweave_bricks",
+    "side": "excessive_building:block/smooth_basketweave_bricks"
+  },
+  "render_type": "solid"
+}

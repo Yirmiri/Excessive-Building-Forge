@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "excessive_building:block/blackstone_window",
+    "particle": "excessive_building:block/blackstone_window"
+  },
+  "render_type": "solid"
+}

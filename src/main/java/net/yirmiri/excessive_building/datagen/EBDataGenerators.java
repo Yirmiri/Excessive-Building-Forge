@@ -20,7 +20,6 @@ public class EBDataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(true, new EBRecipeProvider(packOutput));
         generator.addProvider(true, new EBItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(true, new EBBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeServer(), new EBWorldGenProvider(packOutput, lookupProvider));

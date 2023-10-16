@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "excessive_building:fiery_crystal_block",
     "excessive_building:lapis_lazuli_bricks",
     "excessive_building:lapis_lazuli_brick_stairs",
     "excessive_building:lapis_lazuli_brick_slab",
@@ -9,6 +8,31 @@
     "excessive_building:iron_bricks",
     "excessive_building:iron_brick_stairs",
     "excessive_building:iron_brick_slab",
-    "excessive_building:iron_brick_vertical_stairs"
+    "excessive_building:iron_brick_vertical_stairs",
+    "excessive_building:chiseled_copper",
+    "excessive_building:exposed_chiseled_copper",
+    "excessive_building:weathered_chiseled_copper",
+    "excessive_building:oxidized_chiseled_copper",
+    "excessive_building:waxed_chiseled_copper",
+    "excessive_building:waxed_exposed_chiseled_copper",
+    "excessive_building:waxed_weathered_chiseled_copper",
+    "excessive_building:waxed_oxidized_chiseled_copper",
+    "excessive_building:copper_grate",
+    "excessive_building:exposed_copper_grate",
+    "excessive_building:weathered_copper_grate",
+    "excessive_building:oxidized_copper_grate",
+    "excessive_building:waxed_copper_grate",
+    "excessive_building:waxed_exposed_copper_grate",
+    "excessive_building:waxed_weathered_copper_grate",
+    "excessive_building:waxed_oxidized_copper_grate",
+    "excessive_building:copper_bulb",
+    "excessive_building:exposed_copper_bulb",
+    "excessive_building:weathered_copper_bulb",
+    "excessive_building:oxidized_copper_bulb",
+    "excessive_building:waxed_copper_bulb",
+    "excessive_building:waxed_exposed_copper_bulb",
+    "excessive_building:waxed_weathered_copper_bulb",
+    "excessive_building:waxed_oxidized_copper_bulb",
+    "excessive_building:iron_grate"
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "excessive_building:block/polished_tuff",
+    "top": "excessive_building:block/polished_tuff",
+    "side": "excessive_building:block/polished_tuff"
+  },
+  "render_type": "solid"
+}

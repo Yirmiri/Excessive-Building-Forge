@@ -1,11 +1,15 @@
 package net.yirmiri.excessive_building.block;
 
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -24,87 +28,150 @@ public class EBBlocks {
 
             public static final RegistryObject<Block> OAK_MOSAIC = registerBlock("oak_mosaic",
                     () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                            .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                            .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                        @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                        @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                        @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
             public static final RegistryObject<Block> OAK_MOSAIC_STAIRS = registerBlock("oak_mosaic_stairs",
                     () -> new StairBlock(() -> EBBlocks.OAK_MOSAIC.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                            .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                            .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                        @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                        @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                        @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
             public static final RegistryObject<Block> OAK_MOSAIC_SLAB = registerBlock("oak_mosaic_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                            .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                            .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                        @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                        @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                        @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
             public static final RegistryObject<Block> SPRUCE_MOSAIC = registerBlock("spruce_mosaic",
                     () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                            .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                            .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                        @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                        @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                        @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
             public static final RegistryObject<Block> SPRUCE_MOSAIC_STAIRS = registerBlock("spruce_mosaic_stairs",
                     () -> new StairBlock(() -> EBBlocks.SPRUCE_MOSAIC.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                            .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                            .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                        @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                        @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                        @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
             public static final RegistryObject<Block> SPRUCE_MOSAIC_SLAB = registerBlock("spruce_mosaic_slab",
                     () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                            .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                            .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                        @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                        @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                        @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> BIRCH_MOSAIC = registerBlock("birch_mosaic",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> BIRCH_MOSAIC_STAIRS = registerBlock("birch_mosaic_stairs",
                 () -> new StairBlock(() -> EBBlocks.BIRCH_MOSAIC.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> BIRCH_MOSAIC_SLAB = registerBlock("birch_mosaic_slab",
                 () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> JUNGLE_MOSAIC = registerBlock("jungle_mosaic",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> JUNGLE_MOSAIC_STAIRS = registerBlock("jungle_mosaic_stairs",
                 () -> new StairBlock(() -> EBBlocks.JUNGLE_MOSAIC.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> JUNGLE_MOSAIC_SLAB = registerBlock("jungle_mosaic_slab",
                 () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> ACACIA_MOSAIC = registerBlock("acacia_mosaic",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> ACACIA_MOSAIC_STAIRS = registerBlock("acacia_mosaic_stairs",
                 () -> new StairBlock(() -> EBBlocks.ACACIA_MOSAIC.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> ACACIA_MOSAIC_SLAB = registerBlock("acacia_mosaic_slab",
                 () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> DARK_OAK_MOSAIC = registerBlock("dark_oak_mosaic",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> DARK_OAK_MOSAIC_STAIRS = registerBlock("dark_oak_mosaic_stairs",
                 () -> new StairBlock(() -> EBBlocks.DARK_OAK_MOSAIC.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> DARK_OAK_MOSAIC_SLAB = registerBlock("dark_oak_mosaic_slab",
                 () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> MANGROVE_MOSAIC = registerBlock("mangrove_mosaic",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> MANGROVE_MOSAIC_STAIRS = registerBlock("mangrove_mosaic_stairs",
                 () -> new StairBlock(() -> EBBlocks.MANGROVE_MOSAIC.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> MANGROVE_MOSAIC_SLAB = registerBlock("mangrove_mosaic_slab",
                 () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                        .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                    @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                    @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                    @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
         public static final RegistryObject<Block> CRIMSON_MOSAIC = registerBlock("crimson_mosaic",
                 () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)
@@ -180,23 +247,38 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> EMPTY_SHELF = registerBlock("empty_shelf",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 30; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }});
 
     public static final RegistryObject<Block> EMPTY_POTION_SHELF = registerBlock("empty_potion_shelf",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 30; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }});
 
     public static final RegistryObject<Block> WATER_POTION_SHELF = registerBlock("water_potion_shelf",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 30; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }});
 
     public static final RegistryObject<Block> POTION_SHELF = registerBlock("potion_shelf",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 30; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }});
 
     public static final RegistryObject<Block> ALCHEMIST_SHELF = registerBlock("alchemist_shelf",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 30; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }});
 
     public static final RegistryObject<Block> GOLDEN_BRICKS = registerBlock("golden_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)
@@ -244,15 +326,24 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> CHERRY_MOSAIC = registerBlock("cherry_mosaic",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.CHERRY_WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.CHERRY_WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHERRY_MOSAIC_STAIRS = registerBlock("cherry_mosaic_stairs",
             () -> new StairBlock(() -> EBBlocks.CHERRY_MOSAIC.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.CHERRY_WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.CHERRY_WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHERRY_MOSAIC_SLAB = registerBlock("cherry_mosaic_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.CHERRY_WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.CHERRY_WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICKS = registerBlock("mossy_deepslate_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_BRICKS)
@@ -458,7 +549,7 @@ public class EBBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP)
                     .strength(0.3f).explosionResistance(0.3f).sound(SoundType.GLASS).lightLevel(state -> 15)));
 
-    public static final RegistryObject<Block> FIERY_CRYSTAL_BLOCK = registerBlock("fiery_crystal_block",
+    public static final RegistryObject<Block> FIERY_BLOCK = registerBlock("fiery_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)
                     .strength(3f).explosionResistance(3f).sound(SoundType.AMETHYST).lightLevel(state -> 7).requiresCorrectToolForDrops()));
 
@@ -472,39 +563,66 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> CHISELED_OAK = registerBlock("chiseled_oak",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHISELED_SPRUCE = registerBlock("chiseled_spruce",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHISELED_BIRCH = registerBlock("chiseled_birch",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHISELED_JUNGLE = registerBlock("chiseled_jungle",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHISELED_ACACIA = registerBlock("chiseled_acacia",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHISELED_DARK_OAK = registerBlock("chiseled_dark_oak",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHISELED_MANGROVE = registerBlock("chiseled_mangrove",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHISELED_CHERRY = registerBlock("chiseled_cherry",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.CHERRY_WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.CHERRY_WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHISELED_BAMBOO = registerBlock("chiseled_bamboo",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.BAMBOO_WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.BAMBOO_WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHISELED_CRIMSON = registerBlock("chiseled_crimson",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)
@@ -796,43 +914,73 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> OAK_VERTICAL_STAIRS = registerBlock("oak_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> SPRUCE_VERTICAL_STAIRS = registerBlock("spruce_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> BIRCH_VERTICAL_STAIRS = registerBlock("birch_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> JUNGLE_VERTICAL_STAIRS = registerBlock("jungle_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> ACACIA_VERTICAL_STAIRS = registerBlock("acacia_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> DARK_OAK_VERTICAL_STAIRS = registerBlock("dark_oak_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> MANGROVE_VERTICAL_STAIRS = registerBlock("mangrove_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHERRY_VERTICAL_STAIRS = registerBlock("cherry_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.CHERRY_WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.CHERRY_WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> BAMBOO_VERTICAL_STAIRS = registerBlock("bamboo_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.BAMBOO_WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.BAMBOO_WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> BAMBOO_MOSAIC_VERTICAL_STAIRS = registerBlock("bamboo_mosaic_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_MOSAIC)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.BAMBOO_WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.BAMBOO_WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CRIMSON_VERTICAL_STAIRS = registerBlock("crimson_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)
@@ -976,35 +1124,59 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> OAK_MOSAIC_VERTICAL_STAIRS = registerBlock("oak_mosaic_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> SPRUCE_MOSAIC_VERTICAL_STAIRS = registerBlock("spruce_mosaic_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> BIRCH_MOSAIC_VERTICAL_STAIRS = registerBlock("birch_mosaic_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> JUNGLE_MOSAIC_VERTICAL_STAIRS = registerBlock("jungle_mosaic_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> ACACIA_MOSAIC_VERTICAL_STAIRS = registerBlock("acacia_mosaic_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> DARK_OAK_MOSAIC_VERTICAL_STAIRS = registerBlock("dark_oak_mosaic_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> MANGROVE_MOSAIC_VERTICAL_STAIRS = registerBlock("mangrove_mosaic_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CHERRY_MOSAIC_VERTICAL_STAIRS = registerBlock("cherry_mosaic_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.CHERRY_WOOD)));
+                    .strength(2f).explosionResistance(3f).sound(SoundType.CHERRY_WOOD).ignitedByLava()) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 5; }});
 
     public static final RegistryObject<Block> CRIMSON_MOSAIC_VERTICAL_STAIRS = registerBlock("crimson_mosaic_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)
@@ -1677,10 +1849,16 @@ public class EBBlocks {
             () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.RED_STAINED_GLASS).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RAINBOW_WOOL = registerBlock("rainbow_wool",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.RED_WOOL).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.RED_WOOL)) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 60; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 30; }});
 
     public static final RegistryObject<Block> RAINBOW_CARPET = registerBlock("rainbow_carpet",
-            () -> new WoolCarpetBlock(DyeColor.RED, BlockBehaviour.Properties.copy(Blocks.RED_CARPET).requiresCorrectToolForDrops()));
+            () -> new WoolCarpetBlock(DyeColor.RED, BlockBehaviour.Properties.copy(Blocks.RED_CARPET)) {
+                @Override public boolean isFlammable(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return true; }
+                @Override public int getFlammability(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 20; }
+                @Override public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) { return 60; }});
 
     public static final RegistryObject<Block> COBBLED_GRANITE_BRICK_WALL = registerBlock("cobbled_granite_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.COBBLED_GRANITE_BRICKS.get()).requiresCorrectToolForDrops()));
@@ -1708,6 +1886,192 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> DRIPSTONE_TILE_WALL = registerBlock("dripstone_tile_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.DRIPSTONE_TILES.get()).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CALCITE_BRICK_VERTICAL_STAIRS = registerBlock("calcite_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+
+    public static final RegistryObject<Block> CALCITE_TILE_VERTICAL_STAIRS = registerBlock("calcite_tile_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
+
+    public static final RegistryObject<Block> TUFF_BRICK_VERTICAL_STAIRS = registerBlock("tuff_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> TUFF_TILE_VERTICAL_STAIRS = registerBlock("tuff_tile_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> DRIPSTONE_BRICK_VERTICAL_STAIRS = registerBlock("dripstone_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
+
+    public static final RegistryObject<Block> DRIPSTONE_TILE_VERTICAL_STAIRS = registerBlock("dripstone_tile_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
+
+    public static final RegistryObject<Block> SNOW_BRICK_VERTICAL_STAIRS = registerBlock("snow_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.SNOW_BRICKS.get())));
+
+    public static final RegistryObject<Block> MUD_TILE_VERTICAL_STAIRS = registerBlock("mud_tile_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.MUD_BRICKS)));
+
+    public static final RegistryObject<Block> NETHERITE_BRICK_VERTICAL_STAIRS = registerBlock("netherite_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.NETHERITE_BLOCK)));
+
+    public static final RegistryObject<Block> QUARTZ_TILE_VERTICAL_STAIRS = registerBlock("quartz_tile_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.QUARTZ_TILES.get())));
+
+    public static final RegistryObject<Block> COBBLED_GRANITE_BRICK_VERTICAL_STAIRS = registerBlock("cobbled_granite_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.COBBLED_GRANITE_BRICKS.get())));
+
+    public static final RegistryObject<Block> COBBLED_DIORITE_BRICK_VERTICAL_STAIRS = registerBlock("cobbled_diorite_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.COBBLED_DIORITE_BRICKS.get())));
+
+    public static final RegistryObject<Block> COBBLED_ANDESITE_BRICK_VERTICAL_STAIRS = registerBlock("cobbled_andesite_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.COBBLED_ANDESITE_BRICKS.get())));
+
+    public static final RegistryObject<Block> FIERY_CLUSTER = registerBlock("fiery_cluster",
+            () -> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)));
+
+    // public static final RegistryObject<Block> LARGE_FIERY_BUD = registerBlock("large_fiery_bud",
+            // () -> new AmethystClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).requiresCorrectToolForDrops()));
+
+    // public static final RegistryObject<Block> MEDIUM_FIERY_BUD = registerBlock("medium_fiery_bud",
+            // () -> new AmethystClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD).requiresCorrectToolForDrops()));
+
+    // public static final RegistryObject<Block> SMALL_FIERY_BUD = registerBlock("small_fiery_bud",
+            // () -> new AmethystClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> KYANITE_CLUSTER = registerBlock("kyanite_cluster",
+            () -> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)));
+
+    public static final RegistryObject<Block> KYANITE_BLOCK = registerBlock("kyanite_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
+
+    public static final RegistryObject<Block> PRISMARINE_CRYSTAL_BLOCK = registerBlock("prismarine_crystal_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
+
+    public static final RegistryObject<Block> CHISELED_COPPER = registerBlock("chiseled_copper",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK)));
+
+    public static final RegistryObject<Block> EXPOSED_CHISELED_COPPER = registerBlock("exposed_chiseled_copper",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER)));
+
+    public static final RegistryObject<Block> WEATHERED_CHISELED_COPPER = registerBlock("weathered_chiseled_copper",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER)));
+
+    public static final RegistryObject<Block> OXIDIZED_CHISELED_COPPER = registerBlock("oxidized_chiseled_copper",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER)));
+
+    public static final RegistryObject<Block> WAXED_CHISELED_COPPER = registerBlock("waxed_chiseled_copper",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK)));
+
+    public static final RegistryObject<Block> WAXED_EXPOSED_CHISELED_COPPER = registerBlock("waxed_exposed_chiseled_copper",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_COPPER)));
+
+    public static final RegistryObject<Block> WAXED_WEATHERED_CHISELED_COPPER = registerBlock("waxed_weathered_chiseled_copper",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER)));
+
+    public static final RegistryObject<Block> WAXED_OXIDIZED_CHISELED_COPPER = registerBlock("waxed_oxidized_chiseled_copper",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER)));
+
+    public static final RegistryObject<Block> COPPER_BULB = registerBlock("copper_bulb",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).lightLevel(state -> 15)));
+
+    public static final RegistryObject<Block> EXPOSED_COPPER_BULB = registerBlock("exposed_copper_bulb",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER).lightLevel(state -> 11)));
+
+    public static final RegistryObject<Block> WEATHERED_COPPER_BULB = registerBlock("weathered_copper_bulb",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER).lightLevel(state -> 7)));
+
+    public static final RegistryObject<Block> OXIDIZED_COPPER_BULB = registerBlock("oxidized_copper_bulb",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER).lightLevel(state -> 3)));
+
+    public static final RegistryObject<Block> WAXED_COPPER_BULB = registerBlock("waxed_copper_bulb",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK).lightLevel(state -> 15)));
+
+    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_BULB = registerBlock("waxed_exposed_copper_bulb",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_COPPER).lightLevel(state -> 11)));
+
+    public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_BULB = registerBlock("waxed_weathered_copper_bulb",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER).lightLevel(state -> 7)));
+
+    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_BULB = registerBlock("waxed_oxidized_copper_bulb",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER).lightLevel(state -> 3)));
+
+    public static final RegistryObject<Block> COPPER_GRATE = registerBlock("copper_grate",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> EXPOSED_COPPER_GRATE = registerBlock("exposed_copper_grate",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER).noOcclusion()));
+
+    public static final RegistryObject<Block> WEATHERED_COPPER_GRATE = registerBlock("weathered_copper_grate",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER).noOcclusion()));
+
+    public static final RegistryObject<Block> OXIDIZED_COPPER_GRATE = registerBlock("oxidized_copper_grate",
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER).noOcclusion()));
+
+    public static final RegistryObject<Block> WAXED_COPPER_GRATE = registerBlock("waxed_copper_grate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK).noOcclusion()));
+
+    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_GRATE = registerBlock("waxed_exposed_copper_grate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_COPPER).noOcclusion()));
+
+    public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_GRATE = registerBlock("waxed_weathered_copper_grate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER).noOcclusion()));
+
+    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_GRATE = registerBlock("waxed_oxidized_copper_grate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER).noOcclusion()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_BRICKS = registerBlock("polished_tuff_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_BRICK_STAIRS = registerBlock("polished_tuff_brick_stairs",
+            () -> new StairBlock(EBBlocks.POLISHED_TUFF_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_BRICK_SLAB = registerBlock("polished_tuff_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_BRICK_WALL = registerBlock("polished_tuff_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_BRICK_VERTICAL_STAIRS = registerBlock("polished_tuff_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF = registerBlock("polished_tuff",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_STAIRS = registerBlock("polished_tuff_stairs",
+            () -> new StairBlock(EBBlocks.POLISHED_TUFF_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_SLAB = registerBlock("polished_tuff_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_WALL = registerBlock("polished_tuff_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_VERTICAL_STAIRS = registerBlock("polished_tuff_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CHISELED_POLISHED_TUFF_BRICKS = registerBlock("chiseled_polished_tuff_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_TILES = registerBlock("polished_tuff_tiles",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_TILE_STAIRS = registerBlock("polished_tuff_tile_stairs",
+            () -> new StairBlock(EBBlocks.POLISHED_TUFF_TILES.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_TILE_SLAB = registerBlock("polished_tuff_tile_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_TILE_WALL = registerBlock("polished_tuff_tile_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_TILE_VERTICAL_STAIRS = registerBlock("polished_tuff_tile_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> GOLD_GRATE = registerBlock("gold_grate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> IRON_GRATE = registerBlock("iron_grate",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
 
 
     private static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {

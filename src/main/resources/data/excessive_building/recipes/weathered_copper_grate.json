@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #",
+    "###"
+    ],
+  "key": {
+    "#": {
+      "item": "minecraft:weathered_copper"
+    }
+  },
+  "result": {
+    "count": 8,
+    "item": "excessive_building:weathered_copper_grate"
+  }
+}

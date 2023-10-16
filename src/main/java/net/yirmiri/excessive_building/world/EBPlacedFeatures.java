@@ -18,7 +18,7 @@ import java.util.List;
 public class EBPlacedFeatures {
     public static final ResourceKey<PlacedFeature> QUARTZ_ORE_PLACED_KEY = createKey("quartz_ore_placed");
     public static final ResourceKey<PlacedFeature> BRIMSTONE_PLACED_KEY = createKey("brimstone_placed");
-    public static final ResourceKey<PlacedFeature> FIERY_CRYSTAL_BLOCK_PLACED_KEY = createKey("fiery_crystal_block_placed");
+    public static final ResourceKey<PlacedFeature> FIERY_BLOCK_PLACED_KEY = createKey("fiery_block_placed");
     public static final ResourceKey<PlacedFeature> SOUL_MAGMA_PLACED_KEY = createKey("soul_magma_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
@@ -30,7 +30,7 @@ public class EBPlacedFeatures {
         register(context, BRIMSTONE_PLACED_KEY, configuredFeatures.getOrThrow(EBConfiguredFeatures.BRIMSTONE_KEY),
                 EBOrePlacement.commonOrePlacement(8, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
 
-        register(context, FIERY_CRYSTAL_BLOCK_PLACED_KEY, configuredFeatures.getOrThrow(EBConfiguredFeatures.FIERY_CRYSTAL_BLOCK_KEY),
+        register(context, FIERY_BLOCK_PLACED_KEY, configuredFeatures.getOrThrow(EBConfiguredFeatures.FIERY_BLOCK_KEY),
                 EBOrePlacement.commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.absolute(12), VerticalAnchor.absolute(48))));
 
         register(context, SOUL_MAGMA_PLACED_KEY, configuredFeatures.getOrThrow(EBConfiguredFeatures.SOUL_MAGMA_KEY),

@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "excessive_building:block/sandstone_tiles",
+    "top": "excessive_building:block/sandstone_tiles",
+    "side": "excessive_building:block/sandstone_tiles"
+  },
+  "render_type": "solid"
+}

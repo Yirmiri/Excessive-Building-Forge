@@ -11,7 +11,10 @@ public class EBItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ExcessiveBuilding.MOD_ID);
 
-    public static final RegistryObject<Item> FIERY_CRYSTAL_SHARDS = ITEMS.register("fiery_crystal_shards",
+    public static final RegistryObject<Item> FIERY_SHARDS = ITEMS.register("fiery_shards",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> KYANITE_SHARDS = ITEMS.register("kyanite_shards",
             () -> new Item(new Item.Properties()));
 
         public static void register(IEventBus eventBus) {

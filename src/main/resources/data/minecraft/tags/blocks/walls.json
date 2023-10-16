@@ -42,6 +42,9 @@
     "excessive_building:dripstone_tile_wall",
     "excessive_building:cobbled_granite_brick_wall",
     "excessive_building:cobbled_andesite_brick_wall",
-    "excessive_building:cobbled_diorite_brick_wall"
+    "excessive_building:cobbled_diorite_brick_wall",
+    "excessive_building:polished_tuff_wall",
+    "excessive_building:polished_tuff_brick_wall",
+    "excessive_building:polished_tuff_tile_wall"
   ]
 }

@@ -1,8 +1,0 @@
-{
-  "parent": "block/wall_inventory",
-  "textures": {
-    "wall": "excessive_building:block/cherry_log",
-    "particle": "excessive_building:block/cherry_log"
-  },
-  "render_type": "solid"
-}

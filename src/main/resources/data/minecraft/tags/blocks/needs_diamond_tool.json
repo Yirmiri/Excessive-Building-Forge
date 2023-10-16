@@ -12,6 +12,7 @@
     "excessive_building:netherite_bricks",
     "excessive_building:netherite_brick_stairs",
     "excessive_building:netherite_brick_slab",
-    "excessive_building:cracked_obsidian_bricks"
+    "excessive_building:cracked_obsidian_bricks",
+    "excessive_building:netherite_brick_vertical_stairs"
   ]
 }

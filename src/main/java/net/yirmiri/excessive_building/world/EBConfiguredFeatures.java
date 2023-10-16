@@ -20,7 +20,7 @@ import java.util.List;
 
 public class EBConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> QUARTZ_ORE_KEY = registerKey("quartz_ore_key");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> FIERY_CRYSTAL_BLOCK_KEY = registerKey("fiery_crystal_block_key");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> FIERY_BLOCK_KEY = registerKey("fiery_block_key");
     public static final ResourceKey<ConfiguredFeature<?, ?>> BRIMSTONE_KEY = registerKey("brimstone_key");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SOUL_MAGMA_KEY = registerKey("soul_magma_key");
 
@@ -35,8 +35,8 @@ public class EBConfiguredFeatures {
         register(context, QUARTZ_ORE_KEY, Feature.ORE, new OreConfiguration(stoneReplaceables,
                 EBBlocks.QUARTZ_ORE.get().defaultBlockState(), 8));
 
-        register(context, FIERY_CRYSTAL_BLOCK_KEY, Feature.ORE, new OreConfiguration(basaltReplaceables,
-                EBBlocks.FIERY_CRYSTAL_BLOCK.get().defaultBlockState(), 10));
+        register(context, FIERY_BLOCK_KEY, Feature.ORE, new OreConfiguration(basaltReplaceables,
+                EBBlocks.FIERY_BLOCK.get().defaultBlockState(), 10));
 
         register(context, BRIMSTONE_KEY, Feature.ORE, new OreConfiguration(netherrackReplaceables,
                 EBBlocks.BRIMSTONE.get().defaultBlockState(), 64));

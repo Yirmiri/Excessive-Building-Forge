@@ -1,6 +1,0 @@
-{
-  "type": "forge:add_features",
-  "biomes": "#is_nether",
-  "features": "excessive_building:fiery_crystal_block_placed",
-  "step": "underground_ores"
-}

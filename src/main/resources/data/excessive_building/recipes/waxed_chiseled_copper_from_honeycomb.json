@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "waxed_chiseled_copper",
+  "ingredients": [
+    {
+      "item": "excessive_building:chiseled_copper"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "result": {
+    "item": "excessive_building:waxed_chiseled_copper"
+  }
+}
