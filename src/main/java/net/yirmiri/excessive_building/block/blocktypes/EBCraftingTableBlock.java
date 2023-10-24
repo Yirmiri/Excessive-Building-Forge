@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.block.variants;
+package net.yirmiri.excessive_building.block.blocktypes;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

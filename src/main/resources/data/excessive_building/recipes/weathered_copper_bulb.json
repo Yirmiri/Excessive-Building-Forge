@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "key": {
     "#": {
-      "item": "minecraft:copper_block"
+      "item": "minecraft:weathered_copper"
     },
     "@": {
       "item": "minecraft:redstone_lamp"
@@ -15,6 +15,6 @@
   ],
   "result": {
     "count": 4,
-    "item": "excessive_building:copper_bulb"
+    "item": "excessive_building:weathered_copper_bulb"
   }
 }

@@ -358,6 +358,7 @@
     "excessive_building:polished_tuff_tile_stairs",
     "excessive_building:polished_tuff_tile_slab",
     "excessive_building:polished_tuff_tile_wall",
-    "excessive_building:polished_tuff_tile_vertical_stairs"
+    "excessive_building:polished_tuff_tile_vertical_stairs",
+    "excessive_building:deepslate_quartz_ore"
   ]
 }

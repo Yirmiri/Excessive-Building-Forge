@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.block.variants;
+package net.yirmiri.excessive_building.block.blocktypes;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -9,8 +9,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class SpeedBlock extends Block {
-    public SpeedBlock(Properties properties) {
+public class PathBlock extends Block {
+    public PathBlock(Properties properties) {
         super(properties);
     }
 

@@ -8,33 +8,37 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 import java.util.List;
 
 public class EBPlacedFeatures {
     public static final ResourceKey<PlacedFeature> QUARTZ_ORE_PLACED_KEY = createKey("quartz_ore_placed");
-    public static final ResourceKey<PlacedFeature> BRIMSTONE_PLACED_KEY = createKey("brimstone_placed");
-    public static final ResourceKey<PlacedFeature> FIERY_BLOCK_PLACED_KEY = createKey("fiery_block_placed");
     public static final ResourceKey<PlacedFeature> SOUL_MAGMA_PLACED_KEY = createKey("soul_magma_placed");
+    public static final ResourceKey<PlacedFeature> FIERY_GEODE_PLACED_KEY = createKey("fiery_geode_placed");
+    public static final ResourceKey<PlacedFeature> KYANITE_GEODE_PLACED_KEY = createKey("kyanite_geode_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
         register(context, QUARTZ_ORE_PLACED_KEY, configuredFeatures.getOrThrow(EBConfiguredFeatures.QUARTZ_ORE_KEY),
-                EBOrePlacement.commonOrePlacement(8, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(48))));
-
-        register(context, BRIMSTONE_PLACED_KEY, configuredFeatures.getOrThrow(EBConfiguredFeatures.BRIMSTONE_KEY),
-                EBOrePlacement.commonOrePlacement(8, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(128))));
-
-        register(context, FIERY_BLOCK_PLACED_KEY, configuredFeatures.getOrThrow(EBConfiguredFeatures.FIERY_BLOCK_KEY),
-                EBOrePlacement.commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.absolute(12), VerticalAnchor.absolute(48))));
+                EBOrePlacement.commonOrePlacement(8, //veins per chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-32), VerticalAnchor.absolute(32))));
 
         register(context, SOUL_MAGMA_PLACED_KEY, configuredFeatures.getOrThrow(EBConfiguredFeatures.SOUL_MAGMA_KEY),
-                EBOrePlacement.commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(40))));
+                EBOrePlacement.commonOrePlacement(9, //veins per chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(48))));
+
+        register(context, FIERY_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(EBConfiguredFeatures.FIERY_GEODE_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(48)),
+                        BiomeFilter.biome()));
+
+        register(context, KYANITE_GEODE_PLACED_KEY, configuredFeatures.getOrThrow(EBConfiguredFeatures.KYANITE_GEODE_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(80), VerticalAnchor.absolute(128)),
+                        BiomeFilter.biome()));
     }
 
     private static ResourceKey<PlacedFeature> createKey(String name) {

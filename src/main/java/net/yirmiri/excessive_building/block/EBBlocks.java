@@ -15,9 +15,10 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.block.variants.EBCraftingTableBlock;
-import net.yirmiri.excessive_building.block.variants.SpeedBlock;
-import net.yirmiri.excessive_building.block.variants.VerticalStairBlock;
+import net.yirmiri.excessive_building.block.blocktypes.EBCraftingTableBlock;
+import net.yirmiri.excessive_building.block.blocktypes.SoulMagmaBlock;
+import net.yirmiri.excessive_building.block.blocktypes.PathBlock;
+import net.yirmiri.excessive_building.block.blocktypes.VerticalStairBlock;
 import net.yirmiri.excessive_building.item.EBItems;
 
 import java.util.function.Supplier;
@@ -558,7 +559,7 @@ public class EBBlocks {
                     .strength(2f).explosionResistance(3f).sound(SoundType.WOOD)));
 
     public static final RegistryObject<Block> ASPHALT = registerBlock("asphalt",
-            () -> new SpeedBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
+            () -> new PathBlock(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(1f).explosionResistance(2f).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> CHISELED_OAK = registerBlock("chiseled_oak",
@@ -1462,7 +1463,7 @@ public class EBBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_QUARTZ_ORE).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
 
     public static final RegistryObject<Block> SOUL_MAGMA_BLOCK = registerBlock("soul_magma_block",
-            () -> new MagmaBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK).requiresCorrectToolForDrops()));
+            () -> new SoulMagmaBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> CRACKED_COBBLESTONE_BRICKS = registerBlock("cracked_cobblestone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(EBBlocks.COBBLESTONE_BRICKS.get()).requiresCorrectToolForDrops()));
@@ -1927,7 +1928,7 @@ public class EBBlocks {
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.COBBLED_ANDESITE_BRICKS.get())));
 
     public static final RegistryObject<Block> FIERY_CLUSTER = registerBlock("fiery_cluster",
-            () -> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)));
+            () -> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER).lightLevel(state -> 12)));
 
     // public static final RegistryObject<Block> LARGE_FIERY_BUD = registerBlock("large_fiery_bud",
             // () -> new AmethystClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD).requiresCorrectToolForDrops()));
@@ -1978,7 +1979,7 @@ public class EBBlocks {
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER).lightLevel(state -> 11)));
 
     public static final RegistryObject<Block> WEATHERED_COPPER_BULB = registerBlock("weathered_copper_bulb",
-            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER).lightLevel(state -> 7)));
+            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER).lightLevel(state -> 8)));
 
     public static final RegistryObject<Block> OXIDIZED_COPPER_BULB = registerBlock("oxidized_copper_bulb",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER).lightLevel(state -> 3)));
@@ -1990,7 +1991,7 @@ public class EBBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_COPPER).lightLevel(state -> 11)));
 
     public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_BULB = registerBlock("waxed_weathered_copper_bulb",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER).lightLevel(state -> 7)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER).lightLevel(state -> 8)));
 
     public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_BULB = registerBlock("waxed_oxidized_copper_bulb",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER).lightLevel(state -> 3)));
@@ -2068,10 +2069,14 @@ public class EBBlocks {
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> GOLD_GRATE = registerBlock("gold_grate",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> IRON_GRATE = registerBlock("iron_grate",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).requiresCorrectToolForDrops().noOcclusion()));
+
+    public static final RegistryObject<Block> DEEPSLATE_QUARTZ_ORE = registerBlock("deepslate_quartz_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(EBBlocks.QUARTZ_ORE.get()).requiresCorrectToolForDrops()
+                    .sound(SoundType.DEEPSLATE), UniformInt.of(2, 5)));
 
 
     private static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {

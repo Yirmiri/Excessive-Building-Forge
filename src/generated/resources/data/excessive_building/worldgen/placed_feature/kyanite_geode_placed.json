@@ -1,9 +1,9 @@
 {
-  "feature": "excessive_building:fiery_block_key",
+  "feature": "excessive_building:kyanite_geode_key",
   "placement": [
     {
-      "type": "minecraft:count",
-      "count": 10
+      "type": "minecraft:rarity_filter",
+      "chance": 32
     },
     {
       "type": "minecraft:in_square"
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:uniform",
         "max_inclusive": {
-          "absolute": 48
+          "absolute": 128
         },
         "min_inclusive": {
-          "absolute": 12
+          "above_bottom": 80
         }
       }
     },

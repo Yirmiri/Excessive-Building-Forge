@@ -2,8 +2,69 @@ c-------------------------------------------------------------------------------
 
 Literally just a secret .txt file of every single update's changelog
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release 1.5.0 (Forge/NeoForge: 1.20.1, 1.19.2, 1.18.2) (Fabric/Quilt: 1.20.1, 1.19.2, 1.18.2)
+Major Update
+
+  Additions
+•   Added copper grates (from Minecraft Live 2023)
+•   Added copper bulbs (from Minecraft Live 2023)
+•   Added chiseled copper (from Minecraft Live 2023)
+•   Added polished tuff & polished tuff bricks (from Minecraft Live 2023)
+•   Added polished tuff tiles (BASED OFF OF Minecraft Live 2023)
+•   Added gold and iron grates (BASED OFF OF Minecraft Live 2023)
+•   Added deepslate quartz ore
+•   Added fiery and kyanite crystal clusters
+•   Added kyanite shards (dropped from kyanite clusters)
+•   Added prismarine crystal and kyanite blocks
+
+  Additions to port versions (1.18.2/1.19.2)
+•   Added most missing features (1.18.2, 1.19.2)
+
+  Changes
+•   Flammable blocks now are ignited by lava
+•   Custom wool blocks now burn when ignited
+•   Renamed "Fiery Crystal Block" to "Fiery Block"
+•   Renamed "Fiery Crystal Shards" to "Fiery Shards"
+•   Removed items from Excessive Building in all creative tabs except the Excessive Building tab
+•   Reordered the Excessive Building creative tab
+•   Changed the iron grate texture
+•   Changed the copper bulb recipe from 9 copper ingots for 1 to 4 copper blocks for 4
+•   Weathered copper bulbs now emit a light level of 8 rather than 7 due to some information about them being shared
+•   Soul magma blocks now deal double the damage and damage can no longer be prevented while sneaking (only for soul magma)
+•   World generation has been overhauled!:
+   •   Overworld Quartz Ore: Now generates from y-32 to y32 and has a deepslate variant
+   •   Soul Magma: Now generates from y0 to y48 and veins are slightly smaller
+   •   Brimstone & Fiery now generates in fiery geodes which can be found in the Nether from y0 to y48 (fiery clusters drop fiery crystals)
+   •   Kyanite is a new generated block that makes up the new kyanite geodes which can be found in the Nether from y80 to y128
+
+  Technical Changes
+•   Changed the block id of "fiery_crystal_block" to "fiery_block"
+•   Changed the item id of "fiery_crystal_shards" to "fiery_shards"
+•   Amethyst and prismarine crystal blocks are now above fiery crystal blocks in the creative tab
+•   Fiery blocks now only require a wooden pickaxe to mine rather than a stone
+
+  Bug Fixes
+•   Custom wool blocks no longer take a long time to mine (1.20.1, 1.19.2, 1.18.2)
+•   Fixed some block properties to match their base counterparts (1.20.1)
+•   Fixed fiery crystal blocks dropping fiery shards even though this was removed last update (1.20.1, 1.19.2, 1.18.2)
+•   Fixed 1.4.2 wall blocks not dropping when mined (1.20.1, 1.19.2, 1.18.2)
+•   Fixed 1.4.2 wall blocks not being craftable (1.18.2, 1.19.2)
+•   Fixed some items not working properly due to id changes in .jsons but never the actual code (1.18.2, 1.19.2)
+•   Fixed some items not being in creative tabs (1.18.2, 1.19.2)
+
+  Notes
+•   All Minecraft Live 2023 features will be removed in 1.21+ releases but use this as a sort of backport or early version of the new features
+(all other Minecraft Live 2023 features and changes for building will come to updates of this mod)
+•   Anything based off Minecraft Live 2023 will stay in the mod as its not coming into the vanilla game :)
+
   Notes
 •   --> [WARNING] <-- Be sure to make backups before launching this update as it changes a lot of inner workings of the mod
+•   For now Excessive Building updates will be smaller as I'm currently working on a new mod. Large updates will still come to the mod, especially when a new major Minecraft version releases!
+for more information on our new mod and Excessive Building updates you can follow the Twitter or join our Discord! (click the image on the home page for links)
+
+    Thank you for downloading and enjoy Excessive Building!
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
