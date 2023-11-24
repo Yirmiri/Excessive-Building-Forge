@@ -1,9 +1,0 @@
-{
-  "parent": "block/slab_top",
-  "textures": {
-    "bottom": "excessive_building:block/polished_tuff_bricks",
-    "top": "excessive_building:block/polished_tuff_bricks",
-    "side": "excessive_building:block/polished_tuff_bricks"
-  },
-  "render_type": "solid"
-}

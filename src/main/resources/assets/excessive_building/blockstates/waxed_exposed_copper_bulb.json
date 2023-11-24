@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
-      "model": "excessive_building:block/waxed_exposed_copper_bulb"
+    "lit=false": {
+      "model": "excessive_building:block/exposed_copper_bulb"
+    },
+    "lit=true": {
+      "model": "excessive_building:block/exposed_copper_bulb_lit"
     }
   }
 }

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:blaze_rod"
+    },
+    "$": {
+      "item": "minecraft:exposed_copper"
+    },
+    "@": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    " $ ",
+    "$#$",
+    " @ "
+  ],
+  "result": {
+    "count": 4,
+    "item": "excessive_building:exposed_copper_bulb"
+  },
+  "show_notification": true
+}

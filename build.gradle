@@ -2,9 +2,10 @@ plugins {
     id 'eclipse'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
-version = '1.20.1-1.5'
+version = '1.20.1-1.5.1'
 group = 'net.yirmiri.excessive_building' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'excessive_building'
 
@@ -74,13 +75,22 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
+}
+
+repositories {
     maven {
         url "https://www.cursemaven.com"
     }
 }
 
 dependencies {
+    //Required Dependents
     minecraft 'net.minecraftforge:forge:1.20.1-47.2.1'
+
+    //Aether
+    implementation fg.deobf("curse.maven:aether-255308:4816890")
+    runtimeOnly fg.deobf("curse.maven:aether-255308:4816890")
 }
 
 jar {

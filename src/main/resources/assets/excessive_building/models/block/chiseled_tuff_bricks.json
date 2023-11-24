@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "excessive_building:block/chiseled_tuff_bricks_top",
+    "up": "excessive_building:block/chiseled_tuff_bricks_top",
+    "north": "excessive_building:block/chiseled_tuff_bricks",
+    "east": "excessive_building:block/chiseled_tuff_bricks",
+    "south": "excessive_building:block/chiseled_tuff_bricks",
+    "west": "excessive_building:block/chiseled_tuff_bricks",
+    "particle": "excessive_building:block/chiseled_tuff_bricks_top"
+  },
+  "render_type": "solid"
+}

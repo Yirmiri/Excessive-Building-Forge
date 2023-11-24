@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "@": {
+      "item": "minecraft:blaze_powder"
+    },
+    "#": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "pattern": [
+    "@#@"
+  ],
+  "result": {
+    "item": "excessive_building:fiery_crystal_shards"
+  }
+}

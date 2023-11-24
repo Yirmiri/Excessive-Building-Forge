@@ -1,0 +1,9 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "excessive_building:block/tuff",
+    "top": "excessive_building:block/tuff",
+    "side": "excessive_building:block/tuff"
+  },
+  "render_type": "solid"
+}

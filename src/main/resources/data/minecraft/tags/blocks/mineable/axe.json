@@ -89,6 +89,10 @@
     "excessive_building:colored_mangrove_crafting_table",
     "excessive_building:colored_cherry_crafting_table",
     "excessive_building:colored_crimson_crafting_table",
-    "excessive_building:colored_warped_crafting_table"
+    "excessive_building:colored_warped_crafting_table",
+    "excessive_building:chiseled_skyroot",
+    "excessive_building:skyroot_mosaic",
+    "excessive_building:skyroot_mosaic_stairs",
+    "excessive_building:skyroot_mosaic_slab"
   ]
 }

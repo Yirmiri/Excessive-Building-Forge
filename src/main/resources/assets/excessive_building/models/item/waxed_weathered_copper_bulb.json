@@ -1,5 +1,5 @@
 {
-  "parent": "excessive_building:block/waxed_weathered_copper_bulb",
+  "parent": "excessive_building:block/weathered_copper_bulb",
   "display": {
     "thirdperson": {
       "rotation": [

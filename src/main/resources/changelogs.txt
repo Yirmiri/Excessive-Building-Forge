@@ -4,6 +4,43 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release Beta 1.5.1 (Forge/NeoForge: 1.20.1)
+Small Update
+
+THIS IS A BETA VERSION, SOME THINGS MAY BE BUGGY!
+
+IMPORTANT NOTE: 1.19.2/1.18.2 will have a 1.21 backport but not until much later in the development cycle of 1.21 (this will be the final backport version so I want to make it count)
+ANOTHER THING TO NOTE: This update removes some blocks so do note that when updating your world
+
+  Additions
+•   Added Aether compatibility (more info below)
+•   Added polished blackstone tiles
+•   Added tuff stairs, slabs, walls, vertical stairs, and chiseled blocks (backported from 1.21)
+•   Potion shelf variants now contribute to the enchanting table power level
+
+  Changes
+•   Removed polished (chiseled) tuff bricks and tiles (textures transferred)
+•   The old tuff bricks now have the new 1.21 textures (rest in peace tuff bricks), tuff tiles also have been updated to match the new blocks
+•   All 1.21 copper and tuff blocks have been given the official textures
+•   Copper bulbs are now activated by redstone (do not work like official copper bulbs but rather like redstone lamps)
+•   Reordered creative inventory slightly
+•   Updated advancement descriptions to better help players understand them
+
+  Bug Fixes
+•   Polished tuff stairs now properly belong to the correct blockset (1.20.1)
+•   Soul magma blocks do not generate bubble columns (1.20.1)
+•   Cleaned up some code causing meaningless errors (1.20.1)
+•   Fixed deepslate quartz being missing from creative inventory (1.20.1)
+
+  Compatibility
+•   The first mod to recieve mod integration is the Aether mod, mod integration may have some knicks and knacks so please send any issues you encounter to us!
+•   Added chiseled skyroot and skyroot mosaic (Aether)
+•   Added enchanted gravitite, zanite, and ambrosium bricks (Aether)
+•   Vertical stairs will come later on (Aether)
+•   If all goes well we will add more mod compat in the full release of the update
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release 1.5.0 (Forge/NeoForge: 1.20.1, 1.19.2, 1.18.2) (Fabric/Quilt: 1.20.1, 1.19.2, 1.18.2)
 Major Update
 

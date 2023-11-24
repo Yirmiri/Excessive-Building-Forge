@@ -33,6 +33,9 @@
     "excessive_building:waxed_exposed_copper_bulb",
     "excessive_building:waxed_weathered_copper_bulb",
     "excessive_building:waxed_oxidized_copper_bulb",
-    "excessive_building:iron_grate"
+    "excessive_building:iron_grate",
+    "excessive_building:zanite_bricks",
+    "excessive_building:zanite_brick_stairs",
+    "excessive_building:zanite_brick_slab"
   ]
 }

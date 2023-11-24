@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "excessive_building:cobbled_granite"
-  },
-  "result": "excessive_building:cobbled_granite_wall"
-}

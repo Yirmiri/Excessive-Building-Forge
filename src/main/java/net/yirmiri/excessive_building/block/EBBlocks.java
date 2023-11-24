@@ -15,10 +15,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.block.blocktypes.EBCraftingTableBlock;
-import net.yirmiri.excessive_building.block.blocktypes.SoulMagmaBlock;
-import net.yirmiri.excessive_building.block.blocktypes.PathBlock;
-import net.yirmiri.excessive_building.block.blocktypes.VerticalStairBlock;
+import net.yirmiri.excessive_building.block.blocktypes.*;
 import net.yirmiri.excessive_building.item.EBItems;
 
 import java.util.function.Supplier;
@@ -1463,7 +1460,7 @@ public class EBBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_QUARTZ_ORE).requiresCorrectToolForDrops(), UniformInt.of(2, 5)));
 
     public static final RegistryObject<Block> SOUL_MAGMA_BLOCK = registerBlock("soul_magma_block",
-            () -> new SoulMagmaBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK).requiresCorrectToolForDrops()));
+            () -> new MagmaBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> CRACKED_COBBLESTONE_BRICKS = registerBlock("cracked_cobblestone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(EBBlocks.COBBLESTONE_BRICKS.get()).requiresCorrectToolForDrops()));
@@ -1709,15 +1706,6 @@ public class EBBlocks {
     public static final RegistryObject<Block> CALCITE_BRICK_SLAB = registerBlock("calcite_brick_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
 
-    public static final RegistryObject<Block> TUFF_BRICKS = registerBlock("tuff_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> TUFF_BRICK_STAIRS = registerBlock("tuff_brick_stairs",
-            () -> new StairBlock(EBBlocks.TUFF_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.TUFF)));
-
-    public static final RegistryObject<Block> TUFF_BRICK_SLAB = registerBlock("tuff_brick_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
-
     public static final RegistryObject<Block> DRIPSTONE_BRICKS = registerBlock("dripstone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
 
@@ -1735,15 +1723,6 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> CALCITE_TILE_SLAB = registerBlock("calcite_tile_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
-
-    public static final RegistryObject<Block> TUFF_TILES = registerBlock("tuff_tiles",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> TUFF_TILE_STAIRS = registerBlock("tuff_tile_stairs",
-            () -> new StairBlock(EBBlocks.TUFF_TILES.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.TUFF)));
-
-    public static final RegistryObject<Block> TUFF_TILE_SLAB = registerBlock("tuff_tile_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
 
     public static final RegistryObject<Block> DRIPSTONE_TILES = registerBlock("dripstone_tiles",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK).requiresCorrectToolForDrops()));
@@ -1876,12 +1855,6 @@ public class EBBlocks {
     public static final RegistryObject<Block> CALCITE_TILE_WALL = registerBlock("calcite_tile_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.CALCITE_TILES.get()).requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block> TUFF_BRICK_WALL = registerBlock("tuff_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.TUFF_BRICKS.get()).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> TUFF_TILE_WALL = registerBlock("tuff_tile_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.TUFF_TILES.get()).requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> DRIPSTONE_BRICK_WALL = registerBlock("dripstone_brick_wall",
             () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.DRIPSTONE_BRICKS.get()).requiresCorrectToolForDrops()));
 
@@ -1893,12 +1866,6 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> CALCITE_TILE_VERTICAL_STAIRS = registerBlock("calcite_tile_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.CALCITE)));
-
-    public static final RegistryObject<Block> TUFF_BRICK_VERTICAL_STAIRS = registerBlock("tuff_brick_vertical_stairs",
-            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
-
-    public static final RegistryObject<Block> TUFF_TILE_VERTICAL_STAIRS = registerBlock("tuff_tile_vertical_stairs",
-            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
 
     public static final RegistryObject<Block> DRIPSTONE_BRICK_VERTICAL_STAIRS = registerBlock("dripstone_brick_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.DRIPSTONE_BLOCK)));
@@ -1972,30 +1939,6 @@ public class EBBlocks {
     public static final RegistryObject<Block> WAXED_OXIDIZED_CHISELED_COPPER = registerBlock("waxed_oxidized_chiseled_copper",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER)));
 
-    public static final RegistryObject<Block> COPPER_BULB = registerBlock("copper_bulb",
-            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).lightLevel(state -> 15)));
-
-    public static final RegistryObject<Block> EXPOSED_COPPER_BULB = registerBlock("exposed_copper_bulb",
-            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.EXPOSED, BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER).lightLevel(state -> 11)));
-
-    public static final RegistryObject<Block> WEATHERED_COPPER_BULB = registerBlock("weathered_copper_bulb",
-            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.WEATHERED, BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER).lightLevel(state -> 8)));
-
-    public static final RegistryObject<Block> OXIDIZED_COPPER_BULB = registerBlock("oxidized_copper_bulb",
-            () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.OXIDIZED, BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER).lightLevel(state -> 3)));
-
-    public static final RegistryObject<Block> WAXED_COPPER_BULB = registerBlock("waxed_copper_bulb",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK).lightLevel(state -> 15)));
-
-    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_BULB = registerBlock("waxed_exposed_copper_bulb",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_COPPER).lightLevel(state -> 11)));
-
-    public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_BULB = registerBlock("waxed_weathered_copper_bulb",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER).lightLevel(state -> 8)));
-
-    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_BULB = registerBlock("waxed_oxidized_copper_bulb",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER).lightLevel(state -> 3)));
-
     public static final RegistryObject<Block> COPPER_GRATE = registerBlock("copper_grate",
             () -> new WeatheringCopperFullBlock(WeatheringCopper.WeatherState.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).noOcclusion()));
 
@@ -2020,54 +1963,6 @@ public class EBBlocks {
     public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_GRATE = registerBlock("waxed_oxidized_copper_grate",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER).noOcclusion()));
 
-    public static final RegistryObject<Block> POLISHED_TUFF_BRICKS = registerBlock("polished_tuff_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_BRICK_STAIRS = registerBlock("polished_tuff_brick_stairs",
-            () -> new StairBlock(EBBlocks.POLISHED_TUFF_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.TUFF)));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_BRICK_SLAB = registerBlock("polished_tuff_brick_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_BRICK_WALL = registerBlock("polished_tuff_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_BRICK_VERTICAL_STAIRS = registerBlock("polished_tuff_brick_vertical_stairs",
-            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> POLISHED_TUFF = registerBlock("polished_tuff",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_STAIRS = registerBlock("polished_tuff_stairs",
-            () -> new StairBlock(EBBlocks.POLISHED_TUFF_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.TUFF)));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_SLAB = registerBlock("polished_tuff_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_WALL = registerBlock("polished_tuff_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_VERTICAL_STAIRS = registerBlock("polished_tuff_vertical_stairs",
-            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> CHISELED_POLISHED_TUFF_BRICKS = registerBlock("chiseled_polished_tuff_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_TILES = registerBlock("polished_tuff_tiles",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_TILE_STAIRS = registerBlock("polished_tuff_tile_stairs",
-            () -> new StairBlock(EBBlocks.POLISHED_TUFF_TILES.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.TUFF)));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_TILE_SLAB = registerBlock("polished_tuff_tile_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_TILE_WALL = registerBlock("polished_tuff_tile_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> POLISHED_TUFF_TILE_VERTICAL_STAIRS = registerBlock("polished_tuff_tile_vertical_stairs",
-            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
-
     public static final RegistryObject<Block> GOLD_GRATE = registerBlock("gold_grate",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).requiresCorrectToolForDrops().noOcclusion()));
 
@@ -2078,8 +1973,113 @@ public class EBBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(EBBlocks.QUARTZ_ORE.get()).requiresCorrectToolForDrops()
                     .sound(SoundType.DEEPSLATE), UniformInt.of(2, 5)));
 
+    public static final RegistryObject<Block> POLISHED_TUFF = registerBlock("polished_tuff",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
 
-    private static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {
+    public static final RegistryObject<Block> POLISHED_TUFF_STAIRS = registerBlock("polished_tuff_stairs",
+            () -> new StairBlock(EBBlocks.POLISHED_TUFF.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_SLAB = registerBlock("polished_tuff_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_WALL = registerBlock("polished_tuff_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_VERTICAL_STAIRS = registerBlock("polished_tuff_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TUFF_BRICKS = registerBlock("tuff_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CHISELED_TUFF_BRICKS = registerBlock("chiseled_tuff_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CHISELED_POLISHED_TUFF = registerBlock("chiseled_polished_tuff",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TUFF_BRICK_STAIRS = registerBlock("tuff_brick_stairs",
+            () -> new StairBlock(EBBlocks.TUFF_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> TUFF_BRICK_SLAB = registerBlock("tuff_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> TUFF_BRICK_WALL = registerBlock("tuff_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.TUFF_BRICKS.get()).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TUFF_BRICK_VERTICAL_STAIRS = registerBlock("tuff_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> TUFF_TILES = registerBlock("tuff_tiles",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TUFF_TILE_STAIRS = registerBlock("tuff_tile_stairs",
+            () -> new StairBlock(EBBlocks.TUFF_TILES.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> TUFF_TILE_SLAB = registerBlock("tuff_tile_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> TUFF_TILE_WALL = registerBlock("tuff_tile_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.TUFF_TILES.get()).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TUFF_TILE_VERTICAL_STAIRS = registerBlock("tuff_tile_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> TUFF_STAIRS = registerBlock("tuff_stairs",
+            () -> new StairBlock(Blocks.TUFF.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> TUFF_SLAB = registerBlock("tuff_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> TUFF_WALL = registerBlock("tuff_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.TUFF_TILES.get()).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TUFF_VERTICAL_STAIRS = registerBlock("tuff_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(Blocks.TUFF)));
+
+    public static final RegistryObject<Block> COPPER_BULB = registerBlock("copper_bulb",
+            () -> new CopperBulbBlock(BlockBehaviour.Properties.copy(Blocks.COPPER_BLOCK).lightLevel(litBlockEmission -> 15), WeatheringCopper.WeatherState.UNAFFECTED));
+
+    public static final RegistryObject<Block> EXPOSED_COPPER_BULB = registerBlock("exposed_copper_bulb",
+            () -> new CopperBulbBlock(BlockBehaviour.Properties.copy(Blocks.EXPOSED_COPPER).lightLevel(litBlockEmission -> 11), WeatheringCopper.WeatherState.EXPOSED));
+
+    public static final RegistryObject<Block> WEATHERED_COPPER_BULB = registerBlock("weathered_copper_bulb",
+            () -> new CopperBulbBlock(BlockBehaviour.Properties.copy(Blocks.WEATHERED_COPPER).lightLevel(litBlockEmission -> 8), WeatheringCopper.WeatherState.WEATHERED));
+
+    public static final RegistryObject<Block> OXIDIZED_COPPER_BULB = registerBlock("oxidized_copper_bulb",
+            () -> new CopperBulbBlock(BlockBehaviour.Properties.copy(Blocks.OXIDIZED_COPPER).lightLevel(litBlockEmission -> 3), WeatheringCopper.WeatherState.OXIDIZED));
+
+    public static final RegistryObject<Block> WAXED_COPPER_BULB = registerBlock("waxed_copper_bulb",
+            () -> new RedstoneLampBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_COPPER_BLOCK).lightLevel(litBlockEmission -> 15)));
+
+    public static final RegistryObject<Block> WAXED_EXPOSED_COPPER_BULB = registerBlock("waxed_exposed_copper_bulb",
+            () -> new RedstoneLampBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_EXPOSED_COPPER).lightLevel(litBlockEmission -> 11)));
+
+    public static final RegistryObject<Block> WAXED_WEATHERED_COPPER_BULB = registerBlock("waxed_weathered_copper_bulb",
+            () -> new RedstoneLampBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_WEATHERED_COPPER).lightLevel(litBlockEmission -> 8)));
+
+    public static final RegistryObject<Block> WAXED_OXIDIZED_COPPER_BULB = registerBlock("waxed_oxidized_copper_bulb",
+            () -> new RedstoneLampBlock(BlockBehaviour.Properties.copy(Blocks.WAXED_OXIDIZED_COPPER).lightLevel(litBlockEmission -> 3)));
+
+    public static final RegistryObject<Block> POLISHED_BLACKSTONE_TILES = registerBlock("polished_blackstone_tiles",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_BLACKSTONE_TILE_STAIRS = registerBlock("polished_blackstone_tile_stairs",
+            () -> new StairBlock(() -> EBBlocks.POLISHED_BLACKSTONE_TILES.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.POLISHED_BLACKSTONE_TILES.get())));
+
+    public static final RegistryObject<Block> POLISHED_BLACKSTONE_TILE_SLAB = registerBlock("polished_blackstone_tile_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_BLACKSTONE_TILES.get())));
+
+    public static final RegistryObject<Block> POLISHED_BLACKSTONE_TILE_WALL = registerBlock("polished_blackstone_tile_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_BLACKSTONE_TILES.get())));
+
+    public static final RegistryObject<Block> POLISHED_BLACKSTONE_TILE_VERTICAL_STAIRS = registerBlock("polished_blackstone_tile_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_BLACKSTONE_TILES.get())));
+
+    public static final RegistryObject<Block> CRACKED_POLISHED_BLACKSTONE_TILES = registerBlock("cracked_polished_blackstone_tiles",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.POLISHED_BLACKSTONE).requiresCorrectToolForDrops()));
+
+
+    protected static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {
                 RegistryObject<B> toReturn = BLOCKS.register(name, block);
                 registryBlockItem(name, toReturn);
                 return toReturn;
