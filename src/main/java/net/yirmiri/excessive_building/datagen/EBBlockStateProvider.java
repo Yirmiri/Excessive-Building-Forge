@@ -13,7 +13,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.EBBlocks;
-import net.yirmiri.excessive_building.compat.aether.AetherIntegration;
 
 public class EBBlockStateProvider extends BlockStateProvider {
     public EBBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -28,18 +27,6 @@ public class EBBlockStateProvider extends BlockStateProvider {
         stairsBlock(((StairBlock) EBBlocks.POLISHED_BLACKSTONE_TILE_STAIRS.get()), blockTexture(EBBlocks.POLISHED_BLACKSTONE_TILES.get()));
         slabBlock(((SlabBlock) EBBlocks.POLISHED_BLACKSTONE_TILE_SLAB.get()), blockTexture(EBBlocks.POLISHED_BLACKSTONE_TILES.get()), blockTexture(EBBlocks.POLISHED_BLACKSTONE_TILES.get()));
         wallBlock(((WallBlock) EBBlocks.POLISHED_BLACKSTONE_TILE_WALL.get()), blockTexture(EBBlocks.POLISHED_BLACKSTONE_TILES.get()));
-
-        stairsBlock(((StairBlock) AetherIntegration.SKYROOT_MOSAIC_STAIRS.get()), blockTexture(AetherIntegration.SKYROOT_MOSAIC.get()));
-        slabBlock(((SlabBlock) AetherIntegration.SKYROOT_MOSAIC_SLAB.get()), blockTexture(AetherIntegration.SKYROOT_MOSAIC.get()), blockTexture(AetherIntegration.SKYROOT_MOSAIC.get()));
-
-        stairsBlock(((StairBlock) AetherIntegration.AMBROSIUM_BRICK_STAIRS.get()), blockTexture(AetherIntegration.AMBROSIUM_BRICKS.get()));
-        slabBlock(((SlabBlock) AetherIntegration.AMBROSIUM_BRICK_SLAB.get()), blockTexture(AetherIntegration.AMBROSIUM_BRICKS.get()), blockTexture(AetherIntegration.AMBROSIUM_BRICKS.get()));
-
-        stairsBlock(((StairBlock) AetherIntegration.ZANITE_BRICK_STAIRS.get()), blockTexture(AetherIntegration.ZANITE_BRICKS.get()));
-        slabBlock(((SlabBlock) AetherIntegration.ZANITE_BRICK_SLAB.get()), blockTexture(AetherIntegration.ZANITE_BRICKS.get()), blockTexture(AetherIntegration.ZANITE_BRICKS.get()));
-
-        stairsBlock(((StairBlock) AetherIntegration.ENCHANTED_GRAVITITE_BRICK_STAIRS.get()), blockTexture(AetherIntegration.ENCHANTED_GRAVITITE_BRICKS.get()));
-        slabBlock(((SlabBlock) AetherIntegration.ENCHANTED_GRAVITITE_BRICK_SLAB.get()), blockTexture(AetherIntegration.ENCHANTED_GRAVITITE_BRICKS.get()), blockTexture(AetherIntegration.ENCHANTED_GRAVITITE_BRICKS.get()));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

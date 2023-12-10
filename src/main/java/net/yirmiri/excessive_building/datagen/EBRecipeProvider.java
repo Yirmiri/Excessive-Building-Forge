@@ -134,6 +134,15 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .define('#', EBBlocks.TUFF_BRICKS.get())
                 .pattern("##")
                 .pattern("##").unlockedBy(getHasName(EBBlocks.TUFF_BRICKS.get()), has(EBBlocks.TUFF_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.DECORATIONS, EBBlocks.DIRT_SLAB.get(), Ingredient.of(Blocks.DIRT))
+                .unlockedBy(getHasName(Blocks.DIRT), has(Blocks.DIRT)).save(pWriter);
+
+        grateBuilder(EBBlocks.IRON_GRATE.get(), Ingredient.of(Blocks.IRON_BLOCK))
+                .unlockedBy(getHasName(Blocks.IRON_BLOCK), has(Blocks.IRON_BLOCK)).save(pWriter);
+
+        grateBuilder(EBBlocks.GOLD_GRATE.get(), Ingredient.of(Blocks.GOLD_BLOCK))
+                .unlockedBy(getHasName(Blocks.GOLD_BLOCK), has(Blocks.GOLD_BLOCK)).save(pWriter);
     }
 
     protected static RecipeBuilder verticalstairBuilder(ItemLike itemLike, Ingredient ingredient) {

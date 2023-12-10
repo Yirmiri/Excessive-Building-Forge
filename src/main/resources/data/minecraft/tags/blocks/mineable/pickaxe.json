@@ -417,15 +417,6 @@
     "excessive_building:polished_blackstone_tile_stairs",
     "excessive_building:polished_blackstone_tile_slab",
     "excessive_building:polished_blackstone_tile_wall",
-    "excessive_building:polished_blackstone_tile_vertical_stairs",
-    "excessive_building:ambrosium_bricks",
-    "excessive_building:ambrosium_brick_stairs",
-    "excessive_building:ambrosium_brick_slab",
-    "excessive_building:zanite_bricks",
-    "excessive_building:zanite_brick_stairs",
-    "excessive_building:zanite_brick_slab",
-    "excessive_building:enchanted_gravitite_bricks",
-    "excessive_building:enchanted_gravitite_brick_stairs",
-    "excessive_building:enchanted_gravitite_brick_slab"
+    "excessive_building:polished_blackstone_tile_vertical_stairs"
   ]
 }

@@ -4,6 +4,25 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release 1.5.1 (Forge/NeoForge: 1.20.1)
+Small Update
+
+   Changes
+•   Changed copper bulbs to no longer use the redstone lamp block as a base
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release Beta 1.5.1_01 (Forge/NeoForge: 1.20.1)
+Hotfix Update
+
+  READ THISISISISISIISIISSSSSSSSSS
+•   Temp removed all integration for now has I clean out issues
+
+  Bug Fixes
+•   Fixed recipe missing recipes for gold/iron grates and dirt slabs
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release Beta 1.5.1 (Forge/NeoForge: 1.20.1)
 Small Update
 

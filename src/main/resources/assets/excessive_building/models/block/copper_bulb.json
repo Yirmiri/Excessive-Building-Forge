@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "excessive_building:block/copper_bulb"
+    "all": "excessive_building:block/copper_bulb_lit"
   }
 }

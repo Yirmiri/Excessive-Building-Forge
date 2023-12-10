@@ -35,10 +35,17 @@ public class VerticalStairBlock extends HorizontalDirectionalBlock implements Si
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return switch (state.getValue(FACING)) {
-            default -> Shapes.or(box(8, 0, 0, 16, 16, 8), box(0, 0, 0, 8, 16, 16));
-            case NORTH -> Shapes.or(box(0, 0, 8, 8, 16, 16), box(8, 0, 0, 16, 16, 16));
-            case EAST -> Shapes.or(box(0, 0, 0, 8, 16, 8), box(0, 0, 8, 16, 16, 16));
-            case WEST -> Shapes.or(box(8, 0, 8, 16, 16, 16), box(0, 0, 0, 16, 16, 8));
+            default -> Shapes.or(box(8, 0, 0, 16, 16, 8),
+                    box(0, 0, 0, 8, 16, 16));
+
+            case NORTH -> Shapes.or(box(0, 0, 8, 8, 16, 16),
+                    box(8, 0, 0, 16, 16, 16));
+
+            case EAST -> Shapes.or(box(0, 0, 0, 8, 16, 8),
+                    box(0, 0, 8, 16, 16, 16));
+
+            case WEST -> Shapes.or(box(8, 0, 8, 16, 16, 16),
+                    box(0, 0, 0, 16, 16, 8));
         };
     }
 

@@ -9,14 +9,11 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.yirmiri.excessive_building.block.EBBlocks;
-import net.yirmiri.excessive_building.compat.CompatHandler;
-import net.yirmiri.excessive_building.compat.aether.AetherIntegration;
 import net.yirmiri.excessive_building.item.EBCreativeTabs;
 import net.yirmiri.excessive_building.item.EBItems;
 
@@ -34,8 +31,6 @@ public class ExcessiveBuilding {
         modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::onClientSetup);
-
-        CompatHandler.register();
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -599,27 +594,5 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.QUARTZ_VERTICAL_STAIRS);
             event.accept(EBBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS);
         }
-
-        if (event.getTab() == EBCreativeTabs.EXCESSIVE_BUILDING.get() && (aether)) {
-            event.accept(AetherIntegration.CHISELED_SKYROOT.get());
-            event.accept(AetherIntegration.SKYROOT_MOSAIC.get());
-            event.accept(AetherIntegration.SKYROOT_MOSAIC_STAIRS.get());
-            event.accept(AetherIntegration.SKYROOT_MOSAIC_SLAB.get());
-            event.accept(AetherIntegration.AMBROSIUM_BRICKS.get());
-            event.accept(AetherIntegration.AMBROSIUM_BRICK_STAIRS.get());
-            event.accept(AetherIntegration.AMBROSIUM_BRICK_SLAB.get());
-            event.accept(AetherIntegration.ZANITE_BRICKS.get());
-            event.accept(AetherIntegration.ZANITE_BRICK_STAIRS.get());
-            event.accept(AetherIntegration.ZANITE_BRICK_SLAB.get());
-            event.accept(AetherIntegration.ENCHANTED_GRAVITITE_BRICKS.get());
-            event.accept(AetherIntegration.ENCHANTED_GRAVITITE_BRICK_STAIRS.get());
-            event.accept(AetherIntegration.ENCHANTED_GRAVITITE_BRICK_SLAB.get());
-        }
-    }
-    public static final boolean aether;
-
-    static {
-        ModList mods = ModList.get();
-        aether = mods.isLoaded("aether");
     }
 }
