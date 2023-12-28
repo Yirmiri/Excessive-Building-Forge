@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "excessive_building:block/cracked_calcite_tiles",
-    "particle": "excessive_building:block/cracked_calcite_tiles"
-  },
-  "render_type": "solid"
-}

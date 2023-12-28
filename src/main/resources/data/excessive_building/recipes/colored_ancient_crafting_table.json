@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "colored_crafting_table",
+  "ingredients": [
+    {
+      "item": "excessive_building:ancient_crafting_table"
+    },
+    {
+      "tag": "minecraft:wool"
+    }
+  ],
+  "result": {
+    "item": "excessive_building:colored_ancient_crafting_table"
+  }
+}

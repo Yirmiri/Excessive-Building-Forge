@@ -1,0 +1,14 @@
+{
+  "type": "excessive_building:add_item",
+  "block": "excessive_building:ancient_sapling",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:gameplay/sniffer_digging"
+    },
+    {
+      "chance": 0.25,
+      "condition": "minecraft:random_chance"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:nether_brick"
+    },
+    "%": {
+      "item": "minecraft:polished_blackstone"
+    },
+    "@": {
+      "item": "excessive_building:fiery_shards"
+    }
+  },
+  "pattern": [
+    "#@#",
+    "@%@",
+    "#@#"
+  ],
+  "result": {
+    "item": "excessive_building:blackstone_window"
+  },
+  "show_notification": true
+}

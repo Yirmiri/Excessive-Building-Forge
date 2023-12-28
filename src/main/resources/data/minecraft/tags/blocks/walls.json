@@ -45,6 +45,12 @@
     "excessive_building:cobbled_diorite_brick_wall",
     "excessive_building:polished_tuff_wall",
     "excessive_building:tuff_wall",
-    "excessive_building:polished_blackstone_tile_wall"
+    "excessive_building:polished_stone_brick_wall",
+    "excessive_building:polished_stone_wall",
+    "excessive_building:polished_blackstone_tile_wall",
+    "excessive_building:polished_calcite_wall",
+    "excessive_building:basketweave_brick_wall",
+    "excessive_building:smooth_basketweave_brick_wall",
+    "excessive_building:polished_basalt_wall"
   ]
 }

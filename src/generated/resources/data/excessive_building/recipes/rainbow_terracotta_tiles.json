@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "excessive_building:blue_terracotta_tiles"
+    },
+    "C": {
+      "item": "excessive_building:light_blue_terracotta_tiles"
+    },
+    "G": {
+      "item": "excessive_building:green_terracotta_tiles"
+    },
+    "I": {
+      "item": "excessive_building:pink_terracotta_tiles"
+    },
+    "L": {
+      "item": "excessive_building:lime_terracotta_tiles"
+    },
+    "O": {
+      "item": "excessive_building:orange_terracotta_tiles"
+    },
+    "P": {
+      "item": "excessive_building:purple_terracotta_tiles"
+    },
+    "R": {
+      "item": "excessive_building:red_terracotta_tiles"
+    },
+    "Y": {
+      "item": "excessive_building:yellow_terracotta_tiles"
+    }
+  },
+  "pattern": [
+    "ROY",
+    "LGC",
+    "BPI"
+  ],
+  "result": {
+    "count": 9,
+    "item": "excessive_building:rainbow_terracotta_tiles"
+  },
+  "show_notification": true
+}

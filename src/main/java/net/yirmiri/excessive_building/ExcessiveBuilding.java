@@ -3,9 +3,15 @@ package net.yirmiri.excessive_building;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -14,25 +20,43 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.yirmiri.excessive_building.block.EBBlocks;
-import net.yirmiri.excessive_building.item.EBCreativeTabs;
+import net.yirmiri.excessive_building.effect.EBMobEffects;
+import net.yirmiri.excessive_building.effect.EBPotions;
+import net.yirmiri.excessive_building.item.EBItemGroups;
 import net.yirmiri.excessive_building.item.EBItems;
+import net.yirmiri.excessive_building.loot.EBLootTableModifiers;
+import net.yirmiri.excessive_building.util.EBBrewingRecipe;
+import net.yirmiri.excessive_building.util.EBWoodTypes;
 
-@Mod(ExcessiveBuilding.MOD_ID)
+@Mod(ExcessiveBuilding.MODID)
 public class ExcessiveBuilding {
-    public static final String MOD_ID = "excessive_building";
+    public static final String MODID = "excessive_building";
 
     public ExcessiveBuilding() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         EBBlocks.register(modEventBus);
         EBItems.register(modEventBus);
-        EBCreativeTabs.register(modEventBus);
+        EBItemGroups.register(modEventBus);
+        EBMobEffects.register(modEventBus);
+        EBPotions.register(modEventBus);
+        EBLootTableModifiers.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::onClientSetup);
+        modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
+    }
+
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.ANCIENT_SAPLING.getId(), EBBlocks.POTTED_ANCIENT_SAPLING);
+
+            BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.AWKWARD, EBItems.ANCIENT_FRUIT.get(), EBPotions.REACHING_POTION.get()));
+            BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(EBPotions.REACHING_POTION.get(), Items.REDSTONE, EBPotions.LONG_REACHING_POTION.get()));
+        });
     }
 
     @SubscribeEvent
@@ -46,8 +70,17 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.RAINBOW_STAINED_GLASS.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.RAINBOW_STAINED_GLASS_PANE.get(), RenderType.translucent());
 
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.FIERY_CLUSTER.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.KYANITE_CLUSTER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.SPRUCE_LADDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.BIRCH_LADDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.BAMBOO_LADDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.JUNGLE_LADDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ACACIA_LADDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.DARK_OAK_LADDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.MANGROVE_LADDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_LADDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.CHERRY_LADDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.WARPED_LADDER.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.CRIMSON_LADDER.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.COPPER_GRATE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.EXPOSED_COPPER_GRATE.get(), RenderType.cutoutMipped());
@@ -59,17 +92,25 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.WAXED_COPPER_GRATE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.GOLD_GRATE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.IRON_GRATE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_DOOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_TRAPDOOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_LEAVES.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_SAPLING.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_ANCIENT_SAPLING.get(), RenderType.cutoutMipped());
+
+        Sheets.addWoodType(EBWoodTypes.ANCIENT);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             AxeItem.STRIPPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPPABLES)
+                    .put(EBBlocks.ANCIENT_LOG.get(), EBBlocks.STRIPPED_ANCIENT_LOG.get()).put(EBBlocks.ANCIENT_WOOD.get(), EBBlocks.STRIPPED_ANCIENT_WOOD.get())
                     .build();
         });
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTab() == EBCreativeTabs.EXCESSIVE_BUILDING.get()) {
+        if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get()) {
             event.accept(EBBlocks.CHISELED_OAK);
             event.accept(EBBlocks.OAK_MOSAIC);
             event.accept(EBBlocks.OAK_MOSAIC_STAIRS);
@@ -80,47 +121,90 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.SPRUCE_MOSAIC_STAIRS);
             event.accept(EBBlocks.SPRUCE_MOSAIC_VERTICAL_STAIRS);
             event.accept(EBBlocks.SPRUCE_MOSAIC_SLAB);
+            event.accept(EBBlocks.SPRUCE_LADDER);
             event.accept(EBBlocks.CHISELED_BIRCH);
             event.accept(EBBlocks.BIRCH_MOSAIC);
             event.accept(EBBlocks.BIRCH_MOSAIC_STAIRS);
             event.accept(EBBlocks.BIRCH_MOSAIC_VERTICAL_STAIRS);
             event.accept(EBBlocks.BIRCH_MOSAIC_SLAB);
+            event.accept(EBBlocks.BIRCH_LADDER);
             event.accept(EBBlocks.CHISELED_JUNGLE);
             event.accept(EBBlocks.JUNGLE_MOSAIC);
             event.accept(EBBlocks.JUNGLE_MOSAIC_STAIRS);
             event.accept(EBBlocks.JUNGLE_MOSAIC_VERTICAL_STAIRS);
             event.accept(EBBlocks.JUNGLE_MOSAIC_SLAB);
+            event.accept(EBBlocks.JUNGLE_LADDER);
             event.accept(EBBlocks.CHISELED_ACACIA);
             event.accept(EBBlocks.ACACIA_MOSAIC);
             event.accept(EBBlocks.ACACIA_MOSAIC_STAIRS);
             event.accept(EBBlocks.ACACIA_MOSAIC_VERTICAL_STAIRS);
             event.accept(EBBlocks.ACACIA_MOSAIC_SLAB);
+            event.accept(EBBlocks.ACACIA_LADDER);
             event.accept(EBBlocks.CHISELED_DARK_OAK);
             event.accept(EBBlocks.DARK_OAK_MOSAIC);
             event.accept(EBBlocks.DARK_OAK_MOSAIC_STAIRS);
             event.accept(EBBlocks.DARK_OAK_MOSAIC_VERTICAL_STAIRS);
             event.accept(EBBlocks.DARK_OAK_MOSAIC_SLAB);
+            event.accept(EBBlocks.DARK_OAK_LADDER);
             event.accept(EBBlocks.CHISELED_MANGROVE);
             event.accept(EBBlocks.MANGROVE_MOSAIC);
             event.accept(EBBlocks.MANGROVE_MOSAIC_STAIRS);
             event.accept(EBBlocks.MANGROVE_MOSAIC_VERTICAL_STAIRS);
             event.accept(EBBlocks.MANGROVE_MOSAIC_SLAB);
+            event.accept(EBBlocks.MANGROVE_LADDER);
             event.accept(EBBlocks.CHISELED_CHERRY);
             event.accept(EBBlocks.CHERRY_MOSAIC);
             event.accept(EBBlocks.CHERRY_MOSAIC_STAIRS);
             event.accept(EBBlocks.CHERRY_MOSAIC_VERTICAL_STAIRS);
             event.accept(EBBlocks.CHERRY_MOSAIC_SLAB);
+            event.accept(EBBlocks.CHERRY_LADDER);
+            event.accept(EBBlocks.ANCIENT_LOG);
+            event.accept(EBBlocks.ANCIENT_WOOD);
+            event.accept(EBBlocks.STRIPPED_ANCIENT_LOG);
+            event.accept(EBBlocks.STRIPPED_ANCIENT_WOOD);
+            event.accept(EBBlocks.ANCIENT_PLANKS);
+            event.accept(EBBlocks.ANCIENT_STAIRS);
+            event.accept(EBBlocks.ANCIENT_VERTICAL_STAIRS);
+            event.accept(EBBlocks.ANCIENT_SLAB);
+            event.accept(EBBlocks.CHISELED_ANCIENT);
+            event.accept(EBBlocks.ANCIENT_MOSAIC);
+            event.accept(EBBlocks.ANCIENT_MOSAIC_STAIRS);
+            event.accept(EBBlocks.ANCIENT_MOSAIC_VERTICAL_STAIRS);
+            event.accept(EBBlocks.ANCIENT_MOSAIC_SLAB);
+            event.accept(EBBlocks.ANCIENT_FENCE);
+            event.accept(EBBlocks.ANCIENT_FENCE_GATE);
+            event.accept(EBBlocks.ANCIENT_DOOR);
+            event.accept(EBBlocks.ANCIENT_TRAPDOOR);
+            event.accept(EBBlocks.ANCIENT_LADDER);
+            event.accept(EBBlocks.ANCIENT_PRESSURE_PLATE);
+            event.accept(EBBlocks.ANCIENT_BUTTON);
+            //event.accept(EBBlocks.ANCIENT_SIGN);
+            //event.accept(EBBlocks.ANCIENT_HANGING_SIGN);
             event.accept(EBBlocks.CHISELED_BAMBOO);
+            event.accept(EBBlocks.BAMBOO_LADDER);
             event.accept(EBBlocks.CHISELED_CRIMSON);
             event.accept(EBBlocks.CRIMSON_MOSAIC);
             event.accept(EBBlocks.CRIMSON_MOSAIC_STAIRS);
             event.accept(EBBlocks.CRIMSON_MOSAIC_VERTICAL_STAIRS);
             event.accept(EBBlocks.CRIMSON_MOSAIC_SLAB);
+            event.accept(EBBlocks.CRIMSON_LADDER);
             event.accept(EBBlocks.CHISELED_WARPED);
             event.accept(EBBlocks.WARPED_MOSAIC);
             event.accept(EBBlocks.WARPED_MOSAIC_STAIRS);
             event.accept(EBBlocks.WARPED_MOSAIC_VERTICAL_STAIRS);
             event.accept(EBBlocks.WARPED_MOSAIC_SLAB);
+            event.accept(EBBlocks.WARPED_LADDER);
+            event.accept(EBBlocks.POLISHED_STONE);
+            event.accept(EBBlocks.POLISHED_STONE_STAIRS);
+            event.accept(EBBlocks.POLISHED_STONE_VERTICAL_STAIRS);
+            event.accept(EBBlocks.POLISHED_STONE_SLAB);
+            event.accept(EBBlocks.POLISHED_STONE_WALL);
+            event.accept(EBBlocks.POLISHED_STONE_BRICKS);
+            event.accept(EBBlocks.CRACKED_POLISHED_STONE_BRICKS);
+            event.accept(EBBlocks.POLISHED_STONE_BRICK_STAIRS);
+            event.accept(EBBlocks.POLISHED_STONE_BRICK_VERTICAL_STAIRS);
+            event.accept(EBBlocks.POLISHED_STONE_BRICK_SLAB);
+            event.accept(EBBlocks.POLISHED_STONE_BRICK_WALL);
             event.accept(EBBlocks.COBBLESTONE_BRICKS);
             event.accept(EBBlocks.CRACKED_COBBLESTONE_BRICKS);
             event.accept(EBBlocks.COBBLESTONE_BRICK_STAIRS);
@@ -190,6 +274,11 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.POLISHED_ANDESITE_BRICK_VERTICAL_STAIRS);
             event.accept(EBBlocks.POLISHED_ANDESITE_BRICK_SLAB);
             event.accept(EBBlocks.POLISHED_ANDESITE_BRICK_WALL);
+            event.accept(EBBlocks.POLISHED_CALCITE);
+            event.accept(EBBlocks.POLISHED_CALCITE_STAIRS);
+            event.accept(EBBlocks.POLISHED_CALCITE_VERTICAL_STAIRS);
+            event.accept(EBBlocks.POLISHED_CALCITE_SLAB);
+            event.accept(EBBlocks.POLISHED_CALCITE_WALL);
             event.accept(EBBlocks.CALCITE_BRICKS);
             event.accept(EBBlocks.CRACKED_CALCITE_BRICKS);
             event.accept(EBBlocks.CALCITE_BRICK_STAIRS);
@@ -197,6 +286,7 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.CALCITE_BRICK_SLAB);
             event.accept(EBBlocks.CALCITE_BRICK_WALL);
             event.accept(EBBlocks.CALCITE_TILES);
+            event.accept(EBBlocks.CRACKED_CALCITE_TILES);
             event.accept(EBBlocks.CALCITE_TILE_STAIRS);
             event.accept(EBBlocks.CALCITE_TILE_VERTICAL_STAIRS);
             event.accept(EBBlocks.CALCITE_TILE_SLAB);
@@ -248,12 +338,25 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.MOSSY_DEEPSLATE_BRICK_VERTICAL_STAIRS);
             event.accept(EBBlocks.MOSSY_DEEPSLATE_BRICK_SLAB);
             event.accept(EBBlocks.MOSSY_DEEPSLATE_BRICK_WALL);
+            event.accept(EBBlocks.CRACKED_BRICKS);
+            event.accept(EBBlocks.HERRINGBONE_BRICKS);
+            event.accept(EBBlocks.BASKETWEAVE_BRICKS);
+            event.accept(EBBlocks.BASKETWEAVE_BRICK_STAIRS);
+            event.accept(EBBlocks.BASKETWEAVE_BRICK_VERTICAL_STAIRS);
+            event.accept(EBBlocks.BASKETWEAVE_BRICK_SLAB);
+            event.accept(EBBlocks.BASKETWEAVE_BRICK_WALL);
             event.accept(EBBlocks.SMOOTH_BRICKS);
             event.accept(EBBlocks.CRACKED_SMOOTH_BRICKS);
             event.accept(EBBlocks.SMOOTH_BRICK_STAIRS);
             event.accept(EBBlocks.SMOOTH_BRICK_VERTICAL_STAIRS);
             event.accept(EBBlocks.SMOOTH_BRICK_SLAB);
             event.accept(EBBlocks.SMOOTH_BRICK_WALL);
+            event.accept(EBBlocks.SMOOTH_HERRINGBONE_BRICKS);
+            event.accept(EBBlocks.SMOOTH_BASKETWEAVE_BRICKS);
+            event.accept(EBBlocks.SMOOTH_BASKETWEAVE_BRICK_STAIRS);
+            event.accept(EBBlocks.SMOOTH_BASKETWEAVE_BRICK_VERTICAL_STAIRS);
+            event.accept(EBBlocks.SMOOTH_BASKETWEAVE_BRICK_SLAB);
+            event.accept(EBBlocks.SMOOTH_BASKETWEAVE_BRICK_WALL);
             event.accept(EBBlocks.MUD_TILES);
             event.accept(EBBlocks.MUD_TILE_STAIRS);
             event.accept(EBBlocks.MUD_TILE_VERTICAL_STAIRS);
@@ -333,8 +436,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_STAIRS);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_SLAB);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_WALL);
-            event.accept(EBBlocks.BRIMSTONE_WINDOW);
-            event.accept(EBBlocks.BRIMSTONE_LANTERN);
             event.accept(EBBlocks.NETHER_TILES);
             event.accept(EBBlocks.NETHER_TILE_STAIRS);
             event.accept(EBBlocks.NETHER_TILE_VERTICAL_STAIRS);
@@ -387,6 +488,19 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.WARPED_MOSSY_BLACKSTONE_BRICK_VERTICAL_STAIRS);
             event.accept(EBBlocks.WARPED_MOSSY_BLACKSTONE_BRICK_SLAB);
             event.accept(EBBlocks.WARPED_MOSSY_BLACKSTONE_BRICK_WALL);
+            event.accept(EBBlocks.POLISHED_BASALT);
+            event.accept(EBBlocks.POLISHED_BASALT_STAIRS);
+            event.accept(EBBlocks.POLISHED_BASALT_VERTICAL_STAIRS);
+            event.accept(EBBlocks.POLISHED_BASALT_SLAB);
+            event.accept(EBBlocks.POLISHED_BASALT_WALL);
+            event.accept(EBBlocks.ASPHALT);
+            event.accept(EBBlocks.ASPHALT_STAIRS);
+            event.accept(EBBlocks.ASPHALT_SLAB);
+            event.accept(EBBlocks.ASPHALT_VERTICAL_STAIRS);
+            event.accept(EBBlocks.SWIFT_ASPHALT);
+            event.accept(EBBlocks.SWIFT_ASPHALT_STAIRS);
+            event.accept(EBBlocks.SWIFT_ASPHALT_SLAB);
+            event.accept(EBBlocks.SWIFT_ASPHALT_VERTICAL_STAIRS);
             event.accept(EBBlocks.OBSIDIAN_BRICKS);
             event.accept(EBBlocks.CRACKED_OBSIDIAN_BRICKS);
             event.accept(EBBlocks.OBSIDIAN_BRICK_STAIRS);
@@ -481,7 +595,16 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.PINK_TERRACOTTA_TILES);
             event.accept(EBBlocks.PINK_TERRACOTTA_TILE_STAIRS);
             event.accept(EBBlocks.PINK_TERRACOTTA_TILE_SLAB);
+            event.accept(EBBlocks.STONE_LANTERN);
+            event.accept(EBBlocks.DEEPSLATE_LANTERN);
+            event.accept(EBBlocks.BLACKSTONE_LANTERN);
+            event.accept(EBBlocks.BLACKSTONE_WINDOW);
+            event.accept(EBBlocks.BRIMSTONE_LANTERN);
+            event.accept(EBBlocks.BRIMSTONE_WINDOW);
             event.accept(EBBlocks.SOUL_MAGMA_BLOCK);
+            event.accept(EBBlocks.ANCIENT_LEAVES);
+            event.accept(EBBlocks.ANCIENT_SAPLING);
+            event.accept(EBItems.ANCIENT_FRUIT);
             event.accept(EBBlocks.AMETHYST_LANTERN);
             event.accept(EBBlocks.AMETHYST_GLASS);
             event.accept(EBBlocks.AMETHYST_GLASS_PANE);
@@ -521,12 +644,13 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.WAXED_EXPOSED_COPPER_BULB);
             event.accept(EBBlocks.WAXED_WEATHERED_COPPER_BULB);
             event.accept(EBBlocks.WAXED_OXIDIZED_COPPER_BULB);
-            event.accept(EBBlocks.ASPHALT);
             event.accept(EBBlocks.EMPTY_SHELF);
             event.accept(EBBlocks.EMPTY_POTION_SHELF);
             event.accept(EBBlocks.WATER_POTION_SHELF);
             event.accept(EBBlocks.POTION_SHELF);
             event.accept(EBBlocks.ALCHEMIST_SHELF);
+            event.accept(EBBlocks.BRICKSHELF);
+            event.accept(EBBlocks.NETHER_BRICKSHELF);
             event.accept(EBBlocks.OAK_CRAFTING_TABLE);
             event.accept(EBBlocks.SPRUCE_CRAFTING_TABLE);
             event.accept(EBBlocks.COLORED_SPRUCE_CRAFTING_TABLE);
@@ -543,6 +667,8 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.BAMBOO_CRAFTING_TABLE);
             event.accept(EBBlocks.CHERRY_CRAFTING_TABLE);
             event.accept(EBBlocks.COLORED_CHERRY_CRAFTING_TABLE);
+            event.accept(EBBlocks.ANCIENT_CRAFTING_TABLE);
+            event.accept(EBBlocks.COLORED_ANCIENT_CRAFTING_TABLE);
             event.accept(EBBlocks.CRIMSON_CRAFTING_TABLE);
             event.accept(EBBlocks.COLORED_CRIMSON_CRAFTING_TABLE);
             event.accept(EBBlocks.WARPED_CRAFTING_TABLE);

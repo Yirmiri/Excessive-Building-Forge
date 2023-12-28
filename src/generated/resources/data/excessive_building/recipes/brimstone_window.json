@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:nether_brick"
+    },
+    "%": {
+      "item": "excessive_building:polished_brimstone"
+    },
+    "@": {
+      "item": "excessive_building:fiery_shards"
+    }
+  },
+  "pattern": [
+    "#@#",
+    "@%@",
+    "#@#"
+  ],
+  "result": {
+    "item": "excessive_building:brimstone_window"
+  },
+  "show_notification": true
+}

@@ -89,6 +89,25 @@
     "excessive_building:colored_mangrove_crafting_table",
     "excessive_building:colored_cherry_crafting_table",
     "excessive_building:colored_crimson_crafting_table",
-    "excessive_building:colored_warped_crafting_table"
+    "excessive_building:colored_warped_crafting_table",
+    "excessive_building:brickshelf",
+    "excessive_building:nether_brickshelf",
+    "excessive_building:ancient_mosaic",
+    "excessive_building:chiseled_ancient",
+    "excessive_building:ancient_mosaic_vertical_stairs",
+    "excessive_building:ancient_vertical_stairs",
+    "excessive_building:ancient_crafting_table",
+    "excessive_building:colored_ancient_crafting_table",
+    "excessive_building:ancient_ladder",
+    "excessive_building:spruce_ladder",
+    "excessive_building:birch_ladder",
+    "excessive_building:jungle_ladder",
+    "excessive_building:acacia_ladder",
+    "excessive_building:dark_oak_ladder",
+    "excessive_building:mangrove_ladder",
+    "excessive_building:cherry_ladder",
+    "excessive_building:crimson_ladder",
+    "excessive_building:warped_ladder",
+    "excessive_building:bamboo_ladder"
   ]
 }

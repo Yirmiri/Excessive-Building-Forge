@@ -6,8 +6,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.world.EBConfiguredFeatures;
-import net.yirmiri.excessive_building.world.EBPlacedFeatures;
+import net.yirmiri.excessive_building.worldgen.EBConfiguredFeatures;
+import net.yirmiri.excessive_building.worldgen.EBPlacedFeatures;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;
@@ -18,6 +18,6 @@ public class EBWorldGenProvider extends DatapackBuiltinEntriesProvider {
             .add(Registries.PLACED_FEATURE, EBPlacedFeatures::bootstrap);
 
     public EBWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BUILDER, Set.of(ExcessiveBuilding.MOD_ID));
+        super(output, registries, BUILDER, Set.of(ExcessiveBuilding.MODID));
     }
 }

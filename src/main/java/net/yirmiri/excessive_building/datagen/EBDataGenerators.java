@@ -8,10 +8,11 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.loot.EBGlobalLootModifiersProvider;
 
 import java.util.concurrent.CompletableFuture;
 
-@Mod.EventBusSubscriber(modid = ExcessiveBuilding.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = ExcessiveBuilding.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class EBDataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {
@@ -24,5 +25,6 @@ public class EBDataGenerators {
         generator.addProvider(event.includeClient(), new EBBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new EBItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeServer(), new EBWorldGenProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new EBGlobalLootModifiersProvider(packOutput));
     }
 }

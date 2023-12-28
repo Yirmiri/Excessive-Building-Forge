@@ -1,6 +1,57 @@
-c--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Literally just a secret .txt file of every single update's changelog
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release V2.0.0 (Forge/NeoForge: 1.20.1) (Fabric/Quilt: 1.20.1)
+The 100K Update! - Major Update
+
+•   Thank you all so much for helping reach 100K downloads, I really didn't think my silly block mode would go so far and was infact made on April Fools because I didn't
+think it would get so far enough for me to do this. I ended up finding that there is an entire art/modding Minecraft community out there and became part of it! I am truly
+thankful to be where I am, and as a thank you to you all I have compiled a bunch of ideas I have seen people wanted in this mod and put it all in this update + more, enjoy :)<3
+
+  Additions
+•   Added the ancient woodset (sapling can be obtained from sniffers sniffing up the ground)
+•   Added ancient fruit which drops uncommonly from ancient leaves, ancient fruit can be brewed into a potion of reaching which increases interaction reach for the duration of its effect
+NOTE: Reaching is currently only on Forge since they support block reach as an attribute, and while yes I could add it to Fabric I'd rather wait since it will be officially supported by Minecraft innnn 1.21... or 1.20.5? idk anymore-
+...as a compromise for now Fabric players can create haste potions out of ancient fruit! (crafting these potions will be removed after I support reaching in both loaders)
+•   Added new ladder variants (a new ladder recipe has been added to make room for variant ladders, this includes the original ladder however the old recipe remains for those that don't wanna use specific planks)
+•   Added polished stone and polished stone bricks
+•   Added polished calcite blocks & cracked calcite tiles
+•   Added brickshelves & nether brickshelves (these are meant to be a silly item, was inspired after seeing a post made by @qzimyion)
+•   Added basketweave and herringbone brick variants (aswell as the missing cracked bricks variant)
+•   Added stone, deepslate, & blackstone lanterns (aswell as blackstone windows)
+•   All asphalt blocks no longer give speed however you can now choose to tint them to have speed applied
+•   Added swift asphalt (a variant of asphalt that increases speed) and asphalt block variants (stairs, slabs, and vertical stairs)
+•   Added polished basalt blocks, can be crafted from smooth basalt
+
+  Changes
+•   Changed a bunch of textures to match my newer style of art aswell as a lot of vanilla color/texture parity
+•   The biggest victim of the above texture changes are the polished andesite, diorite, and granite bricks.
+These blocks now resemble their base polished variants MUCH better than before which allows them to better fit into builds utilizing those blocks.
+•   Adjusted Excessive Building creative tab slightly
+•   Obsidian bricks and tiles are now immune to the Ender Dragon
+•   Smithing tables can now be broken using both an axe or pickaxe
+•   Added a recipe for fiery and kyanite shards due to there being no way to renew them yet
+•   Changed calcite bricks recipe to utilize the new polished calcite instead
+•   Changed the recipes for brimstone windows and lanterns
+•   Amethyst lantern recipe has been buffed to grant 2 instead of 1
+•   Fiery lantern recipe has been slightly changed to cost 1 less nether brick and 1 more fiery crystal
+•   All lantern blocks including sea lanterns now drop themselves at all times (glowstone still drops glowstone dust)
+•   Updated stone mason trades (this only applies to Excessive Building's custom trades)
+•   Added all crystal and shards to the cleric's trades to make obtaining them in bulk easier
+
+  Bug Fixes
+•   Fixed polished blackstone tiles and its variants from being crafted (Forge/Fabric)
+•   Added Excessive Building's Nether wood block variants to the "non_flammable_woods" tag which should solve some issues in which other mods use that tag (Forge/Fabric)
+•   Fixed various recipes that previously were broken (Forge/Fabric)
+•   Not a bug but thought it would be stupid to mention I removed the extra c in the changelog file's border at the top (ALL :P)
+
+  Technical Changes
+•   Asphalt blocks are no longer considered "speed blocks"
+•   Flammable blocks are now their own seperate block class to clean up some ugly code
+•   Features no longer have the _placed suffix (this also effects /place)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -15,7 +66,7 @@ Small Update
 Version Release Beta 1.5.1_01 (Forge/NeoForge: 1.20.1)
 Hotfix Update
 
-  READ THISISISISISIISIISSSSSSSSSS
+  READ THISISISISISIISIISSSSSSSSSS - comment a few weeks later, holy shit this is weird 3AM me, anyway I saw that Excessive Building has been put in the backlog for Wood Good so compat isn't priority anymore
 •   Temp removed all integration for now has I clean out issues
 
   Bug Fixes

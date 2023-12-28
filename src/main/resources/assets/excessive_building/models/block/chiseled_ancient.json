@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "excessive_building:block/ancient_planks",
+    "side": "excessive_building:block/chiseled_ancient",
+    "top": "excessive_building:block/ancient_planks"
+  }
+}
