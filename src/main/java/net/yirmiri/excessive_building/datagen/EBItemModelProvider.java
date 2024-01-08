@@ -10,8 +10,8 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.block.EBBlocks;
-import net.yirmiri.excessive_building.item.EBItems;
+import net.yirmiri.excessive_building.init.EBBlocks;
+import net.yirmiri.excessive_building.init.EBItems;
 
 public class EBItemModelProvider extends ItemModelProvider {
 

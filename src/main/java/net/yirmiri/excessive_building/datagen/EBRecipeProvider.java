@@ -7,8 +7,8 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import net.yirmiri.excessive_building.block.EBBlocks;
-import net.yirmiri.excessive_building.item.EBItems;
+import net.yirmiri.excessive_building.init.EBBlocks;
+import net.yirmiri.excessive_building.init.EBItems;
 
 import java.util.List;
 import java.util.function.Consumer;

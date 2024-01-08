@@ -8,7 +8,7 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.loot.EBGlobalLootModifiersProvider;
+import net.yirmiri.excessive_building.datagen.loot.EBGlobalLootModifiersProvider;
 
 import java.util.concurrent.CompletableFuture;
 

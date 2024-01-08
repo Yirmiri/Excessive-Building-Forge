@@ -27,7 +27,7 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.CherryTrunkPlacer
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.block.EBBlocks;
+import net.yirmiri.excessive_building.init.EBBlocks;
 
 import java.util.List;
 

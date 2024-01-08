@@ -19,15 +19,15 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.yirmiri.excessive_building.block.EBBlocks;
-import net.yirmiri.excessive_building.effect.EBMobEffects;
-import net.yirmiri.excessive_building.effect.EBPotions;
-import net.yirmiri.excessive_building.item.EBItemGroups;
-import net.yirmiri.excessive_building.item.EBItems;
-import net.yirmiri.excessive_building.loot.EBLootTableModifiers;
-import net.yirmiri.excessive_building.particle.EBParticleTypes;
-import net.yirmiri.excessive_building.util.EBBrewingRecipe;
-import net.yirmiri.excessive_building.util.EBWoodTypes;
+import net.yirmiri.excessive_building.init.EBBlocks;
+import net.yirmiri.excessive_building.potion.EBMobEffects;
+import net.yirmiri.excessive_building.potion.EBPotions;
+import net.yirmiri.excessive_building.init.EBItemGroups;
+import net.yirmiri.excessive_building.init.EBItems;
+import net.yirmiri.excessive_building.datagen.loot.EBLootTableModifiers;
+import net.yirmiri.excessive_building.init.EBParticleTypes;
+import net.yirmiri.excessive_building.potion.EBBrewingRecipe;
+import net.yirmiri.excessive_building.init.EBWoodTypes;
 
 @Mod(ExcessiveBuilding.MODID)
 public class ExcessiveBuilding {

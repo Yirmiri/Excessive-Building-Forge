@@ -9,7 +9,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.block.EBBlocks;
+import net.yirmiri.excessive_building.init.EBBlocks;
 
 public class EBBlockStateProvider extends BlockStateProvider {
     public EBBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
