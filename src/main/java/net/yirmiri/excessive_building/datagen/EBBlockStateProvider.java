@@ -71,6 +71,15 @@ public class EBBlockStateProvider extends BlockStateProvider {
         stairsBlock(((StairBlock) EBBlocks.POLISHED_BASALT_STAIRS.get()), blockTexture(EBBlocks.POLISHED_BASALT.get()));
         slabBlock(((SlabBlock) EBBlocks.POLISHED_BASALT_SLAB.get()), blockTexture(EBBlocks.POLISHED_BASALT.get()), blockTexture(EBBlocks.POLISHED_BASALT.get()));
         wallBlock(((WallBlock) EBBlocks.POLISHED_BASALT_WALL.get()), blockTexture(EBBlocks.POLISHED_BASALT.get()));
+
+        blockWithItem(EBBlocks.COPPER_BULB);
+        blockWithItem(EBBlocks.WEATHERED_COPPER_BULB);
+        blockWithItem(EBBlocks.EXPOSED_COPPER_BULB);
+        blockWithItem(EBBlocks.OXIDIZED_COPPER_BULB);
+        blockWithItem(EBBlocks.WAXED_COPPER_BULB);
+        blockWithItem(EBBlocks.WAXED_WEATHERED_COPPER_BULB);
+        blockWithItem(EBBlocks.WAXED_EXPOSED_COPPER_BULB);
+        blockWithItem(EBBlocks.WAXED_OXIDIZED_COPPER_BULB);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

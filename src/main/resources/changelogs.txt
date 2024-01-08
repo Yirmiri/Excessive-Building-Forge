@@ -20,6 +20,7 @@ Small Update
 
   Technical Changes
 •   Cleaned up & rewrote a large chunk of code (won't affect gameplay)
+•   Added an update.json to notify user's of new updates
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
