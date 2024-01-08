@@ -2124,15 +2124,6 @@ public class EBBlocks {
             () -> new EBCraftingTableBlock(BlockBehaviour.Properties.copy(Blocks.CRAFTING_TABLE)
                     .strength(2.5f).explosionResistance(2.5f).sound(SoundType.CHERRY_WOOD)));
 
-    public static final RegistryObject<Block> ANCIENT_LEAVES = registerBlock("ancient_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES)));
-
-    public static final RegistryObject<Block> ANCIENT_SAPLING = registerBlock("ancient_sapling",
-            () -> new SaplingBlock(new AncientTreeGrower(), BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING)));
-
-    public static final RegistryObject<Block> POTTED_ANCIENT_SAPLING = BLOCKS.register("potted_ancient_sapling",
-            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.ANCIENT_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_CHERRY_SAPLING)));
-
     public static final RegistryObject<Block> SPRUCE_LADDER = registerBlock("spruce_ladder",
             () -> new LadderBlock(BlockBehaviour.Properties.copy(Blocks.LADDER)));
 
@@ -2180,6 +2171,20 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> POLISHED_BASALT_VERTICAL_STAIRS = registerBlock("polished_basalt_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_BASALT.get())));
+
+    public static final RegistryObject<Block> ANCIENT_LEAVES = registerBlock("ancient_leaves",
+            () -> new AncientLeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES).lightLevel(state -> 9)));
+
+    public static final RegistryObject<Block> ANCIENT_SAPLING = registerBlock("ancient_sapling",
+            () -> new SaplingBlock(new AncientTreeGrower(), BlockBehaviour.Properties.copy(Blocks.CHERRY_SAPLING).lightLevel(state -> 6)));
+
+    public static final RegistryObject<Block> POTTED_ANCIENT_SAPLING = BLOCKS.register("potted_ancient_sapling",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.ANCIENT_SAPLING,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_CHERRY_SAPLING).lightLevel(state -> 6)));
+
+    public static final RegistryObject<Block> UNLIT_ANCIENT_LEAVES = registerBlock("unlit_ancient_leaves",
+            () -> new AncientLeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES)));
+
 
     protected static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {
                 RegistryObject<B> toReturn = BLOCKS.register(name, block);

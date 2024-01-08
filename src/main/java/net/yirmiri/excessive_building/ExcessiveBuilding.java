@@ -25,6 +25,7 @@ import net.yirmiri.excessive_building.effect.EBPotions;
 import net.yirmiri.excessive_building.item.EBItemGroups;
 import net.yirmiri.excessive_building.item.EBItems;
 import net.yirmiri.excessive_building.loot.EBLootTableModifiers;
+import net.yirmiri.excessive_building.particle.EBParticleTypes;
 import net.yirmiri.excessive_building.util.EBBrewingRecipe;
 import net.yirmiri.excessive_building.util.EBWoodTypes;
 
@@ -41,6 +42,7 @@ public class ExcessiveBuilding {
         EBMobEffects.register(modEventBus);
         EBPotions.register(modEventBus);
         EBLootTableModifiers.register(modEventBus);
+        EBParticleTypes.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::setup);
@@ -95,6 +97,7 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_DOOR.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_TRAPDOOR.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_LEAVES.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.UNLIT_ANCIENT_LEAVES.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_SAPLING.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_ANCIENT_SAPLING.get(), RenderType.cutoutMipped());
 
@@ -603,6 +606,7 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.BRIMSTONE_WINDOW);
             event.accept(EBBlocks.SOUL_MAGMA_BLOCK);
             event.accept(EBBlocks.ANCIENT_LEAVES);
+            event.accept(EBBlocks.UNLIT_ANCIENT_LEAVES);
             event.accept(EBBlocks.ANCIENT_SAPLING);
             event.accept(EBItems.ANCIENT_FRUIT);
             event.accept(EBBlocks.AMETHYST_LANTERN);

@@ -65,6 +65,7 @@ public class EBBlockStateProvider extends BlockStateProvider {
         stairsBlock(((StairBlock) EBBlocks.ANCIENT_MOSAIC_STAIRS.get()), blockTexture(EBBlocks.ANCIENT_MOSAIC.get()));
         slabBlock(((SlabBlock) EBBlocks.ANCIENT_MOSAIC_SLAB.get()), blockTexture(EBBlocks.ANCIENT_MOSAIC.get()), blockTexture(EBBlocks.ANCIENT_MOSAIC.get()));
         blockWithItem(EBBlocks.ANCIENT_LEAVES);
+        blockWithItem(EBBlocks.UNLIT_ANCIENT_LEAVES);
 
         blockWithItem(EBBlocks.POLISHED_BASALT);
         stairsBlock(((StairBlock) EBBlocks.POLISHED_BASALT_STAIRS.get()), blockTexture(EBBlocks.POLISHED_BASALT.get()));

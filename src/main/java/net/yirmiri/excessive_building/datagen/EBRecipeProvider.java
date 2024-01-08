@@ -417,6 +417,9 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
 
         wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_BASALT_WALL.get(), Ingredient.of(EBBlocks.POLISHED_BASALT.get()))
                 .unlockedBy(getHasName(EBBlocks.POLISHED_BASALT.get()), has(EBBlocks.POLISHED_BASALT.get())).save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, EBBlocks.UNLIT_ANCIENT_LEAVES.get(), 1).requires(EBBlocks.ANCIENT_LEAVES.get())
+                .unlockedBy(getHasName(EBBlocks.ANCIENT_LEAVES.get()), has(EBBlocks.ANCIENT_LEAVES.get())).save(pWriter);
     }
 
     protected static RecipeBuilder EBmosaicBuilder(ItemLike itemLike, Ingredient ingredient) {
