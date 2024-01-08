@@ -4,18 +4,22 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release V2.0.1 (Forge/NeoForge: 1.20.1) (Fabric/Quilt: 1.20.1)
+Version Release V2.0.2 (Forge/NeoForge: 1.20.1) (Fabric/Quilt: 1.20.1)
 Small Update
 
   Additions
+•   Added small leaf particles that fall from ancient leaves
 •   Added a variant of ancient leaves that do not emit light
 
   Changes
 •   Ancient leaves, saplings, & potted saplings will now give off a small amount of light
 
   Bug Fixes
-•   Added ancient blocks to the leaves, saplings, logs, & logs_that_burn item tags
-•   Added ancient logs item tag
+•   Added ancient blocks to the leaves, saplings, logs, & logs_that_burn item tags (Forge/Fabric)
+•   Added ancient logs item tag (Forge/Fabric)
+
+  Technical Changes
+•   Cleaned up & rewrote a large chunk of code (won't affect gameplay)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
