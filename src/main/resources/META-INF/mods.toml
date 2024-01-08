@@ -1,11 +1,12 @@
 modLoader="javafml" #mandatory
 loaderVersion="[47,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
 license="MIT License"
+
 [[mods]] #mandatory
 modId="excessive_building" #mandatory
 version="1.20.1-2.0.2" #mandatory
 displayName="Excessive Building" #mandatory
-#updateJSONURL="https://legacy.curseforge.com/minecraft/mc-mods/excessive-building/files" #optional
+updateJSONURL="https://raw.githubusercontent.com/Yirmiri/Excessive-Building/master/update.json" #optional
 displayURL="https://legacy.curseforge.com/minecraft/mc-mods/excessive-building" #optional
 logoFile="excessive_building_title.png" #optional
 #credits="ig Yirmiri again" #optional
