@@ -13,7 +13,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.CraftingTableBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
-import net.yirmiri.excessive_building.inventory.EBCraftingMenu;
+import net.yirmiri.excessive_building.screen.EBCraftingMenu;
 
 public class EBCraftingTableBlock extends CraftingTableBlock {
     public static final Component TITLE = Component.translatable("container.crafting");

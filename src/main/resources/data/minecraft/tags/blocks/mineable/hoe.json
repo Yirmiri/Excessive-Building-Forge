@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "excessive_building:ancient_leaves"
+    "excessive_building:ancient_leaves",
+    "excessive_building:unlit_ancient_leaves"
   ]
 }

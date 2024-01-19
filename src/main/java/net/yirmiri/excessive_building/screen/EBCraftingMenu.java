@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.inventory;
+package net.yirmiri.excessive_building.screen;
 
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
@@ -7,9 +7,8 @@ import net.minecraft.world.inventory.CraftingMenu;
 import net.minecraft.world.level.block.Block;
 
 public class EBCraftingMenu extends CraftingMenu {
-
-    private final ContainerLevelAccess access;
     private final Block block;
+    private final ContainerLevelAccess access;
 
     public EBCraftingMenu(int id, Inventory playerInventoryIn, Block blockIn) {
         this(id, playerInventoryIn, ContainerLevelAccess.NULL, blockIn);
@@ -17,8 +16,8 @@ public class EBCraftingMenu extends CraftingMenu {
 
     public EBCraftingMenu(int aSuper, Inventory inv, ContainerLevelAccess containerLevelAccess, Block blockIn) {
         super(aSuper, inv, containerLevelAccess);
-        this.access = containerLevelAccess;
         this.block = blockIn;
+        this.access = containerLevelAccess;
     }
 
     @Override

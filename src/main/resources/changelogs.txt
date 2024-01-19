@@ -17,6 +17,7 @@ Small Update
   Bug Fixes
 •   Added ancient blocks to the leaves, saplings, logs, & logs_that_burn item tags (Forge/Fabric)
 •   Added ancient logs item tag (Forge/Fabric)
+•   Fixed missing copper bulb textures (Forge/Fabric)
 
   Technical Changes
 •   Cleaned up & rewrote a large chunk of code (won't affect gameplay)

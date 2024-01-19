@@ -23,6 +23,7 @@ public class EBItems {
     public static final RegistryObject<Item> ANCIENT_FRUIT = ITEMS.register("ancient_fruit",
             () -> new Item(new Item.Properties().food(EBFoods.ANCIENT_FRUIT)));
 
+
     public static void register(IEventBus eventBus) {
             ITEMS.register(eventBus);
     }
