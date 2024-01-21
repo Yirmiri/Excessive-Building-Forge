@@ -4,6 +4,16 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v2.0.3 (Forge/NeoForge: 1.20.1)
+Hotfix Update
+
+  Bug Fixes
+•   Fixed a major issue causing servers to crash upon loading v2.0.2
+•   Fixed an issue where in some cases the particles from the ancient tree would not appear
+•   Fixed issues with fiery and kyanite cluster's not appearing transparent
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release V2.0.2 (Forge/NeoForge: 1.20.1) (Fabric/Quilt: 1.20.1)
 Small Update
 

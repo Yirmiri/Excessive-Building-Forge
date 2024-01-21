@@ -4,7 +4,7 @@ license="MIT License"
 
 [[mods]] #mandatory
 modId="excessive_building" #mandatory
-version="1.20.1-2.0.2" #mandatory
+version="1.20.1-2.0.3" #mandatory
 displayName="Excessive Building" #mandatory
 updateJSONURL="https://raw.githubusercontent.com/Yirmiri/Excessive-Building/master/update.json" #optional
 displayURL="https://legacy.curseforge.com/minecraft/mc-mods/excessive-building" #optional

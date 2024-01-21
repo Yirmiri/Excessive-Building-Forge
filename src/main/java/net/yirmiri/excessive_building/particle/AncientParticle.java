@@ -6,7 +6,6 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-@OnlyIn(Dist.CLIENT)
 public class AncientParticle extends TextureSheetParticle {
     private float rotSpeed;
     private final float particleRandom;

@@ -1,8 +1,9 @@
 package net.yirmiri.excessive_building.init;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,10 +21,10 @@ public class EBParticleTypes {
     public static final RegistryObject<SimpleParticleType> ANCIENT_PARTICLE = PARTICLE_TYPES.register("ancient_particle",
             () -> new SimpleParticleType(true));
 
-
+    @OnlyIn(Dist.CLIENT)
     @SubscribeEvent
-    public static void registerParticleFactories(final RegisterParticleProvidersEvent event) {
-        Minecraft.getInstance().particleEngine.register(EBParticleTypes.ANCIENT_PARTICLE.get(), AncientParticle.Provider::new);
+    public static void registerFactories(RegisterParticleProvidersEvent event) {
+        event.registerSpriteSet(EBParticleTypes.ANCIENT_PARTICLE.get(), AncientParticle.Provider::new);
     }
 
     public static void register(IEventBus eventBus) {

@@ -100,6 +100,8 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.UNLIT_ANCIENT_LEAVES.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_SAPLING.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_ANCIENT_SAPLING.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.FIERY_CLUSTER.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.KYANITE_CLUSTER.get(), RenderType.cutoutMipped());
 
         Sheets.addWoodType(EBWoodTypes.ANCIENT);
     }
