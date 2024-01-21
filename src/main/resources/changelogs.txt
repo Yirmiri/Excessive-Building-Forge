@@ -4,13 +4,50 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v2.0.4 (Forge/NeoForge: 1.20.1) (Fabric/Quilt: 1.20.1)
+Small Update
+
+  Additions
+•   Ancient Fruit can now make mundane potions when not brewed properly
+
+  Changes
+•   Ancient Fruit will now grant reaching for 10 seconds when eaten to hint that they can be used to make potions
+
+  Bug Fixes
+•   Fixed a crash caused by ancient leaves (Fabric)
+•   Ancient leaves should no longer appear invisible when falling from trees (Fabric)
+•   Fixed missing textures on copper bulbs (Fabric)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release v2.0.3 (Forge: 1.19.2)
+Major Update
+
+  Additions
+•   Added most blocks from version v1.3.0.2 to v2.0.3
+•   Brought over most changes from v1.3.0.2 to v2.0.3
+•   New creative inventory (will probably not be organized)
+•   Added a new world generation system;
+	•   Quartz can generate in the Overworld at lower levels
+	•   Soul magma can generate in Soul Sand Valleys
+	•   Fiery geodes can generate low down in the Nether with bands of brimstone around them
+	•   Kyanite geodes can generate high up in the Nether with bands of brimstone around them
+•   All villager trades have been reworked
+•   Construction worker villagers have been removed
+•   Lots of 1.21 content has been ported from the snapshots
+•   Ancient fruit can be brewed into reaching potions
+•   Changed lots of textures
+... & many more changes (you can check previous changelogs for a good idea of what was added)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v2.0.3 (Forge/NeoForge: 1.20.1)
 Hotfix Update
 
   Bug Fixes
-•   Fixed a major issue causing servers to crash upon loading v2.0.2
-•   Fixed an issue where in some cases the particles from the ancient tree would not appear
-•   Fixed issues with fiery and kyanite cluster's not appearing transparent
+•   Fixed a major issue causing servers to crash upon loading v2.0.2 (Forge)
+•   Fixed an issue where in some cases the particles from the ancient tree would not appear (Forge)
+•   Fixed issues with fiery and kyanite cluster's not appearing transparent (Forge)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -31,7 +68,22 @@ Small Update
 
   Technical Changes
 •   Cleaned up & rewrote a large chunk of code (won't affect gameplay)
-•   Added an update.json to notify user's of new updates
+•   Added an update.json to notify user's of new updates (Forge Only)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release V2.0.1 (Forge/NeoForge: 1.20.1)
+Small Update
+
+  Additions
+•   Added a variant of ancient leaves that do not emit light
+
+  Changes
+•   Ancient leaves, saplings, & potted saplings will now give off a small amount of light
+
+  Bug Fixes
+•   Added ancient blocks to the leaves, saplings, logs, & logs_that_burn item tags (Forge)
+•   Added ancient logs item tag (Forge)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
