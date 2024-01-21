@@ -56,6 +56,7 @@ public class ExcessiveBuilding {
         event.enqueueWork(() -> {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.ANCIENT_SAPLING.getId(), EBBlocks.POTTED_ANCIENT_SAPLING);
 
+            BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.WATER, EBItems.ANCIENT_FRUIT.get(), Potions.MUNDANE));
             BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.AWKWARD, EBItems.ANCIENT_FRUIT.get(), EBPotions.REACHING_POTION.get()));
             BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(EBPotions.REACHING_POTION.get(), Items.REDSTONE, EBPotions.LONG_REACHING_POTION.get()));
         });
