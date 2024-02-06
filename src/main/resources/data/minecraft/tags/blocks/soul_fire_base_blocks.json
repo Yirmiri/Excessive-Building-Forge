@@ -6,6 +6,13 @@
     "excessive_building:cut_soul_sandstone",
     "excessive_building:chiseled_soul_sandstone",
     "excessive_building:smooth_soul_sandstone",
-    "excessive_building:soul_magma_block"
+    "excessive_building:soul_magma_block",
+    "excessive_building:kyanite_block",
+    "excessive_building:kyanite_bricks",
+    "excessive_building:kyanite_tiles",
+    "excessive_building:cracked_kyanite_bricks",
+    "excessive_building:cracked_kyanite_tiles",
+    "excessive_building:kyanite_glass",
+    "excessive_building:kyanite_lamp"
   ]
 }

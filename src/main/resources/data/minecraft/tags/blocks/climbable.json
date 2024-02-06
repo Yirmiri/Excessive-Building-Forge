@@ -10,6 +10,8 @@
     "excessive_building:cherry_ladder",
     "excessive_building:crimson_ladder",
     "excessive_building:warped_ladder",
-    "excessive_building:bamboo_ladder"
+    "excessive_building:bamboo_ladder",
+    "excessive_building:willow_ladder",
+    "excessive_building:maple_ladder"
   ]
 }

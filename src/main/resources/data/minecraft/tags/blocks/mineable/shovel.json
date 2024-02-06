@@ -5,6 +5,9 @@
     "excessive_building:snow_bricks",
     "excessive_building:snow_brick_stairs",
     "excessive_building:snow_brick_slab",
-    "excessive_building:snow_brick_vertical_stairs"
+    "excessive_building:snow_brick_vertical_stairs",
+    "excessive_building:grass_slab",
+    "excessive_building:rooted_dirt_slab",
+    "excessive_building:coarse_dirt_slab"
   ]
 }

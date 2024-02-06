@@ -17,6 +17,26 @@
     "excessive_building:colored_crimson_crafting_table",
     "excessive_building:colored_warped_crafting_table",
     "excessive_building:warped_ladder",
-    "excessive_building:crimson_ladder"
+    "excessive_building:crimson_ladder",
+    "excessive_building:crimson_empty_shelf",
+    "excessive_building:crimson_empty_potion_shelf",
+    "excessive_building:crimson_water_potion_shelf",
+    "excessive_building:crimson_potion_shelf",
+    "excessive_building:crimson_alchemist_shelf",
+    "excessive_building:crimson_brickshelf",
+    "excessive_building:crimson_nether_brickshelf",
+    "excessive_building:crimson_bookshelf",
+    "excessive_building:warped_empty_shelf",
+    "excessive_building:warped_empty_potion_shelf",
+    "excessive_building:warped_water_potion_shelf",
+    "excessive_building:warped_potion_shelf",
+    "excessive_building:warped_alchemist_shelf",
+    "excessive_building:warped_brickshelf",
+    "excessive_building:warped_nether_brickshelf",
+    "excessive_building:warped_bookshelf",
+    "excessive_building:hollow_crimson_stem",
+    "excessive_building:hollow_stripped_crimson_stem",
+    "excessive_building:hollow_stripped_warped_stem",
+    "excessive_building:hollow_warped_stem"
   ]
 }

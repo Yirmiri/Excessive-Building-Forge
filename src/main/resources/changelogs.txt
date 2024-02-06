@@ -4,6 +4,80 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v2.1.0 (Forge/NeoForge: 1.20.1) (Fabric/Quilt: 1.20.1)
+Major Update
+
+  Additions
+•   Added maple forests, these are a new biome with new plants and tree this however causes the mod to now require "Terrablender"
+•   Added the maple wood set (pastel orange), maple trees can be found in 3 different colors generating in maple forests (a new biome), or bought from wandering traders
+•   Added the willow wood set (pastel green), willow trees can be found generating in swamp biomes or bought from wandering traders
+•   Added golden birch forest biomes and golden birch trees, sapling can be bought from wandering traders
+•   Added terracotta bricks (comes in all 18 variants)
+•   Added smooth terracotta bricks (comes in all 18 variants)
+•   Added knitted wool (not all variants will be included on launch)
+•   Added reaching lamps which increase block reach when nearby
+•   Added miralen crystals includes all features of other crystal blocks including the new features, can be purchased from cleric villagers at level 3
+•   Added crystal bricks and tiles (variants include: amethyst, prismarine crystal, fiery, and kyanite)
+•   Added kyanite lamps and glass
+•   Added budding fiery and kyanite blocks, these will turn into their crystal variants over time and generate inside of their geodes
+•   Added hollow logs, logs with holes in the middle... yep
+•   Added a wood variant for each shelf variant
+•   Added a new block variant known as "pedestals", these come in variants for each pillar block
+•   Added ancient signs and hanging signs
+•   Brimstone blobs can now generate in the Nether like older versions did
+•   Added acorns which can be planted to grow one of three random maple trees, can be bought from wandering traders
+•   Added algae, a new plant that can float on water and generates in both swamps and mangrove swamps, can be bought from wandering traders
+•   Added roses, a new flower that generates in forest biomes aswell as two rare variants, can be bought from wandering traders (roses mixed with rose bushes can make rose bundles)
+•   Added grass, rooted dirt, and coarse dirt slabs (grass will not spread to allow more choice and rooted dirt can be bonemealed for roots)
+•   Fiery and kyanite crystals can now be used as trim materials for armor
+•   Added the excessive banner pattern which can be crafted from cobblestone bricks, crimson mosaic, and an oak alchemist shelf
+•   Added netherrack, end stone, and smooth basalt stairs, slabs, and vertical stairs
+•   Added wool stairs and slabs
+•   JEED translations have been added for the reaching effect
+•   Added a bunch of misc blocks such as: chiseled smooth stone bricks, smooth stone brick pillars, tuff brick pillars, mossy polished stone bricks, iron bar doors and trapdoors, and emerald bricks
+
+  Changes
+•   Changed the id of all lamp items, if you previously had any in your world they may break
+•   Changed most creative inventory sorting and added many new tabs to help with the clutter however the original Excessive Building tab will remain that contains all the blocks/items
+•   Changed the textures of ancient ladders, cobbled andesite, cobbled granite, and cobbled diorite
+•   Cobblestone, cobbled deepslate, and blackstone bricks no longer require clay in their recipes
+•   Brimstone & blackstone windows now output 2 blocks when being crafted
+•   Changed the recipes for shelf variants (in extension changed the loot table for alchemist shelves due to them being cheaper)
+•   Changed the crystal glass recipes
+•   Removed most old advancements and replaced them with higher quality advancements
+•   Renamed all previously existing shelves including vanilla to "Oak [variant] Shelf"
+•   Renamed empty potion shelves and water potion shelves to [variant] bottle shelf
+•   Oak bookshelves can now only be created from oak planks
+•   Grates can now be waterlogged
+•   Dirt slabs are no longer considered a secret block and now appear in the creative inventory
+•   Rainbow terracotta tiles no longer appear in the creative inventory to match other "secret" blocks
+•   Crystal blocks will now chime when hit by a projectile
+•   Rearranged the creative inventory... again
+
+  Removals
+•   Removed Excessive Building's polished basalt
+•   Removed recipes that turn crystal blocks into crystals
+
+  Bug Fixes
+•   Fixed an issue causing brimstone lamps from being craftable (Forge/Fabric)
+•   Fixed missing loot table for cobblestone brick vertical stairs (Forge/Fabric)
+•   Fixed pickaxes not mining fiery/kyanite clusters faster (Forge/Fabric)
+•   Added missing "flower_pots" tag (Forge/Fabric)
+•   Added missing loot tables for stripped ancient logs (Forge/Fabric)
+•   Added unique wood type sounds for cherry, bamboo, ancient, and nether ladder variants (Forge/Fabric)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release v2.0.3.1 (Forge: 1.19.2)
+
+  Changes
+•   Brimstone & blackstone windows now output 2 blocks when being crafted
+
+  Bug Fixes
+•   Fixed an issue causing brimstone lamps from being craftable (Forge)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v2.0.4 (Forge/NeoForge: 1.20.1) (Fabric/Quilt: 1.20.1)
 Small Update
 
@@ -114,7 +188,7 @@ NOTE: Reaching is currently only on Forge since they support block reach as an a
 •   Added polished calcite blocks & cracked calcite tiles
 •   Added brickshelves & nether brickshelves (these are meant to be a silly item, was inspired after seeing a post made by @qzimyion)
 •   Added basketweave and herringbone brick variants (aswell as the missing cracked bricks variant)
-•   Added stone, deepslate, & blackstone lanterns (aswell as blackstone windows)
+•   Added stone, deepslate, & blackstone lamps (aswell as blackstone windows)
 •   All asphalt blocks no longer give speed however you can now choose to tint them to have speed applied
 •   Added swift asphalt (a variant of asphalt that increases speed) and asphalt block variants (stairs, slabs, and vertical stairs)
 •   Added polished basalt blocks, can be crafted from smooth basalt
@@ -128,10 +202,10 @@ These blocks now resemble their base polished variants MUCH better than before w
 •   Smithing tables can now be broken using both an axe or pickaxe
 •   Added a recipe for fiery and kyanite shards due to there being no way to renew them yet
 •   Changed calcite bricks recipe to utilize the new polished calcite instead
-•   Changed the recipes for brimstone windows and lanterns
-•   Amethyst lantern recipe has been buffed to grant 2 instead of 1
-•   Fiery lantern recipe has been slightly changed to cost 1 less nether brick and 1 more fiery crystal
-•   All lantern blocks including sea lanterns now drop themselves at all times (glowstone still drops glowstone dust)
+•   Changed the recipes for brimstone windows and lamps
+•   Amethyst lamp recipe has been buffed to grant 2 instead of 1
+•   Fiery lamp recipe has been slightly changed to cost 1 less nether brick and 1 more fiery crystal
+•   All lamp blocks including sea lamps now drop themselves at all times (glowstone still drops glowstone dust)
 •   Updated stone mason trades (this only applies to Excessive Building's custom trades)
 •   Added all crystal and shards to the cleric's trades to make obtaining them in bulk easier
 
@@ -170,7 +244,7 @@ NOTE: Reaching is currently only on Forge since they support block reach as an a
 •   Added polished calcite blocks & cracked calcite tiles
 •   Added brickshelves & nether brickshelves (these are meant to be a silly item, was inspired after seeing a post made by @qzimyion)
 •   Added basketweave and herringbone brick variants (aswell as the missing cracked bricks variant)
-•   Added stone, deepslate, & blackstone lanterns (aswell as blackstone windows)
+•   Added stone, deepslate, & blackstone lamps (aswell as blackstone windows)
 •   All asphalt blocks no longer give speed however you can now choose to tint them to have speed applied
 •   Added swift asphalt (a variant of asphalt that increases speed) and asphalt block variants (stairs, slabs, and vertical stairs)
 •   Added polished basalt blocks, can be crafted from smooth basalt
@@ -184,10 +258,10 @@ These blocks now resemble their base polished variants MUCH better than before w
 •   Smithing tables can now be broken using both an axe or pickaxe
 •   Added a recipe for fiery and kyanite shards due to there being no way to renew them yet
 •   Changed calcite bricks recipe to utilize the new polished calcite instead
-•   Changed the recipes for brimstone windows and lanterns
-•   Amethyst lantern recipe has been buffed to grant 2 instead of 1
-•   Fiery lantern recipe has been slightly changed to cost 1 less nether brick and 1 more fiery crystal
-•   All lantern blocks including sea lanterns now drop themselves at all times (glowstone still drops glowstone dust)
+•   Changed the recipes for brimstone windows and lamps
+•   Amethyst lamp recipe has been buffed to grant 2 instead of 1
+•   Fiery lamp recipe has been slightly changed to cost 1 less nether brick and 1 more fiery crystal
+•   All lamp blocks including sea lamps now drop themselves at all times (glowstone still drops glowstone dust)
 •   Updated stone mason trades (this only applies to Excessive Building's custom trades)
 •   Added all crystal and shards to the cleric's trades to make obtaining them in bulk easier
 
@@ -423,7 +497,7 @@ Medium Sized Update
   Changes
 •   Changed partygoer description
 •   Changed rainbow terracotta tiles texture
-•   Amethyst and fiery crystal lanterns now make chiming sounds
+•   Amethyst and fiery crystal lamps now make chiming sounds
 •   Stone Masons no longer sell wooden blocks
 •   Changed and reorganized a bit of inner stuff so please report any issues :>
 
@@ -462,13 +536,13 @@ Major Update
 •   Added advancements (more are planned for the future)
 	•   Bricked Up - Obtain all cobbled bricks
 	•   Bad Financial Decisions - Obtain all resource bricks
-	•   Lumen Large - Obtain all lanterns
+	•   Lumen Large - Obtain all lamps
 •   Added terracotta tiles + 17 other colored variants
 •   Added quartz tiles
 •   Added calcite, tuff, and dripstone bricks & tiles + cracked calcite bricks
 •   Added cobbled andesite, diorite, and granite bricks + cracked variants
 •   Added cracked variants of obsidian bricks and smooth bricks
-•   Added fiery and amethyst lanterns (fiery lanterns have a unique light level of 11)
+•   Added fiery and amethyst lamps (fiery lamps have a unique light level of 11)
 •   Added polished sulfuric blocks, bricks, and tiles
 •   Added netherite bricks (can be used on beacons like other resource bricks)
 •   Added polished brimstone pillar (more pillar blocks are planned in the future)

@@ -9,6 +9,10 @@
     "excessive_building:mangrove_mosaic_slab",
     "excessive_building:cherry_mosaic_slab",
     "excessive_building:ancient_slab",
-    "excessive_building:ancient_mosaic_slab"
+    "excessive_building:ancient_mosaic_slab",
+    "excessive_building:willow_slab",
+    "excessive_building:willow_mosaic_slab",
+    "excessive_building:maple_slab",
+    "excessive_building:maple_mosaic_slab"
   ]
 }

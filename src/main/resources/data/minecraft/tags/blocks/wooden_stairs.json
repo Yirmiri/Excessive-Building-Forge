@@ -9,6 +9,10 @@
     "excessive_building:mangrove_mosaic_stairs",
     "excessive_building:cherry_mosaic_stairs",
     "excessive_building:ancient_stairs",
-    "excessive_building:ancient_mosaic_stairs"
+    "excessive_building:ancient_mosaic_stairs",
+    "excessive_building:willow_stairs",
+    "excessive_building:willow_mosaic_stairs",
+    "excessive_building:maple_stairs",
+    "excessive_building:maple_mosaic_stairs"
   ]
 }

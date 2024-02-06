@@ -4,6 +4,14 @@
     "excessive_building:ancient_log",
     "excessive_building:ancient_wood",
     "excessive_building:stripped_ancient_log",
-    "excessive_building:stripped_ancient_wood"
+    "excessive_building:stripped_ancient_wood",
+    "excessive_building:willow_log",
+    "excessive_building:willow_wood",
+    "excessive_building:stripped_willow_log",
+    "excessive_building:stripped_willow_wood",
+    "excessive_building:maple_log",
+    "excessive_building:maple_wood",
+    "excessive_building:stripped_maple_log",
+    "excessive_building:stripped_maple_wood"
   ]
 }

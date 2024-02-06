@@ -154,7 +154,7 @@
   "block.excessive_building.polished_brimstone_tile_slab": "Плита з полірованих сірчаних кахлів",
   "block.excessive_building.polished_brimstone_tile_wall": "Стіна з полірованих сірчаних кахлів",
   "block.excessive_building.brimstone_window": "Сірчане вікно",
-  "block.excessive_building.brimstone_lantern": "Сірчаний ліхтар",
+  "block.excessive_building.brimstone_lamp": "Сірчаний ліхтар",
   "block.excessive_building.fiery_block": "Вогняний блок",
   "block.excessive_building.blue_nether_bricks": "Синя незерська цегла",
   "block.excessive_building.blue_nether_brick_stairs": "Сходи із синьої незерської цегли",
@@ -453,8 +453,8 @@
   "block.excessive_building.gray_terracotta_tiles": "Сірі керамічні кахлі",
   "block.excessive_building.cracked_calcite_bricks": "Тріснута кальцитова цегла",
   "block.excessive_building.polished_brimstone_pillar": "Полірована сірчана колона",
-  "block.excessive_building.amethyst_lantern": "Аметистовий ліхтар",
-  "block.excessive_building.fiery_lantern": "Вогняний ліхтар",
+  "block.excessive_building.amethyst_lamp": "Аметистовий ліхтар",
+  "block.excessive_building.fiery_lamp": "Вогняний ліхтар",
   "block.excessive_building.rainbow_stained_glass": "Веселкове скло",
   "block.excessive_building.rainbow_stained_glass_pane": "Веселкова шиба",
   "block.excessive_building.rainbow_wool": "Веселкова вовна",
@@ -529,10 +529,12 @@
   "block.excessive_building.polished_blackstone_tile_slab": "Плита з полірованих чорнокам'яних кахлів",
   "block.excessive_building.polished_blackstone_tile_wall": "Стіна з полірованих чорнокам'яних кахлів",
   "block.excessive_building.polished_blackstone_tile_vertical_stairs": "Вертикальні сходи з полірованих чорнокам'яних кахлів",
+
   "item.excessive_building.fiery_shards": "Вогняні уламки",
   "item.excessive_building.kyanite_shards": "Кіанітові уламки",
-  "advancements.adventure.lanterns.title": "Велике сяйво",
-  "advancements.adventure.lanterns.description": "Майте всі ліхтарі в своєму інвентарі",
+
+  "advancements.adventure.lamps.title": "Велике сяйво",
+  "advancements.adventure.lamps.description": "Майте всі ліхтарі в своєму інвентарі",
   "advancements.adventure.all_bricks.title": "Муляр — не маляр",
   "advancements.adventure.all_bricks.description": "Майте всі різновиди цегли з кругляку в своєму інвентарі",
   "advancements.adventure.resource_bricks.title": "Погані фінансові рішення",
@@ -541,5 +543,6 @@
   "advancements.adventure.rainbow.description": "Зробіть правильне рішення щодо блока для вечірки...",
   "advancements.adventure.skittles.title": "Скуштуй веселку",
   "advancements.adventure.skittles.description": "Спробуйте кожен колір хоча б раз й оберіть улюблений",
+
   "excessive_building_tab": "Excessive Building"
 }

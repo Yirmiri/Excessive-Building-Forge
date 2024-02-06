@@ -5,7 +5,7 @@
       "alternate_inner_layer_provider": {
         "type": "minecraft:simple_state_provider",
         "state": {
-          "Name": "excessive_building:fiery_block"
+          "Name": "excessive_building:budding_fiery_block"
         }
       },
       "cannot_replace": "#minecraft:features_cannot_replace",
@@ -22,6 +22,27 @@
         }
       },
       "inner_placements": [
+        {
+          "Name": "excessive_building:small_fiery_bud",
+          "Properties": {
+            "facing": "up",
+            "waterlogged": "false"
+          }
+        },
+        {
+          "Name": "excessive_building:medium_fiery_bud",
+          "Properties": {
+            "facing": "up",
+            "waterlogged": "false"
+          }
+        },
+        {
+          "Name": "excessive_building:large_fiery_bud",
+          "Properties": {
+            "facing": "up",
+            "waterlogged": "false"
+          }
+        },
         {
           "Name": "excessive_building:fiery_cluster",
           "Properties": {

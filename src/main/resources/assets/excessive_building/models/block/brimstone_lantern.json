@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "excessive_building:block/brimstone_lantern",
-    "particle": "excessive_building:block/brimstone_lantern"
-  },
-  "render_type": "solid"
-}

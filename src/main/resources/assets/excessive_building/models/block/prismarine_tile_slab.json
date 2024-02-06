@@ -1,9 +1,0 @@
-{
-  "parent": "block/slab",
-  "textures": {
-    "bottom": "excessive_building:block/prismarine_crystal_tiles",
-    "top": "excessive_building:block/prismarine_crystal_tiles",
-    "side": "excessive_building:block/prismarine_crystal_tiles"
-  },
-  "render_type": "solid"
-}

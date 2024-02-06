@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "excessive_building:Important/!modding/Excessive-Building [Forge]/src/main/resources/assets/excessive_building/models/template/top",
-		"1": "Important/!modding/Excessive-Building [Forge]/src/main/resources/assets/excessive_building/models/template/middle",
-		"2": "Important/!modding/Excessive-Building [Forge]/src/main/resources/assets/excessive_building/models/template/bottom",
-		"particle": "excessive_building:Important/!modding/Excessive-Building [Forge]/src/main/resources/assets/excessive_building/models/template/top"
+		"0": "excessive_building:atop",
+		"1": "excessive_building:amiddle",
+		"2": "excessive_building:abottom",
+		"particle": "excessive_building:atop"
 	},
 	"elements": [
 		{

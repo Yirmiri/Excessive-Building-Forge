@@ -51,6 +51,16 @@
     "excessive_building:polished_calcite_wall",
     "excessive_building:basketweave_brick_wall",
     "excessive_building:smooth_basketweave_brick_wall",
-    "excessive_building:polished_basalt_wall"
+    "excessive_building:amethyst_brick_wall",
+    "excessive_building:amethyst_tile_wall",
+    "excessive_building:fiery_brick_wall",
+    "excessive_building:fiery_tile_wall",
+    "excessive_building:prismarine_crystal_brick_wall",
+    "excessive_building:prismarine_crystal_tile_wall",
+    "excessive_building:kyanite_brick_wall",
+    "excessive_building:kyanite_tile_wall",
+    "excessive_building:mossy_polished_stone_brick_wall",
+    "excessive_building:miralen_brick_wall",
+    "excessive_building:miralen_tile_wall"
   ]
 }

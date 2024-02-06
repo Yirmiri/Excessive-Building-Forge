@@ -1,5 +1,7 @@
 {
   "values": [
-    "excessive_building:ancient_fence_gate"
+    "excessive_building:ancient_fence_gate",
+    "excessive_building:willow_fence_gate",
+    "excessive_building:maple_fence_gate"
   ]
 }
