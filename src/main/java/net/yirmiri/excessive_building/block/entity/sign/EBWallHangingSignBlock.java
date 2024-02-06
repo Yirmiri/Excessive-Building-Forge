@@ -1,5 +1,5 @@
 package net.yirmiri.excessive_building.block.entity.sign;
-/*
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.WallHangingSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -17,5 +17,3 @@ public class EBWallHangingSignBlock extends WallHangingSignBlock {
         return new EBHangingSignBlockEntity(pPos, pState);
     }
 }
-
- */
