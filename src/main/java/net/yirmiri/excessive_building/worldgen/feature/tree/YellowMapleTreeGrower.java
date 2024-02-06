@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.worldgen.tree;
+package net.yirmiri.excessive_building.worldgen.feature.tree;
 
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;

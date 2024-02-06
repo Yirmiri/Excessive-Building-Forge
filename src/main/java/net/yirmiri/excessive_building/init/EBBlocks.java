@@ -23,7 +23,7 @@ import net.yirmiri.excessive_building.block.entity.sign.EBStandingSignBlock;
 import net.yirmiri.excessive_building.block.entity.sign.EBWallHangingSignBlock;
 import net.yirmiri.excessive_building.block.entity.sign.EBWallSignBlock;
 import net.yirmiri.excessive_building.block.flammable.*;
-import net.yirmiri.excessive_building.worldgen.tree.*;
+import net.yirmiri.excessive_building.worldgen.feature.tree.*;
 
 import java.util.function.Supplier;
 
