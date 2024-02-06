@@ -189,5 +189,10 @@ public class EBVillagers {
                     new ItemStack(Items.EMERALD, 5), //cost
                     new ItemStack(EBBlocks.ACORN.get(), 1),
                     16, 5, 0.05f)); //max uses, xp, multiplier
+
+            genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemStack(Items.EMERALD, 5), //cost
+                    new ItemStack(EBBlocks.GOLDEN_BIRCH_SAPLING.get(), 1),
+                    8, 5, 0.05f)); //max uses, xp, multiplier
         }
 }

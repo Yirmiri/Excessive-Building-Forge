@@ -3369,7 +3369,7 @@ public class EBBlocks {
             () -> new PedestalBlock(BlockBehaviour.Properties.copy(EBBlocks.TUFF_BRICK_PILLAR.get())));
 
     public static final RegistryObject<Block> ACORN = registerBlock("acorn",
-            () -> new AcornBlock(new OakTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+            () -> new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICKS = registerBlock("mossy_polished_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_STONE_BRICKS.get()).requiresCorrectToolForDrops()));

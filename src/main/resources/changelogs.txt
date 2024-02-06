@@ -25,7 +25,7 @@ Major Update
 •   Added a new block variant known as "pedestals", these come in variants for each pillar block
 •   Added ancient signs and hanging signs
 •   Brimstone blobs can now generate in the Nether like older versions did
-•   Added acorns which can be planted to grow one of three random maple trees, can be bought from wandering traders
+•   Added acorns which can be planted to grow one of three random maple trees, can be bought from wandering traders (still wip and only create oak trees)
 •   Added algae, a new plant that can float on water and generates in both swamps and mangrove swamps, can be bought from wandering traders
 •   Added roses, a new flower that generates in forest biomes aswell as two rare variants, can be bought from wandering traders (roses mixed with rose bushes can make rose bundles)
 •   Added grass, rooted dirt, and coarse dirt slabs (grass will not spread to allow more choice and rooted dirt can be bonemealed for roots)
