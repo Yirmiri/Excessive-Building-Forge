@@ -6,12 +6,12 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class AncientParticle extends TextureSheetParticle {
+public class FallingLeavesParticle extends TextureSheetParticle {
     private float rotSpeed;
     private final float particleRandom;
     private final float spinAcceleration;
 
-    protected AncientParticle(ClientLevel p_277612_, double p_278010_, double p_277614_, double p_277673_, SpriteSet p_277465_) {
+    protected FallingLeavesParticle(ClientLevel p_277612_, double p_278010_, double p_277614_, double p_277673_, SpriteSet p_277465_) {
         super(p_277612_, p_278010_, p_277614_, p_277673_);
         this.setSprite(p_277465_.get(this.random.nextInt(12), 12));
         this.rotSpeed = (float)Math.toRadians(this.random.nextBoolean() ? -30.0D : 30.0D);
@@ -71,7 +71,7 @@ public class AncientParticle extends TextureSheetParticle {
 
         public Particle createParticle(SimpleParticleType particleType, ClientLevel level,
             double x, double y, double z, double dx, double dy, double dz) {
-            return new AncientParticle(level, x, y, z, this.sprites);
+            return new FallingLeavesParticle(level, x, y, z, this.sprites);
         }
     }
 }

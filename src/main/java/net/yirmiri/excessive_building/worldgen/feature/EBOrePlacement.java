@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.worldgen;
+package net.yirmiri.excessive_building.worldgen.feature;
 
 import net.minecraft.world.level.levelgen.placement.BiomeFilter;
 import net.minecraft.world.level.levelgen.placement.CountPlacement;
