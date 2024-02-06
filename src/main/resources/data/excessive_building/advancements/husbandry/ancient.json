@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "excessive_building:ancient_sapling"
+    },
+    "title": {
+      "translate": "advancements.husbandry.ancient.title"
+    },
+    "description": {
+      "translate": "advancements.husbandry.ancient.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "minecraft:husbandry/obtain_sniffer_egg",
+  "criteria": {
+    "ancient_sapling": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "excessive_building:ancient_sapling"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ancient_sapling"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

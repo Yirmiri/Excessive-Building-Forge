@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "excessive_building:item/maple_door"
+  },
+  "render_type": "translucent"
+}

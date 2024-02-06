@@ -1,0 +1,9 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "bottom": "minecraft:block/rooted_dirt",
+    "top": "minecraft:block/rooted_dirt",
+    "side": "minecraft:block/rooted_dirt"
+  },
+  "render_type": "solid"
+}

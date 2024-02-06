@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "excessive_building:block/algae"
+      },
+      {
+        "model": "excessive_building:block/algae",
+        "y": 90
+      },
+      {
+        "model": "excessive_building:block/algae",
+        "y": 180
+      },
+      {
+        "model": "excessive_building:block/algae",
+        "y": 270
+      }
+    ]
+  }
+}

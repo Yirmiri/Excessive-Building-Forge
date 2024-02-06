@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "excessive_building:block/orange_maple_sapling"
+  }
+}

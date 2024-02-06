@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "excessive_building:willow_planks"
+    },
+    "@": {
+      "item": "minecraft:nether_brick"
+    }
+  },
+  "pattern": [
+    "###",
+    "@@@",
+    "###"
+  ],
+  "result": {
+    "item": "excessive_building:willow_nether_brickshelf"
+  },
+  "show_notification": true
+}

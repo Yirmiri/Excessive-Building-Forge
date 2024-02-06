@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "minecraft:glass"
+    },
+    "@": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "pattern": [
+    "@#@",
+    "#@#",
+    "@#@"
+  ],
+  "result": {
+    "count": 4,
+    "item": "excessive_building:amethyst_glass"
+  },
+  "show_notification": true
+}

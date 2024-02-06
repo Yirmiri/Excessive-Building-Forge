@@ -1,0 +1,45 @@
+{
+  "display": {
+    "icon": {
+      "item": "excessive_building:red_maple_sapling"
+    },
+    "title": {
+      "translate": "advancements.adventure.maple.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.maple.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "excessive_building:maple_forest": {
+      "trigger": "minecraft:location",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "location": {
+                "biome": "excessive_building:maple_forest"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "excessive_building:maple_forest"
+    ]
+  ],
+  "rewards": {
+    "experience": 0
+  },
+  "sends_telemetry_event": true
+}

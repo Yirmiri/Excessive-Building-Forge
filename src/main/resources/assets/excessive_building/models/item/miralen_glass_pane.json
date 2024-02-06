@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "excessive_building:block/miralen_glass"
+  },
+  "render_type": "translucent"
+}

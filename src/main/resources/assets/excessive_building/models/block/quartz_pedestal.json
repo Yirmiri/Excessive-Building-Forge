@@ -1,0 +1,9 @@
+{
+  "parent": "excessive_building:custom/pedestal",
+  "textures": {
+    "particle": "minecraft:block/quartz_block_side",
+    "0": "minecraft:block/quartz_block_side",
+    "1": "minecraft:block/quartz_pillar"
+  },
+  "render_type": "solid"
+}

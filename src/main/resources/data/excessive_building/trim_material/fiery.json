@@ -1,0 +1,9 @@
+{
+  "asset_name": "fiery",
+  "description": {
+    "color": "#fdce4e",
+    "translate": "trim_material.excessive_building.fiery"
+  },
+  "ingredient": "excessive_building:fiery_shards",
+  "item_model_index": 0.01
+}

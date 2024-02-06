@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "excessive_building:excessive_banner_pattern"
+    },
+    "title": {
+      "translate": "advancements.adventure.excessive.title"
+    },
+    "description": {
+      "translate": "advancements.adventure.excessive.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "minecraft:adventure/root",
+  "criteria": {
+    "excessive": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "excessive_building:excessive_banner_pattern"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "excessive"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

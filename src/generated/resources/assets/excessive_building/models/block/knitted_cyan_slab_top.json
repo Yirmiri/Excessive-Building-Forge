@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "excessive_building:block/knitted_cyan_wool",
+    "side": "excessive_building:block/knitted_cyan_wool",
+    "top": "excessive_building:block/knitted_cyan_wool"
+  }
+}

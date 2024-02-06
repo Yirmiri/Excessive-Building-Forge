@@ -1,0 +1,39 @@
+{
+  "display": {
+    "icon": {
+      "item": "excessive_building:ancient_fruit"
+    },
+    "title": {
+      "translate": "advancements.husbandry.ancient_fruit.title"
+    },
+    "description": {
+      "translate": "advancements.husbandry.ancient_fruit.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "excessive_building:husbandry/ancient",
+  "criteria": {
+    "ancient_fruit": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "excessive_building:ancient_fruit"
+          ]
+        }
+      }
+    }
+  },
+  "requirements": [
+    [
+      "ancient_fruit"
+    ]
+  ],
+  "rewards": {
+    "experience": 0
+  },
+  "sends_telemetry_event": true
+}

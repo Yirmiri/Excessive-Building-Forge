@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "excessive_building:block/orange_maple_leaves_pile"
+  }
+}

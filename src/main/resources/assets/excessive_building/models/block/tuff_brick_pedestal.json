@@ -1,0 +1,9 @@
+{
+  "parent": "excessive_building:custom/pedestal",
+  "textures": {
+    "particle": "excessive_building:block/tuff_bricks",
+    "0": "excessive_building:block/tuff_bricks",
+    "1": "excessive_building:block/tuff_brick_pillar"
+  },
+  "render_type": "solid"
+}

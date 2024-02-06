@@ -1,0 +1,9 @@
+{
+  "asset_name": "kyanite",
+  "description": {
+    "color": "#7fdee9",
+    "translate": "trim_material.excessive_building.kyanite"
+  },
+  "ingredient": "excessive_building:kyanite_shards",
+  "item_model_index": 0.02
+}

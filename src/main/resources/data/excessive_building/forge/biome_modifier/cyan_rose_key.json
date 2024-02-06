@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_features",
+  "biomes": [
+    "forest",
+    "flower_forest",
+    "excessive_building:maple_forest"
+  ],
+  "features": "excessive_building:cyan_rose_placed",
+  "step": "vegetal_decoration"
+}

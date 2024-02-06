@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "excessive_building:rose"
+    },
+    "@": {
+      "item": "minecraft:rose_bush"
+    }
+  },
+  "pattern": [
+    "#@#"
+  ],
+  "result": {
+    "count": 4,
+    "item": "excessive_building:rose_bundle"
+  },
+  "show_notification": true
+}

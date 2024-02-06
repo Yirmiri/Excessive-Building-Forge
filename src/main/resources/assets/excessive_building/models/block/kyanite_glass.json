@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "excessive_building:block/kyanite_glass",
+    "particle": "excessive_building:block/kyanite_glass"
+  },
+  "render_type": "translucent"
+}

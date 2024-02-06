@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:purpur_slab"
+    },
+    "@": {
+      "item": "minecraft:purpur_pillar"
+    }
+  },
+  "pattern": [
+    "###",
+    " @ ",
+    "###"
+  ],
+  "result": {
+    "count": 3,
+    "item": "excessive_building:purpur_pedestal"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "excessive_building:cobblestone_bricks"
+    },
+    {
+      "item": "excessive_building:crimson_mosaic"
+    },
+    {
+      "item": "excessive_building:alchemist_shelf"
+    }
+  ],
+  "result": {
+    "item": "excessive_building:excessive_banner_pattern"
+  }
+}

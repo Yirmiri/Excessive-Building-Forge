@@ -1,0 +1,9 @@
+{
+  "asset_name": "miralen",
+  "description": {
+    "color": "#e876ab",
+    "translate": "trim_material.excessive_building.miralen"
+  },
+  "ingredient": "excessive_building:miralen_shards",
+  "item_model_index": 0.03
+}

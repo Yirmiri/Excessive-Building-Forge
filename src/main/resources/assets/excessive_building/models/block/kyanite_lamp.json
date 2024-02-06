@@ -1,0 +1,11 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "bottom": "excessive_building:block/kyanite_lamp_top",
+    "top": "excessive_building:block/kyanite_lamp_top",
+    "side": "excessive_building:block/kyanite_lamp",
+    "overlay": "excessive_building:block/kyanite_lamp",
+    "particle": "excessive_building:block/kyanite_lamp_top"
+  },
+  "render_type": "solid"
+}

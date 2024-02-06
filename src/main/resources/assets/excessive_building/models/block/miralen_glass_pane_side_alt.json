@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_glass_pane_side_alt",
+  "textures": {
+    "edge": "excessive_building:block/miralen_glass_pane_top",
+    "pane": "excessive_building:block/miralen_glass"
+  },
+  "render_type": "translucent"
+}

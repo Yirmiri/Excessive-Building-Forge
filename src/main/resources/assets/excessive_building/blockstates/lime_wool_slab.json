@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/lime_wool_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/lime_wool"
+    },
+    "type=top": {
+      "model": "excessive_building:block/lime_wool_slab_top"
+    }
+  }
+}
