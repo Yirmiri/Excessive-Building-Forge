@@ -68,6 +68,7 @@ public class ExcessiveBuilding {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.ORANGE_MAPLE_SAPLING.getId(), EBBlocks.POTTED_ORANGE_MAPLE_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.YELLOW_MAPLE_SAPLING.getId(), EBBlocks.POTTED_YELLOW_MAPLE_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.MARIGOLD.getId(), EBBlocks.POTTED_MARIGOLD);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.GOLDEN_BIRCH_SAPLING.getId(), EBBlocks.POTTED_GOLDEN_BIRCH_SAPLING);
 
             BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.WATER, EBItems.ANCIENT_FRUIT.get(), Potions.MUNDANE));
             BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.AWKWARD, EBItems.ANCIENT_FRUIT.get(), EBPotions.REACHING_POTION.get()));
