@@ -10,11 +10,10 @@ import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.yirmiri.excessive_building.init.EBBlocks;
 import net.yirmiri.excessive_building.init.EBItems;
 
-import java.util.List;
 import java.util.function.Consumer;
 
 public class EBRecipeProvider extends RecipeProvider implements IConditionBuilder {
-    private static final List<ItemLike> QUARTZ_SMELTABLES = List.of(EBBlocks.QUARTZ_ORE.get(), EBBlocks.DEEPSLATE_QUARTZ_ORE.get());
+
     public EBRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
@@ -165,9 +164,6 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.POLISHED_BLACKSTONE_TILES.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRACKED_POLISHED_BLACKSTONE_TILES.get(), 0.1F, 200)
                 .unlockedBy(getHasName(EBBlocks.POLISHED_BLACKSTONE_TILES.get()), has(EBBlocks.POLISHED_BLACKSTONE_TILES.get())).save(pWriter);
 
-        oreSmelting(pWriter, QUARTZ_SMELTABLES, RecipeCategory.MISC, Items.QUARTZ, 0.2f, 200, "quartz");
-        oreBlasting(pWriter, QUARTZ_SMELTABLES, RecipeCategory.MISC, Items.QUARTZ, 0.2f, 100, "quartz");
-
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_STONE.get(), 4)
                 .define('#', Blocks.STONE).define('@', Blocks.SMOOTH_STONE)
                 .pattern("#@")
@@ -201,15 +197,6 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
 
         wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_STONE_BRICK_WALL.get(), Ingredient.of(EBBlocks.POLISHED_STONE_BRICKS.get()))
                 .unlockedBy(getHasName(EBBlocks.POLISHED_STONE_BRICKS.get()), has(EBBlocks.POLISHED_STONE_BRICKS.get())).save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBItems.FIERY_SHARDS.get(), 4).requires(EBBlocks.FIERY_BLOCK.get())
-                .unlockedBy(getHasName(EBBlocks.FIERY_BLOCK.get()), has(EBBlocks.FIERY_BLOCK.get())).save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBItems.KYANITE_SHARDS.get(), 4).requires(EBBlocks.KYANITE_BLOCK.get())
-                .unlockedBy(getHasName(EBBlocks.KYANITE_BLOCK.get()), has(EBBlocks.KYANITE_BLOCK.get())).save(pWriter);
-
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, Items.PRISMARINE_CRYSTALS, 4).requires(EBBlocks.PRISMARINE_CRYSTAL_BLOCK.get())
-                .unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_BLOCK.get()), has(EBBlocks.PRISMARINE_CRYSTAL_BLOCK.get())).save(pWriter);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HERRINGBONE_BRICKS.get(), 2)
                 .define('#', Blocks.BRICK_SLAB)
@@ -258,31 +245,37 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(Blocks.BRICKS), RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRACKED_BRICKS.get(), 0.1F, 200)
                 .unlockedBy(getHasName(Blocks.BRICKS), has(Blocks.BRICKS)).save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.STONE_LANTERN.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.STONE_LAMP.get(), 4)
                 .define('#', EBBlocks.POLISHED_STONE.get()).define('@', EBItems.FIERY_SHARDS.get())
                 .pattern("@#@")
                 .pattern("#@#")
                 .pattern("@#@").unlockedBy(getHasName(EBItems.FIERY_SHARDS.get()), has(EBItems.FIERY_SHARDS.get())).save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DEEPSLATE_LANTERN.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DEEPSLATE_LAMP.get(), 4)
                 .define('#', Blocks.POLISHED_DEEPSLATE).define('@', EBItems.FIERY_SHARDS.get())
                 .pattern("@#@")
                 .pattern("#@#")
                 .pattern("@#@").unlockedBy(getHasName(EBItems.FIERY_SHARDS.get()), has(EBItems.FIERY_SHARDS.get())).save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BLACKSTONE_LANTERN.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BLACKSTONE_LAMP.get(), 4)
                 .define('#', Blocks.POLISHED_BLACKSTONE).define('@', EBItems.FIERY_SHARDS.get())
                 .pattern("@#@")
                 .pattern("#@#")
                 .pattern("@#@").unlockedBy(getHasName(EBItems.FIERY_SHARDS.get()), has(EBItems.FIERY_SHARDS.get())).save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BLACKSTONE_WINDOW.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BLACKSTONE_WINDOW.get(), 2)
                 .define('#', Items.NETHER_BRICK).define('@', EBItems.FIERY_SHARDS.get()).define('%', Blocks.POLISHED_BLACKSTONE)
                 .pattern("#@#")
                 .pattern("@%@")
                 .pattern("#@#").unlockedBy(getHasName(EBItems.FIERY_SHARDS.get()), has(EBItems.FIERY_SHARDS.get())).save(pWriter);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BRIMSTONE_WINDOW.get(), 1)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BRIMSTONE_LAMP.get(), 4)
+                .define('#', EBBlocks.POLISHED_BRIMSTONE.get()).define('@', EBItems.FIERY_SHARDS.get())
+                .pattern("@#@")
+                .pattern("#@#")
+                .pattern("@#@").unlockedBy(getHasName(EBItems.FIERY_SHARDS.get()), has(EBItems.FIERY_SHARDS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BRIMSTONE_WINDOW.get(), 2)
                 .define('#', Items.NETHER_BRICK).define('@', EBItems.FIERY_SHARDS.get()).define('%', EBBlocks.POLISHED_BRIMSTONE.get())
                 .pattern("#@#")
                 .pattern("@%@")
@@ -343,6 +336,31 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANCIENT_PLANKS.get(), 4).requires(EBBlocks.ANCIENT_LOG.get())
                 .unlockedBy(getHasName(EBBlocks.ANCIENT_LOG.get()), has(EBBlocks.ANCIENT_LOG.get())).save(pWriter);
 
+        woodBuilder(EBBlocks.ANCIENT_WOOD.get(), Ingredient.of(EBBlocks.ANCIENT_LOG.get()))
+                .unlockedBy(getHasName(EBBlocks.ANCIENT_LOG.get()), has(EBBlocks.ANCIENT_LOG.get())).save(pWriter);
+
+        woodBuilder(EBBlocks.STRIPPED_ANCIENT_WOOD.get(), Ingredient.of(EBBlocks.STRIPPED_ANCIENT_LOG.get()))
+                .unlockedBy(getHasName(EBBlocks.STRIPPED_ANCIENT_LOG.get()), has(EBBlocks.STRIPPED_ANCIENT_LOG.get())).save(pWriter);
+
+        fenceBuilder(EBBlocks.ANCIENT_FENCE.get(), Ingredient.of(EBBlocks.ANCIENT_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        fenceGateBuilder(EBBlocks.ANCIENT_FENCE_GATE.get(), Ingredient.of(EBBlocks.ANCIENT_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        doorBuilder(EBBlocks.ANCIENT_DOOR.get(), Ingredient.of(EBBlocks.ANCIENT_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        trapdoorBuilder(EBBlocks.ANCIENT_TRAPDOOR.get(), Ingredient.of(EBBlocks.ANCIENT_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        buttonBuilder(EBBlocks.ANCIENT_BUTTON.get(), Ingredient.of(EBBlocks.ANCIENT_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, EBBlocks.ANCIENT_PRESSURE_PLATE.get())
+                .define('#', EBBlocks.ANCIENT_PLANKS.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.RAINBOW_WOOL.get(), 9)
                 .define('R', Blocks.RED_WOOL).define('O', Blocks.ORANGE_WOOL).define('Y', Blocks.YELLOW_WOOL)
                 .define('L', Blocks.LIME_WOOL).define('G', Blocks.GREEN_WOOL).define('C', Blocks.LIGHT_BLUE_WOOL)
@@ -376,50 +394,1778 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .define('#', EBBlocks.RAINBOW_WOOL.get())
                 .pattern("##").unlockedBy(getHasName(EBBlocks.RAINBOW_WOOL.get()), has(EBBlocks.RAINBOW_WOOL.get())).save(pWriter);
 
-        woodBuilder(EBBlocks.ANCIENT_WOOD.get(), Ingredient.of(EBBlocks.ANCIENT_LOG.get()))
-                .unlockedBy(getHasName(EBBlocks.ANCIENT_LOG.get()), has(EBBlocks.ANCIENT_LOG.get())).save(pWriter);
-
-        woodBuilder(EBBlocks.STRIPPED_ANCIENT_WOOD.get(), Ingredient.of(EBBlocks.STRIPPED_ANCIENT_LOG.get()))
-                .unlockedBy(getHasName(EBBlocks.STRIPPED_ANCIENT_LOG.get()), has(EBBlocks.STRIPPED_ANCIENT_LOG.get())).save(pWriter);
-
-        fenceBuilder(EBBlocks.ANCIENT_FENCE.get(), Ingredient.of(EBBlocks.ANCIENT_PLANKS.get()))
-                .unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
-
-        fenceGateBuilder(EBBlocks.ANCIENT_FENCE_GATE.get(), Ingredient.of(EBBlocks.ANCIENT_PLANKS.get()))
-                .unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
-
-        doorBuilder(EBBlocks.ANCIENT_DOOR.get(), Ingredient.of(EBBlocks.ANCIENT_PLANKS.get()))
-                .unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
-
-        trapdoorBuilder(EBBlocks.ANCIENT_TRAPDOOR.get(), Ingredient.of(EBBlocks.ANCIENT_PLANKS.get()))
-                .unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
-
-        buttonBuilder(EBBlocks.ANCIENT_BUTTON.get(), Ingredient.of(EBBlocks.ANCIENT_PLANKS.get()))
-                .unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, EBBlocks.ANCIENT_PRESSURE_PLATE.get())
-                .define('#', EBBlocks.ANCIENT_PLANKS.get())
-                .pattern("##").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.POLISHED_BASALT.get(), 4)
-                .define('#', Blocks.SMOOTH_BASALT)
-                .pattern("##")
-                .pattern("##").unlockedBy(getHasName(Blocks.SMOOTH_BASALT), has(Blocks.SMOOTH_BASALT)).save(pWriter);
-
-        stairBuilder(EBBlocks.POLISHED_BASALT_STAIRS.get(), Ingredient.of(EBBlocks.POLISHED_BASALT.get()))
-                .unlockedBy(getHasName(EBBlocks.POLISHED_BASALT.get()), has(EBBlocks.POLISHED_BASALT.get())).save(pWriter);
-
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_BASALT_SLAB.get(), Ingredient.of(EBBlocks.POLISHED_BASALT.get()))
-                .unlockedBy(getHasName(EBBlocks.POLISHED_BASALT.get()), has(EBBlocks.POLISHED_BASALT.get())).save(pWriter);
-
-        verticalstairBuilder(EBBlocks.POLISHED_BASALT_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.POLISHED_BASALT.get()))
-                .unlockedBy(getHasName(EBBlocks.POLISHED_BASALT.get()), has(EBBlocks.POLISHED_BASALT.get())).save(pWriter);
-
-        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_BASALT_WALL.get(), Ingredient.of(EBBlocks.POLISHED_BASALT.get()))
-                .unlockedBy(getHasName(EBBlocks.POLISHED_BASALT.get()), has(EBBlocks.POLISHED_BASALT.get())).save(pWriter);
-
         ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, EBBlocks.UNLIT_ANCIENT_LEAVES.get(), 1).requires(EBBlocks.ANCIENT_LEAVES.get())
                 .unlockedBy(getHasName(EBBlocks.ANCIENT_LEAVES.get()), has(EBBlocks.ANCIENT_LEAVES.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get(), 9)
+                .define('R', EBBlocks.RED_TERRACOTTA_BRICKS.get()).define('O', EBBlocks.ORANGE_TERRACOTTA_BRICKS.get()).define('Y', EBBlocks.YELLOW_TERRACOTTA_BRICKS.get())
+                .define('L', EBBlocks.LIME_TERRACOTTA_BRICKS.get()).define('G', EBBlocks.GREEN_TERRACOTTA_BRICKS.get()).define('C', EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS.get())
+                .define('B', EBBlocks.BLUE_TERRACOTTA_BRICKS.get()).define('P', EBBlocks.PURPLE_TERRACOTTA_BRICKS.get()).define('I', EBBlocks.PINK_TERRACOTTA_BRICKS.get())
+                .pattern("ROY")
+                .pattern("LGC")
+                .pattern("BPI").unlockedBy(getHasName(EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get()), has(EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.RAINBOW_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get()), has(EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.RAINBOW_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get()), has(EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.COBBLESTONE_BRICKS.get(), 4)
+                .define('#', Blocks.COBBLESTONE)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.COBBLESTONE), has(Blocks.COBBLESTONE)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.COBBLED_DEEPSLATE_BRICKS.get(), 4)
+                .define('#', Blocks.COBBLED_DEEPSLATE).define('@', Blocks.POLISHED_DEEPSLATE)
+                .pattern("@#")
+                .pattern("#@").unlockedBy(getHasName(Blocks.COBBLED_DEEPSLATE), has(Blocks.COBBLED_DEEPSLATE)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BLACKSTONE_BRICKS.get(), 4)
+                .define('#', Blocks.BLACKSTONE).define('@', Blocks.POLISHED_BLACKSTONE)
+                .pattern("@#")
+                .pattern("#@").unlockedBy(getHasName(Blocks.POLISHED_BLACKSTONE), has(Blocks.POLISHED_BLACKSTONE)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.TERRACOTTA), has(Blocks.TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.TERRACOTTA_BRICKS.get()), has(EBBlocks.TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.TERRACOTTA_BRICKS.get()), has(EBBlocks.TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.RED_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.RED_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.RED_TERRACOTTA), has(Blocks.RED_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.RED_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.RED_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.RED_TERRACOTTA_BRICKS.get()), has(EBBlocks.RED_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.RED_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.RED_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.RED_TERRACOTTA_BRICKS.get()), has(EBBlocks.RED_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ORANGE_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.ORANGE_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.ORANGE_TERRACOTTA), has(Blocks.ORANGE_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.ORANGE_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.ORANGE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ORANGE_TERRACOTTA_BRICKS.get()), has(EBBlocks.ORANGE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ORANGE_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.ORANGE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ORANGE_TERRACOTTA_BRICKS.get()), has(EBBlocks.ORANGE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.YELLOW_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.YELLOW_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.YELLOW_TERRACOTTA), has(Blocks.YELLOW_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.YELLOW_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.YELLOW_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.YELLOW_TERRACOTTA_BRICKS.get()), has(EBBlocks.YELLOW_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.YELLOW_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.YELLOW_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.YELLOW_TERRACOTTA_BRICKS.get()), has(EBBlocks.YELLOW_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LIME_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.LIME_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.LIME_TERRACOTTA), has(Blocks.LIME_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.LIME_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.LIME_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.LIME_TERRACOTTA_BRICKS.get()), has(EBBlocks.LIME_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LIME_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.LIME_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.LIME_TERRACOTTA_BRICKS.get()), has(EBBlocks.LIME_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GREEN_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.GREEN_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.GREEN_TERRACOTTA), has(Blocks.GREEN_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.GREEN_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.GREEN_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.GREEN_TERRACOTTA_BRICKS.get()), has(EBBlocks.GREEN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GREEN_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.GREEN_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.GREEN_TERRACOTTA_BRICKS.get()), has(EBBlocks.GREEN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BLUE_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.BLUE_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.BLUE_TERRACOTTA), has(Blocks.BLUE_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.BLUE_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.BLUE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.BLUE_TERRACOTTA_BRICKS.get()), has(EBBlocks.BLUE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BLUE_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.BLUE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.BLUE_TERRACOTTA_BRICKS.get()), has(EBBlocks.BLUE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.LIGHT_BLUE_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.LIGHT_BLUE_TERRACOTTA), has(Blocks.LIGHT_BLUE_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS.get()), has(EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS.get()), has(EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CYAN_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.CYAN_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.CYAN_TERRACOTTA), has(Blocks.CYAN_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.CYAN_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.CYAN_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.CYAN_TERRACOTTA_BRICKS.get()), has(EBBlocks.CYAN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CYAN_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.CYAN_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.CYAN_TERRACOTTA_BRICKS.get()), has(EBBlocks.CYAN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PURPLE_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.PURPLE_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.PURPLE_TERRACOTTA), has(Blocks.PURPLE_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.PURPLE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.PURPLE_TERRACOTTA_BRICKS.get()), has(EBBlocks.PURPLE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PURPLE_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.PURPLE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.PURPLE_TERRACOTTA_BRICKS.get()), has(EBBlocks.PURPLE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MAGENTA_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.MAGENTA_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.MAGENTA_TERRACOTTA), has(Blocks.MAGENTA_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.MAGENTA_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MAGENTA_TERRACOTTA_BRICKS.get()), has(EBBlocks.MAGENTA_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MAGENTA_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.MAGENTA_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MAGENTA_TERRACOTTA_BRICKS.get()), has(EBBlocks.MAGENTA_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PINK_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.PINK_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.PINK_TERRACOTTA), has(Blocks.PINK_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.PINK_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.PINK_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.PINK_TERRACOTTA_BRICKS.get()), has(EBBlocks.PINK_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PINK_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.PINK_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.PINK_TERRACOTTA_BRICKS.get()), has(EBBlocks.PINK_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BROWN_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.BROWN_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.BROWN_TERRACOTTA), has(Blocks.BROWN_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.BROWN_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.BROWN_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.BROWN_TERRACOTTA_BRICKS.get()), has(EBBlocks.BROWN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BROWN_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.BROWN_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.BROWN_TERRACOTTA_BRICKS.get()), has(EBBlocks.BROWN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BLACK_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.BLACK_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.BLACK_TERRACOTTA), has(Blocks.BLACK_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.BLACK_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.BLACK_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.BLACK_TERRACOTTA_BRICKS.get()), has(EBBlocks.BLACK_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BLACK_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.BLACK_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.BLACK_TERRACOTTA_BRICKS.get()), has(EBBlocks.BLACK_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WHITE_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.WHITE_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.WHITE_TERRACOTTA), has(Blocks.WHITE_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.WHITE_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.WHITE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.WHITE_TERRACOTTA_BRICKS.get()), has(EBBlocks.WHITE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WHITE_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.WHITE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.WHITE_TERRACOTTA_BRICKS.get()), has(EBBlocks.WHITE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GRAY_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.GRAY_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.GRAY_TERRACOTTA), has(Blocks.GRAY_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.GRAY_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.GRAY_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.GRAY_TERRACOTTA_BRICKS.get()), has(EBBlocks.GRAY_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GRAY_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.GRAY_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.GRAY_TERRACOTTA_BRICKS.get()), has(EBBlocks.GRAY_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS.get(), 4)
+                .define('#', Blocks.LIGHT_GRAY_TERRACOTTA)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.LIGHT_GRAY_TERRACOTTA), has(Blocks.LIGHT_GRAY_TERRACOTTA)).save(pWriter);
+
+        stairBuilder(EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS.get()), has(EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS.get()), has(EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.GRASS_SLAB.get(), Ingredient.of(Blocks.GRASS_BLOCK))
+                .unlockedBy(getHasName(Blocks.GRASS_BLOCK), has(Blocks.GRASS_BLOCK)).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ROOTED_DIRT_SLAB.get(), Ingredient.of(Blocks.ROOTED_DIRT))
+                .unlockedBy(getHasName(Blocks.ROOTED_DIRT), has(Blocks.ROOTED_DIRT)).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.COARSE_DIRT_SLAB.get(), Ingredient.of(Blocks.COARSE_DIRT))
+                .unlockedBy(getHasName(Blocks.COARSE_DIRT), has(Blocks.COARSE_DIRT)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_COBBLESTONE_BRICKS.get(), 4)
+                .define('#', Blocks.MOSSY_COBBLESTONE)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.MOSSY_COBBLESTONE), has(Blocks.MOSSY_COBBLESTONE)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SANDSTONE_BRICKS.get(), 2)
+                .define('#', Blocks.SANDSTONE).define('@', Blocks.SAND)
+                .pattern("#@")
+                .pattern("@#").unlockedBy(getHasName(Blocks.SANDSTONE), has(Blocks.SANDSTONE)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.RED_SANDSTONE_BRICKS.get(), 2)
+                .define('#', Blocks.RED_SANDSTONE).define('@', Blocks.RED_SAND)
+                .pattern("#@")
+                .pattern("@#").unlockedBy(getHasName(Blocks.RED_SANDSTONE), has(Blocks.RED_SANDSTONE)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_BRICKS.get(), 2)
+                .define('#', EBBlocks.SOUL_SANDSTONE.get()).define('@', Blocks.SOUL_SAND)
+                .pattern("#@")
+                .pattern("@#").unlockedBy(getHasName(EBBlocks.SOUL_SANDSTONE.get()), has(EBBlocks.SOUL_SANDSTONE.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.END_STONE_STAIRS.get(), Ingredient.of(Blocks.END_STONE))
+                .unlockedBy(getHasName(Blocks.END_STONE), has(Blocks.END_STONE)).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.END_STONE_SLAB.get(), Ingredient.of(Blocks.END_STONE))
+                .unlockedBy(getHasName(Blocks.END_STONE), has(Blocks.END_STONE)).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.END_STONE_VERTICAL_STAIRS.get(), Ingredient.of(Blocks.END_STONE))
+                .unlockedBy(getHasName(Blocks.END_STONE), has(Blocks.END_STONE)).save(pWriter);
+
+        stairBuilder(EBBlocks.NETHERRACK_STAIRS.get(), Ingredient.of(Blocks.NETHERRACK))
+                .unlockedBy(getHasName(Blocks.NETHERRACK), has(Blocks.NETHERRACK)).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.NETHERRACK_SLAB.get(), Ingredient.of(Blocks.NETHERRACK))
+                .unlockedBy(getHasName(Blocks.NETHERRACK), has(Blocks.NETHERRACK)).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.NETHERRACK_VERTICAL_STAIRS.get(), Ingredient.of(Blocks.NETHERRACK))
+                .unlockedBy(getHasName(Blocks.NETHERRACK), has(Blocks.NETHERRACK)).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_BASALT_STAIRS.get(), Ingredient.of(Blocks.SMOOTH_BASALT))
+                .unlockedBy(getHasName(Blocks.SMOOTH_BASALT), has(Blocks.SMOOTH_BASALT)).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BASALT_SLAB.get(), Ingredient.of(Blocks.SMOOTH_BASALT))
+                .unlockedBy(getHasName(Blocks.SMOOTH_BASALT), has(Blocks.SMOOTH_BASALT)).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.SMOOTH_BASALT_VERTICAL_STAIRS.get(), Ingredient.of(Blocks.SMOOTH_BASALT))
+                .unlockedBy(getHasName(Blocks.SMOOTH_BASALT), has(Blocks.SMOOTH_BASALT)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KYANITE_LAMP.get(), 2)
+                .define('#', Items.IRON_INGOT).define('@', EBItems.KYANITE_SHARDS.get())
+                .pattern("@#@")
+                .pattern("#@#")
+                .pattern("@#@").unlockedBy(getHasName(EBItems.KYANITE_SHARDS.get()), has(EBItems.KYANITE_SHARDS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KYANITE_GLASS_PANE.get(), 16)
+                .define('#', EBBlocks.KYANITE_GLASS.get())
+                .pattern("###")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.KYANITE_GLASS.get()), has(EBBlocks.KYANITE_GLASS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KYANITE_GLASS.get(), 4)
+                .define('@', EBItems.KYANITE_SHARDS.get()).define('#', Blocks.GLASS)
+                .pattern("@#@")
+                .pattern("#@#")
+                .pattern("@#@").unlockedBy(getHasName(EBItems.KYANITE_SHARDS.get()), has(EBItems.KYANITE_SHARDS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.AMETHYST_GLASS.get(), 4)
+                .define('@', Items.AMETHYST_SHARD).define('#', Blocks.GLASS)
+                .pattern("@#@")
+                .pattern("#@#")
+                .pattern("@#@").unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PRISMARINE_GLASS.get(), 4)
+                .define('@', Items.PRISMARINE_CRYSTALS).define('#', Blocks.GLASS)
+                .pattern("@#@")
+                .pattern("#@#")
+                .pattern("@#@").unlockedBy(getHasName(Items.PRISMARINE_CRYSTALS), has(Items.PRISMARINE_CRYSTALS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.FIERY_GLASS.get(), 4)
+                .define('@', EBItems.FIERY_SHARDS.get()).define('#', Blocks.GLASS)
+                .pattern("@#@")
+                .pattern("#@#")
+                .pattern("@#@").unlockedBy(getHasName(EBItems.FIERY_SHARDS.get()), has(EBItems.FIERY_SHARDS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.AMETHYST_BRICKS.get(), 4)
+                .define('#', Blocks.AMETHYST_BLOCK)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.AMETHYST_BLOCK), has(Blocks.AMETHYST_BLOCK)).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.AMETHYST_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRACKED_AMETHYST_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_BRICKS.get()), has(EBBlocks.AMETHYST_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.AMETHYST_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.AMETHYST_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_BRICKS.get()), has(EBBlocks.AMETHYST_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.AMETHYST_BRICK_SLAB.get(), Ingredient.of(EBBlocks.AMETHYST_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_BRICKS.get()), has(EBBlocks.AMETHYST_BRICKS.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.AMETHYST_BRICK_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.AMETHYST_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_BRICKS.get()), has(EBBlocks.AMETHYST_BRICKS.get())).save(pWriter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.AMETHYST_BRICK_WALL.get(), Ingredient.of(EBBlocks.AMETHYST_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_BRICKS.get()), has(EBBlocks.AMETHYST_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.AMETHYST_TILES.get(), 4)
+                .define('#', EBBlocks.AMETHYST_BRICKS.get())
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(EBBlocks.AMETHYST_BRICKS.get()), has(EBBlocks.AMETHYST_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.AMETHYST_TILES.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRACKED_AMETHYST_TILES.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_TILES.get()), has(EBBlocks.AMETHYST_TILES.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.AMETHYST_TILE_STAIRS.get(), Ingredient.of(EBBlocks.AMETHYST_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_TILES.get()), has(EBBlocks.AMETHYST_TILES.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.AMETHYST_TILE_SLAB.get(), Ingredient.of(EBBlocks.AMETHYST_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_TILES.get()), has(EBBlocks.AMETHYST_TILES.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.AMETHYST_TILE_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.AMETHYST_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_TILES.get()), has(EBBlocks.AMETHYST_TILES.get())).save(pWriter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.AMETHYST_TILE_WALL.get(), Ingredient.of(EBBlocks.AMETHYST_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.AMETHYST_TILES.get()), has(EBBlocks.AMETHYST_TILES.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get(), 4)
+                .define('#', EBBlocks.PRISMARINE_CRYSTAL_BLOCK.get())
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_BLOCK.get()), has(EBBlocks.PRISMARINE_CRYSTAL_BLOCK.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRACKED_PRISMARINE_CRYSTAL_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get()), has(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.PRISMARINE_CRYSTAL_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get()), has(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PRISMARINE_CRYSTAL_BRICK_SLAB.get(), Ingredient.of(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get()), has(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.PRISMARINE_CRYSTAL_BRICK_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get()), has(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get())).save(pWriter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PRISMARINE_CRYSTAL_BRICK_WALL.get(), Ingredient.of(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get()), has(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PRISMARINE_CRYSTAL_TILES.get(), 4)
+                .define('#', EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get())
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get()), has(EBBlocks.PRISMARINE_CRYSTAL_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.PRISMARINE_CRYSTAL_TILES.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRACKED_PRISMARINE_CRYSTAL_TILES.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_TILES.get()), has(EBBlocks.PRISMARINE_CRYSTAL_TILES.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.PRISMARINE_CRYSTAL_TILE_STAIRS.get(), Ingredient.of(EBBlocks.AMETHYST_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_TILES.get()), has(EBBlocks.PRISMARINE_CRYSTAL_TILES.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PRISMARINE_CRYSTAL_TILE_SLAB.get(), Ingredient.of(EBBlocks.PRISMARINE_CRYSTAL_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_TILES.get()), has(EBBlocks.PRISMARINE_CRYSTAL_TILES.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.PRISMARINE_CRYSTAL_TILE_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.PRISMARINE_CRYSTAL_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_TILES.get()), has(EBBlocks.PRISMARINE_CRYSTAL_TILES.get())).save(pWriter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.PRISMARINE_CRYSTAL_TILE_WALL.get(), Ingredient.of(EBBlocks.PRISMARINE_CRYSTAL_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.PRISMARINE_CRYSTAL_TILES.get()), has(EBBlocks.PRISMARINE_CRYSTAL_TILES.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.FIERY_BRICKS.get(), 4)
+                .define('#', EBBlocks.FIERY_BLOCK.get())
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(EBBlocks.FIERY_BLOCK.get()), has(EBBlocks.FIERY_BLOCK.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.FIERY_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRACKED_FIERY_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.FIERY_BRICKS.get()), has(EBBlocks.FIERY_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.FIERY_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.FIERY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.FIERY_BRICKS.get()), has(EBBlocks.FIERY_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.FIERY_BRICK_SLAB.get(), Ingredient.of(EBBlocks.FIERY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.FIERY_BRICKS.get()), has(EBBlocks.FIERY_BRICKS.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.FIERY_BRICK_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.FIERY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.FIERY_BRICKS.get()), has(EBBlocks.FIERY_BRICKS.get())).save(pWriter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.FIERY_BRICK_WALL.get(), Ingredient.of(EBBlocks.FIERY_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.FIERY_BRICKS.get()), has(EBBlocks.FIERY_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.FIERY_TILES.get(), 4)
+                .define('#', EBBlocks.FIERY_BRICKS.get())
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(EBBlocks.FIERY_BRICKS.get()), has(EBBlocks.FIERY_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.FIERY_TILES.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRACKED_FIERY_TILES.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.FIERY_TILES.get()), has(EBBlocks.FIERY_TILES.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.FIERY_TILE_STAIRS.get(), Ingredient.of(EBBlocks.FIERY_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.FIERY_TILES.get()), has(EBBlocks.FIERY_TILES.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.FIERY_TILE_SLAB.get(), Ingredient.of(EBBlocks.FIERY_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.FIERY_TILES.get()), has(EBBlocks.FIERY_TILES.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.FIERY_TILE_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.FIERY_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.FIERY_TILES.get()), has(EBBlocks.FIERY_TILES.get())).save(pWriter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.FIERY_TILE_WALL.get(), Ingredient.of(EBBlocks.FIERY_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.FIERY_TILES.get()), has(EBBlocks.FIERY_TILES.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KYANITE_BRICKS.get(), 4)
+                .define('#', EBBlocks.KYANITE_BLOCK.get())
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KYANITE_BLOCK.get()), has(EBBlocks.KYANITE_BLOCK.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.KYANITE_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRACKED_KYANITE_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.KYANITE_BRICKS.get()), has(EBBlocks.KYANITE_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.KYANITE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.KYANITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.KYANITE_BRICKS.get()), has(EBBlocks.KYANITE_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KYANITE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.KYANITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.KYANITE_BRICKS.get()), has(EBBlocks.KYANITE_BRICKS.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.KYANITE_BRICK_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.KYANITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.KYANITE_BRICKS.get()), has(EBBlocks.KYANITE_BRICKS.get())).save(pWriter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KYANITE_BRICK_WALL.get(), Ingredient.of(EBBlocks.KYANITE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.KYANITE_BRICKS.get()), has(EBBlocks.KYANITE_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KYANITE_TILES.get(), 4)
+                .define('#', EBBlocks.KYANITE_BRICKS.get())
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KYANITE_BRICKS.get()), has(EBBlocks.KYANITE_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.KYANITE_TILES.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRACKED_KYANITE_TILES.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.KYANITE_TILES.get()), has(EBBlocks.KYANITE_TILES.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.KYANITE_TILE_STAIRS.get(), Ingredient.of(EBBlocks.KYANITE_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.KYANITE_TILES.get()), has(EBBlocks.KYANITE_TILES.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KYANITE_TILE_SLAB.get(), Ingredient.of(EBBlocks.KYANITE_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.KYANITE_TILES.get()), has(EBBlocks.KYANITE_TILES.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.KYANITE_TILE_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.KYANITE_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.KYANITE_TILES.get()), has(EBBlocks.KYANITE_TILES.get())).save(pWriter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KYANITE_TILE_WALL.get(), Ingredient.of(EBBlocks.KYANITE_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.KYANITE_TILES.get()), has(EBBlocks.KYANITE_TILES.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHISELED_SMOOTH_STONE_BRICKS.get(), 1)
+                .define('#', EBBlocks.SMOOTH_STONE_BRICK_SLAB.get())
+                .pattern("#")
+                .pattern("#").unlockedBy(getHasName(EBBlocks.SMOOTH_STONE_BRICK_SLAB.get()), has(EBBlocks.SMOOTH_STONE_BRICK_SLAB.get())).save(pWriter);
+
+        signBuilder(EBBlocks.ANCIENT_SIGN.get(), Ingredient.of(EBBlocks.ANCIENT_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANCIENT_HANGING_SIGN.get(), 6)
+                .define('#', EBBlocks.STRIPPED_ANCIENT_LOG.get()).define('@', Items.CHAIN)
+                .pattern("@ @")
+                .pattern("###")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.STRIPPED_ANCIENT_LOG.get()), has(EBBlocks.STRIPPED_ANCIENT_LOG.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.EMERALD_BRICKS.get(), 4)
+                .define('#', Blocks.EMERALD_BLOCK)
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(Blocks.EMERALD_BLOCK), has(Blocks.EMERALD_BLOCK)).save(pWriter);
+
+        stairBuilder(EBBlocks.EMERALD_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.EMERALD_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.EMERALD_BRICKS.get()), has(EBBlocks.EMERALD_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.EMERALD_BRICK_SLAB.get(), Ingredient.of(EBBlocks.EMERALD_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.EMERALD_BRICKS.get()), has(EBBlocks.EMERALD_BRICKS.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.EMERALD_BRICK_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.EMERALD_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.EMERALD_BRICKS.get()), has(EBBlocks.EMERALD_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_RED_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_RED_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_RED_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_RED_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_RED_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_RED_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_RED_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_RED_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_ORANGE_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_ORANGE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_ORANGE_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_ORANGE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_ORANGE_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_ORANGE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_ORANGE_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_ORANGE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_YELLOW_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_YELLOW_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_YELLOW_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_YELLOW_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_YELLOW_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_YELLOW_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_YELLOW_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_YELLOW_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_LIME_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_LIME_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_LIME_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_LIME_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_LIME_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_LIME_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_LIME_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_LIME_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_GREEN_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_GREEN_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_GREEN_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_GREEN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_GREEN_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_GREEN_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_GREEN_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_GREEN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_BLUE_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_BLUE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_BLUE_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_BLUE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BLUE_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_BLUE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_BLUE_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_BLUE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_LIGHT_BLUE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_LIGHT_BLUE_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_LIGHT_BLUE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_LIGHT_BLUE_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_LIGHT_BLUE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_LIGHT_BLUE_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_LIGHT_BLUE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_CYAN_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_CYAN_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_CYAN_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_CYAN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_CYAN_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_CYAN_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_CYAN_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_CYAN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_PURPLE_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_PURPLE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_PURPLE_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_PURPLE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_PURPLE_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_PURPLE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_PURPLE_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_PURPLE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_MAGENTA_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_MAGENTA_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_MAGENTA_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_MAGENTA_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_MAGENTA_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_MAGENTA_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_MAGENTA_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_MAGENTA_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_PINK_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_PINK_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_PINK_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_PINK_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_PINK_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_PINK_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_PINK_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_PINK_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_BROWN_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_BROWN_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_BROWN_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_BROWN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BROWN_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_BROWN_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_BROWN_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_BROWN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_BLACK_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_BLACK_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_BLACK_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_BLACK_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BLACK_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_BLACK_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_BLACK_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_BLACK_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_WHITE_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_WHITE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_WHITE_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_WHITE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_WHITE_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_WHITE_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_WHITE_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_WHITE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_GRAY_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_GRAY_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_GRAY_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_GRAY_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_GRAY_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_GRAY_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_GRAY_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_GRAY_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.SMOOTH_LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.SMOOTH_LIGHT_GRAY_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_LIGHT_GRAY_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_LIGHT_GRAY_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_LIGHT_GRAY_TERRACOTTA_BRICK_SLAB.get(), Ingredient.of(EBBlocks.SMOOTH_LIGHT_GRAY_TERRACOTTA_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_LIGHT_GRAY_TERRACOTTA_BRICKS.get()), has(EBBlocks.SMOOTH_LIGHT_GRAY_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_RAINBOW_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get()), has(EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.TERRACOTTA_BRICKS.get()), has(EBBlocks.TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.RED_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_RED_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.RED_TERRACOTTA_BRICKS.get()), has(EBBlocks.RED_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.YELLOW_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_YELLOW_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.YELLOW_TERRACOTTA_BRICKS.get()), has(EBBlocks.YELLOW_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.ORANGE_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_ORANGE_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.ORANGE_TERRACOTTA_BRICKS.get()), has(EBBlocks.ORANGE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.LIME_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_LIME_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.LIME_TERRACOTTA_BRICKS.get()), has(EBBlocks.LIME_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.GREEN_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_GREEN_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.GREEN_TERRACOTTA_BRICKS.get()), has(EBBlocks.GREEN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.CYAN_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_CYAN_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.CYAN_TERRACOTTA_BRICKS.get()), has(EBBlocks.CYAN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_LIGHT_BLUE_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS.get()), has(EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.BLUE_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BLUE_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.BLUE_TERRACOTTA_BRICKS.get()), has(EBBlocks.BLUE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.PURPLE_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_PURPLE_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.PURPLE_TERRACOTTA_BRICKS.get()), has(EBBlocks.PURPLE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.MAGENTA_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_MAGENTA_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.MAGENTA_TERRACOTTA_BRICKS.get()), has(EBBlocks.MAGENTA_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.PINK_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_PINK_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.PINK_TERRACOTTA_BRICKS.get()), has(EBBlocks.PINK_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.WHITE_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_WHITE_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.WHITE_TERRACOTTA_BRICKS.get()), has(EBBlocks.WHITE_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.GRAY_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_GRAY_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.GRAY_TERRACOTTA_BRICKS.get()), has(EBBlocks.GRAY_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_LIGHT_GRAY_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS.get()), has(EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.BLACK_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BLACK_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.BLACK_TERRACOTTA_BRICKS.get()), has(EBBlocks.BLACK_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.BROWN_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BROWN_TERRACOTTA_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.BROWN_TERRACOTTA_BRICKS.get()), has(EBBlocks.BROWN_TERRACOTTA_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.EMPTY_SHELF.get())
+                .define('#', Blocks.OAK_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.EMPTY_POTION_SHELF.get())
+                .define('#', Blocks.OAK_PLANKS).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WATER_POTION_SHELF.get())
+                .define('#', Blocks.OAK_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.POTION_SHELF.get())
+                .define('#', Blocks.OAK_PLANKS).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ALCHEMIST_SHELF.get())
+                .define('#', Blocks.OAK_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_EMPTY_SHELF.get())
+                .define('#', Blocks.SPRUCE_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_BOOKSHELF.get())
+                .define('#', Blocks.SPRUCE_PLANKS).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_EMPTY_POTION_SHELF.get())
+                .define('#', Blocks.SPRUCE_PLANKS).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_WATER_POTION_SHELF.get())
+                .define('#', Blocks.SPRUCE_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_POTION_SHELF.get())
+                .define('#', Blocks.SPRUCE_PLANKS).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_ALCHEMIST_SHELF.get())
+                .define('#', Blocks.SPRUCE_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_EMPTY_SHELF.get())
+                .define('#', Blocks.MANGROVE_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_BOOKSHELF.get())
+                .define('#', Blocks.MANGROVE_PLANKS).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_EMPTY_POTION_SHELF.get())
+                .define('#', Blocks.MANGROVE_PLANKS).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_WATER_POTION_SHELF.get())
+                .define('#', Blocks.MANGROVE_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_POTION_SHELF.get())
+                .define('#', Blocks.MANGROVE_PLANKS).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_ALCHEMIST_SHELF.get())
+                .define('#', Blocks.MANGROVE_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_EMPTY_SHELF.get())
+                .define('#', Blocks.CHERRY_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_BOOKSHELF.get())
+                .define('#', Blocks.CHERRY_PLANKS).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_EMPTY_POTION_SHELF.get())
+                .define('#', Blocks.CHERRY_PLANKS).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_WATER_POTION_SHELF.get())
+                .define('#', Blocks.CHERRY_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_POTION_SHELF.get())
+                .define('#', Blocks.CHERRY_PLANKS).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_ALCHEMIST_SHELF.get())
+                .define('#', Blocks.CHERRY_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_EMPTY_SHELF.get())
+                .define('#', Blocks.DARK_OAK_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_BOOKSHELF.get())
+                .define('#', Blocks.DARK_OAK_PLANKS).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_EMPTY_POTION_SHELF.get())
+                .define('#', Blocks.DARK_OAK_PLANKS).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_WATER_POTION_SHELF.get())
+                .define('#', Blocks.DARK_OAK_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_POTION_SHELF.get())
+                .define('#', Blocks.DARK_OAK_PLANKS).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_ALCHEMIST_SHELF.get())
+                .define('#', Blocks.DARK_OAK_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_EMPTY_SHELF.get())
+                .define('#', Blocks.ACACIA_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_BOOKSHELF.get())
+                .define('#', Blocks.ACACIA_PLANKS).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_EMPTY_POTION_SHELF.get())
+                .define('#', Blocks.ACACIA_PLANKS).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_WATER_POTION_SHELF.get())
+                .define('#', Blocks.ACACIA_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_POTION_SHELF.get())
+                .define('#', Blocks.ACACIA_PLANKS).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_ALCHEMIST_SHELF.get())
+                .define('#', Blocks.ACACIA_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_EMPTY_SHELF.get())
+                .define('#', Blocks.JUNGLE_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_BOOKSHELF.get())
+                .define('#', Blocks.JUNGLE_PLANKS).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_EMPTY_POTION_SHELF.get())
+                .define('#', Blocks.JUNGLE_PLANKS).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_WATER_POTION_SHELF.get())
+                .define('#', Blocks.JUNGLE_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_POTION_SHELF.get())
+                .define('#', Blocks.JUNGLE_PLANKS).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_ALCHEMIST_SHELF.get())
+                .define('#', Blocks.JUNGLE_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_EMPTY_SHELF.get())
+                .define('#', Blocks.BIRCH_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_BOOKSHELF.get())
+                .define('#', Blocks.BIRCH_PLANKS).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_EMPTY_POTION_SHELF.get())
+                .define('#', Blocks.BIRCH_PLANKS).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_WATER_POTION_SHELF.get())
+                .define('#', Blocks.BIRCH_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_POTION_SHELF.get())
+                .define('#', Blocks.BIRCH_PLANKS).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_ALCHEMIST_SHELF.get())
+                .define('#', Blocks.BIRCH_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_EMPTY_SHELF.get())
+                .define('#', EBBlocks.ANCIENT_PLANKS.get())
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_BOOKSHELF.get())
+                .define('#', EBBlocks.ANCIENT_PLANKS.get()).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_EMPTY_POTION_SHELF.get())
+                .define('#', EBBlocks.ANCIENT_PLANKS.get()).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_WATER_POTION_SHELF.get())
+                .define('#', EBBlocks.ANCIENT_PLANKS.get()).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_POTION_SHELF.get())
+                .define('#', EBBlocks.ANCIENT_PLANKS.get()).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_ALCHEMIST_SHELF.get())
+                .define('#', EBBlocks.ANCIENT_PLANKS.get()).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_EMPTY_SHELF.get())
+                .define('#', Blocks.CRIMSON_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_BOOKSHELF.get())
+                .define('#', Blocks.CRIMSON_PLANKS).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_EMPTY_POTION_SHELF.get())
+                .define('#', Blocks.CRIMSON_PLANKS).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_WATER_POTION_SHELF.get())
+                .define('#', Blocks.CRIMSON_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_POTION_SHELF.get())
+                .define('#', Blocks.CRIMSON_PLANKS).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_ALCHEMIST_SHELF.get())
+                .define('#', Blocks.CRIMSON_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_EMPTY_SHELF.get())
+                .define('#', Blocks.WARPED_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_BOOKSHELF.get())
+                .define('#', Blocks.WARPED_PLANKS).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_EMPTY_POTION_SHELF.get())
+                .define('#', Blocks.WARPED_PLANKS).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_WATER_POTION_SHELF.get())
+                .define('#', Blocks.WARPED_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_POTION_SHELF.get())
+                .define('#', Blocks.WARPED_PLANKS).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_ALCHEMIST_SHELF.get())
+                .define('#', Blocks.WARPED_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BRICKSHELF.get())
+                .define('#', Blocks.OAK_PLANKS).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_BRICKSHELF.get())
+                .define('#', Blocks.SPRUCE_PLANKS).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_BRICKSHELF.get())
+                .define('#', Blocks.BIRCH_PLANKS).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_BRICKSHELF.get())
+                .define('#', Blocks.JUNGLE_PLANKS).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_BRICKSHELF.get())
+                .define('#', Blocks.ACACIA_PLANKS).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_BRICKSHELF.get())
+                .define('#', Blocks.DARK_OAK_PLANKS).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_BRICKSHELF.get())
+                .define('#', Blocks.MANGROVE_PLANKS).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_BRICKSHELF.get())
+                .define('#', Blocks.CHERRY_PLANKS).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_BRICKSHELF.get())
+                .define('#', EBBlocks.ANCIENT_PLANKS.get()).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_BRICKSHELF.get())
+                .define('#', Blocks.CRIMSON_PLANKS).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_BRICKSHELF.get())
+                .define('#', Blocks.WARPED_PLANKS).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.NETHER_BRICKSHELF.get())
+                .define('#', Blocks.OAK_PLANKS).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_NETHER_BRICKSHELF.get())
+                .define('#', Blocks.SPRUCE_PLANKS).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_NETHER_BRICKSHELF.get())
+                .define('#', Blocks.BIRCH_PLANKS).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_NETHER_BRICKSHELF.get())
+                .define('#', Blocks.JUNGLE_PLANKS).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_NETHER_BRICKSHELF.get())
+                .define('#', Blocks.ACACIA_PLANKS).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_NETHER_BRICKSHELF.get())
+                .define('#', Blocks.DARK_OAK_PLANKS).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_NETHER_BRICKSHELF.get())
+                .define('#', Blocks.MANGROVE_PLANKS).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_NETHER_BRICKSHELF.get())
+                .define('#', Blocks.CHERRY_PLANKS).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_NETHER_BRICKSHELF.get())
+                .define('#', EBBlocks.ANCIENT_PLANKS.get()).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_NETHER_BRICKSHELF.get())
+                .define('#', Blocks.CRIMSON_PLANKS).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_NETHER_BRICKSHELF.get())
+                .define('#', Blocks.WARPED_PLANKS).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(pWriter);
+
+        EBmosaicBuilder(EBBlocks.SMOOTH_STONE_BRICK_PILLAR.get(), Ingredient.of(EBBlocks.SMOOTH_STONE_BRICK_SLAB.get()))
+                .unlockedBy(getHasName(EBBlocks.SMOOTH_STONE_BRICK_SLAB.get()), has(EBBlocks.SMOOTH_STONE_BRICK_SLAB.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.POLISHED_BRIMSTONE_PEDESTAL.get(), 3)
+                .define('#', EBBlocks.POLISHED_BRIMSTONE_SLAB.get()).define('@', EBBlocks.POLISHED_BRIMSTONE_PILLAR.get())
+                .pattern("###")
+                .pattern(" @ ")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.POLISHED_BRIMSTONE_SLAB.get()), has(EBBlocks.POLISHED_BRIMSTONE_SLAB.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SMOOTH_STONE_BRICK_PEDESTAL.get(), 3)
+                .define('#', EBBlocks.SMOOTH_STONE_BRICK_SLAB.get()).define('@', EBBlocks.SMOOTH_STONE_BRICK_PILLAR.get())
+                .pattern("###")
+                .pattern(" @ ")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.SMOOTH_STONE_BRICK_SLAB.get()), has(EBBlocks.SMOOTH_STONE_BRICK_SLAB.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.QUARTZ_PEDESTAL.get(), 3)
+                .define('#', Blocks.QUARTZ_SLAB).define('@', Blocks.QUARTZ_PILLAR)
+                .pattern("###")
+                .pattern(" @ ")
+                .pattern("###").unlockedBy(getHasName(Blocks.QUARTZ_SLAB), has(Blocks.QUARTZ_SLAB)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.PURPUR_PEDESTAL.get(), 3)
+                .define('#', Blocks.PURPUR_SLAB).define('@', Blocks.PURPUR_PILLAR)
+                .pattern("###")
+                .pattern(" @ ")
+                .pattern("###").unlockedBy(getHasName(Blocks.PURPUR_SLAB), has(Blocks.PURPUR_SLAB)).save(pWriter);
+
+        stairBuilder(EBBlocks.WILLOW_STAIRS.get(), Ingredient.of(EBBlocks.WILLOW_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WILLOW_SLAB.get(), Ingredient.of(EBBlocks.WILLOW_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.WILLOW_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.WILLOW_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.WILLOW_MOSAIC_STAIRS.get(), Ingredient.of(EBBlocks.WILLOW_MOSAIC.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_MOSAIC.get()), has(EBBlocks.WILLOW_MOSAIC.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WILLOW_MOSAIC_SLAB.get(), Ingredient.of(EBBlocks.WILLOW_MOSAIC.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_MOSAIC.get()), has(EBBlocks.WILLOW_MOSAIC.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.WILLOW_MOSAIC_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.WILLOW_MOSAIC.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_MOSAIC.get()), has(EBBlocks.WILLOW_MOSAIC.get())).save(pWriter);
+
+        craftingtableBuilder(EBBlocks.WILLOW_CRAFTING_TABLE.get(), Ingredient.of(EBBlocks.WILLOW_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        EBmosaicBuilder(EBBlocks.WILLOW_MOSAIC.get(), Ingredient.of(EBBlocks.WILLOW_SLAB.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_SLAB.get()), has(EBBlocks.WILLOW_SLAB.get())).save(pWriter);
+
+        chiseledplankBuilder(EBBlocks.CHISELED_WILLOW.get(), Ingredient.of(EBBlocks.WILLOW_SLAB.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_SLAB.get()), has(EBBlocks.WILLOW_SLAB.get())).save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WILLOW_PLANKS.get(), 4).requires(EBBlocks.WILLOW_LOG.get())
+                .unlockedBy(getHasName(EBBlocks.WILLOW_LOG.get()), has(EBBlocks.WILLOW_LOG.get())).save(pWriter);
+
+        woodBuilder(EBBlocks.WILLOW_WOOD.get(), Ingredient.of(EBBlocks.WILLOW_LOG.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_LOG.get()), has(EBBlocks.WILLOW_LOG.get())).save(pWriter);
+
+        woodBuilder(EBBlocks.STRIPPED_WILLOW_WOOD.get(), Ingredient.of(EBBlocks.STRIPPED_WILLOW_LOG.get()))
+                .unlockedBy(getHasName(EBBlocks.STRIPPED_WILLOW_LOG.get()), has(EBBlocks.STRIPPED_WILLOW_LOG.get())).save(pWriter);
+
+        fenceBuilder(EBBlocks.WILLOW_FENCE.get(), Ingredient.of(EBBlocks.WILLOW_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        fenceGateBuilder(EBBlocks.WILLOW_FENCE_GATE.get(), Ingredient.of(EBBlocks.WILLOW_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        doorBuilder(EBBlocks.WILLOW_DOOR.get(), Ingredient.of(EBBlocks.WILLOW_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        trapdoorBuilder(EBBlocks.WILLOW_TRAPDOOR.get(), Ingredient.of(EBBlocks.WILLOW_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        buttonBuilder(EBBlocks.WILLOW_BUTTON.get(), Ingredient.of(EBBlocks.WILLOW_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, EBBlocks.WILLOW_PRESSURE_PLATE.get())
+                .define('#', EBBlocks.WILLOW_PLANKS.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        signBuilder(EBBlocks.WILLOW_SIGN.get(), Ingredient.of(EBBlocks.WILLOW_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WILLOW_HANGING_SIGN.get(), 6)
+                .define('#', EBBlocks.STRIPPED_WILLOW_LOG.get()).define('@', Items.CHAIN)
+                .pattern("@ @")
+                .pattern("###")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.STRIPPED_WILLOW_LOG.get()), has(EBBlocks.STRIPPED_WILLOW_LOG.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_EMPTY_SHELF.get())
+                .define('#', EBBlocks.WILLOW_PLANKS.get())
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_BOOKSHELF.get())
+                .define('#', EBBlocks.WILLOW_PLANKS.get()).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_EMPTY_POTION_SHELF.get())
+                .define('#', EBBlocks.WILLOW_PLANKS.get()).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_WATER_POTION_SHELF.get())
+                .define('#', EBBlocks.WILLOW_PLANKS.get()).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_POTION_SHELF.get())
+                .define('#', EBBlocks.WILLOW_PLANKS.get()).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_ALCHEMIST_SHELF.get())
+                .define('#', EBBlocks.WILLOW_PLANKS.get()).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_BRICKSHELF.get())
+                .define('#', EBBlocks.WILLOW_PLANKS.get()).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_NETHER_BRICKSHELF.get())
+                .define('#', EBBlocks.WILLOW_PLANKS.get()).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ROSE_BUNDLE.get(), 4)
+                .define('#', EBBlocks.ROSE.get()).define('@', Blocks.ROSE_BUSH)
+                .pattern("#@#").unlockedBy(getHasName(EBBlocks.ROSE.get()), has(EBBlocks.ROSE.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.MAPLE_STAIRS.get(), Ingredient.of(EBBlocks.MAPLE_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MAPLE_SLAB.get(), Ingredient.of(EBBlocks.MAPLE_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.MAPLE_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.MAPLE_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.MAPLE_MOSAIC_STAIRS.get(), Ingredient.of(EBBlocks.MAPLE_MOSAIC.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_MOSAIC.get()), has(EBBlocks.MAPLE_MOSAIC.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MAPLE_MOSAIC_SLAB.get(), Ingredient.of(EBBlocks.MAPLE_MOSAIC.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_MOSAIC.get()), has(EBBlocks.MAPLE_MOSAIC.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.MAPLE_MOSAIC_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.MAPLE_MOSAIC.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_MOSAIC.get()), has(EBBlocks.MAPLE_MOSAIC.get())).save(pWriter);
+
+        craftingtableBuilder(EBBlocks.MAPLE_CRAFTING_TABLE.get(), Ingredient.of(EBBlocks.MAPLE_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        EBmosaicBuilder(EBBlocks.MAPLE_MOSAIC.get(), Ingredient.of(EBBlocks.MAPLE_SLAB.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_SLAB.get()), has(EBBlocks.MAPLE_SLAB.get())).save(pWriter);
+
+        chiseledplankBuilder(EBBlocks.CHISELED_MAPLE.get(), Ingredient.of(EBBlocks.MAPLE_SLAB.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_SLAB.get()), has(EBBlocks.MAPLE_SLAB.get())).save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MAPLE_PLANKS.get(), 4).requires(EBBlocks.MAPLE_LOG.get())
+                .unlockedBy(getHasName(EBBlocks.MAPLE_LOG.get()), has(EBBlocks.MAPLE_LOG.get())).save(pWriter);
+
+        woodBuilder(EBBlocks.MAPLE_WOOD.get(), Ingredient.of(EBBlocks.MAPLE_LOG.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_LOG.get()), has(EBBlocks.MAPLE_LOG.get())).save(pWriter);
+
+        woodBuilder(EBBlocks.STRIPPED_MAPLE_WOOD.get(), Ingredient.of(EBBlocks.STRIPPED_MAPLE_LOG.get()))
+                .unlockedBy(getHasName(EBBlocks.STRIPPED_MAPLE_LOG.get()), has(EBBlocks.STRIPPED_MAPLE_LOG.get())).save(pWriter);
+
+        fenceBuilder(EBBlocks.MAPLE_FENCE.get(), Ingredient.of(EBBlocks.MAPLE_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        fenceGateBuilder(EBBlocks.MAPLE_FENCE_GATE.get(), Ingredient.of(EBBlocks.MAPLE_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        doorBuilder(EBBlocks.MAPLE_DOOR.get(), Ingredient.of(EBBlocks.MAPLE_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        trapdoorBuilder(EBBlocks.MAPLE_TRAPDOOR.get(), Ingredient.of(EBBlocks.MAPLE_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        buttonBuilder(EBBlocks.MAPLE_BUTTON.get(), Ingredient.of(EBBlocks.MAPLE_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.REDSTONE, EBBlocks.MAPLE_PRESSURE_PLATE.get())
+                .define('#', EBBlocks.MAPLE_PLANKS.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        signBuilder(EBBlocks.MAPLE_SIGN.get(), Ingredient.of(EBBlocks.MAPLE_PLANKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MAPLE_HANGING_SIGN.get(), 6)
+                .define('#', EBBlocks.STRIPPED_MAPLE_LOG.get()).define('@', Items.CHAIN)
+                .pattern("@ @")
+                .pattern("###")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.STRIPPED_MAPLE_LOG.get()), has(EBBlocks.STRIPPED_MAPLE_LOG.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MAPLE_EMPTY_SHELF.get())
+                .define('#', EBBlocks.MAPLE_PLANKS.get())
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MAPLE_BOOKSHELF.get())
+                .define('#', EBBlocks.MAPLE_PLANKS.get()).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MAPLE_EMPTY_POTION_SHELF.get())
+                .define('#', EBBlocks.MAPLE_PLANKS.get()).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MAPLE_WATER_POTION_SHELF.get())
+                .define('#', EBBlocks.MAPLE_PLANKS.get()).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MAPLE_POTION_SHELF.get())
+                .define('#', EBBlocks.MAPLE_PLANKS.get()).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MAPLE_ALCHEMIST_SHELF.get())
+                .define('#', EBBlocks.MAPLE_PLANKS.get()).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MAPLE_BRICKSHELF.get())
+                .define('#', EBBlocks.MAPLE_PLANKS.get()).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MAPLE_NETHER_BRICKSHELF.get())
+                .define('#', EBBlocks.MAPLE_PLANKS.get()).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.RED_MAPLE_LEAVES_PILE.get(), 3)
+                .define('#', EBBlocks.RED_MAPLE_LEAVES.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.RED_MAPLE_LEAVES.get()), has(EBBlocks.RED_MAPLE_LEAVES.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ORANGE_MAPLE_LEAVES_PILE.get(), 3)
+                .define('#', EBBlocks.ORANGE_MAPLE_LEAVES.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.ORANGE_MAPLE_LEAVES.get()), has(EBBlocks.ORANGE_MAPLE_LEAVES.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.YELLOW_MAPLE_LEAVES_PILE.get(), 3)
+                .define('#', EBBlocks.YELLOW_MAPLE_LEAVES.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.YELLOW_MAPLE_LEAVES.get()), has(EBBlocks.YELLOW_MAPLE_LEAVES.get())).save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBItems.EXCESSIVE_BANNER_PATTERN.get(), 1).requires(EBBlocks.COBBLESTONE_BRICKS.get())
+                .requires(EBBlocks.CRIMSON_MOSAIC.get()).requires(EBBlocks.ALCHEMIST_SHELF.get())
+                .unlockedBy(getHasName(EBBlocks.ALCHEMIST_SHELF.get()), has(EBBlocks.ALCHEMIST_SHELF.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_OAK_LOG.get(), 8)
+                .define('#', Blocks.OAK_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.OAK_LOG), has(Blocks.OAK_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_CHERRY_LOG.get(), 8)
+                .define('#', Blocks.CHERRY_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_LOG), has(Blocks.CHERRY_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_MANGROVE_LOG.get(), 8)
+                .define('#', Blocks.MANGROVE_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_LOG), has(Blocks.MANGROVE_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_DARK_OAK_LOG.get(), 8)
+                .define('#', Blocks.DARK_OAK_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_LOG), has(Blocks.DARK_OAK_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_ACACIA_LOG.get(), 8)
+                .define('#', Blocks.ACACIA_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_LOG), has(Blocks.ACACIA_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_JUNGLE_LOG.get(), 8)
+                .define('#', Blocks.JUNGLE_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_LOG), has(Blocks.JUNGLE_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_BIRCH_LOG.get(), 8)
+                .define('#', Blocks.BIRCH_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_LOG), has(Blocks.BIRCH_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_SPRUCE_LOG.get(), 8)
+                .define('#', Blocks.SPRUCE_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_LOG), has(Blocks.SPRUCE_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_CRIMSON_STEM.get(), 8)
+                .define('#', Blocks.CRIMSON_STEM)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_STEM), has(Blocks.CRIMSON_STEM)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_WARPED_STEM.get(), 8)
+                .define('#', Blocks.WARPED_STEM)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_STEM), has(Blocks.WARPED_STEM)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_WILLOW_LOG.get(), 8)
+                .define('#', EBBlocks.WILLOW_LOG.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_LOG.get()), has(EBBlocks.WILLOW_LOG.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_MAPLE_LOG.get(), 8)
+                .define('#', EBBlocks.MAPLE_LOG.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MAPLE_LOG.get()), has(EBBlocks.MAPLE_LOG.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_ANCIENT_LOG.get(), 8)
+                .define('#', EBBlocks.ANCIENT_LOG.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_LOG.get()), has(EBBlocks.ANCIENT_LOG.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_OAK_LOG.get(), 8)
+                .define('#', Blocks.STRIPPED_OAK_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.STRIPPED_OAK_LOG), has(Blocks.STRIPPED_OAK_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_CHERRY_LOG.get(), 8)
+                .define('#', Blocks.STRIPPED_CHERRY_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.STRIPPED_CHERRY_LOG), has(Blocks.STRIPPED_CHERRY_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_MANGROVE_LOG.get(), 8)
+                .define('#', Blocks.STRIPPED_MANGROVE_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.STRIPPED_MANGROVE_LOG), has(Blocks.STRIPPED_MANGROVE_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_DARK_OAK_LOG.get(), 8)
+                .define('#', Blocks.STRIPPED_DARK_OAK_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.STRIPPED_DARK_OAK_LOG), has(Blocks.STRIPPED_DARK_OAK_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_ACACIA_LOG.get(), 8)
+                .define('#', Blocks.STRIPPED_ACACIA_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.STRIPPED_ACACIA_LOG), has(Blocks.STRIPPED_ACACIA_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_JUNGLE_LOG.get(), 8)
+                .define('#', Blocks.STRIPPED_JUNGLE_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.STRIPPED_JUNGLE_LOG), has(Blocks.STRIPPED_JUNGLE_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_BIRCH_LOG.get(), 8)
+                .define('#', Blocks.STRIPPED_BIRCH_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.STRIPPED_BIRCH_LOG), has(Blocks.STRIPPED_BIRCH_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_SPRUCE_LOG.get(), 8)
+                .define('#', Blocks.STRIPPED_SPRUCE_LOG)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.STRIPPED_SPRUCE_LOG), has(Blocks.STRIPPED_SPRUCE_LOG)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_CRIMSON_STEM.get(), 8)
+                .define('#', Blocks.STRIPPED_CRIMSON_STEM)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.STRIPPED_CRIMSON_STEM), has(Blocks.STRIPPED_CRIMSON_STEM)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_WARPED_STEM.get(), 8)
+                .define('#', Blocks.STRIPPED_WARPED_STEM)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.STRIPPED_WARPED_STEM), has(Blocks.STRIPPED_WARPED_STEM)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_WILLOW_LOG.get(), 8)
+                .define('#', EBBlocks.STRIPPED_WILLOW_LOG.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.STRIPPED_WILLOW_LOG.get()), has(EBBlocks.STRIPPED_WILLOW_LOG.get())).save(pWriter);
+//the bite of 87?
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_MAPLE_LOG.get(), 8)
+                .define('#', EBBlocks.STRIPPED_MAPLE_LOG.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.STRIPPED_MAPLE_LOG.get()), has(EBBlocks.STRIPPED_MAPLE_LOG.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_STRIPPED_ANCIENT_LOG.get(), 8)
+                .define('#', EBBlocks.STRIPPED_ANCIENT_LOG.get())
+                .pattern("###")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.STRIPPED_ANCIENT_LOG.get()), has(EBBlocks.STRIPPED_ANCIENT_LOG.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.MOSSY_POLISHED_STONE_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get()), has(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_POLISHED_STONE_BRICK_SLAB.get(), Ingredient.of(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get()), has(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.MOSSY_POLISHED_STONE_BRICK_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get()), has(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())).save(pWriter);
+//oh no covid 19
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MOSSY_POLISHED_STONE_BRICK_WALL.get(), Ingredient.of(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get()), has(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())).save(pWriter);
+
+        doorBuilder(EBBlocks.IRON_BAR_DOOR.get(), Ingredient.of(Blocks.IRON_BARS))
+                .unlockedBy(getHasName(Blocks.IRON_BARS), has(Blocks.IRON_BARS)).save(pWriter);
+
+        trapdoorBuilder(EBBlocks.IRON_BAR_TRAPDOOR.get(), Ingredient.of(Blocks.IRON_BARS))
+                .unlockedBy(getHasName(Blocks.IRON_BARS), has(Blocks.IRON_BARS)).save(pWriter);
+
+        fourforfourBuilder(EBBlocks.KNITTED_RED_WOOL.get(), Ingredient.of(Blocks.RED_WOOL))
+                .unlockedBy(getHasName(Blocks.RED_WOOL), has(Blocks.RED_WOOL)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_RED_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_RED_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_RED_WOOL.get()), has(EBBlocks.KNITTED_RED_WOOL.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.KNITTED_RED_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_RED_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_RED_WOOL.get()), has(EBBlocks.KNITTED_RED_WOOL.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_RED_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_RED_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_RED_WOOL.get()), has(EBBlocks.KNITTED_RED_WOOL.get())).save(pWriter);
+
+        fourforfourBuilder(EBBlocks.KNITTED_CYAN_WOOL.get(), Ingredient.of(Blocks.CYAN_WOOL))
+                .unlockedBy(getHasName(Blocks.CYAN_WOOL), has(Blocks.CYAN_WOOL)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_CYAN_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_CYAN_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_CYAN_WOOL.get()), has(EBBlocks.KNITTED_CYAN_WOOL.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.KNITTED_CYAN_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_CYAN_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_CYAN_WOOL.get()), has(EBBlocks.KNITTED_CYAN_WOOL.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_CYAN_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_CYAN_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_CYAN_WOOL.get()), has(EBBlocks.KNITTED_CYAN_WOOL.get())).save(pWriter);
+
+        fourforfourBuilder(EBBlocks.KNITTED_BLUE_WOOL.get(), Ingredient.of(Blocks.BLUE_WOOL))
+                .unlockedBy(getHasName(Blocks.BLUE_WOOL), has(Blocks.BLUE_WOOL)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_BLUE_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_BLUE_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_BLUE_WOOL.get()), has(EBBlocks.KNITTED_BLUE_WOOL.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.KNITTED_BLUE_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_BLUE_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_BLUE_WOOL.get()), has(EBBlocks.KNITTED_BLUE_WOOL.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_BLUE_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_BLUE_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_BLUE_WOOL.get()), has(EBBlocks.KNITTED_BLUE_WOOL.get())).save(pWriter);
+
+        fourforfourBuilder(EBBlocks.KNITTED_PURPLE_WOOL.get(), Ingredient.of(Blocks.PURPLE_WOOL))
+                .unlockedBy(getHasName(Blocks.PURPLE_WOOL), has(Blocks.PURPLE_WOOL)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_PURPLE_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_PURPLE_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_PURPLE_WOOL.get()), has(EBBlocks.KNITTED_PURPLE_WOOL.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.KNITTED_PURPLE_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_PURPLE_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_PURPLE_WOOL.get()), has(EBBlocks.KNITTED_PURPLE_WOOL.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_PURPLE_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_PURPLE_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_PURPLE_WOOL.get()), has(EBBlocks.KNITTED_PURPLE_WOOL.get())).save(pWriter);
+
+        fourforfourBuilder(EBBlocks.KNITTED_BLACK_WOOL.get(), Ingredient.of(Blocks.BLACK_WOOL))
+                .unlockedBy(getHasName(Blocks.BLACK_WOOL), has(Blocks.BLACK_WOOL)).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_BLACK_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_BLACK_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_BLACK_WOOL.get()), has(EBBlocks.KNITTED_BLACK_WOOL.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.KNITTED_BLACK_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_BLACK_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_BLACK_WOOL.get()), has(EBBlocks.KNITTED_BLACK_WOOL.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_BLACK_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_BLACK_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_BLACK_WOOL.get()), has(EBBlocks.KNITTED_BLACK_WOOL.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.REACHING_LANTERN.get(), 1)
+                .define('@', EBItems.ANCIENT_FRUIT.get()).define('#', Items.IRON_NUGGET).define('%', Items.IRON_INGOT)
+                .pattern("#%#")
+                .pattern("%@%")
+                .pattern("#%#").unlockedBy(getHasName(EBBlocks.TUFF_BRICK_SLAB.get()), has(EBBlocks.TUFF_BRICK_SLAB.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MIRALEN_BRICKS.get(), 4)
+                .define('#', EBBlocks.MIRALEN_BLOCK.get())
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(EBBlocks.MIRALEN_BLOCK.get()), has(EBBlocks.MIRALEN_BLOCK.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.MIRALEN_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRACKED_MIRALEN_BRICKS.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.MIRALEN_BRICKS.get()), has(EBBlocks.MIRALEN_BRICKS.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.MIRALEN_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.MIRALEN_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MIRALEN_BRICKS.get()), has(EBBlocks.MIRALEN_BRICKS.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MIRALEN_BRICK_SLAB.get(), Ingredient.of(EBBlocks.MIRALEN_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MIRALEN_BRICKS.get()), has(EBBlocks.MIRALEN_BRICKS.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.MIRALEN_BRICK_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.MIRALEN_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MIRALEN_BRICKS.get()), has(EBBlocks.MIRALEN_BRICKS.get())).save(pWriter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MIRALEN_BRICK_WALL.get(), Ingredient.of(EBBlocks.MIRALEN_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MIRALEN_BRICKS.get()), has(EBBlocks.MIRALEN_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MIRALEN_TILES.get(), 4)
+                .define('#', EBBlocks.MIRALEN_BRICKS.get())
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(EBBlocks.MIRALEN_BRICKS.get()), has(EBBlocks.MIRALEN_BRICKS.get())).save(pWriter);
+
+        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.MIRALEN_TILES.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRACKED_MIRALEN_TILES.get(), 0.1F, 200)
+                .unlockedBy(getHasName(EBBlocks.MIRALEN_TILES.get()), has(EBBlocks.MIRALEN_TILES.get())).save(pWriter);
+
+        stairBuilder(EBBlocks.MIRALEN_TILE_STAIRS.get(), Ingredient.of(EBBlocks.MIRALEN_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.MIRALEN_TILES.get()), has(EBBlocks.MIRALEN_TILES.get())).save(pWriter);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MIRALEN_TILE_SLAB.get(), Ingredient.of(EBBlocks.MIRALEN_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.MIRALEN_TILES.get()), has(EBBlocks.MIRALEN_TILES.get())).save(pWriter);
+
+        verticalstairBuilder(EBBlocks.MIRALEN_TILE_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.MIRALEN_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.MIRALEN_TILES.get()), has(EBBlocks.MIRALEN_TILES.get())).save(pWriter);
+
+        wallBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MIRALEN_TILE_WALL.get(), Ingredient.of(EBBlocks.MIRALEN_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.MIRALEN_TILES.get()), has(EBBlocks.MIRALEN_TILES.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MIRALEN_BLOCK.get(), 1)
+                .define('#', EBItems.MIRALEN_SHARDS.get())
+                .pattern("##")
+                .pattern("##").unlockedBy(getHasName(EBBlocks.MIRALEN_BLOCK.get()), has(EBBlocks.MIRALEN_BLOCK.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MIRALEN_LAMP.get(), 2)
+                .define('#', Items.IRON_INGOT).define('@', EBItems.MIRALEN_SHARDS.get())
+                .pattern("@#@")
+                .pattern("#@#")
+                .pattern("@#@").unlockedBy(getHasName(EBItems.MIRALEN_SHARDS.get()), has(EBItems.MIRALEN_SHARDS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MIRALEN_GLASS_PANE.get(), 16)
+                .define('#', EBBlocks.MIRALEN_GLASS.get())
+                .pattern("###")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MIRALEN_GLASS.get()), has(EBBlocks.MIRALEN_GLASS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MIRALEN_GLASS.get(), 4)
+                .define('@', EBItems.MIRALEN_SHARDS.get()).define('#', Blocks.GLASS)
+                .pattern("@#@")
+                .pattern("#@#")
+                .pattern("@#@").unlockedBy(getHasName(EBItems.MIRALEN_SHARDS.get()), has(EBItems.MIRALEN_SHARDS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.TUFF_BRICK_PILLAR.get(), 2)
+                .define('#', EBBlocks.TUFF_BRICKS.get())
+                .pattern("#")
+                .pattern("#").unlockedBy(getHasName(EBBlocks.TUFF_BRICKS.get()), has(EBBlocks.TUFF_BRICKS.get())).save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.TUFF_BRICK_PEDESTAL.get(), 3)
+                .define('#', EBBlocks.TUFF_BRICK_SLAB.get()).define('@', EBBlocks.TUFF_BRICK_PILLAR.get())
+                .pattern("###")
+                .pattern(" @ ")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.TUFF_BRICK_SLAB.get()), has(EBBlocks.TUFF_BRICK_SLAB.get())).save(pWriter);
+
+    }
+
+    protected static RecipeBuilder fourforfourBuilder(ItemLike itemLike, Ingredient ingredient) {
+        return ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, itemLike, 4)
+                .define('#', ingredient)
+                .pattern("##")
+                .pattern("##");
     }
 
     protected static RecipeBuilder EBmosaicBuilder(ItemLike itemLike, Ingredient ingredient) {

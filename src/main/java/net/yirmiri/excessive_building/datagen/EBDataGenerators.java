@@ -26,5 +26,14 @@ public class EBDataGenerators {
         generator.addProvider(event.includeClient(), new EBItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeServer(), new EBWorldGenProvider(packOutput, lookupProvider));
         generator.addProvider(event.includeServer(), new EBGlobalLootModifiersProvider(packOutput));
+
+        EBBlockTagProvider blockTagGenerator = generator.addProvider(event.includeServer(),
+                new EBBlockTagProvider(packOutput, lookupProvider, existingFileHelper));
+
+        EBBannerTagProvider bannerTagProvider = generator.addProvider(event.includeServer(),
+                new EBBannerTagProvider(packOutput, lookupProvider, existingFileHelper));
+
+        generator.addProvider(event.includeServer(),
+                new EBItemTagProvider(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
     }
 }

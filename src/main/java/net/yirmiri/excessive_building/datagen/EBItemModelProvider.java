@@ -21,6 +21,60 @@ public class EBItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        evenSimplerBlockItem(EBBlocks.TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.RAINBOW_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.RAINBOW_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.RED_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.RED_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.ORANGE_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.ORANGE_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.YELLOW_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.YELLOW_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.GREEN_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.GREEN_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.LIME_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.LIME_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.BLUE_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.BLUE_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.CYAN_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.CYAN_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.PURPLE_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.PURPLE_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.MAGENTA_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.MAGENTA_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.PINK_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.PINK_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.WHITE_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.WHITE_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.GRAY_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.GRAY_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.BLACK_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.BLACK_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.LIGHT_GRAY_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.BROWN_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.BROWN_TERRACOTTA_BRICK_SLAB);
+
         evenSimplerBlockItem(EBBlocks.POLISHED_BLACKSTONE_TILE_STAIRS);
         evenSimplerBlockItem(EBBlocks.POLISHED_BLACKSTONE_TILE_SLAB);
         wallItem(EBBlocks.POLISHED_BLACKSTONE_TILE_WALL, EBBlocks.POLISHED_BLACKSTONE_TILES);
@@ -45,8 +99,6 @@ public class EBItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(EBBlocks.ASPHALT_STAIRS);
         evenSimplerBlockItem(EBBlocks.ASPHALT_SLAB);
 
-        //simpleItem(EBItems.ANCIENT_SIGN);
-        //simpleItem(EBItems.ANCIENT_HANGING_SIGN);
         evenSimplerBlockItem(EBBlocks.ANCIENT_STAIRS);
         evenSimplerBlockItem(EBBlocks.ANCIENT_SLAB);
         evenSimplerBlockItem(EBBlocks.ANCIENT_MOSAIC_STAIRS);
@@ -58,9 +110,123 @@ public class EBItemModelProvider extends ItemModelProvider {
 
         simpleItem(EBItems.ANCIENT_FRUIT);
 
-        evenSimplerBlockItem(EBBlocks.POLISHED_BASALT_STAIRS);
-        evenSimplerBlockItem(EBBlocks.POLISHED_BASALT_SLAB);
-        wallItem(EBBlocks.POLISHED_BASALT_WALL, EBBlocks.POLISHED_BASALT);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_BASALT_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_BASALT_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.END_STONE_STAIRS);
+        evenSimplerBlockItem(EBBlocks.END_STONE_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.NETHERRACK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.NETHERRACK_SLAB);
+
+        simpleItem(EBItems.ANCIENT_SIGN);
+        simpleItem(EBItems.ANCIENT_HANGING_SIGN);
+
+        evenSimplerBlockItem(EBBlocks.EMERALD_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.EMERALD_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_RAINBOW_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_RAINBOW_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_RED_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_RED_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_ORANGE_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_ORANGE_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_YELLOW_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_YELLOW_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_GREEN_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_GREEN_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_LIME_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_LIME_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_LIGHT_BLUE_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_LIGHT_BLUE_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_BLUE_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_BLUE_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_CYAN_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_CYAN_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_PURPLE_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_PURPLE_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_MAGENTA_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_MAGENTA_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_PINK_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_PINK_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_WHITE_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_WHITE_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_GRAY_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_GRAY_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_BLACK_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_BLACK_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_LIGHT_GRAY_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_LIGHT_GRAY_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.SMOOTH_BROWN_TERRACOTTA_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.SMOOTH_BROWN_TERRACOTTA_BRICK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.WILLOW_STAIRS);
+        evenSimplerBlockItem(EBBlocks.WILLOW_SLAB);
+        evenSimplerBlockItem(EBBlocks.WILLOW_MOSAIC_STAIRS);
+        evenSimplerBlockItem(EBBlocks.WILLOW_MOSAIC_SLAB);
+        evenSimplerBlockItem(EBBlocks.WILLOW_PRESSURE_PLATE);
+        evenSimplerBlockItem(EBBlocks.WILLOW_FENCE_GATE);
+        fenceItem(EBBlocks.WILLOW_FENCE, EBBlocks.WILLOW_PLANKS);
+        buttonItem(EBBlocks.WILLOW_BUTTON, EBBlocks.WILLOW_PLANKS);
+
+        simpleItem(EBItems.WILLOW_SIGN);
+        simpleItem(EBItems.WILLOW_HANGING_SIGN);
+
+        evenSimplerBlockItem(EBBlocks.MAPLE_STAIRS);
+        evenSimplerBlockItem(EBBlocks.MAPLE_SLAB);
+        evenSimplerBlockItem(EBBlocks.MAPLE_MOSAIC_STAIRS);
+        evenSimplerBlockItem(EBBlocks.MAPLE_MOSAIC_SLAB);
+        evenSimplerBlockItem(EBBlocks.MAPLE_PRESSURE_PLATE);
+        evenSimplerBlockItem(EBBlocks.MAPLE_FENCE_GATE);
+        fenceItem(EBBlocks.MAPLE_FENCE, EBBlocks.MAPLE_PLANKS);
+        buttonItem(EBBlocks.MAPLE_BUTTON, EBBlocks.MAPLE_PLANKS);
+
+        simpleItem(EBItems.MAPLE_SIGN);
+        simpleItem(EBItems.MAPLE_HANGING_SIGN);
+
+        simpleItem(EBItems.EXCESSIVE_BANNER_PATTERN);
+        simpleBlockItemBlockTexture(EBBlocks.MARIGOLD);
+
+        evenSimplerBlockItem(EBBlocks.MOSSY_POLISHED_STONE_BRICK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.MOSSY_POLISHED_STONE_BRICK_SLAB);
+        wallItem(EBBlocks.MOSSY_POLISHED_STONE_BRICK_WALL, EBBlocks.POLISHED_STONE_BRICKS);
+
+        simpleBlockItem(EBBlocks.IRON_BAR_DOOR);
+        trapdoorItem(EBBlocks.IRON_BAR_TRAPDOOR);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_RED_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_RED_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_CYAN_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_CYAN_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_BLACK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_BLACK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_PURPLE_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_PURPLE_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_BLUE_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_BLUE_SLAB);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
