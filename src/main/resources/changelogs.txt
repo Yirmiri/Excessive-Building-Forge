@@ -4,7 +4,16 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v2.1.2 (Forge/NeoForge: 1.20.1)
+Small Update
+
+  Changes
+•   Removed minecraft/lang/en_us.json
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v2.1.1 (Forge/NeoForge: 1.20.1)
+Small Update
 
 •   Note: Fabric v2.1+ will still happen but I am currently burnt out.
 •   Note but again: I plan to do ports to 1.20.2/.3/.4 but those will come once Fabric is ported and all the small extra content is cleaned up
