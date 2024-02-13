@@ -1004,7 +1004,6 @@
   "block.excessive_building.hollow_stripped_warped_stem": "Hollow Stripped Warped Stem",
   "block.excessive_building.tuff_brick_pillar": "Tuff Brick Pillar",
   "block.excessive_building.tuff_brick_pedestal": "Tuff Brick Pedestal",
-  "block.excessive_building.acorn": "Acorn | UNDER CONSTRUCTION",
   "block.excessive_building.mossy_polished_stone_bricks": "Mossy Polished Stone Bricks",
   "block.excessive_building.mossy_polished_stone_brick_stairs": "Mossy Polished Stone Brick Stairs",
   "block.excessive_building.mossy_polished_stone_brick_slab": "Mossy Polished Stone Brick Slab",
@@ -1086,6 +1085,7 @@
   "block.excessive_building.miralen_tile_vertical_stairs": "Miralen Tile Vertical Stairs",
   "block.excessive_building.golden_birch_leaves": "Golden Birch Leaves",
   "block.excessive_building.golden_birch_sapling": "Golden Birch Sapling",
+  "block.excessive_building.acorn": "Acorn (Unfinished)",
 
   "item.excessive_building.fiery_shards": "Fiery Shards",
   "item.excessive_building.kyanite_shards": "Kyanite Shards",

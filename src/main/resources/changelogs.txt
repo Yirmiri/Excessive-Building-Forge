@@ -4,6 +4,23 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v2.1.1 (Forge/NeoForge: 1.20.1)
+
+•   Note: Fabric v2.1+ will still happen but I am currently burnt out.
+•   Note but again: I plan to do ports to 1.20.2/.3/.4 but those will come once Fabric is ported and all the small extra content is cleaned up
+
+  Additions
+•   Added miralen geodes which can be found in the new 1.18 mountain biomes
+
+  Changes
+•   Updated README.txt in the lang folder
+•   Changed the name of acorns from "Acorn | UNDER CONSTRUCTION" to "Acorn (Unfinished)", acorns will be worked on whenever I do a proper content update
+
+  Bug Fixes
+•   Added missing hanging signs gui textures
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v2.1.0 (Forge/NeoForge: 1.20.1) (Fabric/Quilt: 1.20.1)
 Major Update
 

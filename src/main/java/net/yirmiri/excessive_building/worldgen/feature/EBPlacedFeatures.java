@@ -37,6 +37,7 @@ public class EBPlacedFeatures {
     public static final ResourceKey<PlacedFeature> COMMON_PUMPKIN_PATCH_PLACED = createKey("common_pumpkin_patch_placed");
     public static final ResourceKey<PlacedFeature> BRIMSTONE_PLACED = createKey("brimstone_placed");
     public static final ResourceKey<PlacedFeature> GOLDEN_BIRCH_TREE_PLACED = createKey("golden_birch_tree_placed");
+    public static final ResourceKey<PlacedFeature> MIRALEN_GEODE_PLACED = createKey("miralen_geode_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -103,6 +104,10 @@ public class EBPlacedFeatures {
 
         register(context, GOLDEN_BIRCH_TREE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.GOLDEN_BIRCH_TREE), //placed, % chance for extra, extra
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(16, 0.2f, 1), EBBlocks.GOLDEN_BIRCH_SAPLING.get()));
+
+        register(context, MIRALEN_GEODE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.MIRALEN_GEODE),
+                List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(),
+                        HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-40), VerticalAnchor.absolute(60)), BiomeFilter.biome()));
 
     }
 

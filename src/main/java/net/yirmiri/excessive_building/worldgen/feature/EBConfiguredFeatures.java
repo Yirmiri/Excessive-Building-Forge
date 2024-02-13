@@ -66,6 +66,7 @@ public class EBConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> BRIMSTONE = registerKey("brimstone");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GOLDEN_BIRCH_TREE = registerKey("golden_birch_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GOLDEN_BIRCH_TREE_BEES_01 = registerKey("golden_birch_tree_bees_01");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MIRALEN_GEODE = registerKey("miralen_geode");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -163,6 +164,17 @@ public class EBConfiguredFeatures {
 
         register(context, GOLDEN_BIRCH_TREE, Feature.TREE, createGoldenBirch().build());
         register(context, GOLDEN_BIRCH_TREE_BEES_01, Feature.TREE, createGoldenBirch().decorators(List.of(beehivedecorator4)).build());
+
+        register(context, MIRALEN_GEODE, Feature.GEODE,
+                new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                        BlockStateProvider.simple(EBBlocks.MIRALEN_BLOCK.get()), BlockStateProvider.simple(EBBlocks.BUDDING_MIRALEN_BLOCK.get()),
+                        BlockStateProvider.simple(Blocks.CALCITE), BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
+                        List.of(EBBlocks.SMALL_MIRALEN_BUD.get().defaultBlockState(), EBBlocks.MEDIUM_MIRALEN_BUD.get().defaultBlockState(),
+                                EBBlocks.LARGE_MIRALEN_BUD.get().defaultBlockState(), EBBlocks.MIRALEN_CLUSTER.get().defaultBlockState()),
+                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
+                        new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6),
+                        UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
     }
 
