@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#is_mountain",
+  "features": "excessive_building:miralen_geode_placed",
+  "step": "underground_ores"
+}
