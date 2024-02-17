@@ -59,8 +59,8 @@ public class EBPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(80), VerticalAnchor.absolute(128)), BiomeFilter.biome()));
 
         register(context, ALGAE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.ALGAE),
-                EBOrePlacement.commonOrePlacement(10, //veins per chunk
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(64), VerticalAnchor.absolute(82))));
+                EBOrePlacement.commonOrePlacement(32, //veins per chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(48), VerticalAnchor.absolute(92))));
 
         register(context, ROSE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.ROSE),
                 RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
