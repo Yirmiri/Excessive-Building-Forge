@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.block.entity;
+package net.yirmiri.excessive_building.blockentity.sign;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;

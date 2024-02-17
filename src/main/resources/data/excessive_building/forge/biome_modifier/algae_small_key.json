@@ -1,8 +1,8 @@
 {
   "type": "forge:add_features",
   "biomes": [
-    "mangrove_swamp"
+    "swamp"
   ],
-  "features": "excessive_building:algae_placed",
+  "features": "excessive_building:algae_small_placed",
   "step": "vegetal_decoration"
 }

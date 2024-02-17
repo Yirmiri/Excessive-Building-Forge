@@ -6,7 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.worldgen.EBConfiguredFeatures;
+import net.yirmiri.excessive_building.worldgen.feature.EBConfiguredFeatures;
 import net.yirmiri.excessive_building.worldgen.feature.EBPlacedFeatures;
 import net.yirmiri.excessive_building.worldgen.biome.EBBiomes;
 

@@ -13,7 +13,6 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.init.EBBlocks;
-import net.yirmiri.excessive_building.worldgen.EBConfiguredFeatures;
 
 import java.util.List;
 
@@ -38,6 +37,7 @@ public class EBPlacedFeatures {
     public static final ResourceKey<PlacedFeature> BRIMSTONE_PLACED = createKey("brimstone_placed");
     public static final ResourceKey<PlacedFeature> GOLDEN_BIRCH_TREE_PLACED = createKey("golden_birch_tree_placed");
     public static final ResourceKey<PlacedFeature> MIRALEN_GEODE_PLACED = createKey("miralen_geode_placed");
+    public static final ResourceKey<PlacedFeature> ALGAE_SMALL_PLACED = createKey("algae_small_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -57,10 +57,6 @@ public class EBPlacedFeatures {
         register(context, KYANITE_GEODE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.KYANITE_GEODE),
                 List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(),
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(80), VerticalAnchor.absolute(128)), BiomeFilter.biome()));
-
-        register(context, ALGAE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.ALGAE),
-                EBOrePlacement.commonOrePlacement(32, //veins per chunk
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(48), VerticalAnchor.absolute(92))));
 
         register(context, ROSE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.ROSE),
                 RarityFilter.onAverageOnceEvery(16), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
@@ -108,6 +104,12 @@ public class EBPlacedFeatures {
         register(context, MIRALEN_GEODE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.MIRALEN_GEODE),
                 List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(),
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-40), VerticalAnchor.absolute(60)), BiomeFilter.biome()));
+
+        register(context, ALGAE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.ALGAE),
+                List.of(CountPlacement.of(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+        register(context, ALGAE_SMALL_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.ALGAE),
+                List.of(CountPlacement.of(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
     }
 

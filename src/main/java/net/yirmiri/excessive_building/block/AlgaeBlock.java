@@ -1,8 +1,9 @@
 package net.yirmiri.excessive_building.block;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.Holder;
+import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.player.Player;
@@ -15,7 +16,8 @@ import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.chunk.ChunkGenerator;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.HitResult;
@@ -23,9 +25,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.PlantType;
 import net.yirmiri.excessive_building.init.EBItems;
-import net.yirmiri.excessive_building.worldgen.feature.EBPlacedFeatures;
-
-import java.util.Optional;
+import net.yirmiri.excessive_building.worldgen.feature.EBConfiguredFeatures;
 
 public class AlgaeBlock extends BushBlock implements BonemealableBlock {
     protected static final VoxelShape AABB = Block.box(1.0D, 0.0D, 1.0D, 15.0D, 1.5D, 15.0D);
@@ -63,7 +63,16 @@ public class AlgaeBlock extends BushBlock implements BonemealableBlock {
     }
 
     public void performBonemeal(ServerLevel serverLevel, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
-        Optional<Holder.Reference<PlacedFeature>> optional = serverLevel.registryAccess().registryOrThrow(Registries.PLACED_FEATURE)
-                .getHolder(EBPlacedFeatures.ALGAE_PLACED);
+        BlockState blockstate = serverLevel.getBlockState(blockPos);
+        BlockPos blockpos = blockPos.above();
+        ChunkGenerator chunkgenerator = serverLevel.getChunkSource().getGenerator();
+        Registry<ConfiguredFeature<?, ?>> registry = serverLevel.registryAccess().registryOrThrow(Registries.CONFIGURED_FEATURE);
+            this.place(registry, EBConfiguredFeatures.ALGAE_SMALL, serverLevel, chunkgenerator, randomSource, blockpos);
+    }
+
+    private void place(Registry<ConfiguredFeature<?, ?>> features, ResourceKey<ConfiguredFeature<?, ?>> resourceKey, ServerLevel serverLevel, ChunkGenerator chunkGenerator, RandomSource randomSource, BlockPos pos) {
+        features.getHolder(resourceKey).ifPresent((reference) -> {
+            reference.value().place(serverLevel, chunkGenerator, randomSource, pos);
+        });
     }
 }

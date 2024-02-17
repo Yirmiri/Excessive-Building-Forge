@@ -7,7 +7,6 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.grower.OakTreeGrower;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.material.MapColor;
@@ -18,10 +17,10 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.*;
-import net.yirmiri.excessive_building.block.entity.sign.EBCeilingHangingSignBlock;
-import net.yirmiri.excessive_building.block.entity.sign.EBStandingSignBlock;
-import net.yirmiri.excessive_building.block.entity.sign.EBWallHangingSignBlock;
-import net.yirmiri.excessive_building.block.entity.sign.EBWallSignBlock;
+import net.yirmiri.excessive_building.block.EBCeilingHangingSignBlock;
+import net.yirmiri.excessive_building.block.EBStandingSignBlock;
+import net.yirmiri.excessive_building.block.EBWallHangingSignBlock;
+import net.yirmiri.excessive_building.block.EBWallSignBlock;
 import net.yirmiri.excessive_building.block.flammable.*;
 import net.yirmiri.excessive_building.worldgen.feature.tree.*;
 
@@ -3368,9 +3367,6 @@ public class EBBlocks {
     public static final RegistryObject<Block> TUFF_BRICK_PEDESTAL = registerBlock("tuff_brick_pedestal",
             () -> new PedestalBlock(BlockBehaviour.Properties.copy(EBBlocks.TUFF_BRICK_PILLAR.get())));
 
-    public static final RegistryObject<Block> ACORN = registerBlock("acorn",
-            () -> new SaplingBlock(new OakTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-
     public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICKS = registerBlock("mossy_polished_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_STONE_BRICKS.get()).requiresCorrectToolForDrops()));
 
@@ -3548,9 +3544,6 @@ public class EBBlocks {
     public static final RegistryObject<Block> KNITTED_CYAN_SLAB = registerBlock("knitted_cyan_slab",
             () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
 
-    public static final RegistryObject<Block> REACHING_LANTERN = registerBlock("reaching_lantern",
-            () -> new LanternBlock(BlockBehaviour.Properties.copy(Blocks.LANTERN).lightLevel(state -> 8)));
-
     public static final RegistryObject<Block> MIRALEN_BLOCK = registerBlock("miralen_block",
             () -> new AmethystBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
 
@@ -3623,6 +3616,12 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> POTTED_GOLDEN_BIRCH_SAPLING = BLOCKS.register("potted_golden_birch_sapling",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.GOLDEN_BIRCH_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_BIRCH_SAPLING)));
+
+    public static final RegistryObject<Block> ACORN = registerBlock("acorn",
+            () -> new SaplingBlock(new AcornTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+
+    public static final RegistryObject<Block> REACHING_LANTERN = registerBlock("reaching_lantern",
+            () -> new LanternBlock(BlockBehaviour.Properties.copy(Blocks.LANTERN).lightLevel(state -> 8)));
 
 
     protected static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {

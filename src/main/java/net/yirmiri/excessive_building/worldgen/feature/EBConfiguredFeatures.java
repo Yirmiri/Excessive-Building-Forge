@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.worldgen;
+package net.yirmiri.excessive_building.worldgen.feature;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.core.registries.Registries;
@@ -67,6 +67,7 @@ public class EBConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> GOLDEN_BIRCH_TREE = registerKey("golden_birch_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> GOLDEN_BIRCH_TREE_BEES_01 = registerKey("golden_birch_tree_bees_01");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MIRALEN_GEODE = registerKey("miralen_geode");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ALGAE_SMALL = registerKey("algae_small");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -122,9 +123,6 @@ public class EBConfiguredFeatures {
                 ConstantInt.of(0), ConstantInt.of(5), 0.25F, 0.5F, 0.16666667F, 0.33333334F),
                 new TwoLayersFeatureSize(1, 0, 2)).ignoreVines().build());
 
-        register(context, ALGAE, Feature.RANDOM_PATCH, new RandomPatchConfiguration(10, 7, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
-                new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.ALGAE_BLOCK.get())))));
-
         register(context, ROSE, Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.ROSE.get())))));
 
@@ -175,6 +173,12 @@ public class EBConfiguredFeatures {
                         new GeodeLayerSettings(1.7D, 2.2D, 3.2D, 4.2D),
                         new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6),
                         UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
+
+        register(context, ALGAE, Feature.RANDOM_PATCH, new RandomPatchConfiguration(10, 7, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.ALGAE_BLOCK.get())))));
+
+        register(context, ALGAE_SMALL, Feature.RANDOM_PATCH, new RandomPatchConfiguration(12, 3, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+                new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.ALGAE_BLOCK.get())))));
 
     }
 
