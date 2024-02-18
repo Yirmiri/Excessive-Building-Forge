@@ -26,7 +26,7 @@ public class LeavesPileBlock extends BushBlock implements BonemealableBlock {
         return AABB;
     }
 
-    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean b) {
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean bl) {
         return true;
     }
 

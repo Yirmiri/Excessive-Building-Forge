@@ -18,11 +18,14 @@ import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.yirmiri.excessive_building.block.GrassSlabBlock;
+import net.yirmiri.excessive_building.compat.EBCompatRegistries;
+import net.yirmiri.excessive_building.compat.sullysmod.SullysModCompat;
 import net.yirmiri.excessive_building.datagen.loot.EBLootTableModifiers;
 import net.yirmiri.excessive_building.init.*;
 import net.yirmiri.excessive_building.potion.EBBrewingRecipe;
@@ -47,6 +50,7 @@ public class ExcessiveBuilding {
         EBParticleTypes.register(modEventBus);
         EBBlockEntities.register(modEventBus);
         EBBannerPatterns.register(modEventBus);
+        EBCompatRegistries.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::setup);
@@ -169,10 +173,16 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.GOLDEN_BIRCH_LEAVES.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.GOLDEN_BIRCH_SAPLING.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_GOLDEN_BIRCH_SAPLING.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ACORN.get(), RenderType.cutoutMipped());
 
         Sheets.addWoodType(EBWoodTypes.ANCIENT);
         Sheets.addWoodType(EBWoodTypes.WILLOW);
         Sheets.addWoodType(EBWoodTypes.MAPLE);
+
+        if (sullysMod) {
+            ItemBlockRenderTypes.setRenderLayer(SullysModCompat.JADE_GLASS.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(SullysModCompat.JADE_GLASS_PANE.get(), RenderType.translucent());
+        }
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -2627,6 +2637,48 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.QUARTZ_VERTICAL_STAIRS);
             event.accept(EBBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS);
         }
+
+        if (event.getTab() == EBItemGroups.EB_STONE_BLOCKS.get() && (sullysMod)) {
+            event.accept(SullysModCompat.SMOOTHED_ROUGH_JADE_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.ROUGH_JADE_BRICK_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.ROUGH_JADE_TILE_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.POLISHED_JADE_BRICK_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.POLISHED_SMALL_JADE_BRICK_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.POLISHED_JADE_TILE_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.POLISHED_JADE_SHINGLE_VERTICAL_STAIRS);
+        }
+
+        if (event.getTab() == EBItemGroups.EB_FUNCTIONAL_BLOCKS.get() && (sullysMod)) {
+            event.accept(SullysModCompat.JADE_LAMP);
+        }
+
+        if (event.getTab() == EBItemGroups.EB_MISC_TAB.get() && (sullysMod)) {
+            event.accept(SullysModCompat.JADE_LAMP);
+            event.accept(SullysModCompat.JADE_GLASS);
+            event.accept(SullysModCompat.JADE_GLASS_PANE);
+            event.accept(SullysModCompat.POLISHED_JADE_PEDESTAL);
+        }
+
+        if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get() && (sullysMod)) {
+            event.accept(SullysModCompat.JADE_LAMP);
+            event.accept(SullysModCompat.JADE_GLASS);
+            event.accept(SullysModCompat.JADE_GLASS_PANE);
+            event.accept(SullysModCompat.POLISHED_JADE_PEDESTAL);
+            event.accept(SullysModCompat.SMOOTHED_ROUGH_JADE_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.ROUGH_JADE_BRICK_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.ROUGH_JADE_TILE_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.POLISHED_JADE_BRICK_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.POLISHED_SMALL_JADE_BRICK_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.POLISHED_JADE_TILE_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.POLISHED_JADE_SHINGLE_VERTICAL_STAIRS);
+        }
+    }
+
+    public static final boolean sullysMod;
+
+    static {
+        ModList mods = ModList.get();
+        sullysMod = mods.isLoaded("sullysmod");
     }
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

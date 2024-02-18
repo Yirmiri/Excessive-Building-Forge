@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "sullysmod:polished_jade_brick_slab"
+    },
+    "@": {
+      "item": "sullysmod:polished_jade_pillar"
+    }
+  },
+  "pattern": [
+    "###",
+    " @ ",
+    "###"
+  ],
+  "result": {
+    "count": 3,
+    "item": "sullysmod:polished_jade_pedestal"
+  },
+  "show_notification": true
+}

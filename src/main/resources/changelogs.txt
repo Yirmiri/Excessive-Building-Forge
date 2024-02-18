@@ -4,6 +4,26 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v2.1.3 (Forge/NeoForge: 1.20.1)
+Small Update
+
+  Changes
+•   Adjusted the values for maple tree variants from acorns
+
+  Compatibility
+Sully's Mod:
+•   Added reaching effect to jungle spiders
+•   Added tortoises to golden birch forests
+•   Added polished jade pedestals
+•   Added jade vertical stairs
+•   Added jade glass & glass panes
+•   Added jade lamps
+
+  Bug Fixes
+•   Fixed missing translations with miralen wall blocks
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v2.1.2 (Forge/NeoForge: 1.20.1)
 Small Update
 

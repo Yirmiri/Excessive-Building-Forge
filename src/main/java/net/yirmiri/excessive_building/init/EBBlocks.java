@@ -2963,19 +2963,19 @@ public class EBBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
 
     public static final RegistryObject<Block> ROSE = registerBlock("rose",
-            () -> new FlowerBlock(() -> MobEffects.REGENERATION, 5, (BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission())));
+            () -> new FlowerBlock(MobEffects.REGENERATION, 5, (BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission())));
 
     public static final RegistryObject<Block> POTTED_ROSE = BLOCKS.register("potted_rose",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.ROSE, BlockBehaviour.Properties.copy(Blocks.POTTED_POPPY).noOcclusion()));
 
     public static final RegistryObject<Block> WHITE_ROSE = registerBlock("white_rose",
-            () -> new FlowerBlock(() -> MobEffects.GLOWING, 5, (BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission())));
+            () -> new FlowerBlock(MobEffects.GLOWING, 5, (BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission())));
 
     public static final RegistryObject<Block> POTTED_WHITE_ROSE = BLOCKS.register("potted_white_rose",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.WHITE_ROSE, BlockBehaviour.Properties.copy(Blocks.POTTED_POPPY).noOcclusion()));
 
     public static final RegistryObject<Block> CYAN_ROSE = registerBlock("cyan_rose",
-            () -> new FlowerBlock(() -> MobEffects.POISON, 5, (BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission())));
+            () -> new FlowerBlock(MobEffects.POISON, 5, (BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission())));
 
     public static final RegistryObject<Block> POTTED_CYAN_ROSE = BLOCKS.register("potted_cyan_rose",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.CYAN_ROSE, BlockBehaviour.Properties.copy(Blocks.POTTED_POPPY).noOcclusion()));
@@ -3119,7 +3119,7 @@ public class EBBlocks {
             () -> new EBWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), EBWoodTypes.WILLOW));
 
     public static final RegistryObject<Block> ROSE_BUNDLE = registerBlock("rose_bundle",
-            () -> new FlowerBlock(() -> MobEffects.REGENERATION, 5, (BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission())));
+            () -> new FlowerBlock(MobEffects.REGENERATION, 5, (BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission())));
 
     public static final RegistryObject<Block> POTTED_ROSE_BUNDLE = BLOCKS.register("potted_rose_bundle",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.ROSE_BUNDLE, BlockBehaviour.Properties.copy(Blocks.POTTED_POPPY).noOcclusion()));
@@ -3242,7 +3242,7 @@ public class EBBlocks {
             () -> new EBWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), EBWoodTypes.MAPLE));
 
     public static final RegistryObject<Block> MARIGOLD = registerBlock("marigold",
-            () -> new FlowerBlock(() -> MobEffects.LUCK, 5, (BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission())));
+            () -> new FlowerBlock(MobEffects.LUCK, 5, (BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission())));
 
     public static final RegistryObject<Block> POTTED_MARIGOLD = BLOCKS.register("potted_marigold",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.MARIGOLD, BlockBehaviour.Properties.copy(Blocks.POTTED_POPPY).noOcclusion()));
@@ -3624,7 +3624,7 @@ public class EBBlocks {
             () -> new LanternBlock(BlockBehaviour.Properties.copy(Blocks.LANTERN).lightLevel(state -> 8)));
 
 
-    protected static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {
+    public static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {
                 RegistryObject<B> toReturn = BLOCKS.register(name, block);
                 registryBlockItem(name, toReturn);
                 return toReturn;

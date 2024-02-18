@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/cube_bottom_top",
-  "textures": {
-    "bottom": "aether:block/construction/skyroot_planks",
-    "side": "excessive_building:block/chiseled_skyroot",
-    "top": "aether:block/construction/skyroot_planks"
-  }
-}

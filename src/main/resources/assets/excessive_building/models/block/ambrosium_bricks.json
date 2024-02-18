@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "excessive_building:block/ambrosium_bricks",
-    "particle": "excessive_building:block/ambrosium_bricks"
-  },
-  "render_type": "solid"
-}

@@ -54,7 +54,8 @@ public class AlgaeBlock extends BushBlock implements BonemealableBlock {
         return ifluidstate.getType() == Fluids.WATER;
     }
 
-    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean b) {
+    @Override
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean bl) {
         return true;
     }
 
