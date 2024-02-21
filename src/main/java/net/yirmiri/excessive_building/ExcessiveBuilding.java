@@ -73,6 +73,7 @@ public class ExcessiveBuilding {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.YELLOW_MAPLE_SAPLING.getId(), EBBlocks.POTTED_YELLOW_MAPLE_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.MARIGOLD.getId(), EBBlocks.POTTED_MARIGOLD);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.GOLDEN_BIRCH_SAPLING.getId(), EBBlocks.POTTED_GOLDEN_BIRCH_SAPLING);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.ACORN.getId(), EBBlocks.POTTED_ACORN);
 
             BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.WATER, EBItems.ANCIENT_FRUIT.get(), Potions.MUNDANE));
             BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.AWKWARD, EBItems.ANCIENT_FRUIT.get(), EBPotions.REACHING_POTION.get()));
@@ -174,6 +175,8 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.GOLDEN_BIRCH_SAPLING.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_GOLDEN_BIRCH_SAPLING.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.ACORN.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_VINE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_ACORN.get(), RenderType.cutoutMipped());
 
         Sheets.addWoodType(EBWoodTypes.ANCIENT);
         Sheets.addWoodType(EBWoodTypes.WILLOW);
@@ -798,15 +801,19 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.SULFURIC_BRIMSTONE_VERTICAL_STAIRS);
             event.accept(EBBlocks.SULFURIC_BRIMSTONE_SLAB);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE);
+            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_PILLAR);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_STAIRS);
+            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_VERTICAL_STAIRS);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_SLAB);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_WALL);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICKS);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_STAIRS);
+            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_VERTICAL_STAIRS);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_SLAB);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_WALL);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILES);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_STAIRS);
+            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_VERTICAL_STAIRS);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_SLAB);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_WALL);
 
@@ -1268,6 +1275,7 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.SNOW_BRICK_SLAB);
 
             event.accept(EBItems.ALGAE);
+            event.accept(EBBlocks.ANCIENT_VINE);
             event.accept(EBBlocks.RED_MAPLE_LEAVES_PILE);
             event.accept(EBBlocks.ORANGE_MAPLE_LEAVES_PILE);
             event.accept(EBBlocks.YELLOW_MAPLE_LEAVES_PILE);
@@ -1340,6 +1348,8 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.BLACKSTONE_WINDOW);
             event.accept(EBBlocks.BRIMSTONE_LAMP);
             event.accept(EBBlocks.BRIMSTONE_WINDOW);
+            event.accept(EBBlocks.SULFURIC_BRIMSTONE_LAMP);
+            event.accept(EBBlocks.SULFURIC_BRIMSTONE_WINDOW);
             event.accept(EBBlocks.FIERY_LAMP);
             event.accept(EBBlocks.KYANITE_LAMP);
             event.accept(EBBlocks.AMETHYST_LAMP);
@@ -1449,6 +1459,8 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.BLACKSTONE_WINDOW);
             event.accept(EBBlocks.BRIMSTONE_LAMP);
             event.accept(EBBlocks.BRIMSTONE_WINDOW);
+            event.accept(EBBlocks.SULFURIC_BRIMSTONE_LAMP);
+            event.accept(EBBlocks.SULFURIC_BRIMSTONE_WINDOW);
             event.accept(EBBlocks.FIERY_LAMP);
             event.accept(EBBlocks.FIERY_GLASS);
             event.accept(EBBlocks.FIERY_GLASS_PANE);
@@ -1526,6 +1538,7 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.SMOOTH_STONE_BRICK_PEDESTAL);
             event.accept(EBBlocks.TUFF_BRICK_PEDESTAL);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_PEDESTAL);
+            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_PEDESTAL);
             event.accept(EBBlocks.QUARTZ_PEDESTAL);
             event.accept(EBBlocks.PURPUR_PEDESTAL);
 
@@ -1969,15 +1982,19 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.SULFURIC_BRIMSTONE_VERTICAL_STAIRS);
             event.accept(EBBlocks.SULFURIC_BRIMSTONE_SLAB);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE);
+            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_PILLAR);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_STAIRS);
+            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_VERTICAL_STAIRS);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_SLAB);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_WALL);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICKS);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_STAIRS);
+            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_VERTICAL_STAIRS);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_SLAB);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_WALL);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILES);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_STAIRS);
+            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_VERTICAL_STAIRS);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_SLAB);
             event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_WALL);
             event.accept(EBBlocks.NETHER_TILES);
@@ -2100,6 +2117,7 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.ANCIENT_LEAVES);
             event.accept(EBBlocks.UNLIT_ANCIENT_LEAVES);
             event.accept(EBItems.ALGAE);
+            event.accept(EBBlocks.ANCIENT_VINE);
             event.accept(EBBlocks.RED_MAPLE_LEAVES_PILE);
             event.accept(EBBlocks.ORANGE_MAPLE_LEAVES_PILE);
             event.accept(EBBlocks.YELLOW_MAPLE_LEAVES_PILE);
@@ -2334,9 +2352,12 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.BLACKSTONE_WINDOW);
             event.accept(EBBlocks.BRIMSTONE_LAMP);
             event.accept(EBBlocks.BRIMSTONE_WINDOW);
+            event.accept(EBBlocks.SULFURIC_BRIMSTONE_LAMP);
+            event.accept(EBBlocks.SULFURIC_BRIMSTONE_WINDOW);
             event.accept(EBBlocks.SMOOTH_STONE_BRICK_PEDESTAL);
             event.accept(EBBlocks.TUFF_BRICK_PEDESTAL);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_PEDESTAL);
+            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_PEDESTAL);
             event.accept(EBBlocks.QUARTZ_PEDESTAL);
             event.accept(EBBlocks.PURPUR_PEDESTAL);
             event.accept(EBBlocks.SOUL_MAGMA_BLOCK);
@@ -2643,8 +2664,8 @@ public class ExcessiveBuilding {
             event.accept(SullysModCompat.ROUGH_JADE_BRICK_VERTICAL_STAIRS);
             event.accept(SullysModCompat.ROUGH_JADE_TILE_VERTICAL_STAIRS);
             event.accept(SullysModCompat.POLISHED_JADE_BRICK_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.POLISHED_SMALL_JADE_BRICK_VERTICAL_STAIRS);
             event.accept(SullysModCompat.POLISHED_JADE_TILE_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.POLISHED_SMALL_JADE_BRICK_VERTICAL_STAIRS);
             event.accept(SullysModCompat.POLISHED_JADE_SHINGLE_VERTICAL_STAIRS);
         }
 
@@ -2668,8 +2689,8 @@ public class ExcessiveBuilding {
             event.accept(SullysModCompat.ROUGH_JADE_BRICK_VERTICAL_STAIRS);
             event.accept(SullysModCompat.ROUGH_JADE_TILE_VERTICAL_STAIRS);
             event.accept(SullysModCompat.POLISHED_JADE_BRICK_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.POLISHED_SMALL_JADE_BRICK_VERTICAL_STAIRS);
             event.accept(SullysModCompat.POLISHED_JADE_TILE_VERTICAL_STAIRS);
+            event.accept(SullysModCompat.POLISHED_SMALL_JADE_BRICK_VERTICAL_STAIRS);
             event.accept(SullysModCompat.POLISHED_JADE_SHINGLE_VERTICAL_STAIRS);
         }
     }

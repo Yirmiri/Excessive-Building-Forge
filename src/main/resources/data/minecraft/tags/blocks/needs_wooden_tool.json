@@ -597,6 +597,11 @@
     "excessive_building:budding_miralen_block",
     "excessive_building:small_miralen_bud",
     "excessive_building:medium_miralen_bud",
-    "excessive_building:large_miralen_bud"
+    "excessive_building:large_miralen_bud",
+    "excessive_building:polished_sulfuric_brimstone_pillar",
+    "excessive_building:polished_sulfuric_brimstone_pedestal",
+    "excessive_building:polished_sulfuric_brimstone_vertical_stairs",
+    "excessive_building:polished_sulfuric_brimstone_brick_vertical_stairs",
+    "excessive_building:polished_sulfuric_brimstone_tile_vertical_stairs"
   ]
 }

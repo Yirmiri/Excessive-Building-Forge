@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "excessive_building:block/jade_glass"
+    "layer0": "excessive_building:block/sullysmod/jade_glass"
   }
 }

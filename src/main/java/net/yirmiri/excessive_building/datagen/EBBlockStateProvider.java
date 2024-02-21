@@ -18,6 +18,9 @@ public class EBBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        blockWithItem(EBBlocks.SULFURIC_BRIMSTONE_LAMP);
+        blockWithItem(EBBlocks.SULFURIC_BRIMSTONE_WINDOW);
+
         blockWithItem(EBBlocks.POLISHED_BLACKSTONE_TILES);
         blockWithItem(EBBlocks.CRACKED_POLISHED_BLACKSTONE_TILES);
         stairsBlock(((StairBlock) EBBlocks.POLISHED_BLACKSTONE_TILE_STAIRS.get()), blockTexture(EBBlocks.POLISHED_BLACKSTONE_TILES.get()));

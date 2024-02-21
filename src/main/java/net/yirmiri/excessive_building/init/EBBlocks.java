@@ -3623,6 +3623,35 @@ public class EBBlocks {
     public static final RegistryObject<Block> REACHING_LANTERN = registerBlock("reaching_lantern",
             () -> new LanternBlock(BlockBehaviour.Properties.copy(Blocks.LANTERN).lightLevel(state -> 8)));
 
+    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_VERTICAL_STAIRS = registerBlock("polished_sulfuric_brimstone_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_SULFURIC_BRIMSTONE.get())));
+
+    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_BRICK_VERTICAL_STAIRS = registerBlock("polished_sulfuric_brimstone_brick_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICKS.get())));
+
+    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_TILE_VERTICAL_STAIRS = registerBlock("polished_sulfuric_brimstone_tile_vertical_stairs",
+            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILES.get())));
+
+    public static final RegistryObject<Block> SULFURIC_BRIMSTONE_LAMP = registerBlock("sulfuric_brimstone_lamp",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP)
+                    .strength(0.3f).explosionResistance(0.3f).sound(SoundType.GLASS).lightLevel(state -> 15)));
+
+    public static final RegistryObject<Block> SULFURIC_BRIMSTONE_WINDOW = registerBlock("sulfuric_brimstone_window",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP)
+                    .strength(0.3f).explosionResistance(0.3f).sound(SoundType.GLASS).lightLevel(state -> 15)));
+
+    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_PILLAR = registerBlock("polished_sulfuric_brimstone_pillar",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICKS.get())));
+
+    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_PEDESTAL = registerBlock("polished_sulfuric_brimstone_pedestal",
+            () -> new PedestalBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICKS.get())));
+
+    public static final RegistryObject<Block> ANCIENT_VINE = registerBlock("ancient_vine",
+            () -> new VineBlock(BlockBehaviour.Properties.copy(Blocks.VINE).lightLevel(state -> 4)));
+
+    public static final RegistryObject<Block> POTTED_ACORN = BLOCKS.register("potted_acorn",
+            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.ACORN, BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
+
 
     public static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {
                 RegistryObject<B> toReturn = BLOCKS.register(name, block);

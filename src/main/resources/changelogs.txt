@@ -7,12 +7,20 @@ Literally just a secret .txt file of every single update's changelog
 Version Release v2.1.3 (Forge/NeoForge: 1.20.1)
 Small Update
 
+  Additions
+•   Added ancient vines
+•   Added sulfuric brimstone lamp and window
+•   Added sulfuric brimstone pillar and pedestal
+•   Added missing polished sulfuric brimstone vertical stairs
+•   Acorns can now be put into flower pots to create a small sprout
+
   Changes
 •   Adjusted the values for maple tree variants from acorns
 •   Grass slabs now drop themselves instead of dirt slabs if silk touch is not used
 
-  Compatibility
+  Compatibility (these additions are only if the mod is installed)
 Sully's Mod:
+•   Added grindstone polishing recipes for Excessive Building blocks
 •   Added reaching effect to jungle spiders
 •   Added tortoises to golden birch forests
 •   Added polished jade pedestals
@@ -21,10 +29,15 @@ Sully's Mod:
 •   Added jade lamps
 
   Bug Fixes
-•   Fixed missing translations with miralen wall blocks
-•   Fixed missing texture on double brimstone bricks
-•   Fixed loot tables only dropping one slab for doubled slabs for 153 different slab blocks (this issue has somehow existed since day 1)
-•   Fixed missing loot table for tuff stairs, slabs, vertical stairs, and walls
+•   Fixed missing translations with miralen wall blocks (Forge)
+•   Fixed missing texture on double brimstone bricks (Forge)
+•   Fixed loot tables only dropping one slab for doubled slabs for 153 different slab blocks (this issue has somehow existed since day 1) (Forge)
+•   Fixed missing loot table for tuff stairs, slabs, vertical stairs, and walls (Forge)
+•   Fixed missing loot table for calcite brick/tile slabs and sea lanterns (Forge)
+•   Fixed the uvlock on wool stairs (Forge)
+•   Fixed many meaningless warnings in server logs (Forge)
+•   Fixed planted acorn transparency issues (Forge)
+•   Added missing tags for acorns (Forge)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -57,7 +70,7 @@ Small Update
 •   Changed the name of acorns from "Acorn | UNDER CONSTRUCTION" to "Acorn (Unfinished)", acorns will be worked on whenever I do a proper content update
 
   Bug Fixes
-•   Added missing hanging signs gui textures
+•   Added missing hanging signs gui textures (Forge)
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

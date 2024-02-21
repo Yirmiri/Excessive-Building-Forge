@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "excessive_building:ancient_leaves"
+    },
+    {
+      "item": "excessive_building:ancient_leaves"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "item": "excessive_building:ancient_vine"
+  }
+}
