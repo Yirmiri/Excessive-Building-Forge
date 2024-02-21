@@ -7,7 +7,7 @@
       "model": "excessive_building:block/polished_brimstone_brick_slab_top"
     },
     "type=double": {
-      "model": "excessive_building:block/polished_brimstone_slab_brick_full"
+      "model": "excessive_building:block/polished_brimstone_brick_slab_full"
     }
   }
 }

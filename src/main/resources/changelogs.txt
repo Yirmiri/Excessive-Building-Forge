@@ -9,6 +9,7 @@ Small Update
 
   Changes
 •   Adjusted the values for maple tree variants from acorns
+•   Grass slabs now drop themselves instead of dirt slabs if silk touch is not used
 
   Compatibility
 Sully's Mod:
@@ -21,6 +22,9 @@ Sully's Mod:
 
   Bug Fixes
 •   Fixed missing translations with miralen wall blocks
+•   Fixed missing texture on double brimstone bricks
+•   Fixed loot tables only dropping one slab for doubled slabs for 153 different slab blocks (this issue has somehow existed since day 1)
+•   Fixed missing loot table for tuff stairs, slabs, vertical stairs, and walls
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
