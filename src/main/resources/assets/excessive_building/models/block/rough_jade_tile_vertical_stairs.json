@@ -1,0 +1,8 @@
+{
+  "parent": "excessive_building:custom/vertical_stairs",
+  "textures": {
+    "particle": "sullysmod:block/rough_jade_tiles",
+    "0": "sullysmod:block/rough_jade_tiles"
+  },
+  "render_type": "solid"
+}

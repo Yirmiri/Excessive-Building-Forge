@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "top": "excessive_building:block/sullysmod/jade_lamp_top",
+    "side": "excessive_building:block/sullysmod/jade_lamp",
+    "bottom": "excessive_building:block/sullysmod/jade_lamp_top"
+  }
+}

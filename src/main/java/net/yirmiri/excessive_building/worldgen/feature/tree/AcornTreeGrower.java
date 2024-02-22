@@ -10,9 +10,9 @@ import org.jetbrains.annotations.Nullable;
 public class AcornTreeGrower extends AbstractTreeGrower {
     @Nullable @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean b) {
-        if (Math.random() < 0.55) {
+        if (Math.random() < 0.4) {
         return EBConfiguredFeatures.RED_MAPLE_TREE;
-        } else if (Math.random() < 0.25) {
+        } else if (Math.random() < 0.45) {
         return EBConfiguredFeatures.ORANGE_MAPLE_TREE;
         }
         else return EBConfiguredFeatures.YELLOW_MAPLE_TREE;

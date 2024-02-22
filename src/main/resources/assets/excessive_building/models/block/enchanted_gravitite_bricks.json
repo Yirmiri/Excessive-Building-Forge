@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "excessive_building:block/enchanted_gravitite_bricks",
-    "particle": "excessive_building:block/enchanted_gravitite_bricks"
-  },
-  "render_type": "solid"
-}

@@ -669,6 +669,19 @@
     "excessive_building:budding_miralen_block",
     "excessive_building:small_miralen_bud",
     "excessive_building:medium_miralen_bud",
-    "excessive_building:large_miralen_bud"
+    "excessive_building:large_miralen_bud",
+{ "id": "excessive_building:polished_jade_pedestal", "required": false },
+{ "id": "excessive_building:rough_jade_brick_vertical_stairs", "required": false },
+{ "id": "excessive_building:rough_jade_tile_vertical_stairs", "required": false },
+{ "id": "excessive_building:smoothed_rough_jade_vertical_stairs", "required": false },
+{ "id": "excessive_building:polished_jade_brick_vertical_stairs", "required": false },
+{ "id": "excessive_building:polished_jade_tile_vertical_stairs", "required": false },
+{ "id": "excessive_building:polished_small_jade_brick_vertical_stairs", "required": false },
+{ "id": "excessive_building:polished_jade_shingle_vertical_stairs", "required": false },
+    "excessive_building:polished_sulfuric_brimstone_pillar",
+    "excessive_building:polished_sulfuric_brimstone_pedestal",
+    "excessive_building:polished_sulfuric_brimstone_vertical_stairs",
+    "excessive_building:polished_sulfuric_brimstone_brick_vertical_stairs",
+    "excessive_building:polished_sulfuric_brimstone_tile_vertical_stairs"
   ]
 }
