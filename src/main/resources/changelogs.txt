@@ -9,16 +9,16 @@ Small Update
 
   Additions
 •   Added developer, contributor, translator, and supporter capes
-Contributor capes are unlocked for contributing to the mod
-Translator capes are for translators of the mod (more info found in the lang folder)
-Supporter capes are for those supporting my Ko-Fi (ko-fi.com/yirmiri), NOTE: Your supporter cape can only show after the mod has updated so keep that in mind if you support just for the cape
+- Contributor capes are unlocked for contributing to the mod
+- Translator capes are for translators of the mod (more info found in the lang folder)
+- Supporter capes are for those supporting my Ko-Fi (ko-fi.com/yirmiri), NOTE: Your supporter cape can only show after the mod has updated so keep that in mind if you support just for the cape
 •   Added bamboo shelf variants
+•   Added a custom panorama
 
   Changes
 •   Increased the length of reaching potions
-•   Leaf pile blocks can now be placed on any surface
 •   Brimstone now generates less blobs and now generates towards the lower half of the Nether
-Updated a bunch of textures (hopefully the last large texture overhaul)
+- Updated a bunch of textures (hopefully the last large texture overhaul)
 •   Updated the texture of ancient logs (side/top), leaves (lit/unlit), and sapling
 •   Updated the texture of the top of stripped ancient logs
 •   Updated the texture of the top of maple and willow logs
@@ -31,7 +31,7 @@ Updated a bunch of textures (hopefully the last large texture overhaul)
 •   Updated the texture of miralen glass (lowered opacity)
 
   Compat
-Farmer's Delight
+- Farmer's Delight
 •   Added ancient cabinets
 •   Added ancient cider (gives reaching)
 
