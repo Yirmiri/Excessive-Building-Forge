@@ -25,6 +25,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.yirmiri.excessive_building.block.GrassSlabBlock;
 import net.yirmiri.excessive_building.compat.EBCompatRegistries;
+import net.yirmiri.excessive_building.compat.FarmersDelightCompat;
 import net.yirmiri.excessive_building.compat.SullysModCompat;
 import net.yirmiri.excessive_building.datagen.loot.EBLootTableModifiers;
 import net.yirmiri.excessive_building.init.*;
@@ -2718,13 +2719,23 @@ public class ExcessiveBuilding {
             event.accept(SullysModCompat.POLISHED_SMALL_JADE_BRICK_VERTICAL_STAIRS);
             event.accept(SullysModCompat.POLISHED_JADE_SHINGLE_VERTICAL_STAIRS);
         }
+
+        if (event.getTab() == EBItemGroups.EB_FUNCTIONAL_BLOCKS.get() && (farmersDelight)) {
+            event.accept(FarmersDelightCompat.ANCIENT_CABINET);
+        }
+
+        if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get() && (farmersDelight)) {
+            event.accept(FarmersDelightCompat.ANCIENT_CABINET);
+        }
     }
 
     public static final boolean sullysMod;
+    public static final boolean farmersDelight;
 
     static {
         ModList mods = ModList.get();
         sullysMod = mods.isLoaded("sullysmod");
+        farmersDelight = mods.isLoaded("farmersdelight");
     }
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
