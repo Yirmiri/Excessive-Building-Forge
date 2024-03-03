@@ -2074,18 +2074,18 @@ public class EBBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()), SoundEvents.CHERRY_WOOD_FENCE_GATE_OPEN, SoundEvents.CHERRY_WOOD_FENCE_GATE_CLOSE));
 
     public static final RegistryObject<Block> ANCIENT_DOOR = registerBlock("ancient_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()).sound(SoundType.CHERRY_WOOD).ignitedByLava().noOcclusion(), BlockSetType.CHERRY));
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()).sound(SoundType.CHERRY_WOOD).ignitedByLava().noOcclusion(), EBBlockTypes.ANCIENT_BLOCKSET));
 
     public static final RegistryObject<Block> ANCIENT_TRAPDOOR = registerBlock("ancient_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()).sound(SoundType.CHERRY_WOOD).noOcclusion().ignitedByLava(), BlockSetType.CHERRY));
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()).sound(SoundType.CHERRY_WOOD).noOcclusion().ignitedByLava(), EBBlockTypes.ANCIENT_BLOCKSET));
 
     public static final RegistryObject<Block> ANCIENT_BUTTON = registerBlock("ancient_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()).sound(SoundType.CHERRY_WOOD).noCollission().noOcclusion()
-            .strength(0.5f).explosionResistance(0.5f), BlockSetType.CHERRY, 30, true));
+            .strength(0.5f).explosionResistance(0.5f), EBBlockTypes.ANCIENT_BLOCKSET, 30, true));
 
     public static final RegistryObject<Block> ANCIENT_PRESSURE_PLATE = registerBlock("ancient_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()).noCollission().noOcclusion()
-            .sound(SoundType.CHERRY_WOOD).ignitedByLava().strength(0.5f).explosionResistance(0.5f), BlockSetType.CHERRY));
+            .sound(SoundType.CHERRY_WOOD).ignitedByLava().strength(0.5f).explosionResistance(0.5f), EBBlockTypes.ANCIENT_BLOCKSET));
 
     public static final RegistryObject<Block> ANCIENT_LOG = registerBlock("ancient_log",
             () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
@@ -2513,16 +2513,16 @@ public class EBBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SMOOTH_STONE)));
 
     public static final RegistryObject<Block> ANCIENT_SIGN = BLOCKS.register("ancient_sign",
-            () -> new EBStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_SIGN), EBWoodTypes.ANCIENT));
+            () -> new EBStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_SIGN), EBBlockTypes.ANCIENT));
 
     public static final RegistryObject<Block> ANCIENT_WALL_SIGN = BLOCKS.register("ancient_wall_sign",
-            () -> new EBWallSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_WALL_SIGN), EBWoodTypes.ANCIENT));
+            () -> new EBWallSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_WALL_SIGN), EBBlockTypes.ANCIENT));
 
     public static final RegistryObject<Block> ANCIENT_HANGING_SIGN = BLOCKS.register("ancient_hanging_sign",
-            () -> new EBCeilingHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_HANGING_SIGN), EBWoodTypes.ANCIENT));
+            () -> new EBCeilingHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_HANGING_SIGN), EBBlockTypes.ANCIENT));
 
     public static final RegistryObject<Block> ANCIENT_WALL_HANGING_SIGN = BLOCKS.register("ancient_wall_hanging_sign",
-            () -> new EBWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_WALL_HANGING_SIGN), EBWoodTypes.ANCIENT));
+            () -> new EBWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_WALL_HANGING_SIGN), EBBlockTypes.ANCIENT));
 
     public static final RegistryObject<Block> EMERALD_BRICKS = registerBlock("emerald_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK)));
@@ -3039,18 +3039,18 @@ public class EBBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(EBBlocks.WILLOW_PLANKS.get()), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
     public static final RegistryObject<Block> WILLOW_DOOR = registerBlock("willow_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.copy(EBBlocks.WILLOW_PLANKS.get()).sound(SoundType.WOOD).ignitedByLava().noOcclusion(), BlockSetType.OAK));
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(EBBlocks.WILLOW_PLANKS.get()).sound(SoundType.WOOD).ignitedByLava().noOcclusion(), EBBlockTypes.WILLOW_BLOCKSET));
 
     public static final RegistryObject<Block> WILLOW_TRAPDOOR = registerBlock("willow_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(EBBlocks.WILLOW_PLANKS.get()).sound(SoundType.WOOD).noOcclusion().ignitedByLava(), BlockSetType.OAK));
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(EBBlocks.WILLOW_PLANKS.get()).sound(SoundType.WOOD).noOcclusion().ignitedByLava(), EBBlockTypes.WILLOW_BLOCKSET));
 
     public static final RegistryObject<Block> WILLOW_BUTTON = registerBlock("willow_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(EBBlocks.WILLOW_PLANKS.get()).sound(SoundType.WOOD).noCollission().noOcclusion()
-                    .strength(0.5f).explosionResistance(0.5f), BlockSetType.OAK, 30, true));
+                    .strength(0.5f).explosionResistance(0.5f), EBBlockTypes.WILLOW_BLOCKSET, 30, true));
 
     public static final RegistryObject<Block> WILLOW_PRESSURE_PLATE = registerBlock("willow_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(EBBlocks.WILLOW_PLANKS.get()).noCollission().noOcclusion()
-                    .sound(SoundType.WOOD).ignitedByLava().strength(0.5f).explosionResistance(0.5f), BlockSetType.OAK));
+                    .sound(SoundType.WOOD).ignitedByLava().strength(0.5f).explosionResistance(0.5f), EBBlockTypes.WILLOW_BLOCKSET));
 
     public static final RegistryObject<Block> WILLOW_LOG = registerBlock("willow_log",
             () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
@@ -3107,16 +3107,16 @@ public class EBBlocks {
             () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
 
     public static final RegistryObject<Block> WILLOW_SIGN = BLOCKS.register("willow_sign",
-            () -> new EBStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), EBWoodTypes.WILLOW));
+            () -> new EBStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), EBBlockTypes.WILLOW));
 
     public static final RegistryObject<Block> WILLOW_WALL_SIGN = BLOCKS.register("willow_wall_sign",
-            () -> new EBWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), EBWoodTypes.WILLOW));
+            () -> new EBWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), EBBlockTypes.WILLOW));
 
     public static final RegistryObject<Block> WILLOW_HANGING_SIGN = BLOCKS.register("willow_hanging_sign",
-            () -> new EBCeilingHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), EBWoodTypes.WILLOW));
+            () -> new EBCeilingHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), EBBlockTypes.WILLOW));
 
     public static final RegistryObject<Block> WILLOW_WALL_HANGING_SIGN = BLOCKS.register("willow_wall_hanging_sign",
-            () -> new EBWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), EBWoodTypes.WILLOW));
+            () -> new EBWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), EBBlockTypes.WILLOW));
 
     public static final RegistryObject<Block> ROSE_BUNDLE = registerBlock("rose_bundle",
             () -> new FlowerBlock(MobEffects.REGENERATION, 5, (BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission())));
@@ -3168,18 +3168,18 @@ public class EBBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(EBBlocks.MAPLE_PLANKS.get()), SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE));
 
     public static final RegistryObject<Block> MAPLE_DOOR = registerBlock("maple_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.copy(EBBlocks.MAPLE_PLANKS.get()).sound(SoundType.WOOD).ignitedByLava().noOcclusion(), BlockSetType.OAK));
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(EBBlocks.MAPLE_PLANKS.get()).sound(SoundType.WOOD).ignitedByLava().noOcclusion(), EBBlockTypes.MAPLE_BLOCKSET));
 
     public static final RegistryObject<Block> MAPLE_TRAPDOOR = registerBlock("maple_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(EBBlocks.MAPLE_PLANKS.get()).sound(SoundType.WOOD).noOcclusion().ignitedByLava(), BlockSetType.OAK));
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(EBBlocks.MAPLE_PLANKS.get()).sound(SoundType.WOOD).noOcclusion().ignitedByLava(), EBBlockTypes.MAPLE_BLOCKSET));
 
     public static final RegistryObject<Block> MAPLE_BUTTON = registerBlock("maple_button",
             () -> new ButtonBlock(BlockBehaviour.Properties.copy(EBBlocks.MAPLE_PLANKS.get()).sound(SoundType.WOOD).noCollission().noOcclusion()
-                    .strength(0.5f).explosionResistance(0.5f), BlockSetType.OAK, 30, true));
+                    .strength(0.5f).explosionResistance(0.5f), EBBlockTypes.MAPLE_BLOCKSET, 30, true));
 
     public static final RegistryObject<Block> MAPLE_PRESSURE_PLATE = registerBlock("maple_pressure_plate",
             () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(EBBlocks.MAPLE_PLANKS.get()).noCollission().noOcclusion()
-                    .sound(SoundType.WOOD).ignitedByLava().strength(0.5f).explosionResistance(0.5f), BlockSetType.OAK));
+                    .sound(SoundType.WOOD).ignitedByLava().strength(0.5f).explosionResistance(0.5f), EBBlockTypes.MAPLE_BLOCKSET));
 
     public static final RegistryObject<Block> MAPLE_LOG = registerBlock("maple_log",
             () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)
@@ -3230,16 +3230,16 @@ public class EBBlocks {
             () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
 
     public static final RegistryObject<Block> MAPLE_SIGN = BLOCKS.register("maple_sign",
-            () -> new EBStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), EBWoodTypes.MAPLE));
+            () -> new EBStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), EBBlockTypes.MAPLE));
 
     public static final RegistryObject<Block> MAPLE_WALL_SIGN = BLOCKS.register("maple_wall_sign",
-            () -> new EBWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), EBWoodTypes.MAPLE));
+            () -> new EBWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), EBBlockTypes.MAPLE));
 
     public static final RegistryObject<Block> MAPLE_HANGING_SIGN = BLOCKS.register("maple_hanging_sign",
-            () -> new EBCeilingHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), EBWoodTypes.MAPLE));
+            () -> new EBCeilingHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_HANGING_SIGN), EBBlockTypes.MAPLE));
 
     public static final RegistryObject<Block> MAPLE_WALL_HANGING_SIGN = BLOCKS.register("maple_wall_hanging_sign",
-            () -> new EBWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), EBWoodTypes.MAPLE));
+            () -> new EBWallHangingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_HANGING_SIGN), EBBlockTypes.MAPLE));
 
     public static final RegistryObject<Block> MARIGOLD = registerBlock("marigold",
             () -> new FlowerBlock(MobEffects.LUCK, 5, (BlockBehaviour.Properties.copy(Blocks.POPPY).noOcclusion().noCollission())));
@@ -3651,6 +3651,30 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> POTTED_ACORN = BLOCKS.register("potted_acorn",
             () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.ACORN, BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
+
+    public static final RegistryObject<Block> BAMBOO_BOOKSHELF = registerBlock("bamboo_bookshelf",
+            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
+
+    public static final RegistryObject<Block> BAMBOO_EMPTY_SHELF = registerBlock("bamboo_empty_shelf",
+            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
+
+    public static final RegistryObject<Block> BAMBOO_EMPTY_POTION_SHELF = registerBlock("bamboo_empty_potion_shelf",
+            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
+
+    public static final RegistryObject<Block> BAMBOO_WATER_POTION_SHELF = registerBlock("bamboo_water_potion_shelf",
+            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
+
+    public static final RegistryObject<Block> BAMBOO_POTION_SHELF = registerBlock("bamboo_potion_shelf",
+            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
+
+    public static final RegistryObject<Block> BAMBOO_ALCHEMIST_SHELF = registerBlock("bamboo_alchemist_shelf",
+            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
+
+    public static final RegistryObject<Block> BAMBOO_BRICKSHELF = registerBlock("bamboo_brickshelf",
+            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
+
+    public static final RegistryObject<Block> BAMBOO_NETHER_BRICKSHELF = registerBlock("bamboo_nether_brickshelf",
+            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
 
 
     public static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {

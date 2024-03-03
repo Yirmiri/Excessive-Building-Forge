@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "excessive_building:ancient_trapdoor"
+    },
+    "_": {
+      "item": "excessive_building:ancient_slab"
+    }
+  },
+  "pattern": [
+    "___",
+    "D D",
+    "___"
+  ],
+  "result": {
+    "item": "excessive_building:ancient_cabinet"
+  },
+  "show_notification": true
+}

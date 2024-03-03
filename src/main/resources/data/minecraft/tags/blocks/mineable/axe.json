@@ -250,6 +250,15 @@
     "excessive_building:hollow_crimson_stem",
     "excessive_building:hollow_stripped_crimson_stem",
     "excessive_building:hollow_warped_stem",
-    "excessive_building:hollow_stripped_warped_stem"
+    "excessive_building:hollow_stripped_warped_stem",
+    "excessive_building:bamboo_empty_shelf",
+    "excessive_building:bamboo_empty_potion_shelf",
+    "excessive_building:bamboo_water_potion_shelf",
+    "excessive_building:bamboo_potion_shelf",
+    "excessive_building:bamboo_alchemist_shelf",
+    "excessive_building:bamboo_brickshelf",
+    "excessive_building:bamboo_nether_brickshelf",
+    "excessive_building:bamboo_bookshelf",
+{ "id": "excessive_building:ancient_cabinet", "required": false }
   ]
 }

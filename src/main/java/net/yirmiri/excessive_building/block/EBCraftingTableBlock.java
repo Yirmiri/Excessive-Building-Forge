@@ -27,6 +27,7 @@ public class EBCraftingTableBlock extends CraftingTableBlock {
         if (worldIn.isClientSide) {
             return InteractionResult.SUCCESS;
         }
+
         else {
             player.openMenu(state.getMenuProvider(worldIn, pos));
             player.awardStat(Stats.INTERACT_WITH_CRAFTING_TABLE);
@@ -37,6 +38,8 @@ public class EBCraftingTableBlock extends CraftingTableBlock {
     @Override
     public MenuProvider getMenuProvider(BlockState state, Level level, BlockPos pos) {
         return new SimpleMenuProvider((id, inventory, player) -> {
-            return new EBCraftingMenu(id, inventory, ContainerLevelAccess.create(level, pos), this); }, TITLE);
+            return new EBCraftingMenu(id, inventory, ContainerLevelAccess.create(level, pos), this);
+            },
+        TITLE);
     }
 }

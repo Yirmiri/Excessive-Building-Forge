@@ -25,7 +25,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.yirmiri.excessive_building.block.GrassSlabBlock;
 import net.yirmiri.excessive_building.compat.EBCompatRegistries;
-import net.yirmiri.excessive_building.compat.sullysmod.SullysModCompat;
+import net.yirmiri.excessive_building.compat.SullysModCompat;
 import net.yirmiri.excessive_building.datagen.loot.EBLootTableModifiers;
 import net.yirmiri.excessive_building.init.*;
 import net.yirmiri.excessive_building.potion.EBBrewingRecipe;
@@ -34,9 +34,17 @@ import net.yirmiri.excessive_building.potion.EBPotions;
 import net.yirmiri.excessive_building.worldgen.biome.EBOverworldRegion;
 import terrablender.api.Regions;
 
+import java.util.List;
+
 @Mod(ExcessiveBuilding.MODID)
 public class ExcessiveBuilding {
     public static final String MODID = "excessive_building";
+
+    //Capes For Devs and Contributors of an Azurune mod
+    public static final List<String> AZURUNE = List.of("Dev", "Yirmiri", "Nullmiri"); //Developers
+    public static final List<String> UK_UA_TRANSLATORS = List.of("Unroman"); //Ukrainian Translators
+    public static final List<String> CONTRIBUTORS = List.of(); //Contributors
+    public static final List<String> SUPPORTERS = List.of(); //Supporters
 
     public ExcessiveBuilding() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -178,9 +186,9 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_VINE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_ACORN.get(), RenderType.cutoutMipped());
 
-        Sheets.addWoodType(EBWoodTypes.ANCIENT);
-        Sheets.addWoodType(EBWoodTypes.WILLOW);
-        Sheets.addWoodType(EBWoodTypes.MAPLE);
+        Sheets.addWoodType(EBBlockTypes.ANCIENT);
+        Sheets.addWoodType(EBBlockTypes.WILLOW);
+        Sheets.addWoodType(EBBlockTypes.MAPLE);
 
         if (sullysMod) {
             ItemBlockRenderTypes.setRenderLayer(SullysModCompat.JADE_GLASS.get(), RenderType.translucent());
@@ -477,6 +485,15 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.ANCIENT_ALCHEMIST_SHELF);
             event.accept(EBBlocks.ANCIENT_BRICKSHELF);
             event.accept(EBBlocks.ANCIENT_NETHER_BRICKSHELF);
+
+            event.accept(EBBlocks.BAMBOO_BOOKSHELF);
+            event.accept(EBBlocks.BAMBOO_EMPTY_SHELF);
+            event.accept(EBBlocks.BAMBOO_EMPTY_POTION_SHELF);
+            event.accept(EBBlocks.BAMBOO_WATER_POTION_SHELF);
+            event.accept(EBBlocks.BAMBOO_POTION_SHELF);
+            event.accept(EBBlocks.BAMBOO_ALCHEMIST_SHELF);
+            event.accept(EBBlocks.BAMBOO_BRICKSHELF);
+            event.accept(EBBlocks.BAMBOO_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.CRIMSON_BOOKSHELF);
             event.accept(EBBlocks.CRIMSON_EMPTY_SHELF);
@@ -2568,6 +2585,14 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.ANCIENT_ALCHEMIST_SHELF);
             event.accept(EBBlocks.ANCIENT_BRICKSHELF);
             event.accept(EBBlocks.ANCIENT_NETHER_BRICKSHELF);
+            event.accept(EBBlocks.BAMBOO_BOOKSHELF);
+            event.accept(EBBlocks.BAMBOO_EMPTY_SHELF);
+            event.accept(EBBlocks.BAMBOO_EMPTY_POTION_SHELF);
+            event.accept(EBBlocks.BAMBOO_WATER_POTION_SHELF);
+            event.accept(EBBlocks.BAMBOO_POTION_SHELF);
+            event.accept(EBBlocks.BAMBOO_ALCHEMIST_SHELF);
+            event.accept(EBBlocks.BAMBOO_BRICKSHELF);
+            event.accept(EBBlocks.BAMBOO_NETHER_BRICKSHELF);
             event.accept(EBBlocks.CRIMSON_BOOKSHELF);
             event.accept(EBBlocks.CRIMSON_EMPTY_SHELF);
             event.accept(EBBlocks.CRIMSON_EMPTY_POTION_SHELF);

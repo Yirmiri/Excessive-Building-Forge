@@ -4,6 +4,53 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v2.1.4 (Forge/NeoForge: 1.20.1)
+Small Update
+
+  Additions
+•   Added developer, contributor, translator, and supporter capes
+Contributor capes are unlocked for contributing to the mod
+Translator capes are for translators of the mod (more info found in the lang folder)
+Supporter capes are for those supporting my Ko-Fi (ko-fi.com/yirmiri), NOTE: Your supporter cape can only show after the mod has updated so keep that in mind if you support just for the cape
+•   Added bamboo shelf variants
+
+  Changes
+•   Increased the length of reaching potions
+•   Leaf pile blocks can now be placed on any surface
+•   Brimstone now generates less blobs and now generates towards the lower half of the Nether
+Updated a bunch of textures (hopefully the last large texture overhaul)
+•   Updated the texture of ancient logs (side/top), leaves (lit/unlit), and sapling
+•   Updated the texture of the top of stripped ancient logs
+•   Updated the texture of the top of maple and willow logs
+•   Updated the texture of the willow sapling
+•   Updated all the birch shelves (added small corners)
+•   Updated the texture of tuff tiles
+•   Updated the texture of nether tiles
+•   Updated the textures of budding and cluster crystals to each be unique
+•   Updated the textures of miralen bricks and tiles
+•   Updated the texture of miralen glass (lowered opacity)
+
+  Compat
+Farmer's Delight
+•   Added ancient cabinets
+•   Added ancient cider (gives reaching)
+
+  Bug Fixes
+•   Fixed the max length of hanging sign text
+•   Fixed hanging sign GUI's showing the normal sign GUI
+•   Fixed spruce shelves being named cherry shelves
+•   Fixed acorns not dropping when broken
+•   Fixed unclimbable ancient vines
+•   Fixed the chiseled tuff bricks recipe to no longer gives tuff bricks instead
+•   Fixed tuff brick slabs unlocking the lantern of life recipe rather than it being ancient fruit
+•   Fixed wrong texture used on some vertical stairs
+
+  Technical
+•   Woodsets no longer borrow existing block types and instead have their own
+•   Added wooden blocks to their wooden block tags
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v2.1.3 (Forge/NeoForge: 1.20.1)
 Small Update
 

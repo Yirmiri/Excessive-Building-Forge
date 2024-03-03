@@ -37,6 +37,9 @@
     "excessive_building:willow_bookshelf",
     "excessive_building:maple_potion_shelf",
     "excessive_building:maple_alchemist_shelf",
-    "excessive_building:maple_bookshelf"
+    "excessive_building:maple_bookshelf",
+    "excessive_building:bamboo_potion_shelf",
+    "excessive_building:bamboo_alchemist_shelf",
+    "excessive_building:bamboo_bookshelf"
   ]
 }

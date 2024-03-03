@@ -2084,7 +2084,7 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .define('@', EBItems.ANCIENT_FRUIT.get()).define('#', Items.IRON_NUGGET).define('%', Items.IRON_INGOT)
                 .pattern("#%#")
                 .pattern("%@%")
-                .pattern("#%#").unlockedBy(getHasName(EBBlocks.TUFF_BRICK_SLAB.get()), has(EBBlocks.TUFF_BRICK_SLAB.get())).save(recipeOutput);
+                .pattern("#%#").unlockedBy(getHasName(EBItems.ANCIENT_FRUIT.get()), has(EBItems.ANCIENT_FRUIT.get())).save(recipeOutput);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MIRALEN_BRICKS.get(), 4)
                 .define('#', EBBlocks.MIRALEN_BLOCK.get())
@@ -2193,6 +2193,57 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_VINE.get(), 8).requires(EBBlocks.ANCIENT_LEAVES.get(), 2)
                 .unlockedBy(getHasName(EBBlocks.ANCIENT_LEAVES.get()), has(EBBlocks.ANCIENT_LEAVES.get())).save(recipeOutput);
+
+        chiseledBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHISELED_TUFF_BRICKS.get(), Ingredient.of(EBBlocks.TUFF_BRICK_SLAB.get()))
+                .unlockedBy(getHasName(EBBlocks.TUFF_BRICK_SLAB.get()), has(EBBlocks.TUFF_BRICK_SLAB.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_EMPTY_SHELF.get())
+                .define('#', Blocks.BAMBOO_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_BOOKSHELF.get())
+                .define('#', Blocks.BAMBOO_PLANKS).define('@', Items.BOOK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_EMPTY_POTION_SHELF.get())
+                .define('#', Blocks.BAMBOO_PLANKS).define('@', Items.GLASS_BOTTLE)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_WATER_POTION_SHELF.get())
+                .define('#', Blocks.BAMBOO_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_POTION_SHELF.get())
+                .define('#', Blocks.BAMBOO_PLANKS).define('@', Items.POTION)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_ALCHEMIST_SHELF.get())
+                .define('#', Blocks.BAMBOO_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
+                .pattern("###")
+                .pattern("@$@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_BRICKSHELF.get())
+                .define('#', Blocks.BAMBOO_PLANKS).define('@', Items.BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_NETHER_BRICKSHELF.get())
+                .define('#', Blocks.BAMBOO_PLANKS).define('@', Items.NETHER_BRICK)
+                .pattern("###")
+                .pattern("@@@")
+                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(recipeOutput);
 
     }
 

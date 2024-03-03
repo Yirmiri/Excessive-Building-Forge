@@ -7,8 +7,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.yirmiri.excessive_building.init.EBBlockEntities;
 
 public class EBSignBlockEntity extends SignBlockEntity {
-    public EBSignBlockEntity(BlockPos pPos, BlockState pBlockState) {
-        super(EBBlockEntities.EB_SIGN.get(), pPos, pBlockState);
+    public EBSignBlockEntity(BlockPos pos, BlockState state) {
+        super(EBBlockEntities.EB_SIGN.get(), pos, state);
     }
 
     @Override

@@ -15,7 +15,6 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.util.valueproviders.WeightedListInt;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.GeodeBlockSettings;
 import net.minecraft.world.level.levelgen.GeodeCrackSettings;
 import net.minecraft.world.level.levelgen.GeodeLayerSettings;
@@ -28,7 +27,6 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.CherryFoliagePl
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FancyFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.RandomSpreadFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
-import net.minecraft.world.level.levelgen.feature.stateproviders.WeightedStateProvider;
 import net.minecraft.world.level.levelgen.feature.treedecorators.BeehiveDecorator;
 import net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecorator;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.BendingTrunkPlacer;
@@ -75,12 +73,7 @@ public class EBConfiguredFeatures {
         RuleTest soulReplaceables = new TagMatchTest(BlockTags.SOUL_FIRE_BASE_BLOCKS);
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
 
-        BeehiveDecorator beehivedecorator = new BeehiveDecorator(0.002F);
-        BeehiveDecorator beehivedecorator1 = new BeehiveDecorator(0.01F);
-        BeehiveDecorator beehivedecorator2 = new BeehiveDecorator(0.02F);
-        BeehiveDecorator beehivedecorator3 = new BeehiveDecorator(0.05F);
-        BeehiveDecorator beehivedecorator4 = new BeehiveDecorator(0.1F);
-        BeehiveDecorator beehivedecorator5 = new BeehiveDecorator(1.0F);
+        BeehiveDecorator goldenBirchHiveDecorator = new BeehiveDecorator(0.1F);
 
         List<OreConfiguration.TargetBlockState> overworldQuartzOres = List.of
                 (OreConfiguration.target(stoneReplaceables, EBBlocks.QUARTZ_ORE.get().defaultBlockState()),
@@ -134,8 +127,7 @@ public class EBConfiguredFeatures {
 
         register(context, WILLOW_TREE, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(EBBlocks.WILLOW_LOG.get()),
                 new BendingTrunkPlacer(4, 2, 0, 3, UniformInt.of(1, 2)),
-                new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(Blocks.OAK_LEAVES.defaultBlockState(), 3)),
-                new RandomSpreadFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), ConstantInt.of(2), 50),
+                BlockStateProvider.simple(Blocks.OAK_LEAVES), new RandomSpreadFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), ConstantInt.of(2), 50),
                 new TwoLayersFeatureSize(1, 0, 1))).decorators(ImmutableList.of(new LeaveVineDecorator(0.25F))).build());
 
         register(context, RED_MAPLE_TREE, Feature.TREE, createFancyRed().build());
@@ -161,7 +153,7 @@ public class EBConfiguredFeatures {
                 EBBlocks.BRIMSTONE.get().defaultBlockState(), 64)); //vein size
 
         register(context, GOLDEN_BIRCH_TREE, Feature.TREE, createGoldenBirch().build());
-        register(context, GOLDEN_BIRCH_TREE_BEES_01, Feature.TREE, createGoldenBirch().decorators(List.of(beehivedecorator4)).build());
+        register(context, GOLDEN_BIRCH_TREE_BEES_01, Feature.TREE, createGoldenBirch().decorators(List.of(goldenBirchHiveDecorator)).build());
 
         register(context, MIRALEN_GEODE, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),

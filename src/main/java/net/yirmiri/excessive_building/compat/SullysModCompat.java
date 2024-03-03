@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.compat.sullysmod;
+package net.yirmiri.excessive_building.compat;
 
 import com.uraneptus.sullysmod.core.other.SMProperties;
 import net.minecraft.world.level.block.Block;

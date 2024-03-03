@@ -96,7 +96,7 @@ public class EBPlacedFeatures {
 
         register(context, BRIMSTONE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.BRIMSTONE),
                 EBOrePlacement.commonOrePlacement(3, //veins per chunk
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(48), VerticalAnchor.absolute(128))));
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(72))));
 
         register(context, GOLDEN_BIRCH_TREE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.GOLDEN_BIRCH_TREE), //placed, % chance for extra, extra
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(16, 0.2f, 1), EBBlocks.GOLDEN_BIRCH_SAPLING.get()));
