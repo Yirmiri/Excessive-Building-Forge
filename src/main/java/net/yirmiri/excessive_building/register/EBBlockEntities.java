@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.init;
+package net.yirmiri.excessive_building.register;
 
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;

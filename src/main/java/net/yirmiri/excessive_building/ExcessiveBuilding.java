@@ -28,7 +28,7 @@ import net.yirmiri.excessive_building.compat.EBCompatRegistries;
 import net.yirmiri.excessive_building.compat.FarmersDelightCompat;
 import net.yirmiri.excessive_building.compat.SullysModCompat;
 import net.yirmiri.excessive_building.datagen.loot.EBLootTableModifiers;
-import net.yirmiri.excessive_building.init.*;
+import net.yirmiri.excessive_building.register.*;
 import net.yirmiri.excessive_building.potion.EBBrewingRecipe;
 import net.yirmiri.excessive_building.potion.EBMobEffects;
 import net.yirmiri.excessive_building.potion.EBPotions;

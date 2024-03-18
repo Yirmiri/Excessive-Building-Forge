@@ -7,7 +7,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemRandomChanceCon
 import net.minecraftforge.common.data.GlobalLootModifierProvider;
 import net.minecraftforge.common.loot.LootTableIdCondition;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.init.EBBlocks;
+import net.yirmiri.excessive_building.register.EBBlocks;
 
 public class EBGlobalLootModifiersProvider extends GlobalLootModifierProvider {
     public EBGlobalLootModifiersProvider(PackOutput output) {

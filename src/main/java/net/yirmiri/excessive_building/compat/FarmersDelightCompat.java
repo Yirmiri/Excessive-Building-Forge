@@ -5,9 +5,9 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.RegistryObject;
-import net.yirmiri.excessive_building.init.EBBlocks;
-import net.yirmiri.excessive_building.init.EBFoods;
-import net.yirmiri.excessive_building.init.EBItems;
+import net.yirmiri.excessive_building.register.EBBlocks;
+import net.yirmiri.excessive_building.register.EBFoods;
+import net.yirmiri.excessive_building.register.EBItems;
 import vectorwing.farmersdelight.common.block.CabinetBlock;
 import vectorwing.farmersdelight.common.item.DrinkableItem;
 

@@ -25,7 +25,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.common.IPlantable;
-import net.yirmiri.excessive_building.init.EBBlocks;
+import net.yirmiri.excessive_building.register.EBBlocks;
 
 import java.util.List;
 import java.util.Optional;

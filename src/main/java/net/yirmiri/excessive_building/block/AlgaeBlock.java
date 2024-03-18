@@ -24,7 +24,7 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.PlantType;
-import net.yirmiri.excessive_building.init.EBItems;
+import net.yirmiri.excessive_building.register.EBItems;
 import net.yirmiri.excessive_building.worldgen.feature.EBConfiguredFeatures;
 
 public class AlgaeBlock extends BushBlock implements BonemealableBlock {

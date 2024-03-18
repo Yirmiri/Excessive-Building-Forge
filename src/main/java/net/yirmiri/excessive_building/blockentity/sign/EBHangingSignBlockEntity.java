@@ -4,7 +4,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.entity.HangingSignBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
-import net.yirmiri.excessive_building.init.EBBlockEntities;
+import net.yirmiri.excessive_building.register.EBBlockEntities;
 
 public class EBHangingSignBlockEntity extends HangingSignBlockEntity {
     public EBHangingSignBlockEntity(BlockPos pos, BlockState state) {

@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.material.Fluids;
-import net.yirmiri.excessive_building.init.EBBlocks;
+import net.yirmiri.excessive_building.register.EBBlocks;
 
 public class BuddingFieryBlock extends AmethystBlock {
     public static final int GROWTH_CHANCE = 5;

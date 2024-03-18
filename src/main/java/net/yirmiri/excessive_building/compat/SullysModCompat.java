@@ -9,7 +9,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.block.PedestalBlock;
 import net.yirmiri.excessive_building.block.VerticalStairBlock;
-import net.yirmiri.excessive_building.init.EBBlocks;
+import net.yirmiri.excessive_building.register.EBBlocks;
 
 public class SullysModCompat {
 

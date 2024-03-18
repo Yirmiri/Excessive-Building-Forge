@@ -9,7 +9,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.entity.BannerPattern;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.init.EBBannerPatterns;
+import net.yirmiri.excessive_building.register.EBBannerPatterns;
 
 import java.util.concurrent.CompletableFuture;
 

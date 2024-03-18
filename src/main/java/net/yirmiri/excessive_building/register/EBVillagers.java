@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.init;
+package net.yirmiri.excessive_building.register;
 
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -33,9 +33,9 @@ public class EBVillagers {
                     16, 2, 0.05F)); //stock, xp, price multiplier
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1), //cost
-                    new ItemStack(EBBlocks.COBBLED_DEEPSLATE_BRICKS.get(), 24), //offer
-                    16, 2, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(EBBlocks.COBBLED_DEEPSLATE_BRICKS.get(), 24), 
+                    16, 2, 0.05F)); 
         }
 
         //LEVEL 2 TRADES - STONE MASON
@@ -44,14 +44,14 @@ public class EBVillagers {
             int villagerLevel = 2; //villager level (out of 5)
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1), //cost
-                    new ItemStack(Blocks.CALCITE, 16), //offer
-                    16, 5, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(Blocks.CALCITE, 16), 
+                    16, 5, 0.05F)); 
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1), //cost
-                    new ItemStack(Blocks.TUFF, 16), //offer
-                    16, 5, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(Blocks.TUFF, 16), 
+                    16, 5, 0.05F)); 
         }
 
         //LEVEL 3 TRADES - STONE MASON
@@ -60,19 +60,19 @@ public class EBVillagers {
             int villagerLevel = 3; //villager level (out of 5)
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1), //cost
-                    new ItemStack(EBBlocks.POLISHED_ANDESITE_BRICKS.get(), 24), //offer
-                    16, 10, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(EBBlocks.POLISHED_ANDESITE_BRICKS.get(), 24), 
+                    16, 10, 0.05F)); 
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1), //cost
-                    new ItemStack(EBBlocks.POLISHED_GRANITE_BRICKS.get(), 24), //offer
-                    16, 10, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(EBBlocks.POLISHED_GRANITE_BRICKS.get(), 24), 
+                    16, 10, 0.05F)); 
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1), //cost
-                    new ItemStack(EBBlocks.POLISHED_DIORITE_BRICKS.get(), 24), //offer
-                    16, 10, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(EBBlocks.POLISHED_DIORITE_BRICKS.get(), 24), 
+                    16, 10, 0.05F)); 
         }
 
         //LEVEL 5 TRADES - STONE MASON
@@ -81,9 +81,9 @@ public class EBVillagers {
             int villagerLevel = 5; //villager level (out of 5)
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 2), //cost
-                    new ItemStack(EBBlocks.ASPHALT.get(), 24), //offer
-                    16, 30, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 2), 
+                    new ItemStack(EBBlocks.ASPHALT.get(), 24), 
+                    16, 30, 0.05F)); 
         }
 
         //LEVEL 5 TRADES - SHEPHERD
@@ -92,9 +92,9 @@ public class EBVillagers {
             int villagerLevel = 5; //villager level (out of 5)
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1), //cost
-                    new ItemStack(EBBlocks.RAINBOW_WOOL.get(), 4), //offer
-                    8, 30, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(EBBlocks.RAINBOW_WOOL.get(), 4), 
+                    8, 30, 0.05F)); 
         }
 
         //LEVEL 2 TRADES - CLERIC
@@ -103,9 +103,9 @@ public class EBVillagers {
             int villagerLevel = 2; //villager level (out of 5)
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1), //cost
-                    new ItemStack(Items.AMETHYST_SHARD, 8), //offer
-                    16, 5, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 1), 
+                    new ItemStack(Items.AMETHYST_SHARD, 8), 
+                    16, 5, 0.05F)); 
         }
 
         //LEVEL 3 TRADES - CLERIC
@@ -114,24 +114,24 @@ public class EBVillagers {
             int villagerLevel = 3; //villager level (out of 5)
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 2), //cost
-                    new ItemStack(Items.PRISMARINE_CRYSTALS, 8), //offer
-                    16, 5, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 2), 
+                    new ItemStack(Items.PRISMARINE_CRYSTALS, 8), 
+                    16, 5, 0.05F)); 
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 2), //cost
-                    new ItemStack(EBItems.FIERY_SHARDS.get(), 8), //offer
-                    16, 10, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 2), 
+                    new ItemStack(EBItems.FIERY_SHARDS.get(), 8), 
+                    16, 10, 0.05F)); 
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 2), //cost
-                    new ItemStack(EBItems.KYANITE_SHARDS.get(), 8), //offer
-                    16, 10, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 2), 
+                    new ItemStack(EBItems.KYANITE_SHARDS.get(), 8), 
+                    16, 10, 0.05F)); 
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 2), //cost
-                    new ItemStack(EBItems.MIRALEN_SHARDS.get(), 8), //offer
-                    16, 10, 0.05F)); //stock, xp, price multiplier
+                    new ItemStack(Items.EMERALD, 2), 
+                    new ItemStack(EBItems.MIRALEN_SHARDS.get(), 8), 
+                    16, 10, 0.05F)); 
         }
     }
 
@@ -141,57 +141,57 @@ public class EBVillagers {
             List<VillagerTrades.ItemListing> rareTrades = event.getRareTrades();
 
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1), //cost
+                    new ItemStack(Items.EMERALD, 1), 
                     new ItemStack(EBBlocks.ROSE.get(), 1),
                     12, 5, 0.05f)); //max uses, xp, multiplier
 
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1), //cost
+                    new ItemStack(Items.EMERALD, 1), 
                     new ItemStack(EBBlocks.CYAN_ROSE.get(), 1),
                     12, 5, 0.05f)); //max uses, xp, multiplier
 
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 2), //cost
+                    new ItemStack(Items.EMERALD, 2), 
                     new ItemStack(EBBlocks.WHITE_ROSE.get(), 1),
                     12, 5, 0.05f)); //max uses, xp, multiplier
 
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 2), //cost
+                    new ItemStack(Items.EMERALD, 2), 
                     new ItemStack(EBBlocks.ROSE_BUNDLE.get(), 1),
                     12, 5, 0.05f)); //max uses, xp, multiplier
 
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 1), //cost
+                    new ItemStack(Items.EMERALD, 1), 
                     new ItemStack(EBItems.ALGAE.get(), 12),
                     8, 5, 0.05f)); //max uses, xp, multiplier
 
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 5), //cost
+                    new ItemStack(Items.EMERALD, 5), 
                     new ItemStack(EBBlocks.WILLOW_SAPLING.get(), 1),
                     8, 5, 0.05f)); //max uses, xp, multiplier
 
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 5), //cost
+                    new ItemStack(Items.EMERALD, 5), 
                     new ItemStack(EBBlocks.RED_MAPLE_SAPLING.get(), 1),
                     8, 5, 0.05f)); //max uses, xp, multiplier
 
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 5), //cost
+                    new ItemStack(Items.EMERALD, 5), 
                     new ItemStack(EBBlocks.ORANGE_MAPLE_SAPLING.get(), 1),
                     8, 5, 0.05f)); //max uses, xp, multiplier
 
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 5), //cost
+                    new ItemStack(Items.EMERALD, 5), 
                     new ItemStack(EBBlocks.YELLOW_MAPLE_SAPLING.get(), 1),
                     8, 5, 0.05f)); //max uses, xp, multiplier
 
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 5), //cost
+                    new ItemStack(Items.EMERALD, 5), 
                     new ItemStack(EBBlocks.ACORN.get(), 1),
                     16, 5, 0.05f)); //max uses, xp, multiplier
 
             genericTrades.add((pTrader, pRandom) -> new MerchantOffer(
-                    new ItemStack(Items.EMERALD, 5), //cost
+                    new ItemStack(Items.EMERALD, 5), 
                     new ItemStack(EBBlocks.GOLDEN_BIRCH_SAPLING.get(), 1),
                     8, 5, 0.05f)); //max uses, xp, multiplier
         }

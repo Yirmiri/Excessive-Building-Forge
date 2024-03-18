@@ -6,4 +6,5 @@ You will be rewarded with credit & a translator cape.
 If you have a cape and you would like it removed or you cannot see it in game you can contact me via Discord or Twitter :) (Discord: yirmiri | Twitter: @Yirmiris)
 
 Translator Credits:
-- uk_ua translated by "unroman"
+- uk_ua translated by "@un_roman_"
+- ru_ru translated by "@bricker_man"

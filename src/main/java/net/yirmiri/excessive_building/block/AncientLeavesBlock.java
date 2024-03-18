@@ -8,7 +8,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.yirmiri.excessive_building.init.EBParticleTypes;
+import net.yirmiri.excessive_building.register.EBParticleTypes;
 
 public class AncientLeavesBlock extends LeavesBlock {
     public AncientLeavesBlock(BlockBehaviour.Properties properties) {
