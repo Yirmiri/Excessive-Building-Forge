@@ -27,8 +27,19 @@ public class EBProperties {
     public static final BlockBehaviour.Properties ANCIENT_SHELF = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).instrument(NoteBlockInstrument.BASS).strength(1.5F, 1.5F).sound(SoundType.CHERRY_WOOD).ignitedByLava();
 
     //STONE PROPERTIES
-    public static final BlockBehaviour.Properties BRIMSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASS).strength(2.0F, 6.0F).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops();
-    public static final BlockBehaviour.Properties SULFURIC_BRIMSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 6.0F).sound(SoundType.BASALT).requiresCorrectToolForDrops();
+    public static final BlockBehaviour.Properties ROUGH_SANDSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASS).strength(1.0F, 1.0F).requiresCorrectToolForDrops();
+    public static final BlockBehaviour.Properties ROUGH_RED_SANDSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASS).strength(1.0F, 1.0F).requiresCorrectToolForDrops();
+    public static final BlockBehaviour.Properties ROUGH_SOUL_SANDSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASS).strength(1.0F, 1.0F).requiresCorrectToolForDrops();
+    public static final BlockBehaviour.Properties SOUL_SANDSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BROWN).instrument(NoteBlockInstrument.BASS).strength(0.8F, 0.8F).requiresCorrectToolForDrops();
+    public static final BlockBehaviour.Properties BLUE_NETHER = BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_WART_BLOCK).instrument(NoteBlockInstrument.BASS).strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS).requiresCorrectToolForDrops();
+
+    //BRIMSTONE
+    public static final BlockBehaviour.Properties BRIMSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASS).strength(1.5F, 6.0F).sound(SoundType.DRIPSTONE_BLOCK).requiresCorrectToolForDrops();
+    public static final BlockBehaviour.Properties POLISHED_BRIMSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASS).strength(2.0F, 6.0F).sound(SoundType.POLISHED_DEEPSLATE).requiresCorrectToolForDrops();
+    public static final BlockBehaviour.Properties POLISHED_BRIMSTONE_BRICKS = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASS).strength(2.0F, 6.0F).sound(SoundType.NETHER_BRICKS).requiresCorrectToolForDrops();
+    public static final BlockBehaviour.Properties POLISHED_BRIMSTONE_TILES = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).instrument(NoteBlockInstrument.BASS).strength(2.0F, 6.0F).sound(SoundType.DEEPSLATE_TILES).requiresCorrectToolForDrops();
+    public static final BlockBehaviour.Properties SULFURIC_BRIMSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASS).strength(1.5F, 6.0F).sound(SoundType.BASALT).requiresCorrectToolForDrops();
+    public static final BlockBehaviour.Properties POLISHED_SULFURIC_BRIMSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 6.0F).sound(SoundType.BASALT).requiresCorrectToolForDrops();
 
     //CRYSTAL PROPERTIES
     public static final BlockBehaviour.Properties FIERY = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.CHIME).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops();

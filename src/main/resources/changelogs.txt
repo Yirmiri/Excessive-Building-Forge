@@ -17,6 +17,7 @@ Version Release v2.1.4.2 (Forge/NeoForge: 1.20.1)
 •   Fixed an issue causing miralen shards to not drop when using a tool that has a the max cluster harvestables tag
 •   Fixed maple ladders being uncraftable
 •   Fixed ancient cabinets item model
+•   Fixed inconsistent hardness & blast protection values on blocks
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
