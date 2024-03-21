@@ -18,7 +18,6 @@ import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -28,10 +27,10 @@ import net.yirmiri.excessive_building.compat.EBCompatRegistries;
 import net.yirmiri.excessive_building.compat.FarmersDelightCompat;
 import net.yirmiri.excessive_building.compat.SullysModCompat;
 import net.yirmiri.excessive_building.datagen.loot.EBLootTableModifiers;
-import net.yirmiri.excessive_building.register.*;
 import net.yirmiri.excessive_building.potion.EBBrewingRecipe;
 import net.yirmiri.excessive_building.potion.EBMobEffects;
 import net.yirmiri.excessive_building.potion.EBPotions;
+import net.yirmiri.excessive_building.register.*;
 import net.yirmiri.excessive_building.worldgen.biome.EBOverworldRegion;
 import terrablender.api.Regions;
 
@@ -43,6 +42,7 @@ public class ExcessiveBuilding {
 
     //Capes For Devs and Contributors of an Azurune mod
     public static final List<String> AZURUNE = List.of("Dev", "Yirmiri", "Nullmiri"); //Developers
+    public static final List<String> RU_RU_TRANSLATORS = List.of("BrickerNick"); //Russian Translators
     public static final List<String> UK_UA_TRANSLATORS = List.of("Unroman"); //Ukrainian Translators
     public static final List<String> CONTRIBUTORS = List.of(); //Contributors
     public static final List<String> SUPPORTERS = List.of(); //Supporters
@@ -191,7 +191,7 @@ public class ExcessiveBuilding {
         Sheets.addWoodType(EBBlockTypes.WILLOW);
         Sheets.addWoodType(EBBlockTypes.MAPLE);
 
-        if (sullysMod) {
+        if (EBCompatRegistries.sullysMod) {
             ItemBlockRenderTypes.setRenderLayer(SullysModCompat.JADE_GLASS.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(SullysModCompat.JADE_GLASS_PANE.get(), RenderType.translucent());
         }
@@ -2685,7 +2685,7 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS);
         }
 
-        if (event.getTab() == EBItemGroups.EB_STONE_BLOCKS.get() && (sullysMod)) {
+        if (event.getTab() == EBItemGroups.EB_STONE_BLOCKS.get() && (EBCompatRegistries.sullysMod)) {
             event.accept(SullysModCompat.SMOOTHED_ROUGH_JADE_VERTICAL_STAIRS);
             event.accept(SullysModCompat.ROUGH_JADE_BRICK_VERTICAL_STAIRS);
             event.accept(SullysModCompat.ROUGH_JADE_TILE_VERTICAL_STAIRS);
@@ -2695,18 +2695,18 @@ public class ExcessiveBuilding {
             event.accept(SullysModCompat.POLISHED_JADE_SHINGLE_VERTICAL_STAIRS);
         }
 
-        if (event.getTab() == EBItemGroups.EB_FUNCTIONAL_BLOCKS.get() && (sullysMod)) {
+        if (event.getTab() == EBItemGroups.EB_FUNCTIONAL_BLOCKS.get() && (EBCompatRegistries.sullysMod)) {
             event.accept(SullysModCompat.JADE_LAMP);
         }
 
-        if (event.getTab() == EBItemGroups.EB_MISC_TAB.get() && (sullysMod)) {
+        if (event.getTab() == EBItemGroups.EB_MISC_TAB.get() && (EBCompatRegistries.sullysMod)) {
             event.accept(SullysModCompat.JADE_LAMP);
             event.accept(SullysModCompat.JADE_GLASS);
             event.accept(SullysModCompat.JADE_GLASS_PANE);
             event.accept(SullysModCompat.POLISHED_JADE_PEDESTAL);
         }
 
-        if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get() && (sullysMod)) {
+        if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get() && (EBCompatRegistries.sullysMod)) {
             event.accept(SullysModCompat.JADE_LAMP);
             event.accept(SullysModCompat.JADE_GLASS);
             event.accept(SullysModCompat.JADE_GLASS_PANE);
@@ -2720,22 +2720,13 @@ public class ExcessiveBuilding {
             event.accept(SullysModCompat.POLISHED_JADE_SHINGLE_VERTICAL_STAIRS);
         }
 
-        if (event.getTab() == EBItemGroups.EB_FUNCTIONAL_BLOCKS.get() && (farmersDelight)) {
+        if (event.getTab() == EBItemGroups.EB_FUNCTIONAL_BLOCKS.get() && (EBCompatRegistries.farmersDelight)) {
             event.accept(FarmersDelightCompat.ANCIENT_CABINET);
         }
 
-        if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get() && (farmersDelight)) {
+        if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get() && (EBCompatRegistries.farmersDelight)) {
             event.accept(FarmersDelightCompat.ANCIENT_CABINET);
         }
-    }
-
-    public static final boolean sullysMod;
-    public static final boolean farmersDelight;
-
-    static {
-        ModList mods = ModList.get();
-        sullysMod = mods.isLoaded("sullysmod");
-        farmersDelight = mods.isLoaded("farmersdelight");
     }
 
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
