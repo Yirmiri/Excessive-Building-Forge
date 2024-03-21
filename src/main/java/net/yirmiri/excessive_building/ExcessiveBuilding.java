@@ -27,6 +27,7 @@ import net.yirmiri.excessive_building.compat.EBCompatRegistries;
 import net.yirmiri.excessive_building.compat.FarmersDelightCompat;
 import net.yirmiri.excessive_building.compat.SullysModCompat;
 import net.yirmiri.excessive_building.datagen.loot.EBLootTableModifiers;
+import net.yirmiri.excessive_building.other.EBBlockTypes;
 import net.yirmiri.excessive_building.potion.EBBrewingRecipe;
 import net.yirmiri.excessive_building.potion.EBMobEffects;
 import net.yirmiri.excessive_building.potion.EBPotions;
@@ -2724,8 +2725,13 @@ public class ExcessiveBuilding {
             event.accept(FarmersDelightCompat.ANCIENT_CABINET);
         }
 
+        if (event.getTab() == EBItemGroups.EB_MISC_TAB.get() && (EBCompatRegistries.farmersDelight)) {
+            event.accept(FarmersDelightCompat.ANCIENT_CIDER);
+        }
+
         if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get() && (EBCompatRegistries.farmersDelight)) {
             event.accept(FarmersDelightCompat.ANCIENT_CABINET);
+            event.accept(FarmersDelightCompat.ANCIENT_CIDER);
         }
     }
 

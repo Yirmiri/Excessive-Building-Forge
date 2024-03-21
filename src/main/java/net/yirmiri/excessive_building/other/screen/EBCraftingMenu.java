@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.screen;
+package net.yirmiri.excessive_building.other.screen;
 
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;

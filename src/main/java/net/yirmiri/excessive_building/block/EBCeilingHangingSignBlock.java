@@ -5,7 +5,7 @@ import net.minecraft.world.level.block.CeilingHangingSignBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
-import net.yirmiri.excessive_building.blockentity.sign.EBHangingSignBlockEntity;
+import net.yirmiri.excessive_building.block.entity.EBHangingSignBlockEntity;
 
 public class EBCeilingHangingSignBlock extends CeilingHangingSignBlock {
     public EBCeilingHangingSignBlock(Properties pProperties, WoodType pType) {

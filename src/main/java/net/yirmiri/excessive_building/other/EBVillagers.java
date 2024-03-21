@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.register;
+package net.yirmiri.excessive_building.other;
 
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -13,6 +13,8 @@ import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.register.EBBlocks;
+import net.yirmiri.excessive_building.register.EBItems;
 
 import java.util.List;
 
@@ -120,7 +122,7 @@ public class EBVillagers {
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(
                     new ItemStack(Items.EMERALD, 2), 
-                    new ItemStack(EBItems.FIERY_SHARDS.get(), 8), 
+                    new ItemStack(EBItems.FIERY_SHARDS.get(), 8),
                     16, 10, 0.05F)); 
 
             trades.get(villagerLevel).add((trader, rand) -> new MerchantOffer(

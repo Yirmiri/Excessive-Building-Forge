@@ -22,6 +22,8 @@ import net.yirmiri.excessive_building.block.EBStandingSignBlock;
 import net.yirmiri.excessive_building.block.EBWallHangingSignBlock;
 import net.yirmiri.excessive_building.block.EBWallSignBlock;
 import net.yirmiri.excessive_building.block.flammable.*;
+import net.yirmiri.excessive_building.other.EBBlockTypes;
+import net.yirmiri.excessive_building.other.EBProperties;
 import net.yirmiri.excessive_building.worldgen.feature.tree.*;
 
 import java.util.function.Supplier;
@@ -3388,293 +3390,114 @@ public class EBBlocks {
     public static final RegistryObject<Block> IRON_BAR_TRAPDOOR = registerBlock("iron_bar_trapdoor",
             () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BARS).sound(SoundType.METAL).noOcclusion(), BlockSetType.GOLD));
 
-    public static final RegistryObject<Block> KNITTED_RED_WOOL = registerBlock("knitted_red_wool",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_RED_CARPET = registerBlock("knitted_red_carpet",
-            () -> new FlammableWoolCarpetBlock(DyeColor.RED, BlockBehaviour.Properties.copy(Blocks.RED_CARPET), 20, 60));
-
-    public static final RegistryObject<Block> KNITTED_RED_STAIRS = registerBlock("knitted_red_stairs",
-            () -> new FlammableStairBlock(EBBlocks.KNITTED_RED_WOOL.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_RED_SLAB = registerBlock("knitted_red_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> RED_WOOL_STAIRS = registerBlock("red_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.RED_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> RED_WOOL_SLAB = registerBlock("red_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> ORANGE_WOOL_STAIRS = registerBlock("orange_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.ORANGE_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.ORANGE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> ORANGE_WOOL_SLAB = registerBlock("orange_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> YELLOW_WOOL_STAIRS = registerBlock("yellow_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.YELLOW_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.YELLOW_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> YELLOW_WOOL_SLAB = registerBlock("yellow_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.YELLOW_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> LIME_WOOL_STAIRS = registerBlock("lime_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.LIME_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.LIME_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> LIME_WOOL_SLAB = registerBlock("lime_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.LIME_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> GREEN_WOOL_STAIRS = registerBlock("green_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.GREEN_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.GREEN_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> GREEN_WOOL_SLAB = registerBlock("green_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.GREEN_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> CYAN_WOOL_STAIRS = registerBlock("cyan_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.CYAN_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> CYAN_WOOL_SLAB = registerBlock("cyan_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> LIGHT_BLUE_WOOL_STAIRS = registerBlock("light_blue_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.LIGHT_BLUE_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.LIGHT_BLUE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> LIGHT_BLUE_WOOL_SLAB = registerBlock("light_blue_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.LIGHT_BLUE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> BLUE_WOOL_STAIRS = registerBlock("blue_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.BLUE_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BLUE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> BLUE_WOOL_SLAB = registerBlock("blue_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.BLUE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> PURPLE_WOOL_STAIRS = registerBlock("purple_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.PURPLE_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.PURPLE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> PURPLE_WOOL_SLAB = registerBlock("purple_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.PURPLE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> MAGENTA_WOOL_STAIRS = registerBlock("magenta_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.MAGENTA_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.MAGENTA_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> MAGENTA_WOOL_SLAB = registerBlock("magenta_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.MAGENTA_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> PINK_WOOL_STAIRS = registerBlock("pink_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.PINK_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.PINK_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> PINK_WOOL_SLAB = registerBlock("pink_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.PINK_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> GRAY_WOOL_STAIRS = registerBlock("gray_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.GRAY_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.GRAY_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> GRAY_WOOL_SLAB = registerBlock("gray_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.GRAY_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> LIGHT_GRAY_WOOL_STAIRS = registerBlock("light_gray_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.LIGHT_GRAY_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.LIGHT_GRAY_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> LIGHT_GRAY_WOOL_SLAB = registerBlock("light_gray_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.LIGHT_GRAY_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> BROWN_WOOL_STAIRS = registerBlock("brown_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.BROWN_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BROWN_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> BROWN_WOOL_SLAB = registerBlock("brown_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> WHITE_WOOL_STAIRS = registerBlock("white_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.WHITE_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> WHITE_WOOL_SLAB = registerBlock("white_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> BLACK_WOOL_STAIRS = registerBlock("black_wool_stairs",
-            () -> new FlammableStairBlock(Blocks.BLACK_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> BLACK_WOOL_SLAB = registerBlock("black_wool_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_BLACK_WOOL = registerBlock("knitted_black_wool",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_BLACK_CARPET = registerBlock("knitted_black_carpet",
-            () -> new FlammableWoolCarpetBlock(DyeColor.BLACK, BlockBehaviour.Properties.copy(Blocks.BLACK_CARPET), 20, 60));
-
-    public static final RegistryObject<Block> KNITTED_BLACK_STAIRS = registerBlock("knitted_black_stairs",
-            () -> new FlammableStairBlock(EBBlocks.KNITTED_RED_WOOL.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_BLACK_SLAB = registerBlock("knitted_black_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_PURPLE_WOOL = registerBlock("knitted_purple_wool",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_PURPLE_CARPET = registerBlock("knitted_purple_carpet",
-            () -> new FlammableWoolCarpetBlock(DyeColor.PURPLE, BlockBehaviour.Properties.copy(Blocks.PURPLE_CARPET), 20, 60));
-
-    public static final RegistryObject<Block> KNITTED_PURPLE_STAIRS = registerBlock("knitted_purple_stairs",
-            () -> new FlammableStairBlock(EBBlocks.KNITTED_RED_WOOL.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.PURPLE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_PURPLE_SLAB = registerBlock("knitted_purple_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.PURPLE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_BLUE_WOOL = registerBlock("knitted_blue_wool",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BLUE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_BLUE_CARPET = registerBlock("knitted_blue_carpet",
-            () -> new FlammableWoolCarpetBlock(DyeColor.BLUE, BlockBehaviour.Properties.copy(Blocks.BLUE_CARPET), 20, 60));
-
-    public static final RegistryObject<Block> KNITTED_BLUE_STAIRS = registerBlock("knitted_blue_stairs",
-            () -> new FlammableStairBlock(EBBlocks.KNITTED_BLUE_WOOL.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BLUE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_BLUE_SLAB = registerBlock("knitted_blue_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.BLUE_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_CYAN_WOOL = registerBlock("knitted_cyan_wool",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_CYAN_CARPET = registerBlock("knitted_cyan_carpet",
-            () -> new FlammableWoolCarpetBlock(DyeColor.CYAN, BlockBehaviour.Properties.copy(Blocks.CYAN_CARPET), 20, 60));
-
-    public static final RegistryObject<Block> KNITTED_CYAN_STAIRS = registerBlock("knitted_cyan_stairs",
-            () -> new FlammableStairBlock(EBBlocks.KNITTED_CYAN_WOOL.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> KNITTED_CYAN_SLAB = registerBlock("knitted_cyan_slab",
-            () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
-
-    public static final RegistryObject<Block> MIRALEN_BLOCK = registerBlock("miralen_block",
-            () -> new AmethystBlock(BlockBehaviour.Properties.copy(Blocks.AMETHYST_BLOCK)));
-
-    public static final RegistryObject<Block> BUDDING_MIRALEN_BLOCK = registerBlock("budding_miralen_block",
-            () -> new BuddingMiralenBlock(BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BLOCK.get()).pushReaction(PushReaction.DESTROY).forceSolidOn().noOcclusion().randomTicks()));
-
-    public static final RegistryObject<Block> SMALL_MIRALEN_BUD = registerBlock("small_miralen_bud",
-            () -> new AmethystClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD)));
-
-    public static final RegistryObject<Block> MEDIUM_MIRALEN_BUD = registerBlock("medium_miralen_bud",
-            () -> new AmethystClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD)));
-
-    public static final RegistryObject<Block> LARGE_MIRALEN_BUD = registerBlock("large_miralen_bud",
-            () -> new AmethystClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD)));
-
-    public static final RegistryObject<Block> MIRALEN_CLUSTER = registerBlock("miralen_cluster",
-            () -> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)));
-
-    public static final RegistryObject<Block> MIRALEN_GLASS = registerBlock("miralen_glass",
-            () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.GLASS).noOcclusion()));
-
-    public static final RegistryObject<Block> MIRALEN_GLASS_PANE = registerBlock("miralen_glass_pane",
-            () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.GLASS).noOcclusion()));
-
-    public static final RegistryObject<Block> MIRALEN_BRICKS = registerBlock("miralen_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BLOCK.get()).strength(1.5f).explosionResistance(6).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> CRACKED_MIRALEN_BRICKS = registerBlock("cracked_miralen_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BRICKS.get())));
-
-    public static final RegistryObject<Block> MIRALEN_BRICK_STAIRS = registerBlock("miralen_brick_stairs",
-            () -> new StairBlock(EBBlocks.MIRALEN_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BRICKS.get())));
-
-    public static final RegistryObject<Block> MIRALEN_BRICK_SLAB = registerBlock("miralen_brick_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BRICKS.get())));
-
-    public static final RegistryObject<Block> MIRALEN_BRICK_WALL = registerBlock("miralen_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BRICKS.get()).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> MIRALEN_BRICK_VERTICAL_STAIRS = registerBlock("miralen_brick_vertical_stairs",
-            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BRICKS.get())));
-
-    public static final RegistryObject<Block> MIRALEN_TILES = registerBlock("miralen_tiles",
-            () -> new Block(BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BRICKS.get())));
-
-    public static final RegistryObject<Block> CRACKED_MIRALEN_TILES = registerBlock("cracked_miralen_tiles",
-            () -> new Block(BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BRICKS.get())));
-
-    public static final RegistryObject<Block> MIRALEN_TILE_STAIRS = registerBlock("miralen_tile_stairs",
-            () -> new StairBlock(EBBlocks.MIRALEN_TILES.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BRICKS.get())));
-
-    public static final RegistryObject<Block> MIRALEN_TILE_SLAB = registerBlock("miralen_tile_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BRICKS.get())));
-
-    public static final RegistryObject<Block> MIRALEN_TILE_WALL = registerBlock("miralen_tile_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BRICKS.get()).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> MIRALEN_TILE_VERTICAL_STAIRS = registerBlock("miralen_tile_vertical_stairs",
-            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BRICKS.get())));
-
-    public static final RegistryObject<Block> MIRALEN_LAMP = registerBlock("miralen_lamp",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN)
-                    .strength(0.3f).explosionResistance(0.3f).sound(SoundType.GLASS).lightLevel(state -> 15)));
-
-    public static final RegistryObject<Block> GOLDEN_BIRCH_LEAVES = registerBlock("golden_birch_leaves",
-            () -> new YellowMapleLeavesBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_LEAVES).mapColor(MapColor.COLOR_YELLOW)));
-
-    public static final RegistryObject<Block> GOLDEN_BIRCH_SAPLING = registerBlock("golden_birch_sapling",
-            () -> new SaplingBlock(new GoldenBirchTreeGrower(), BlockBehaviour.Properties.copy(Blocks.BIRCH_SAPLING)));
-
-    public static final RegistryObject<Block> POTTED_GOLDEN_BIRCH_SAPLING = BLOCKS.register("potted_golden_birch_sapling",
-            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.GOLDEN_BIRCH_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_BIRCH_SAPLING)));
-
-    public static final RegistryObject<Block> ACORN = registerBlock("acorn",
-            () -> new SaplingBlock(new AcornTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-
-    public static final RegistryObject<Block> REACHING_LANTERN = registerBlock("reaching_lantern",
-            () -> new LanternBlock(BlockBehaviour.Properties.copy(Blocks.LANTERN).lightLevel(state -> 8)));
-
-    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_VERTICAL_STAIRS = registerBlock("polished_sulfuric_brimstone_vertical_stairs",
-            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_SULFURIC_BRIMSTONE.get())));
-
-    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_BRICK_VERTICAL_STAIRS = registerBlock("polished_sulfuric_brimstone_brick_vertical_stairs",
-            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICKS.get())));
-
-    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_TILE_VERTICAL_STAIRS = registerBlock("polished_sulfuric_brimstone_tile_vertical_stairs",
-            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILES.get())));
-
-    public static final RegistryObject<Block> SULFURIC_BRIMSTONE_LAMP = registerBlock("sulfuric_brimstone_lamp",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP)
-                    .strength(0.3f).explosionResistance(0.3f).sound(SoundType.GLASS).lightLevel(state -> 15)));
-
-    public static final RegistryObject<Block> SULFURIC_BRIMSTONE_WINDOW = registerBlock("sulfuric_brimstone_window",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP)
-                    .strength(0.3f).explosionResistance(0.3f).sound(SoundType.GLASS).lightLevel(state -> 15)));
-
-    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_PILLAR = registerBlock("polished_sulfuric_brimstone_pillar",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICKS.get())));
-
-    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_PEDESTAL = registerBlock("polished_sulfuric_brimstone_pedestal",
-            () -> new PedestalBlock(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICKS.get())));
-
-    public static final RegistryObject<Block> ANCIENT_VINE = registerBlock("ancient_vine",
-            () -> new VineBlock(BlockBehaviour.Properties.copy(Blocks.VINE).lightLevel(state -> 4)));
-
-    public static final RegistryObject<Block> POTTED_ACORN = BLOCKS.register("potted_acorn",
-            () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.ACORN, BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
-
-    public static final RegistryObject<Block> BAMBOO_BOOKSHELF = registerBlock("bamboo_bookshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BAMBOO_EMPTY_SHELF = registerBlock("bamboo_empty_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BAMBOO_EMPTY_POTION_SHELF = registerBlock("bamboo_empty_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BAMBOO_WATER_POTION_SHELF = registerBlock("bamboo_water_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BAMBOO_POTION_SHELF = registerBlock("bamboo_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BAMBOO_ALCHEMIST_SHELF = registerBlock("bamboo_alchemist_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BAMBOO_BRICKSHELF = registerBlock("bamboo_brickshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BAMBOO_NETHER_BRICKSHELF = registerBlock("bamboo_nether_brickshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BAMBOO_PLANKS).ignitedByLava(), 30, 20));
+    //SHELVES
+    public static final RegistryObject<Block> BAMBOO_BOOKSHELF = registerBlock("bamboo_bookshelf", () -> new FlammableBlock(EBProperties.BAMBOO_SHELF, 30, 20));
+    public static final RegistryObject<Block> BAMBOO_EMPTY_SHELF = registerBlock("bamboo_empty_shelf", () -> new FlammableBlock(EBProperties.BAMBOO_SHELF, 30, 20));
+    public static final RegistryObject<Block> BAMBOO_EMPTY_POTION_SHELF = registerBlock("bamboo_empty_potion_shelf", () -> new FlammableBlock(EBProperties.BAMBOO_SHELF, 30, 20));
+    public static final RegistryObject<Block> BAMBOO_WATER_POTION_SHELF = registerBlock("bamboo_water_potion_shelf", () -> new FlammableBlock(EBProperties.BAMBOO_SHELF, 30, 20));
+    public static final RegistryObject<Block> BAMBOO_POTION_SHELF = registerBlock("bamboo_potion_shelf", () -> new FlammableBlock(EBProperties.BAMBOO_SHELF, 30, 20));
+    public static final RegistryObject<Block> BAMBOO_ALCHEMIST_SHELF = registerBlock("bamboo_alchemist_shelf", () -> new FlammableBlock(EBProperties.BAMBOO_SHELF, 30, 20));
+    public static final RegistryObject<Block> BAMBOO_BRICKSHELF = registerBlock("bamboo_brickshelf", () -> new FlammableBlock(EBProperties.BAMBOO_SHELF, 30, 20));
+    public static final RegistryObject<Block> BAMBOO_NETHER_BRICKSHELF = registerBlock("bamboo_nether_brickshelf", () -> new FlammableBlock(EBProperties.BAMBOO_SHELF, 30, 20));
+
+    //NATURE
+    public static final RegistryObject<Block> ANCIENT_VINE = registerBlock("ancient_vine", () -> new VineBlock(BlockBehaviour.Properties.copy(Blocks.VINE).lightLevel(state -> 4)));
+    public static final RegistryObject<Block> GOLDEN_BIRCH_LEAVES = registerBlock("golden_birch_leaves", () -> new YellowMapleLeavesBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_LEAVES).mapColor(MapColor.COLOR_YELLOW)));
+
+    //SULFURIC BRIMSTONE
+    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_VERTICAL_STAIRS = registerBlock("polished_sulfuric_brimstone_vertical_stairs", () -> new VerticalStairBlock(EBProperties.SULFURIC_BRIMSTONE));
+    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_BRICK_VERTICAL_STAIRS = registerBlock("polished_sulfuric_brimstone_brick_vertical_stairs", () -> new VerticalStairBlock(EBProperties.SULFURIC_BRIMSTONE));
+    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_TILE_VERTICAL_STAIRS = registerBlock("polished_sulfuric_brimstone_tile_vertical_stairs", () -> new VerticalStairBlock(EBProperties.SULFURIC_BRIMSTONE));
+    public static final RegistryObject<Block> SULFURIC_BRIMSTONE_LAMP = registerBlock("sulfuric_brimstone_lamp", () -> new Block(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> SULFURIC_BRIMSTONE_WINDOW = registerBlock("sulfuric_brimstone_window", () -> new Block(BlockBehaviour.Properties.copy(Blocks.REDSTONE_LAMP).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_PILLAR = registerBlock("polished_sulfuric_brimstone_pillar", () -> new RotatedPillarBlock(EBProperties.SULFURIC_BRIMSTONE));
+    public static final RegistryObject<Block> POLISHED_SULFURIC_BRIMSTONE_PEDESTAL = registerBlock("polished_sulfuric_brimstone_pedestal", () -> new PedestalBlock(EBProperties.SULFURIC_BRIMSTONE));
+
+    //CRYSTALS
+    public static final RegistryObject<Block> MIRALEN_BLOCK = registerBlock("miralen_block", () -> new AmethystBlock(EBProperties.MIRALEN));
+    public static final RegistryObject<Block> BUDDING_MIRALEN_BLOCK = registerBlock("budding_miralen_block", () -> new BuddingMiralenBlock(BlockBehaviour.Properties.copy(EBBlocks.MIRALEN_BLOCK.get()).pushReaction(PushReaction.DESTROY).forceSolidOn().noOcclusion().randomTicks()));
+    public static final RegistryObject<Block> SMALL_MIRALEN_BUD = registerBlock("small_miralen_bud", () -> new AmethystClusterBlock(3, 4, BlockBehaviour.Properties.copy(Blocks.SMALL_AMETHYST_BUD)));
+    public static final RegistryObject<Block> MEDIUM_MIRALEN_BUD = registerBlock("medium_miralen_bud", () -> new AmethystClusterBlock(4, 3, BlockBehaviour.Properties.copy(Blocks.MEDIUM_AMETHYST_BUD)));
+    public static final RegistryObject<Block> LARGE_MIRALEN_BUD = registerBlock("large_miralen_bud", () -> new AmethystClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD)));
+    public static final RegistryObject<Block> MIRALEN_CLUSTER = registerBlock("miralen_cluster", () -> new AmethystClusterBlock(7, 3, BlockBehaviour.Properties.copy(Blocks.AMETHYST_CLUSTER)));
+    public static final RegistryObject<Block> MIRALEN_BRICKS = registerBlock("miralen_bricks", () -> new Block(EBProperties.MIRALEN));
+    public static final RegistryObject<Block> CRACKED_MIRALEN_BRICKS = registerBlock("cracked_miralen_bricks", () -> new Block(EBProperties.MIRALEN));
+    public static final RegistryObject<Block> MIRALEN_BRICK_STAIRS = registerBlock("miralen_brick_stairs", () -> new StairBlock(EBBlocks.MIRALEN_BRICKS.get().defaultBlockState(), EBProperties.MIRALEN));
+    public static final RegistryObject<Block> MIRALEN_BRICK_SLAB = registerBlock("miralen_brick_slab", () -> new SlabBlock(EBProperties.MIRALEN));
+    public static final RegistryObject<Block> MIRALEN_BRICK_WALL = registerBlock("miralen_brick_wall", () -> new WallBlock(EBProperties.MIRALEN));
+    public static final RegistryObject<Block> MIRALEN_BRICK_VERTICAL_STAIRS = registerBlock("miralen_brick_vertical_stairs", () -> new VerticalStairBlock(EBProperties.MIRALEN));
+    public static final RegistryObject<Block> MIRALEN_TILES = registerBlock("miralen_tiles", () -> new Block(EBProperties.MIRALEN));
+    public static final RegistryObject<Block> CRACKED_MIRALEN_TILES = registerBlock("cracked_miralen_tiles", () -> new Block(EBProperties.MIRALEN));
+    public static final RegistryObject<Block> MIRALEN_TILE_STAIRS = registerBlock("miralen_tile_stairs", () -> new StairBlock(EBBlocks.MIRALEN_TILES.get().defaultBlockState(), EBProperties.MIRALEN));
+    public static final RegistryObject<Block> MIRALEN_TILE_SLAB = registerBlock("miralen_tile_slab", () -> new SlabBlock(EBProperties.MIRALEN));
+    public static final RegistryObject<Block> MIRALEN_TILE_WALL = registerBlock("miralen_tile_wall", () -> new WallBlock(EBProperties.MIRALEN));
+    public static final RegistryObject<Block> MIRALEN_TILE_VERTICAL_STAIRS = registerBlock("miralen_tile_vertical_stairs", () -> new VerticalStairBlock(EBProperties.MIRALEN));
+    public static final RegistryObject<Block> MIRALEN_GLASS = registerBlock("miralen_glass", () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.GLASS).noOcclusion()));
+    public static final RegistryObject<Block> MIRALEN_GLASS_PANE = registerBlock("miralen_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.GLASS).noOcclusion()));
+    public static final RegistryObject<Block> MIRALEN_LAMP = registerBlock("miralen_lamp", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN).sound(SoundType.GLASS).lightLevel(state -> 15)));
+
+    //KNITTED WOOL
+    public static final RegistryObject<Block> KNITTED_BLACK_WOOL = registerBlock("knitted_black_wool", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_BLACK_CARPET = registerBlock("knitted_black_carpet", () -> new FlammableWoolCarpetBlock(DyeColor.BLACK, BlockBehaviour.Properties.copy(Blocks.BLACK_CARPET), 20, 60));
+    public static final RegistryObject<Block> KNITTED_BLACK_STAIRS = registerBlock("knitted_black_stairs", () -> new FlammableStairBlock(EBBlocks.KNITTED_RED_WOOL.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_BLACK_SLAB = registerBlock("knitted_black_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_RED_WOOL = registerBlock("knitted_red_wool", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_RED_CARPET = registerBlock("knitted_red_carpet", () -> new FlammableWoolCarpetBlock(DyeColor.RED, BlockBehaviour.Properties.copy(Blocks.RED_CARPET), 20, 60));
+    public static final RegistryObject<Block> KNITTED_RED_STAIRS = registerBlock("knitted_red_stairs", () -> new FlammableStairBlock(EBBlocks.KNITTED_RED_WOOL.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_RED_SLAB = registerBlock("knitted_red_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_PURPLE_WOOL = registerBlock("knitted_purple_wool", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_PURPLE_CARPET = registerBlock("knitted_purple_carpet", () -> new FlammableWoolCarpetBlock(DyeColor.PURPLE, BlockBehaviour.Properties.copy(Blocks.PURPLE_CARPET), 20, 60));
+    public static final RegistryObject<Block> KNITTED_PURPLE_STAIRS = registerBlock("knitted_purple_stairs", () -> new FlammableStairBlock(EBBlocks.KNITTED_RED_WOOL.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.PURPLE_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_PURPLE_SLAB = registerBlock("knitted_purple_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.PURPLE_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_BLUE_WOOL = registerBlock("knitted_blue_wool", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.BLUE_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_BLUE_CARPET = registerBlock("knitted_blue_carpet", () -> new FlammableWoolCarpetBlock(DyeColor.BLUE, BlockBehaviour.Properties.copy(Blocks.BLUE_CARPET), 20, 60));
+    public static final RegistryObject<Block> KNITTED_BLUE_STAIRS = registerBlock("knitted_blue_stairs", () -> new FlammableStairBlock(EBBlocks.KNITTED_BLUE_WOOL.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BLUE_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_BLUE_SLAB = registerBlock("knitted_blue_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.BLUE_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_CYAN_WOOL = registerBlock("knitted_cyan_wool", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_CYAN_CARPET = registerBlock("knitted_cyan_carpet", () -> new FlammableWoolCarpetBlock(DyeColor.CYAN, BlockBehaviour.Properties.copy(Blocks.CYAN_CARPET), 20, 60));
+    public static final RegistryObject<Block> KNITTED_CYAN_STAIRS = registerBlock("knitted_cyan_stairs", () -> new FlammableStairBlock(EBBlocks.KNITTED_CYAN_WOOL.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
+    public static final RegistryObject<Block> KNITTED_CYAN_SLAB = registerBlock("knitted_cyan_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
+
+    //MISC
+    public static final RegistryObject<Block> POTTED_ACORN = BLOCKS.register("potted_acorn", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.ACORN, BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
+    public static final RegistryObject<Block> ACORN = registerBlock("acorn", () -> new SaplingBlock(new AcornTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> GOLDEN_BIRCH_SAPLING = registerBlock("golden_birch_sapling", () -> new SaplingBlock(new GoldenBirchTreeGrower(), BlockBehaviour.Properties.copy(Blocks.BIRCH_SAPLING)));
+    public static final RegistryObject<Block> POTTED_GOLDEN_BIRCH_SAPLING = BLOCKS.register("potted_golden_birch_sapling", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.GOLDEN_BIRCH_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_BIRCH_SAPLING)));
+    public static final RegistryObject<Block> REACHING_LANTERN = registerBlock("reaching_lantern", () -> new LanternBlock(BlockBehaviour.Properties.copy(Blocks.LANTERN).lightLevel(state -> 8)));
+
+    //VANILLA ADDITIONS
+    public static final RegistryObject<Block> RED_WOOL_STAIRS = registerBlock("red_wool_stairs", () -> new FlammableStairBlock(Blocks.RED_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
+    public static final RegistryObject<Block> RED_WOOL_SLAB = registerBlock("red_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
+    public static final RegistryObject<Block> ORANGE_WOOL_STAIRS = registerBlock("orange_wool_stairs", () -> new FlammableStairBlock(Blocks.ORANGE_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.ORANGE_WOOL), 60, 30));
+    public static final RegistryObject<Block> ORANGE_WOOL_SLAB = registerBlock("orange_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.ORANGE_WOOL), 60, 30));
+    public static final RegistryObject<Block> YELLOW_WOOL_STAIRS = registerBlock("yellow_wool_stairs", () -> new FlammableStairBlock(Blocks.YELLOW_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.YELLOW_WOOL), 60, 30));
+    public static final RegistryObject<Block> YELLOW_WOOL_SLAB = registerBlock("yellow_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.YELLOW_WOOL), 60, 30));
+    public static final RegistryObject<Block> LIME_WOOL_STAIRS = registerBlock("lime_wool_stairs", () -> new FlammableStairBlock(Blocks.LIME_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.LIME_WOOL), 60, 30));
+    public static final RegistryObject<Block> LIME_WOOL_SLAB = registerBlock("lime_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.LIME_WOOL), 60, 30));
+    public static final RegistryObject<Block> GREEN_WOOL_STAIRS = registerBlock("green_wool_stairs", () -> new FlammableStairBlock(Blocks.GREEN_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.GREEN_WOOL), 60, 30));
+    public static final RegistryObject<Block> GREEN_WOOL_SLAB = registerBlock("green_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.GREEN_WOOL), 60, 30));
+    public static final RegistryObject<Block> CYAN_WOOL_STAIRS = registerBlock("cyan_wool_stairs", () -> new FlammableStairBlock(Blocks.CYAN_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
+    public static final RegistryObject<Block> CYAN_WOOL_SLAB = registerBlock("cyan_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
+    public static final RegistryObject<Block> LIGHT_BLUE_WOOL_STAIRS = registerBlock("light_blue_wool_stairs", () -> new FlammableStairBlock(Blocks.LIGHT_BLUE_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.LIGHT_BLUE_WOOL), 60, 30));
+    public static final RegistryObject<Block> LIGHT_BLUE_WOOL_SLAB = registerBlock("light_blue_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.LIGHT_BLUE_WOOL), 60, 30));
+    public static final RegistryObject<Block> BLUE_WOOL_STAIRS = registerBlock("blue_wool_stairs", () -> new FlammableStairBlock(Blocks.BLUE_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BLUE_WOOL), 60, 30));
+    public static final RegistryObject<Block> BLUE_WOOL_SLAB = registerBlock("blue_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.BLUE_WOOL), 60, 30));
+    public static final RegistryObject<Block> PURPLE_WOOL_STAIRS = registerBlock("purple_wool_stairs", () -> new FlammableStairBlock(Blocks.PURPLE_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.PURPLE_WOOL), 60, 30));
+    public static final RegistryObject<Block> PURPLE_WOOL_SLAB = registerBlock("purple_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.PURPLE_WOOL), 60, 30));
+    public static final RegistryObject<Block> MAGENTA_WOOL_STAIRS = registerBlock("magenta_wool_stairs", () -> new FlammableStairBlock(Blocks.MAGENTA_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.MAGENTA_WOOL), 60, 30));
+    public static final RegistryObject<Block> MAGENTA_WOOL_SLAB = registerBlock("magenta_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.MAGENTA_WOOL), 60, 30));
+    public static final RegistryObject<Block> PINK_WOOL_STAIRS = registerBlock("pink_wool_stairs", () -> new FlammableStairBlock(Blocks.PINK_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.PINK_WOOL), 60, 30));
+    public static final RegistryObject<Block> PINK_WOOL_SLAB = registerBlock("pink_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.PINK_WOOL), 60, 30));
+    public static final RegistryObject<Block> GRAY_WOOL_STAIRS = registerBlock("gray_wool_stairs", () -> new FlammableStairBlock(Blocks.GRAY_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.GRAY_WOOL), 60, 30));
+    public static final RegistryObject<Block> GRAY_WOOL_SLAB = registerBlock("gray_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.GRAY_WOOL), 60, 30));
+    public static final RegistryObject<Block> LIGHT_GRAY_WOOL_STAIRS = registerBlock("light_gray_wool_stairs", () -> new FlammableStairBlock(Blocks.LIGHT_GRAY_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.LIGHT_GRAY_WOOL), 60, 30));
+    public static final RegistryObject<Block> LIGHT_GRAY_WOOL_SLAB = registerBlock("light_gray_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.LIGHT_GRAY_WOOL), 60, 30));
+    public static final RegistryObject<Block> BROWN_WOOL_STAIRS = registerBlock("brown_wool_stairs", () -> new FlammableStairBlock(Blocks.BROWN_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BROWN_WOOL), 60, 30));
+    public static final RegistryObject<Block> BROWN_WOOL_SLAB = registerBlock("brown_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.BROWN_WOOL), 60, 30));
+    public static final RegistryObject<Block> WHITE_WOOL_STAIRS = registerBlock("white_wool_stairs", () -> new FlammableStairBlock(Blocks.WHITE_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL), 60, 30));
+    public static final RegistryObject<Block> WHITE_WOOL_SLAB = registerBlock("white_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.WHITE_WOOL), 60, 30));
+    public static final RegistryObject<Block> BLACK_WOOL_STAIRS = registerBlock("black_wool_stairs", () -> new FlammableStairBlock(Blocks.BLACK_WOOL.defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), 60, 30));
+    public static final RegistryObject<Block> BLACK_WOOL_SLAB = registerBlock("black_wool_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.BLACK_WOOL), 60, 30));
 
 
     public static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {

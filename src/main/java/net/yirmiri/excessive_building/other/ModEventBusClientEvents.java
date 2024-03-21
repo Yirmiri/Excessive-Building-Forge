@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.event;
+package net.yirmiri.excessive_building.other;
 
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
