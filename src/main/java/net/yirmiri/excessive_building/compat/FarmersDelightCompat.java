@@ -13,11 +13,11 @@ import vectorwing.farmersdelight.common.item.DrinkableItem;
 
 public class FarmersDelightCompat {
 
-    public static final RegistryObject<Block> ANCIENT_CABINET = EBBlocks.registerBlock("ancient_cabinet",
-            () -> new CabinetBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get())));
+    //BLOCKS
+    public static final RegistryObject<Block> ANCIENT_CABINET = EBBlocks.registerBlock("ancient_cabinet", () -> new CabinetBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get())));
 
-    public static final RegistryObject<Item> ANCIENT_CIDER = EBItems.ITEMS.register("ancient_cider",
-            () -> new DrinkableItem(new Item.Properties().food(EBProperties.ANCIENT_CIDER)));
+    //FOODS
+    public static final RegistryObject<Item> ANCIENT_CIDER = EBItems.ITEMS.register("ancient_cider", () -> new DrinkableItem(new Item.Properties().food(EBProperties.Foods.ANCIENT_CIDER)));
 
 
     public static void register(IEventBus eventBus) {

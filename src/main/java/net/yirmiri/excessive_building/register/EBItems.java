@@ -26,7 +26,7 @@ public class EBItems {
     public static final RegistryObject<Item> MAPLE_HANGING_SIGN = ITEMS.register("maple_hanging_sign", () -> new HangingSignItem(EBBlocks.MAPLE_HANGING_SIGN.get(), EBBlocks.MAPLE_WALL_HANGING_SIGN.get(), new Item.Properties().stacksTo(16)));
 
     //MISC
-    public static final RegistryObject<Item> ANCIENT_FRUIT = ITEMS.register("ancient_fruit", () -> new Item(new Item.Properties().food(EBProperties.ANCIENT_FRUIT)));
+    public static final RegistryObject<Item> ANCIENT_FRUIT = ITEMS.register("ancient_fruit", () -> new Item(new Item.Properties().food(EBProperties.Foods.ANCIENT_FRUIT)));
     public static final RegistryObject<Item> ALGAE = ITEMS.register("algae", () -> new PlaceOnWaterBlockItem(EBBlocks.ALGAE_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<Item> EXCESSIVE_BANNER_PATTERN = ITEMS.register("excessive_banner_pattern", () -> new BannerPatternItem(EBBannerTagProvider.EXCESSIVE_BANNER_PATTERN, (new Item.Properties().stacksTo(1))));
 
