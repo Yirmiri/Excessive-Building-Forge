@@ -41,8 +41,9 @@ import java.util.List;
 public class ExcessiveBuilding {
     public static final String MODID = "excessive_building";
 
-    //Capes For Devs and Contributors of an Azurune mod
+    //Capes For devs, contributors, and supporters of Excessive Building
     public static final List<String> AZURUNE = List.of("Dev", "Yirmiri", "Nullmiri"); //Developers
+    public static final List<String> COTTON_CANDY = List.of("Milkyfur"); //Artist
     public static final List<String> RU_RU_TRANSLATORS = List.of("BrickerNick"); //Russian Translators
     public static final List<String> UK_UA_TRANSLATORS = List.of("Unroman"); //Ukrainian Translators
     public static final List<String> CONTRIBUTORS = List.of(); //Contributors

@@ -22,6 +22,7 @@ public abstract class AbstractClientPlayerMixin extends Player {
     public void getCloakTextureLocation(CallbackInfoReturnable<ResourceLocation> cir) {
         String username = this.getDisplayName().getString();
         if (ExcessiveBuilding.AZURUNE.contains(username)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/azurune.png"));
+        if (ExcessiveBuilding.COTTON_CANDY.contains(username)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/cotton_candy.png"));
         if (ExcessiveBuilding.RU_RU_TRANSLATORS.contains(username)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/eb_contributors_ru_ru.png"));
         if (ExcessiveBuilding.UK_UA_TRANSLATORS.contains(username)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/eb_contributors_uk_ua.png"));
         if (ExcessiveBuilding.CONTRIBUTORS.contains(username)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/eb_contributors.png"));
