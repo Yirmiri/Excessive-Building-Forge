@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/knitted_light_blue_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/knitted_light_blue_wool"
+    },
+    "type=top": {
+      "model": "excessive_building:block/knitted_light_blue_slab_top"
+    }
+  }
+}

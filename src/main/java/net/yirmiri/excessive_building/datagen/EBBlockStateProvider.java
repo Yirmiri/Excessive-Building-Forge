@@ -290,28 +290,72 @@ public class EBBlockStateProvider extends BlockStateProvider {
         doorBlockWithRenderType(((DoorBlock) EBBlocks.IRON_BAR_DOOR.get()), modLoc("block/iron_bar_door_bottom"), modLoc("block/iron_bar_door_top"), "cutout");
         trapdoorBlockWithRenderType(((TrapDoorBlock) EBBlocks.IRON_BAR_TRAPDOOR.get()), modLoc("block/iron_bar_trapdoor"), true, "cutout");
 
-        blockWithItem(EBBlocks.KNITTED_RED_WOOL);
-        stairsBlock(((StairBlock) EBBlocks.KNITTED_RED_STAIRS.get()), blockTexture(EBBlocks.KNITTED_RED_WOOL.get()));
-        slabBlock(((SlabBlock) EBBlocks.KNITTED_RED_SLAB.get()), blockTexture(EBBlocks.KNITTED_RED_WOOL.get()), blockTexture(EBBlocks.KNITTED_RED_WOOL.get()));
-
-        blockWithItem(EBBlocks.KNITTED_CYAN_WOOL);
-        stairsBlock(((StairBlock) EBBlocks.KNITTED_CYAN_STAIRS.get()), blockTexture(EBBlocks.KNITTED_CYAN_WOOL.get()));
-        slabBlock(((SlabBlock) EBBlocks.KNITTED_CYAN_SLAB.get()), blockTexture(EBBlocks.KNITTED_CYAN_WOOL.get()), blockTexture(EBBlocks.KNITTED_CYAN_WOOL.get()));
+        blockWithItem(EBBlocks.BUDDING_MIRALEN_BLOCK);
+        blockWithItem(EBBlocks.GOLDEN_BIRCH_LEAVES);
 
         blockWithItem(EBBlocks.KNITTED_BLACK_WOOL);
         stairsBlock(((StairBlock) EBBlocks.KNITTED_BLACK_STAIRS.get()), blockTexture(EBBlocks.KNITTED_BLACK_WOOL.get()));
         slabBlock(((SlabBlock) EBBlocks.KNITTED_BLACK_SLAB.get()), blockTexture(EBBlocks.KNITTED_BLACK_WOOL.get()), blockTexture(EBBlocks.KNITTED_BLACK_WOOL.get()));
 
-        blockWithItem(EBBlocks.KNITTED_PURPLE_WOOL);
-        stairsBlock(((StairBlock) EBBlocks.KNITTED_PURPLE_STAIRS.get()), blockTexture(EBBlocks.KNITTED_PURPLE_WOOL.get()));
-        slabBlock(((SlabBlock) EBBlocks.KNITTED_PURPLE_SLAB.get()), blockTexture(EBBlocks.KNITTED_PURPLE_WOOL.get()), blockTexture(EBBlocks.KNITTED_PURPLE_WOOL.get()));
+        blockWithItem(EBBlocks.KNITTED_LIGHT_GRAY_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_LIGHT_GRAY_STAIRS.get()), blockTexture(EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_LIGHT_GRAY_SLAB.get()), blockTexture(EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get()), blockTexture(EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get()));
+
+        blockWithItem(EBBlocks.KNITTED_GRAY_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_GRAY_STAIRS.get()), blockTexture(EBBlocks.KNITTED_GRAY_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_GRAY_SLAB.get()), blockTexture(EBBlocks.KNITTED_GRAY_WOOL.get()), blockTexture(EBBlocks.KNITTED_GRAY_WOOL.get()));
+
+        blockWithItem(EBBlocks.KNITTED_WHITE_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_WHITE_STAIRS.get()), blockTexture(EBBlocks.KNITTED_WHITE_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_WHITE_SLAB.get()), blockTexture(EBBlocks.KNITTED_WHITE_WOOL.get()), blockTexture(EBBlocks.KNITTED_WHITE_WOOL.get()));
+
+        blockWithItem(EBBlocks.KNITTED_BROWN_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_BROWN_STAIRS.get()), blockTexture(EBBlocks.KNITTED_BROWN_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_BROWN_SLAB.get()), blockTexture(EBBlocks.KNITTED_BROWN_WOOL.get()), blockTexture(EBBlocks.KNITTED_BROWN_WOOL.get()));
+
+        blockWithItem(EBBlocks.KNITTED_RED_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_RED_STAIRS.get()), blockTexture(EBBlocks.KNITTED_RED_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_RED_SLAB.get()), blockTexture(EBBlocks.KNITTED_RED_WOOL.get()), blockTexture(EBBlocks.KNITTED_RED_WOOL.get()));
+
+        blockWithItem(EBBlocks.KNITTED_ORANGE_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_ORANGE_STAIRS.get()), blockTexture(EBBlocks.KNITTED_ORANGE_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_ORANGE_SLAB.get()), blockTexture(EBBlocks.KNITTED_ORANGE_WOOL.get()), blockTexture(EBBlocks.KNITTED_ORANGE_WOOL.get()));
+
+        blockWithItem(EBBlocks.KNITTED_YELLOW_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_YELLOW_STAIRS.get()), blockTexture(EBBlocks.KNITTED_YELLOW_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_YELLOW_SLAB.get()), blockTexture(EBBlocks.KNITTED_YELLOW_WOOL.get()), blockTexture(EBBlocks.KNITTED_YELLOW_WOOL.get()));
+
+        blockWithItem(EBBlocks.KNITTED_LIME_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_LIME_STAIRS.get()), blockTexture(EBBlocks.KNITTED_LIME_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_LIME_SLAB.get()), blockTexture(EBBlocks.KNITTED_LIME_WOOL.get()), blockTexture(EBBlocks.KNITTED_LIME_WOOL.get()));
+
+        blockWithItem(EBBlocks.KNITTED_GREEN_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_GREEN_STAIRS.get()), blockTexture(EBBlocks.KNITTED_GREEN_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_GREEN_SLAB.get()), blockTexture(EBBlocks.KNITTED_GREEN_WOOL.get()), blockTexture(EBBlocks.KNITTED_GREEN_WOOL.get()));
+
+        blockWithItem(EBBlocks.KNITTED_CYAN_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_CYAN_STAIRS.get()), blockTexture(EBBlocks.KNITTED_CYAN_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_CYAN_SLAB.get()), blockTexture(EBBlocks.KNITTED_CYAN_WOOL.get()), blockTexture(EBBlocks.KNITTED_CYAN_WOOL.get()));
+
+        blockWithItem(EBBlocks.KNITTED_LIGHT_BLUE_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_LIGHT_BLUE_STAIRS.get()), blockTexture(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_LIGHT_BLUE_SLAB.get()), blockTexture(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get()), blockTexture(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get()));
 
         blockWithItem(EBBlocks.KNITTED_BLUE_WOOL);
         stairsBlock(((StairBlock) EBBlocks.KNITTED_BLUE_STAIRS.get()), blockTexture(EBBlocks.KNITTED_BLUE_WOOL.get()));
         slabBlock(((SlabBlock) EBBlocks.KNITTED_BLUE_SLAB.get()), blockTexture(EBBlocks.KNITTED_BLUE_WOOL.get()), blockTexture(EBBlocks.KNITTED_BLUE_WOOL.get()));
 
-        blockWithItem(EBBlocks.BUDDING_MIRALEN_BLOCK);
-        blockWithItem(EBBlocks.GOLDEN_BIRCH_LEAVES);
+        blockWithItem(EBBlocks.KNITTED_PURPLE_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_PURPLE_STAIRS.get()), blockTexture(EBBlocks.KNITTED_PURPLE_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_PURPLE_SLAB.get()), blockTexture(EBBlocks.KNITTED_PURPLE_WOOL.get()), blockTexture(EBBlocks.KNITTED_PURPLE_WOOL.get()));
+
+        blockWithItem(EBBlocks.KNITTED_MAGENTA_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_MAGENTA_STAIRS.get()), blockTexture(EBBlocks.KNITTED_MAGENTA_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_MAGENTA_SLAB.get()), blockTexture(EBBlocks.KNITTED_MAGENTA_WOOL.get()), blockTexture(EBBlocks.KNITTED_MAGENTA_WOOL.get()));
+
+        blockWithItem(EBBlocks.KNITTED_PINK_WOOL);
+        stairsBlock(((StairBlock) EBBlocks.KNITTED_PINK_STAIRS.get()), blockTexture(EBBlocks.KNITTED_PINK_WOOL.get()));
+        slabBlock(((SlabBlock) EBBlocks.KNITTED_PINK_SLAB.get()), blockTexture(EBBlocks.KNITTED_PINK_WOOL.get()), blockTexture(EBBlocks.KNITTED_PINK_WOOL.get()));
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

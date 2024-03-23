@@ -216,8 +216,44 @@ public class EBItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(EBBlocks.KNITTED_RED_STAIRS);
         evenSimplerBlockItem(EBBlocks.KNITTED_RED_SLAB);
 
+        evenSimplerBlockItem(EBBlocks.KNITTED_ORANGE_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_ORANGE_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_YELLOW_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_YELLOW_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_LIME_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_LIME_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_GREEN_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_GREEN_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_BLUE_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_BLUE_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_LIGHT_BLUE_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_LIGHT_BLUE_SLAB);
+
         evenSimplerBlockItem(EBBlocks.KNITTED_CYAN_STAIRS);
         evenSimplerBlockItem(EBBlocks.KNITTED_CYAN_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_BLUE_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_BLUE_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_PINK_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_PINK_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_MAGENTA_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_MAGENTA_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_WHITE_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_WHITE_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_GRAY_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_GRAY_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_LIGHT_GRAY_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_LIGHT_GRAY_SLAB);
 
         evenSimplerBlockItem(EBBlocks.KNITTED_BLACK_STAIRS);
         evenSimplerBlockItem(EBBlocks.KNITTED_BLACK_SLAB);
@@ -225,8 +261,8 @@ public class EBItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(EBBlocks.KNITTED_PURPLE_STAIRS);
         evenSimplerBlockItem(EBBlocks.KNITTED_PURPLE_SLAB);
 
-        evenSimplerBlockItem(EBBlocks.KNITTED_BLUE_STAIRS);
-        evenSimplerBlockItem(EBBlocks.KNITTED_BLUE_SLAB);
+        evenSimplerBlockItem(EBBlocks.KNITTED_BROWN_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_BROWN_SLAB);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

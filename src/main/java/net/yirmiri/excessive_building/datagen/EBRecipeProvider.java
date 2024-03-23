@@ -2245,6 +2245,149 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .pattern("@@@")
                 .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(recipeOutput);
 
+        fourforfourBuilder(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get(), Ingredient.of(Blocks.LIGHT_BLUE_WOOL))
+                .unlockedBy(getHasName(Blocks.LIGHT_BLUE_WOOL), has(Blocks.LIGHT_BLUE_WOOL)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_LIGHT_BLUE_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get()), has(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get())).save(recipeOutput);
+
+        stairBuilder(EBBlocks.KNITTED_LIGHT_BLUE_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get()), has(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get())).save(recipeOutput);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_LIGHT_BLUE_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get()), has(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get())).save(recipeOutput);
+
+        fourforfourBuilder(EBBlocks.KNITTED_MAGENTA_WOOL.get(), Ingredient.of(Blocks.MAGENTA_WOOL))
+                .unlockedBy(getHasName(Blocks.MAGENTA_WOOL), has(Blocks.MAGENTA_WOOL)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_MAGENTA_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_MAGENTA_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_MAGENTA_WOOL.get()), has(EBBlocks.KNITTED_MAGENTA_WOOL.get())).save(recipeOutput);
+
+        stairBuilder(EBBlocks.KNITTED_MAGENTA_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_MAGENTA_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_MAGENTA_WOOL.get()), has(EBBlocks.KNITTED_MAGENTA_WOOL.get())).save(recipeOutput);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_MAGENTA_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_MAGENTA_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_MAGENTA_WOOL.get()), has(EBBlocks.KNITTED_MAGENTA_WOOL.get())).save(recipeOutput);
+
+        fourforfourBuilder(EBBlocks.KNITTED_PINK_WOOL.get(), Ingredient.of(Blocks.PINK_WOOL))
+                .unlockedBy(getHasName(Blocks.PINK_WOOL), has(Blocks.PINK_WOOL)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_PINK_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_PINK_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_PINK_WOOL.get()), has(EBBlocks.KNITTED_PINK_WOOL.get())).save(recipeOutput);
+
+        stairBuilder(EBBlocks.KNITTED_PINK_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_PINK_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_PINK_WOOL.get()), has(EBBlocks.KNITTED_PINK_WOOL.get())).save(recipeOutput);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_PINK_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_PINK_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_PINK_WOOL.get()), has(EBBlocks.KNITTED_PINK_WOOL.get())).save(recipeOutput);
+
+        fourforfourBuilder(EBBlocks.KNITTED_ORANGE_WOOL.get(), Ingredient.of(Blocks.ORANGE_WOOL))
+                .unlockedBy(getHasName(Blocks.ORANGE_WOOL), has(Blocks.ORANGE_WOOL)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_ORANGE_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_ORANGE_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_ORANGE_WOOL.get()), has(EBBlocks.KNITTED_ORANGE_WOOL.get())).save(recipeOutput);
+
+        stairBuilder(EBBlocks.KNITTED_ORANGE_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_ORANGE_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_ORANGE_WOOL.get()), has(EBBlocks.KNITTED_ORANGE_WOOL.get())).save(recipeOutput);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_ORANGE_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_ORANGE_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_ORANGE_WOOL.get()), has(EBBlocks.KNITTED_ORANGE_WOOL.get())).save(recipeOutput);
+
+        fourforfourBuilder(EBBlocks.KNITTED_YELLOW_WOOL.get(), Ingredient.of(Blocks.YELLOW_WOOL))
+                .unlockedBy(getHasName(Blocks.YELLOW_WOOL), has(Blocks.YELLOW_WOOL)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_YELLOW_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_YELLOW_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_YELLOW_WOOL.get()), has(EBBlocks.KNITTED_YELLOW_WOOL.get())).save(recipeOutput);
+
+        stairBuilder(EBBlocks.KNITTED_YELLOW_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_YELLOW_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_YELLOW_WOOL.get()), has(EBBlocks.KNITTED_YELLOW_WOOL.get())).save(recipeOutput);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_YELLOW_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_YELLOW_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_YELLOW_WOOL.get()), has(EBBlocks.KNITTED_YELLOW_WOOL.get())).save(recipeOutput);
+
+        fourforfourBuilder(EBBlocks.KNITTED_LIME_WOOL.get(), Ingredient.of(Blocks.LIME_WOOL))
+                .unlockedBy(getHasName(Blocks.LIME_WOOL), has(Blocks.LIME_WOOL)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_LIME_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_LIME_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_LIME_WOOL.get()), has(EBBlocks.KNITTED_LIME_WOOL.get())).save(recipeOutput);
+
+        stairBuilder(EBBlocks.KNITTED_LIME_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_LIME_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_LIME_WOOL.get()), has(EBBlocks.KNITTED_LIME_WOOL.get())).save(recipeOutput);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_LIME_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_LIME_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_LIME_WOOL.get()), has(EBBlocks.KNITTED_LIME_WOOL.get())).save(recipeOutput);
+
+        fourforfourBuilder(EBBlocks.KNITTED_GREEN_WOOL.get(), Ingredient.of(Blocks.GREEN_WOOL))
+                .unlockedBy(getHasName(Blocks.GREEN_WOOL), has(Blocks.GREEN_WOOL)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_GREEN_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_GREEN_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_GREEN_WOOL.get()), has(EBBlocks.KNITTED_GREEN_WOOL.get())).save(recipeOutput);
+
+        stairBuilder(EBBlocks.KNITTED_GREEN_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_GREEN_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_GREEN_WOOL.get()), has(EBBlocks.KNITTED_GREEN_WOOL.get())).save(recipeOutput);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_GREEN_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_GREEN_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_GREEN_WOOL.get()), has(EBBlocks.KNITTED_GREEN_WOOL.get())).save(recipeOutput);
+
+        fourforfourBuilder(EBBlocks.KNITTED_WHITE_WOOL.get(), Ingredient.of(Blocks.WHITE_WOOL))
+                .unlockedBy(getHasName(Blocks.WHITE_WOOL), has(Blocks.WHITE_WOOL)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_WHITE_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_WHITE_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_WHITE_WOOL.get()), has(EBBlocks.KNITTED_WHITE_WOOL.get())).save(recipeOutput);
+
+        stairBuilder(EBBlocks.KNITTED_WHITE_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_WHITE_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_WHITE_WOOL.get()), has(EBBlocks.KNITTED_WHITE_WOOL.get())).save(recipeOutput);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_WHITE_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_WHITE_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_WHITE_WOOL.get()), has(EBBlocks.KNITTED_WHITE_WOOL.get())).save(recipeOutput);
+
+        fourforfourBuilder(EBBlocks.KNITTED_GRAY_WOOL.get(), Ingredient.of(Blocks.GRAY_WOOL))
+                .unlockedBy(getHasName(Blocks.GRAY_WOOL), has(Blocks.GRAY_WOOL)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_GRAY_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_GRAY_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_GRAY_WOOL.get()), has(EBBlocks.KNITTED_GRAY_WOOL.get())).save(recipeOutput);
+
+        stairBuilder(EBBlocks.KNITTED_GRAY_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_GRAY_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_GRAY_WOOL.get()), has(EBBlocks.KNITTED_GRAY_WOOL.get())).save(recipeOutput);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_GRAY_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_GRAY_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_GRAY_WOOL.get()), has(EBBlocks.KNITTED_GRAY_WOOL.get())).save(recipeOutput);
+
+        fourforfourBuilder(EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get(), Ingredient.of(Blocks.LIGHT_GRAY_WOOL))
+                .unlockedBy(getHasName(Blocks.LIGHT_GRAY_WOOL), has(Blocks.LIGHT_GRAY_WOOL)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_LIGHT_GRAY_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get()), has(EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get())).save(recipeOutput);
+
+        stairBuilder(EBBlocks.KNITTED_LIGHT_GRAY_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get()), has(EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get())).save(recipeOutput);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_LIGHT_GRAY_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get()), has(EBBlocks.KNITTED_LIGHT_GRAY_WOOL.get())).save(recipeOutput);
+
+        fourforfourBuilder(EBBlocks.KNITTED_BROWN_WOOL.get(), Ingredient.of(Blocks.BROWN_WOOL))
+                .unlockedBy(getHasName(Blocks.BROWN_WOOL), has(Blocks.BROWN_WOOL)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_BROWN_CARPET.get(), 3)
+                .define('#', EBBlocks.KNITTED_BROWN_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_BROWN_WOOL.get()), has(EBBlocks.KNITTED_BROWN_WOOL.get())).save(recipeOutput);
+
+        stairBuilder(EBBlocks.KNITTED_BROWN_STAIRS.get(), Ingredient.of(EBBlocks.KNITTED_BROWN_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_BROWN_WOOL.get()), has(EBBlocks.KNITTED_BROWN_WOOL.get())).save(recipeOutput);
+
+        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_BROWN_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_BROWN_WOOL.get()))
+                .unlockedBy(getHasName(EBBlocks.KNITTED_BROWN_WOOL.get()), has(EBBlocks.KNITTED_BROWN_WOOL.get())).save(recipeOutput);
+
     }
 
     protected static RecipeBuilder fourforfourBuilder(ItemLike itemLike, Ingredient ingredient) {
