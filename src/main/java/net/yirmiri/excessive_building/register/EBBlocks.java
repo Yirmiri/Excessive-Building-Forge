@@ -450,14 +450,8 @@ public class EBBlocks {
     public static final RegistryObject<Block> FIERY_GLASS_PANE = registerBlock("fiery_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.GLASS).noOcclusion()));
     public static final RegistryObject<Block> AMETHYST_GLASS_PANE = registerBlock("amethyst_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.GLASS).noOcclusion()));
     public static final RegistryObject<Block> PRISMARINE_GLASS_PANE = registerBlock("prismarine_glass_pane", () -> new IronBarsBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).sound(SoundType.GLASS).noOcclusion()));
-
-    public static final RegistryObject<Block> AMETHYST_LAMP = registerBlock("amethyst_lamp",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN)
-                    .strength(0.3f).explosionResistance(0.3f).sound(SoundType.GLASS).lightLevel(state -> 15)));
-
-    public static final RegistryObject<Block> FIERY_LAMP = registerBlock("fiery_lamp",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN)
-                    .strength(0.3f).explosionResistance(0.3f).sound(SoundType.GLASS).lightLevel(state -> 11)));
+    public static final RegistryObject<Block> AMETHYST_LAMP = registerBlock("amethyst_lamp", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> FIERY_LAMP = registerBlock("fiery_lamp", () -> new Block(BlockBehaviour.Properties.copy(Blocks.SEA_LANTERN).lightLevel(state -> 11)));
 
     public static final RegistryObject<Block> RAINBOW_STAINED_GLASS = registerBlock("rainbow_stained_glass",
             () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.RED_STAINED_GLASS).requiresCorrectToolForDrops()));
