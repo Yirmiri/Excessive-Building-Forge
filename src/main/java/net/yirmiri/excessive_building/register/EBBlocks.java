@@ -756,7 +756,7 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> NETHER_BRICKSHELF = registerBlock("nether_brickshelf",
             () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)
-                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava(), 30, 20)); //i was gonna leave a comment here making fun for some shitty flammable code but i managed to clean it up, thank god (update like a week later; i managed to clean up the shitty clean up of my shitty code)
+                    .strength(2f).explosionResistance(3f).sound(SoundType.WOOD).ignitedByLava(), 30, 20));
 
     public static final RegistryObject<Block> CRACKED_BRICKS = registerBlock("cracked_bricks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS).requiresCorrectToolForDrops()));

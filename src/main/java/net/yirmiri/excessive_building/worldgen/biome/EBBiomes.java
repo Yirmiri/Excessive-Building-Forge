@@ -30,9 +30,7 @@ public class EBBiomes {
         context.register(GOLDEN_BIRCH_FOREST, goldenBirchForest(context));
     }
 
-    //======================================================================================================
     //GOLDEN BIRCH FOREST BIOME
-    //======================================================================================================
     public static Biome goldenBirchForest(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
@@ -75,9 +73,7 @@ public class EBBiomes {
                         .backgroundMusic(Musics.createGameMusic(SoundEvents.MUSIC_BIOME_FOREST)).build()).build();
     }
 
-    //======================================================================================================
     //MAPLE FOREST BIOME
-    //======================================================================================================
     public static Biome mapleForest(BootstapContext<Biome> context) {
         MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
 
