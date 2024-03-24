@@ -360,6 +360,8 @@ public class EBBlockStateProvider extends BlockStateProvider {
         blockWithItem(EBBlocks.KNITTED_RAINBOW_WOOL);
         stairsBlock(((StairBlock) EBBlocks.KNITTED_RAINBOW_STAIRS.get()), blockTexture(EBBlocks.KNITTED_RAINBOW_WOOL.get()));
         slabBlock(((SlabBlock) EBBlocks.KNITTED_RAINBOW_SLAB.get()), blockTexture(EBBlocks.KNITTED_RAINBOW_WOOL.get()), blockTexture(EBBlocks.KNITTED_RAINBOW_WOOL.get()));
+
+        blockWithItem(EBBlocks.DRMANGOTEA);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {
