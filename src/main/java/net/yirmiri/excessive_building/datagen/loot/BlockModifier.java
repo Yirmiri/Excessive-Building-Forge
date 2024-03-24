@@ -15,13 +15,13 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Supplier;
 
-public class AddBlockModifier extends LootModifier {
-    public static final Supplier<Codec<AddBlockModifier>> CODEC = Suppliers.memoize(() -> RecordCodecBuilder.create
-            (inst -> codecStart(inst).and(ForgeRegistries.BLOCKS.getCodec().fieldOf("block").forGetter(m -> m.block)).apply(inst, AddBlockModifier::new)));
+public class BlockModifier extends LootModifier {
+    public static final Supplier<Codec<BlockModifier>> CODEC = Suppliers.memoize(() -> RecordCodecBuilder.create
+            (inst -> codecStart(inst).and(ForgeRegistries.BLOCKS.getCodec().fieldOf("block").forGetter(m -> m.block)).apply(inst, BlockModifier::new)));
 
     private final Block block;
 
-    public AddBlockModifier(LootItemCondition[] conditionsIn, Block block) {
+    public BlockModifier(LootItemCondition[] conditionsIn, Block block) {
         super(conditionsIn);
         this.block = block;
     }

@@ -2388,6 +2388,18 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
         slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_BROWN_SLAB.get(), Ingredient.of(EBBlocks.KNITTED_BROWN_WOOL.get()))
                 .unlockedBy(getHasName(EBBlocks.KNITTED_BROWN_WOOL.get()), has(EBBlocks.KNITTED_BROWN_WOOL.get())).save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.KNITTED_RAINBOW_WOOL.get(), 9)
+                .define('R', EBBlocks.KNITTED_RED_WOOL.get()).define('O', EBBlocks.KNITTED_ORANGE_WOOL.get()).define('Y', EBBlocks.KNITTED_YELLOW_WOOL.get())
+                .define('L', EBBlocks.KNITTED_LIME_WOOL.get()).define('G', EBBlocks.KNITTED_GREEN_WOOL.get()).define('C', EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get())
+                .define('B', EBBlocks.KNITTED_BLUE_WOOL.get()).define('P', EBBlocks.KNITTED_PURPLE_WOOL.get()).define('I', EBBlocks.KNITTED_PINK_WOOL.get())
+                .pattern("ROY")
+                .pattern("LGC")
+                .pattern("BPI").unlockedBy(getHasName(EBBlocks.KNITTED_RAINBOW_WOOL.get()), has(EBBlocks.KNITTED_RAINBOW_WOOL.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.KNITTED_RAINBOW_CARPET.get(), 6)
+                .define('#', EBBlocks.KNITTED_RAINBOW_WOOL.get())
+                .pattern("##").unlockedBy(getHasName(EBBlocks.KNITTED_RAINBOW_WOOL.get()), has(EBBlocks.KNITTED_RAINBOW_WOOL.get())).save(recipeOutput);
+
     }
 
     protected static RecipeBuilder fourforfourBuilder(ItemLike itemLike, Ingredient ingredient) {

@@ -263,6 +263,9 @@ public class EBItemModelProvider extends ItemModelProvider {
 
         evenSimplerBlockItem(EBBlocks.KNITTED_BROWN_STAIRS);
         evenSimplerBlockItem(EBBlocks.KNITTED_BROWN_SLAB);
+
+        evenSimplerBlockItem(EBBlocks.KNITTED_RAINBOW_STAIRS);
+        evenSimplerBlockItem(EBBlocks.KNITTED_RAINBOW_SLAB);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {

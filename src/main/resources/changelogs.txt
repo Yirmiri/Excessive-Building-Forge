@@ -7,12 +7,13 @@ Literally just a secret .txt file of every single update's changelog
 Version Release v2.1.4.2 (Forge/NeoForge: 1.20.1)
 
   Additions
-•   Added all missing knitted wool variants
+•   Added all missing knitted wool variants (some textures thanks to @Milk_Furr)
 •   Added a bunch of missing recipes
 •   Added ru_ru translations (thanks to @bricker_man)
 
   Changes
 •   Changed a SINGLE pixel on knitted blue wool
+•   Changed the texture of asphalt
 •   Changed the textures of iron and gold grates
 •   Slightly tweaked fiery & miralen trim colors
 •   Slightly tweaked kyanite tiles texture

@@ -1,4 +1,4 @@
-// 1.20.1	2024-03-22T22:34:06.7773998	Item Models: excessive_building
+// 1.20.1	2024-03-23T16:29:47.2494601	Item Models: excessive_building
 74580f58ea7f295c204b1bc122f4624f12669801 assets/excessive_building/models/item/ancient_button.json
 6a4c444f4da54ad5b7926cb1777d718ccfde69e9 assets/excessive_building/models/item/ancient_fence.json
 344e43dfd588d839ca9fb1eff2af2be99024c464 assets/excessive_building/models/item/ancient_fence_gate.json
@@ -58,6 +58,8 @@ c2652b44d3d5a94381d12164b61f26493dd929b3 assets/excessive_building/models/item/k
 3a735035808d4e782329e899afe9086a4a09ff45 assets/excessive_building/models/item/knitted_pink_stairs.json
 4276a1a655af47584d3ecb5ead58fdcfd0b2b6d8 assets/excessive_building/models/item/knitted_purple_slab.json
 cef87ee6fdfcacaaeac89d589e9834fa95664b36 assets/excessive_building/models/item/knitted_purple_stairs.json
+c43b2741d2a769a6e60440cea36005930b3ec3f8 assets/excessive_building/models/item/knitted_rainbow_slab.json
+d2034aad772f9660e76263307f74ac6ea48ddace assets/excessive_building/models/item/knitted_rainbow_stairs.json
 6c4862d8e7cab083faab33c69fe9da825d38ae1c assets/excessive_building/models/item/knitted_red_slab.json
 0ce243ac85fa8d55c02fa5a0899f8db35020df3c assets/excessive_building/models/item/knitted_red_stairs.json
 55295124a6dd84f7435125a77ee6d29f3406ff5c assets/excessive_building/models/item/knitted_white_slab.json

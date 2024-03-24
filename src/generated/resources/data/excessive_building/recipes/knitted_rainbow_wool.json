@@ -1,0 +1,43 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "B": {
+      "item": "excessive_building:knitted_blue_wool"
+    },
+    "C": {
+      "item": "excessive_building:knitted_light_blue_wool"
+    },
+    "G": {
+      "item": "excessive_building:knitted_green_wool"
+    },
+    "I": {
+      "item": "excessive_building:knitted_pink_wool"
+    },
+    "L": {
+      "item": "excessive_building:knitted_lime_wool"
+    },
+    "O": {
+      "item": "excessive_building:knitted_orange_wool"
+    },
+    "P": {
+      "item": "excessive_building:knitted_purple_wool"
+    },
+    "R": {
+      "item": "excessive_building:knitted_red_wool"
+    },
+    "Y": {
+      "item": "excessive_building:knitted_yellow_wool"
+    }
+  },
+  "pattern": [
+    "ROY",
+    "LGC",
+    "BPI"
+  ],
+  "result": {
+    "count": 9,
+    "item": "excessive_building:knitted_rainbow_wool"
+  },
+  "show_notification": true
+}

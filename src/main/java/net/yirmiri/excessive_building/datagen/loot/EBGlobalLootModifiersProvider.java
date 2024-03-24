@@ -16,7 +16,7 @@ public class EBGlobalLootModifiersProvider extends GlobalLootModifierProvider {
 
     @Override
     protected void start() {
-        add("ancient_sapling_from_sniffer", new AddBlockModifier(new LootItemCondition[] {
+        add("ancient_sapling_from_sniffer", new BlockModifier(new LootItemCondition[] {
                 new LootTableIdCondition.Builder(new ResourceLocation("gameplay/sniffer_digging")).build(),
         LootItemRandomChanceCondition.randomChance(0.25f).build()}, EBBlocks.ANCIENT_SAPLING.get()));
     }
