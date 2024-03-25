@@ -26,6 +26,7 @@ Version Release v2.1.4.2 (Forge/NeoForge: 1.20.1)
 •   Fixed ancient cabinets item model
 •   Fixed inconsistent hardness & blast protection values on blocks
 •   Fixed snow brick variants not requiring a shovel
+•   Removed duplicate translations which may have caused issues
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
