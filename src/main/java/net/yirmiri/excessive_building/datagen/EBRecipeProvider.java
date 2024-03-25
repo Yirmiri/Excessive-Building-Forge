@@ -2402,7 +2402,6 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBBlocks.DRMANGOTEA.get(), 1).requires(EBBlocks.KNITTED_CYAN_WOOL.get(), 1).requires(EBItems.ANCIENT_FRUIT.get())
                 .unlockedBy(getHasName(EBBlocks.DRMANGOTEA.get()), has(EBBlocks.DRMANGOTEA.get())).save(recipeOutput);
-
     }
 
     protected static RecipeBuilder fourforfourBuilder(ItemLike itemLike, Ingredient ingredient) {

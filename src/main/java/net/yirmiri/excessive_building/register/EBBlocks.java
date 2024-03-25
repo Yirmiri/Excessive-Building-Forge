@@ -135,6 +135,33 @@ public class EBBlocks {
     public static final RegistryObject<Block> CHISELED_SANDSTONE_BRICKS = registerBlock("chiseled_sandstone_bricks", () -> new Block(EBProperties.BlockProperties.ROUGH_SANDSTONE));
     public static final RegistryObject<Block> CHISELED_RED_SANDSTONE_BRICKS = registerBlock("chiseled_red_sandstone_bricks", () -> new Block(EBProperties.BlockProperties.ROUGH_RED_SANDSTONE));
     public static final RegistryObject<Block> CHISELED_SOUL_SANDSTONE_BRICKS = registerBlock("chiseled_soul_sandstone_bricks", () -> new Block(EBProperties.BlockProperties.ROUGH_SOUL_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_SANDSTONE = registerBlock("polished_sandstone", () -> new Block(EBProperties.BlockProperties.ROUGH_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_SANDSTONE_STAIRS = registerBlock("polished_sandstone_stairs", () -> new StairBlock(() -> EBBlocks.POLISHED_SANDSTONE.get().defaultBlockState(), EBProperties.BlockProperties.ROUGH_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_SANDSTONE_VERTICAL_STAIRS = registerBlock("polished_sandstone_vertical_stairs", () -> new Block(EBProperties.BlockProperties.ROUGH_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_SANDSTONE_SLAB = registerBlock("polished_sandstone_slab", () -> new SlabBlock(EBProperties.BlockProperties.ROUGH_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_SANDSTONE_WALL = registerBlock("polished_sandstone_wall", () -> new WallBlock(EBProperties.BlockProperties.ROUGH_SANDSTONE));
+    public static final RegistryObject<Block> DECORATED_SANDSTONE_BRICKS = registerBlock("decorated_sandstone_bricks", () -> new Block(EBProperties.BlockProperties.ROUGH_SANDSTONE));
+    public static final RegistryObject<Block> CARVED_SANDSTONE_BRICKS = registerBlock("carved_sandstone_bricks", () -> new Block(EBProperties.BlockProperties.ROUGH_SANDSTONE));
+    public static final RegistryObject<Block> SANDSTONEE_PILLAR = registerBlock("sandstone_pillar", () -> new RotatedPillarBlock(EBProperties.BlockProperties.ROUGH_SANDSTONE));
+    public static final RegistryObject<Block> SANDSTONE_PEDESTAL = registerBlock("sandstone_pedestal", () -> new PedestalBlock(EBProperties.BlockProperties.ROUGH_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_RED_SANDSTONE = registerBlock("polished_red_sandstone", () -> new Block(EBProperties.BlockProperties.ROUGH_RED_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_RED_SANDSTONE_STAIRS = registerBlock("polished_red_sandstone_stairs", () -> new StairBlock(() -> EBBlocks.POLISHED_RED_SANDSTONE.get().defaultBlockState(), EBProperties.BlockProperties.ROUGH_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_RED_SANDSTONE_VERTICAL_STAIRS = registerBlock("polished_red_sandstone_vertical_stairs", () -> new Block(EBProperties.BlockProperties.ROUGH_RED_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_RED_SANDSTONE_SLAB = registerBlock("polished_red_sandstone_slab", () -> new SlabBlock(EBProperties.BlockProperties.ROUGH_RED_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_RED_SANDSTONE_WALL = registerBlock("polished_red_sandstone_wall", () -> new WallBlock(EBProperties.BlockProperties.ROUGH_RED_SANDSTONE));
+    public static final RegistryObject<Block> DECORATED_RED_SANDSTONE_BRICKS = registerBlock("decorated_red_sandstone_bricks", () -> new Block(EBProperties.BlockProperties.ROUGH_RED_SANDSTONE));
+    public static final RegistryObject<Block> CARVED_RED_SANDSTONE_BRICKS = registerBlock("carved_red_sandstone_bricks", () -> new Block(EBProperties.BlockProperties.ROUGH_RED_SANDSTONE));
+    public static final RegistryObject<Block> RED_SANDSTONE_PILLAR = registerBlock("red_sandstone_pillar", () -> new RotatedPillarBlock(EBProperties.BlockProperties.ROUGH_RED_SANDSTONE));
+    public static final RegistryObject<Block> RED_SANDSTONE_PEDESTAL = registerBlock("red_sandstone_pedestal", () -> new PedestalBlock(EBProperties.BlockProperties.ROUGH_RED_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_SOUL_SANDSTONE = registerBlock("polished_soul_sandstone", () -> new Block(EBProperties.BlockProperties.ROUGH_SOUL_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_SOUL_SANDSTONE_STAIRS = registerBlock("polished_soul_sandstone_stairs", () -> new StairBlock(() -> EBBlocks.POLISHED_SOUL_SANDSTONE.get().defaultBlockState(), EBProperties.BlockProperties.ROUGH_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_SOUL_SANDSTONE_VERTICAL_STAIRS = registerBlock("polished_soul_sandstone_vertical_stairs", () -> new Block(EBProperties.BlockProperties.ROUGH_SOUL_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_SOUL_SANDSTONE_SLAB = registerBlock("polished_soul_sandstone_slab", () -> new SlabBlock(EBProperties.BlockProperties.ROUGH_SOUL_SANDSTONE));
+    public static final RegistryObject<Block> POLISHED_SOUL_SANDSTONE_WALL = registerBlock("polished_soul_sandstone_wall", () -> new WallBlock(EBProperties.BlockProperties.ROUGH_SOUL_SANDSTONE));
+    public static final RegistryObject<Block> DECORATED_SOUL_SANDSTONE_BRICKS = registerBlock("decorated_soul_sandstone_bricks", () -> new Block(EBProperties.BlockProperties.ROUGH_SOUL_SANDSTONE));
+    public static final RegistryObject<Block> CARVED_SOUL_SANDSTONE_BRICKS = registerBlock("carved_soul_sandstone_bricks", () -> new Block(EBProperties.BlockProperties.ROUGH_SOUL_SANDSTONE));
+    public static final RegistryObject<Block> SOUL_SANDSTONEE_PILLAR = registerBlock("soul_sandstone_pillar", () -> new RotatedPillarBlock(EBProperties.BlockProperties.ROUGH_SOUL_SANDSTONE));
+    public static final RegistryObject<Block> SOUL_SANDSTONE_PEDESTAL = registerBlock("soul_sandstone_pedestal", () -> new PedestalBlock(EBProperties.BlockProperties.ROUGH_SOUL_SANDSTONE));
 
     //BRIMSTONE
     public static final RegistryObject<Block> BRIMSTONE = registerBlock("brimstone", () -> new Block(EBProperties.BlockProperties.BRIMSTONE));

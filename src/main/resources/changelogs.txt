@@ -13,6 +13,7 @@ Version Release v2.1.4.2 (Forge/NeoForge: 1.20.1)
 
   Changes
 •   Changed a SINGLE pixel on knitted blue wool
+•   Changed the textures of all sandstone blocks in EB
 •   Changed the texture of asphalt
 •   Changed the textures of iron and gold grates
 •   Slightly tweaked chiseled planks to allow better tiling
