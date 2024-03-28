@@ -127,7 +127,7 @@ public class EBConfiguredFeatures {
 
         register(context, WILLOW_TREE, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(EBBlocks.WILLOW_LOG.get()),
                 new BendingTrunkPlacer(4, 2, 0, 3, UniformInt.of(1, 2)),
-                BlockStateProvider.simple(Blocks.OAK_LEAVES), new RandomSpreadFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), ConstantInt.of(2), 50),
+                BlockStateProvider.simple(EBBlocks.WILLOW_LEAVES.get()), new RandomSpreadFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), ConstantInt.of(2), 50),
                 new TwoLayersFeatureSize(1, 0, 1))).decorators(ImmutableList.of(new LeaveVineDecorator(0.25F))).build());
 
         register(context, RED_MAPLE_TREE, Feature.TREE, createFancyRed().build());
@@ -150,7 +150,7 @@ public class EBConfiguredFeatures {
                 new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.PUMPKIN)), List.of(Blocks.GRASS_BLOCK)));
 
         register(context, BRIMSTONE, Feature.ORE, new OreConfiguration(netherrackReplaceables,
-                EBBlocks.BRIMSTONE.get().defaultBlockState(), 64)); //vein size
+                EBBlocks.BRIMSTONE.get().defaultBlockState(), 48)); //vein size
 
         register(context, GOLDEN_BIRCH_TREE, Feature.TREE, createGoldenBirch().build());
         register(context, GOLDEN_BIRCH_TREE_BEES_01, Feature.TREE, createGoldenBirch().decorators(List.of(goldenBirchHiveDecorator)).build());

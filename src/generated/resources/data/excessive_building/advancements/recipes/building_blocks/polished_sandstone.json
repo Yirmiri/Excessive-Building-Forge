@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_soul_sandstone": {
+    "has_sandstone": {
       "conditions": {
         "items": [
           {
             "items": [
-              "excessive_building:soul_sandstone"
+              "minecraft:sandstone"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "excessive_building:soul_sandstone_bricks"
+        "recipe": "excessive_building:polished_sandstone"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_soul_sandstone",
+      "has_sandstone",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "excessive_building:soul_sandstone_bricks"
+      "excessive_building:polished_sandstone"
     ]
   },
   "sends_telemetry_event": false

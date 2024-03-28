@@ -627,21 +627,6 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .pattern("##")
                 .pattern("##").unlockedBy(getHasName(Blocks.MOSSY_COBBLESTONE), has(Blocks.MOSSY_COBBLESTONE)).save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SANDSTONE_BRICKS.get(), 2)
-                .define('#', Blocks.SANDSTONE).define('@', Blocks.SAND)
-                .pattern("#@")
-                .pattern("@#").unlockedBy(getHasName(Blocks.SANDSTONE), has(Blocks.SANDSTONE)).save(recipeOutput);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.RED_SANDSTONE_BRICKS.get(), 2)
-                .define('#', Blocks.RED_SANDSTONE).define('@', Blocks.RED_SAND)
-                .pattern("#@")
-                .pattern("@#").unlockedBy(getHasName(Blocks.RED_SANDSTONE), has(Blocks.RED_SANDSTONE)).save(recipeOutput);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SOUL_SANDSTONE_BRICKS.get(), 2)
-                .define('#', EBBlocks.SOUL_SANDSTONE.get()).define('@', Blocks.SOUL_SAND)
-                .pattern("#@")
-                .pattern("@#").unlockedBy(getHasName(EBBlocks.SOUL_SANDSTONE.get()), has(EBBlocks.SOUL_SANDSTONE.get())).save(recipeOutput);
-
         stairBuilder(EBBlocks.END_STONE_STAIRS.get(), Ingredient.of(Blocks.END_STONE))
                 .unlockedBy(getHasName(Blocks.END_STONE), has(Blocks.END_STONE)).save(recipeOutput);
 
@@ -2402,6 +2387,21 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBBlocks.DRMANGOTEA.get(), 1).requires(EBBlocks.KNITTED_CYAN_WOOL.get(), 1).requires(EBItems.ANCIENT_FRUIT.get())
                 .unlockedBy(getHasName(EBBlocks.DRMANGOTEA.get()), has(EBBlocks.DRMANGOTEA.get())).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_SANDSTONE.get(), 2)
+                .define('#', Blocks.SANDSTONE).define('@', Blocks.SAND)
+                .pattern("#@")
+                .pattern("@#").unlockedBy(getHasName(Blocks.SANDSTONE), has(Blocks.SANDSTONE)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_RED_SANDSTONE.get(), 2)
+                .define('#', Blocks.RED_SANDSTONE).define('@', Blocks.RED_SAND)
+                .pattern("#@")
+                .pattern("@#").unlockedBy(getHasName(Blocks.RED_SANDSTONE), has(Blocks.RED_SANDSTONE)).save(recipeOutput);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.POLISHED_SOUL_SANDSTONE.get(), 2)
+                .define('#', EBBlocks.SOUL_SANDSTONE.get()).define('@', Blocks.SOUL_SAND)
+                .pattern("#@")
+                .pattern("@#").unlockedBy(getHasName(EBBlocks.SOUL_SANDSTONE.get()), has(EBBlocks.SOUL_SANDSTONE.get())).save(recipeOutput);
     }
 
     protected static RecipeBuilder fourforfourBuilder(ItemLike itemLike, Ingredient ingredient) {

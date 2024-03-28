@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "excessive_building:red_sandstone_bricks"
+        "recipe": "excessive_building:polished_red_sandstone"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "excessive_building:red_sandstone_bricks"
+      "excessive_building:polished_red_sandstone"
     ]
   },
   "sends_telemetry_event": false

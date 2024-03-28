@@ -8,10 +8,13 @@ Version Release v2.1.4.2 (Forge/NeoForge: 1.20.1)
 
   Additions
 •   Added all missing knitted wool variants (some textures thanks to @Milk_Furr)
+•   Added willow leaves which makes willow saplings finally obtainable (texture by @Milk_Furr)
 •   Added a bunch of missing recipes
 •   Added ru_ru translations (thanks to @bricker_man)
 
   Changes
+•   Reduced spawn rates of Nether geodes
+•   Reduced the spawn rate and size of brimstone blobs, brimstone blobs can no longer spawn below y16
 •   Changed a SINGLE pixel on knitted blue wool
 •   Changed the textures of all sandstone blocks in EB
 •   Changed the texture of asphalt
@@ -19,6 +22,7 @@ Version Release v2.1.4.2 (Forge/NeoForge: 1.20.1)
 •   Slightly tweaked chiseled planks to allow better tiling
 •   Slightly tweaked fiery & miralen trim colors
 •   Slightly tweaked kyanite tiles texture
+•   Changed advancement names and descriptions to include references to other things I like :P
 
   Bug Fixes
 •   Fixed an issue causing miralen shards to not drop when using a tool that has a the max cluster harvestables tag
@@ -26,6 +30,7 @@ Version Release v2.1.4.2 (Forge/NeoForge: 1.20.1)
 •   Fixed ancient cabinets item model
 •   Fixed inconsistent hardness & blast protection values on blocks
 •   Fixed snow brick variants not requiring a shovel
+•   Fixed golden birch leaves loot table
 •   Removed duplicate translations which may have caused issues
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -188,6 +188,7 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.ACORN.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_VINE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_ACORN.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.WILLOW_LEAVES.get(), RenderType.cutoutMipped());
 
         Sheets.addWoodType(EBBlockTypes.ANCIENT);
         Sheets.addWoodType(EBBlockTypes.WILLOW);
@@ -1385,6 +1386,7 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.ORANGE_MAPLE_LEAVES);
             event.accept(EBBlocks.YELLOW_MAPLE_LEAVES);
             event.accept(EBBlocks.GOLDEN_BIRCH_LEAVES);
+            event.accept(EBBlocks.WILLOW_LEAVES);
             event.accept(EBBlocks.ANCIENT_LEAVES);
             event.accept(EBBlocks.UNLIT_ANCIENT_LEAVES);
 
@@ -2178,6 +2180,7 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.ORANGE_MAPLE_LEAVES);
             event.accept(EBBlocks.YELLOW_MAPLE_LEAVES);
             event.accept(EBBlocks.GOLDEN_BIRCH_LEAVES);
+            event.accept(EBBlocks.WILLOW_LEAVES);
             event.accept(EBBlocks.ANCIENT_LEAVES);
             event.accept(EBBlocks.UNLIT_ANCIENT_LEAVES);
             event.accept(EBItems.ALGAE);

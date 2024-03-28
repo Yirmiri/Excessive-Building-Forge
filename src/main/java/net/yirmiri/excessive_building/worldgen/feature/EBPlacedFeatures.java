@@ -51,11 +51,11 @@ public class EBPlacedFeatures {
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(48))));
 
         register(context, FIERY_GEODE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.FIERY_GEODE),
-                List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(),
+                List.of(RarityFilter.onAverageOnceEvery(48), InSquarePlacement.spread(),
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(48)), BiomeFilter.biome()));
 
         register(context, KYANITE_GEODE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.KYANITE_GEODE),
-                List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(),
+                List.of(RarityFilter.onAverageOnceEvery(48), InSquarePlacement.spread(),
                         HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(80), VerticalAnchor.absolute(128)), BiomeFilter.biome()));
 
         register(context, ROSE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.ROSE),
@@ -95,8 +95,8 @@ public class EBPlacedFeatures {
                 RarityFilter.onAverageOnceEvery(800), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP, BiomeFilter.biome());
 
         register(context, BRIMSTONE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.BRIMSTONE),
-                EBOrePlacement.commonOrePlacement(3, //veins per chunk
-                        HeightRangePlacement.uniform(VerticalAnchor.absolute(0), VerticalAnchor.absolute(72))));
+                EBOrePlacement.commonOrePlacement(2, //veins per chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(16), VerticalAnchor.absolute(72))));
 
         register(context, GOLDEN_BIRCH_TREE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.GOLDEN_BIRCH_TREE), //placed, % chance for extra, extra
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(16, 0.2f, 1), EBBlocks.GOLDEN_BIRCH_SAPLING.get()));
