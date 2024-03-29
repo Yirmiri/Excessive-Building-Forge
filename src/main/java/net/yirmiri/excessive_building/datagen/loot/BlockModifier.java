@@ -16,9 +16,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.Supplier;
 
 public class BlockModifier extends LootModifier {
-    public static final Supplier<Codec<BlockModifier>> CODEC = Suppliers.memoize(() -> RecordCodecBuilder.create
-            (inst -> codecStart(inst).and(ForgeRegistries.BLOCKS.getCodec().fieldOf("block").forGetter(m -> m.block)).apply(inst, BlockModifier::new)));
-
+    public static final Supplier<Codec<BlockModifier>> CODEC = Suppliers.memoize(() -> RecordCodecBuilder.create(inst -> codecStart(inst).and(ForgeRegistries.BLOCKS.getCodec().fieldOf("block").forGetter(m -> m.block)).apply(inst, BlockModifier::new)));
     private final Block block;
 
     public BlockModifier(LootItemCondition[] conditionsIn, Block block) {
