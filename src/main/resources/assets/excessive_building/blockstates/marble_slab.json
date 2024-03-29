@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/marble_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/marble"
+    },
+    "type=top": {
+      "model": "excessive_building:block/marble_slab_top"
+    }
+  }
+}

@@ -7,7 +7,7 @@
       "loot_table_id": "minecraft:gameplay/sniffer_digging"
     },
     {
-      "chance": 0.25,
+      "chance": 2.5,
       "condition": "minecraft:random_chance"
     }
   ]

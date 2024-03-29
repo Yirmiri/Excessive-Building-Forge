@@ -66,6 +66,7 @@ public class EBConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> GOLDEN_BIRCH_TREE_BEES_01 = registerKey("golden_birch_tree_bees_01");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MIRALEN_GEODE = registerKey("miralen_geode");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ALGAE_SMALL = registerKey("algae_small");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MARBLE = registerKey("marble");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -79,10 +80,13 @@ public class EBConfiguredFeatures {
                 (OreConfiguration.target(stoneReplaceables, EBBlocks.QUARTZ_ORE.get().defaultBlockState()),
                         OreConfiguration.target(deepslateReplaceables, EBBlocks.DEEPSLATE_QUARTZ_ORE.get().defaultBlockState()));
 
+        List<OreConfiguration.TargetBlockState> marbleBlob = List.of
+                (OreConfiguration.target(stoneReplaceables, EBBlocks.MARBLE.get().defaultBlockState()),
+                        OreConfiguration.target(deepslateReplaceables, EBBlocks.MARQUINA_MARBLE.get().defaultBlockState()));
+
         register(context, QUARTZ_ORE, Feature.ORE, new OreConfiguration(overworldQuartzOres, 8)); //vein size
 
-        register(context, SOUL_MAGMA, Feature.ORE, new OreConfiguration(soulReplaceables,
-                EBBlocks.SOUL_MAGMA_BLOCK.get().defaultBlockState(), 16)); //vein size
+        register(context, SOUL_MAGMA, Feature.ORE, new OreConfiguration(soulReplaceables, EBBlocks.SOUL_MAGMA_BLOCK.get().defaultBlockState(), 16)); //vein size
 
         register(context, FIERY_GEODE, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
@@ -149,8 +153,7 @@ public class EBConfiguredFeatures {
         register(context, COMMON_PUMPKIN_PATCH, Feature.RANDOM_PATCH, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.PUMPKIN)), List.of(Blocks.GRASS_BLOCK)));
 
-        register(context, BRIMSTONE, Feature.ORE, new OreConfiguration(netherrackReplaceables,
-                EBBlocks.BRIMSTONE.get().defaultBlockState(), 48)); //vein size
+        register(context, BRIMSTONE, Feature.ORE, new OreConfiguration(netherrackReplaceables, EBBlocks.BRIMSTONE.get().defaultBlockState(), 48)); //vein size
 
         register(context, GOLDEN_BIRCH_TREE, Feature.TREE, createGoldenBirch().build());
         register(context, GOLDEN_BIRCH_TREE_BEES_01, Feature.TREE, createGoldenBirch().decorators(List.of(goldenBirchHiveDecorator)).build());
@@ -171,6 +174,8 @@ public class EBConfiguredFeatures {
 
         register(context, ALGAE_SMALL, Feature.RANDOM_PATCH, new RandomPatchConfiguration(12, 3, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.ALGAE_BLOCK.get())))));
+
+        register(context, MARBLE, Feature.ORE, new OreConfiguration(marbleBlob, 48)); //vein size
 
     }
 

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "excessive_building:polished_sandstone"
+    },
+    "@": {
+      "item": "excessive_building:sandstone_pillar"
+    }
+  },
+  "pattern": [
+    "###",
+    " @ ",
+    "###"
+  ],
+  "result": {
+    "count": 3,
+    "item": "excessive_building:sandstone_pedestal"
+  },
+  "show_notification": true
+}

@@ -11,7 +11,7 @@ import net.yirmiri.excessive_building.potion.EBMobEffects;
 public class EBProperties {
 
     public class BlockProperties {
-        //WOOD PROPERTIES
+        //WOOD
         public static final BlockBehaviour.Properties GENERIC_WOOD = BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava();
         public static final BlockBehaviour.Properties CHERRY_WOOD = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD).ignitedByLava();
         public static final BlockBehaviour.Properties BAMBOO_WOOD = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.BAMBOO_WOOD).ignitedByLava();
@@ -19,7 +19,7 @@ public class EBProperties {
         public static final BlockBehaviour.Properties WARPED_WOOD = BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_HYPHAE).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.NETHER_WOOD);
         public static final BlockBehaviour.Properties ANCIENT_WOOD = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 3.0F).sound(SoundType.CHERRY_WOOD).ignitedByLava();
 
-        //SHELF PROPERTIES
+        //SHELF
         public static final BlockBehaviour.Properties GENERIC_SHELF = BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(1.5F, 1.5F).sound(SoundType.WOOD).ignitedByLava();
         public static final BlockBehaviour.Properties CHERRY_SHELF = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.BASS).strength(1.5F, 1.5F).sound(SoundType.CHERRY_WOOD).ignitedByLava();
         public static final BlockBehaviour.Properties BAMBOO_SHELF = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASS).strength(1.5F, 1.5F).sound(SoundType.BAMBOO_WOOD).ignitedByLava();
@@ -27,7 +27,7 @@ public class EBProperties {
         public static final BlockBehaviour.Properties WARPED_SHELF = BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_HYPHAE).instrument(NoteBlockInstrument.BASS).strength(1.5F, 1.5F).sound(SoundType.NETHER_WOOD);
         public static final BlockBehaviour.Properties ANCIENT_SHELF = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).instrument(NoteBlockInstrument.BASS).strength(1.5F, 1.5F).sound(SoundType.CHERRY_WOOD).ignitedByLava();
 
-        //CRAFTING TABLE PROPERTIES
+        //CRAFTING TABLE
         public static final BlockBehaviour.Properties GENERIC_CT = BlockBehaviour.Properties.of().mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS).strength(2.5F, 2.5F).sound(SoundType.WOOD).ignitedByLava();
         public static final BlockBehaviour.Properties CHERRY_CT = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.BASS).strength(2.5F, 2.5F).sound(SoundType.CHERRY_WOOD).ignitedByLava();
         public static final BlockBehaviour.Properties BAMBOO_CT = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.5F, 2.5F).sound(SoundType.BAMBOO_WOOD).ignitedByLava();
@@ -35,7 +35,7 @@ public class EBProperties {
         public static final BlockBehaviour.Properties WARPED_CT = BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_HYPHAE).instrument(NoteBlockInstrument.BASS).strength(2.5F, 2.5F).sound(SoundType.NETHER_WOOD);
         public static final BlockBehaviour.Properties ANCIENT_CT = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).instrument(NoteBlockInstrument.BASS).strength(2.5F, 2.5F).sound(SoundType.CHERRY_WOOD).ignitedByLava();
 
-        //STONE PROPERTIES
+        //STONE
         public static final BlockBehaviour.Properties ASPHALT = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(1.0F, 2.0F).requiresCorrectToolForDrops().sound(SoundType.DRIPSTONE_BLOCK);
         public static final BlockBehaviour.Properties ROUGH_SANDSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.SAND).instrument(NoteBlockInstrument.BASS).strength(1.0F, 1.0F).requiresCorrectToolForDrops();
         public static final BlockBehaviour.Properties ROUGH_RED_SANDSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASS).strength(1.0F, 1.0F).requiresCorrectToolForDrops();
@@ -51,12 +51,16 @@ public class EBProperties {
         public static final BlockBehaviour.Properties SULFURIC_BRIMSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASS).strength(1.5F, 6.0F).sound(SoundType.BASALT).requiresCorrectToolForDrops();
         public static final BlockBehaviour.Properties POLISHED_SULFURIC_BRIMSTONE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW).instrument(NoteBlockInstrument.BASS).strength(2.0F, 6.0F).sound(SoundType.BASALT).requiresCorrectToolForDrops();
 
-        //CRYSTAL PROPERTIES
+        //CRYSTAL
         public static final BlockBehaviour.Properties FIERY = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.CHIME).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops();
         public static final BlockBehaviour.Properties PRISMARINE = BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_WART_BLOCK).instrument(NoteBlockInstrument.CHIME).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops();
         public static final BlockBehaviour.Properties KYANITE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_LIGHT_BLUE).instrument(NoteBlockInstrument.CHIME).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops();
         public static final BlockBehaviour.Properties MIRALEN = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.CHIME).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops();
 
+        //MARBLE
+        public static final BlockBehaviour.Properties MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(SoundType.CALCITE).requiresCorrectToolForDrops();
+        public static final BlockBehaviour.Properties MARQUINA_MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(SoundType.CALCITE).requiresCorrectToolForDrops();
+        public static final BlockBehaviour.Properties PINK_MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(SoundType.CALCITE).requiresCorrectToolForDrops();
     }
 
     public class Foods {

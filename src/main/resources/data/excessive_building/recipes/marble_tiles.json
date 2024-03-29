@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "#": {
+      "item": "excessive_building:polished_marble"
+    },
+    "@": {
+      "item": "excessive_building:polished_marquina_marble"
+    }
+  },
+  "pattern": [
+    "#@",
+    "@#"
+  ],
+  "result": {
+    "count": 4,
+    "item": "excessive_building:marble_tiles"
+  },
+  "show_notification": true
+}

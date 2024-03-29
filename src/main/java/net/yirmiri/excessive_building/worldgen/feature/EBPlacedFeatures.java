@@ -38,6 +38,7 @@ public class EBPlacedFeatures {
     public static final ResourceKey<PlacedFeature> GOLDEN_BIRCH_TREE_PLACED = createKey("golden_birch_tree_placed");
     public static final ResourceKey<PlacedFeature> MIRALEN_GEODE_PLACED = createKey("miralen_geode_placed");
     public static final ResourceKey<PlacedFeature> ALGAE_SMALL_PLACED = createKey("algae_small_placed");
+    public static final ResourceKey<PlacedFeature> MARBLE_PLACED = createKey("marble_placed");
 
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
@@ -110,6 +111,10 @@ public class EBPlacedFeatures {
 
         register(context, ALGAE_SMALL_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.ALGAE),
                 List.of(CountPlacement.of(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
+
+        register(context, MARBLE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.MARBLE),
+                EBOrePlacement.commonOrePlacement(3, //veins per chunk
+                        HeightRangePlacement.uniform(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(128))));
 
     }
 

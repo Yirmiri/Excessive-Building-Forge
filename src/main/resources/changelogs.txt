@@ -7,7 +7,9 @@ Literally just a secret .txt file of every single update's changelog
 Version Release v2.1.4.2 (Forge/NeoForge: 1.20.1)
 
   Additions
-•   Added all missing knitted wool variants (some textures thanks to @Milk_Furr)
+•   Added marble, a new blockset that generates in mountain biomes and can be turned into various building blocks
+•   Added new sandstone blocks such as tiles, pillars, chiseled variants, and more!
+•   Added all missing knitted wool variants (textures thanks to @Milk_Furr)
 •   Added willow leaves which makes willow saplings finally obtainable (texture by @Milk_Furr)
 •   Added a bunch of missing recipes
 •   Added ru_ru translations (thanks to @bricker_man)
@@ -15,6 +17,8 @@ Version Release v2.1.4.2 (Forge/NeoForge: 1.20.1)
   Changes
 •   Reduced spawn rates of Nether geodes
 •   Reduced the spawn rate and size of brimstone blobs, brimstone blobs can no longer spawn below y16
+•   Kyanite is no longer considered a soul block
+•   Increased the chances of getting an ancient sapling from 2.5% to 25%
 •   Changed a SINGLE pixel on knitted blue wool
 •   Changed the textures of all sandstone blocks in EB
 •   Changed the texture of asphalt
@@ -372,7 +376,7 @@ These blocks now resemble their base polished variants MUCH better than before w
 •   Mud tile, snow brick, and netherite brick walls do not have a model- these I have 0 clue how they got into the mod but I may aswell add them as full features when I get the chance
 •   Villagers may not have custom trades other than asphalt
 •   Soul magma does not produce a bubble column
-These will be addressed and fixed next update, for now I want to take a little break and work on my new mod Aurynium
+These will be addressed and fixed next update, for now I want to take a little break and work on my new mod excessive_building
 
   Bug Fixes
 •   Fixed polished blackstone tiles and its variants from being crafted (Forge/Fabric)

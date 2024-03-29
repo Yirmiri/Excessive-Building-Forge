@@ -61,6 +61,13 @@
     "excessive_building:kyanite_tile_wall",
     "excessive_building:mossy_polished_stone_brick_wall",
     "excessive_building:miralen_brick_wall",
-    "excessive_building:miralen_tile_wall"
+    "excessive_building:miralen_tile_wall",
+    "excessive_building:marble_wall",
+    "excessive_building:marble_brick_wall",
+    "excessive_building:marble_tile_wall",
+    "excessive_building:marquina_marble_wall",
+    "excessive_building:marquina_marble_brick_wall",
+    "excessive_building:polished_marble_wall",
+    "excessive_building:polished_marquina_marble_wall"
   ]
 }

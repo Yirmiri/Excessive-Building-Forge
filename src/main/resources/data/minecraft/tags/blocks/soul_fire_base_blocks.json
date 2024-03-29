@@ -7,12 +7,17 @@
     "excessive_building:chiseled_soul_sandstone",
     "excessive_building:smooth_soul_sandstone",
     "excessive_building:soul_magma_block",
-    "excessive_building:kyanite_block",
-    "excessive_building:kyanite_bricks",
-    "excessive_building:kyanite_tiles",
-    "excessive_building:cracked_kyanite_bricks",
-    "excessive_building:cracked_kyanite_tiles",
-    "excessive_building:kyanite_glass",
-    "excessive_building:kyanite_lamp"
+    "excessive_building:polished_soul_sandstone",
+    "excessive_building:polished_soul_sandstone_stairs",
+    "excessive_building:polished_soul_sandstone_vertical_stairs",
+    "excessive_building:polished_soul_sandstone_slab",
+    "excessive_building:soul_sandstone_tiles",
+    "excessive_building:soul_sandstone_tile_stairs",
+    "excessive_building:soul_sandstone_tile_vertical_stairs",
+    "excessive_building:soul_sandstone_tile_slab",
+    "excessive_building:engraved_soul_sandstone_bricks",
+    "excessive_building:decorated_soul_sandstone_bricks",
+    "excessive_building:soul_sandstone_pillar",
+    "excessive_building:soul_sandstone_pedestal"
   ]
 }

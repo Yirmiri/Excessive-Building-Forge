@@ -1,0 +1,9 @@
+{
+  "parent": "excessive_building:custom/pedestal",
+  "textures": {
+    "particle": "excessive_building:block/polished_red_sandstone",
+    "0": "excessive_building:block/polished_red_sandstone",
+    "1": "excessive_building:block/red_sandstone_pillar"
+  },
+  "render_type": "solid"
+}

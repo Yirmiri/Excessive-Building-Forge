@@ -1,0 +1,12 @@
+{
+  "type": "sullysmod:grindstone_polishing",
+  "experience": 0,
+  "ingredients": [
+    {
+      "item": "excessive_building:soul_sandstone_vertical_stairs"
+    }
+  ],
+  "result": {
+    "item": "excessive_building:polished_soul_sandstone_vertical_stairs"
+  }
+}
