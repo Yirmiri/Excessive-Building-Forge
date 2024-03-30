@@ -9,7 +9,7 @@ displayName="Excessive Building" #mandatory
 updateJSONURL="https://raw.githubusercontent.com/Yirmiri/Excessive-Building/master/update.json" #optional
 displayURL="https://curseforge.com/minecraft/mc-mods/excessive-building" #optional
 logoFile="excessive_building_title.png" #optional
-#credits="ig Yirmiri again" #optional
+credits="Milkyfur for helping with a few textures :>" #optional
 authors="Yirmiri" #optional
 #displayTest="MATCH_VERSION"
 

@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "excessive_building:polished_marble_slab"
+      "item": "excessive_building:marquina_marble_brick_slab"
     }
   },
   "pattern": [
@@ -11,7 +11,7 @@
     "#"
   ],
   "result": {
-    "item": "excessive_building:chiseled_polished_marble"
+    "item": "excessive_building:chiseled_marble_bricks"
   },
   "show_notification": true
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "excessive_building:polished_marquina_marble"
+    },
+    "@": {
+      "item": "excessive_building:marquina_marble_pillar"
+    }
+  },
+  "pattern": [
+    "###",
+    " @ ",
+    "###"
+  ],
+  "result": {
+    "count": 3,
+    "item": "excessive_building:marquina_marble_pedestal"
+  },
+  "show_notification": true
+}

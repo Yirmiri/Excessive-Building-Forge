@@ -2402,6 +2402,27 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .define('#', EBBlocks.SOUL_SANDSTONE.get()).define('@', Blocks.SOUL_SAND)
                 .pattern("#@")
                 .pattern("@#").unlockedBy(getHasName(EBBlocks.SOUL_SANDSTONE.get()), has(EBBlocks.SOUL_SANDSTONE.get())).save(recipeOutput);
+
+        verticalstairBuilder(EBBlocks.MARBLE_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.MARBLE.get()))
+                .unlockedBy(getHasName(EBBlocks.MARBLE.get()), has(EBBlocks.MARBLE.get())).save(recipeOutput);
+
+        verticalstairBuilder(EBBlocks.MARBLE_BRICK_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.MARBLE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MARBLE_BRICKS.get()), has(EBBlocks.MARBLE_BRICKS.get())).save(recipeOutput);
+
+        verticalstairBuilder(EBBlocks.MARBLE_TILE_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.MARBLE_TILES.get()))
+                .unlockedBy(getHasName(EBBlocks.MARBLE_TILES.get()), has(EBBlocks.MARBLE_TILES.get())).save(recipeOutput);
+
+        verticalstairBuilder(EBBlocks.POLISHED_MARBLE_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.POLISHED_MARBLE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_MARBLE.get()), has(EBBlocks.POLISHED_MARBLE.get())).save(recipeOutput);
+
+        verticalstairBuilder(EBBlocks.MARQUINA_MARBLE_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.MARQUINA_MARBLE.get()))
+                .unlockedBy(getHasName(EBBlocks.MARQUINA_MARBLE.get()), has(EBBlocks.MARQUINA_MARBLE.get())).save(recipeOutput);
+
+        verticalstairBuilder(EBBlocks.MARQUINA_MARBLE_BRICK_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.MARQUINA_MARBLE_BRICKS.get()))
+                .unlockedBy(getHasName(EBBlocks.MARQUINA_MARBLE_BRICKS.get()), has(EBBlocks.MARQUINA_MARBLE_BRICKS.get())).save(recipeOutput);
+
+        verticalstairBuilder(EBBlocks.POLISHED_MARQUINA_MARBLE_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.POLISHED_MARQUINA_MARBLE.get()))
+                .unlockedBy(getHasName(EBBlocks.POLISHED_MARQUINA_MARBLE.get()), has(EBBlocks.POLISHED_MARQUINA_MARBLE.get())).save(recipeOutput);
     }
 
     protected static RecipeBuilder fourforfourBuilder(ItemLike itemLike, Ingredient ingredient) {

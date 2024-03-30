@@ -3,15 +3,17 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "excessive_building:polished_marble_slab"
+      "item": "excessive_building:marble_tiles"
     }
   },
   "pattern": [
-    "#",
-    "#"
+    "###",
+    "## ",
+    "#  "
   ],
   "result": {
-    "item": "excessive_building:chiseled_polished_marble"
+    "count": 4,
+    "item": "excessive_building:marble_tile_vertical_stairs"
   },
   "show_notification": true
 }

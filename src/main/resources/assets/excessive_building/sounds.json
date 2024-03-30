@@ -1,0 +1,56 @@
+{
+  "block.marble.break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "excessive_building:block/marble/break1",
+      "excessive_building:block/marble/break2",
+      "excessive_building:block/marble/break3",
+      "excessive_building:block/marble/break4"
+    ]
+  },
+
+  "block.marble.step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "excessive_building:block/marble/step1",
+      "excessive_building:block/marble/step2",
+      "excessive_building:block/marble/step3",
+      "excessive_building:block/marble/step4",
+      "excessive_building:block/marble/step5",
+      "excessive_building:block/marble/step6"
+    ]
+  },
+
+  "block.marble.place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "excessive_building:block/marble/place1",
+      "excessive_building:block/marble/place2",
+      "excessive_building:block/marble/place3",
+      "excessive_building:block/marble/place4"
+    ]
+  },
+
+  "block.marble.hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "excessive_building:block/marble/step1",
+      "excessive_building:block/marble/step2",
+      "excessive_building:block/marble/step3",
+      "excessive_building:block/marble/step4",
+      "excessive_building:block/marble/step5",
+      "excessive_building:block/marble/step6"
+    ]
+  },
+
+  "block.marble.fall": {
+    "sounds": [
+      "excessive_building:block/marble/step1",
+      "excessive_building:block/marble/step2",
+      "excessive_building:block/marble/step3",
+      "excessive_building:block/marble/step4",
+      "excessive_building:block/marble/step5",
+      "excessive_building:block/marble/step6"
+    ]
+  }
+}

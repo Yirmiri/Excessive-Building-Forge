@@ -28,6 +28,7 @@ import net.yirmiri.excessive_building.compat.FarmersDelightCompat;
 import net.yirmiri.excessive_building.compat.SullysModCompat;
 import net.yirmiri.excessive_building.datagen.loot.EBLootTableModifiers;
 import net.yirmiri.excessive_building.other.EBBlockTypes;
+import net.yirmiri.excessive_building.other.EBSoundEvents;
 import net.yirmiri.excessive_building.potion.EBBrewingRecipe;
 import net.yirmiri.excessive_building.potion.EBMobEffects;
 import net.yirmiri.excessive_building.potion.EBPotions;
@@ -62,6 +63,7 @@ public class ExcessiveBuilding {
         EBBlockEntities.register(modEventBus);
         EBBannerPatterns.register(modEventBus);
         EBCompatRegistries.register(modEventBus);
+        EBSoundEvents.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::setup);

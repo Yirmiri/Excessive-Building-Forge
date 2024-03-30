@@ -58,9 +58,9 @@ public class EBProperties {
         public static final BlockBehaviour.Properties MIRALEN = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.CHIME).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops();
 
         //MARBLE
-        public static final BlockBehaviour.Properties MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(SoundType.CALCITE).requiresCorrectToolForDrops();
-        public static final BlockBehaviour.Properties MARQUINA_MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(SoundType.CALCITE).requiresCorrectToolForDrops();
-        public static final BlockBehaviour.Properties PINK_MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(SoundType.CALCITE).requiresCorrectToolForDrops();
+        public static final BlockBehaviour.Properties MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(EBSoundType.MARBLE).requiresCorrectToolForDrops();
+        public static final BlockBehaviour.Properties MARQUINA_MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(EBSoundType.MARBLE).requiresCorrectToolForDrops();
+        public static final BlockBehaviour.Properties PINK_MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(EBSoundType.MARBLE).requiresCorrectToolForDrops();
     }
 
     public class Foods {
