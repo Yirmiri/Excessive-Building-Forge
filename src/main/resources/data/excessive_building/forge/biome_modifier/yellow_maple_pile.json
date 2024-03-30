@@ -1,7 +1,8 @@
 {
   "type": "forge:add_features",
   "biomes": [
-    "excessive_building:maple_forest"
+    "excessive_building:maple_forest",
+    "excessive_building:snowy_maple_forest"
   ],
   "features": "excessive_building:yellow_maple_pile_placed",
   "step": "vegetal_decoration"

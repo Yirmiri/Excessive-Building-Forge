@@ -14,7 +14,7 @@ import vectorwing.farmersdelight.common.item.DrinkableItem;
 public class FarmersDelightCompat {
 
     //BLOCKS
-    public static final RegistryObject<Block> ANCIENT_CABINET = EBBlocks.registerBlock("ancient_cabinet", () -> new CabinetBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get())));
+    public static final RegistryObject<Block> ANCIENT_CABINET = EBBlocks.register("ancient_cabinet", () -> new CabinetBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get())));
 
     //FOODS
     public static final RegistryObject<Item> ANCIENT_CIDER = EBItems.ITEMS.register("ancient_cider", () -> new DrinkableItem(new Item.Properties().food(EBProperties.Foods.ANCIENT_CIDER)));

@@ -2,6 +2,7 @@ package net.yirmiri.excessive_building.other;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraftforge.common.util.ForgeSoundType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -23,5 +24,9 @@ public class EBSoundEvents {
 
     public static void register(IEventBus eventBus) {
         SOUND_EVENTS.register(eventBus);
+    }
+
+    public class EBSoundTypes {
+        public static final ForgeSoundType MARBLE = new ForgeSoundType(1.0F, 1.0F, EBSoundEvents.MARBLE_BREAK, EBSoundEvents.MARBLE_STEP, EBSoundEvents.MARBLE_PLACE, EBSoundEvents.MARBLE_HIT, EBSoundEvents.MARBLE_FALL);
     }
 }

@@ -58,14 +58,14 @@ public class EBProperties {
         public static final BlockBehaviour.Properties MIRALEN = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.CHIME).strength(1.5F).sound(SoundType.AMETHYST).requiresCorrectToolForDrops();
 
         //MARBLE
-        public static final BlockBehaviour.Properties MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(EBSoundType.MARBLE).requiresCorrectToolForDrops();
-        public static final BlockBehaviour.Properties MARQUINA_MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(EBSoundType.MARBLE).requiresCorrectToolForDrops();
-        public static final BlockBehaviour.Properties PINK_MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(EBSoundType.MARBLE).requiresCorrectToolForDrops();
+        public static final BlockBehaviour.Properties MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(EBSoundEvents.EBSoundTypes.MARBLE).requiresCorrectToolForDrops();
+        public static final BlockBehaviour.Properties MARQUINA_MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(EBSoundEvents.EBSoundTypes.MARBLE).requiresCorrectToolForDrops();
+        public static final BlockBehaviour.Properties PINK_MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(EBSoundEvents.EBSoundTypes.MARBLE).requiresCorrectToolForDrops();
     }
 
     public class Foods {
         //FOOD PROPERTIES
         public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().nutrition(4).saturationMod(0.2f).effect(new MobEffectInstance(EBMobEffects.REACHING.get(), 200, 0), 1.0F).build();
-        public static final FoodProperties ANCIENT_CIDER = new FoodProperties.Builder().alwaysEat().effect(new MobEffectInstance(EBMobEffects.REACHING.get(), 1200, 0), 1.0F).build();
+        public static final FoodProperties ANCIENT_CIDER = new FoodProperties.Builder().alwaysEat().effect(new MobEffectInstance(EBMobEffects.REACHING.get(), 6000, 0), 1.0F).build();
     }
 }

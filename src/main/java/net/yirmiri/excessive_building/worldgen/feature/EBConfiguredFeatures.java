@@ -73,19 +73,11 @@ public class EBConfiguredFeatures {
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest soulReplaceables = new TagMatchTest(BlockTags.SOUL_FIRE_BASE_BLOCKS);
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
-
         BeehiveDecorator goldenBirchHiveDecorator = new BeehiveDecorator(0.1F);
-
-        List<OreConfiguration.TargetBlockState> overworldQuartzOres = List.of
-                (OreConfiguration.target(stoneReplaceables, EBBlocks.QUARTZ_ORE.get().defaultBlockState()),
-                        OreConfiguration.target(deepslateReplaceables, EBBlocks.DEEPSLATE_QUARTZ_ORE.get().defaultBlockState()));
-
-        List<OreConfiguration.TargetBlockState> marbleBlob = List.of
-                (OreConfiguration.target(stoneReplaceables, EBBlocks.MARBLE.get().defaultBlockState()),
-                        OreConfiguration.target(deepslateReplaceables, EBBlocks.MARQUINA_MARBLE.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> overworldQuartzOres = List.of(OreConfiguration.target(stoneReplaceables, EBBlocks.QUARTZ_ORE.get().defaultBlockState()), OreConfiguration.target(deepslateReplaceables, EBBlocks.DEEPSLATE_QUARTZ_ORE.get().defaultBlockState()));
+        List<OreConfiguration.TargetBlockState> marbleBlob = List.of(OreConfiguration.target(stoneReplaceables, EBBlocks.MARBLE.get().defaultBlockState()), OreConfiguration.target(deepslateReplaceables, EBBlocks.MARQUINA_MARBLE.get().defaultBlockState()));
 
         register(context, QUARTZ_ORE, Feature.ORE, new OreConfiguration(overworldQuartzOres, 8)); //vein size
-
         register(context, SOUL_MAGMA, Feature.ORE, new OreConfiguration(soulReplaceables, EBBlocks.SOUL_MAGMA_BLOCK.get().defaultBlockState(), 16)); //vein size
 
         register(context, FIERY_GEODE, Feature.GEODE,

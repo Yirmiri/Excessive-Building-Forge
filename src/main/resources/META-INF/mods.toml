@@ -9,13 +9,11 @@ displayName="Excessive Building" #mandatory
 updateJSONURL="https://raw.githubusercontent.com/Yirmiri/Excessive-Building/master/update.json" #optional
 displayURL="https://curseforge.com/minecraft/mc-mods/excessive-building" #optional
 logoFile="excessive_building_title.png" #optional
-credits="Milkyfur for helping with a few textures :>" #optional
 authors="Yirmiri" #optional
+#credits="Milkyfur for helping with a few textures :>" #optional
 #displayTest="MATCH_VERSION"
 
-description='''
-Excessive Building is a mod that adds a large amount of new vanilla-style blocks to the game to enhance the user's building experience!
-'''
+description="Excessive Building is a mod that adds a large amount of new vanilla-style blocks to the game to enhance the user's building experience!"
 
 [[dependencies.excessive_building]] #optional
 modId="forge" #mandatory

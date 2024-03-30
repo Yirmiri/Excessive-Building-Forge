@@ -18,7 +18,6 @@ public class EBBlockEntities {
     public static final RegistryObject<BlockEntityType<EBHangingSignBlockEntity>> EB_HANGING_SIGN = BLOCK_ENTITIES.register("eb_hanging_sign", () -> BlockEntityType.Builder.of(EBHangingSignBlockEntity::new,
                     EBBlocks.ANCIENT_HANGING_SIGN.get(), EBBlocks.ANCIENT_WALL_HANGING_SIGN.get(), EBBlocks.WILLOW_HANGING_SIGN.get(), EBBlocks.WILLOW_WALL_HANGING_SIGN.get(), EBBlocks.MAPLE_HANGING_SIGN.get(), EBBlocks.MAPLE_WALL_HANGING_SIGN.get()).build(null));
 
-
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }

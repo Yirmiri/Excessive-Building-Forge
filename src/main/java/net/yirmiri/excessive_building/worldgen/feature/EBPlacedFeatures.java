@@ -113,7 +113,7 @@ public class EBPlacedFeatures {
                 List.of(CountPlacement.of(10), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
 
         register(context, MARBLE_PLACED, configuredFeatures.getOrThrow(EBConfiguredFeatures.MARBLE),
-                EBOrePlacement.commonOrePlacement(3, //veins per chunk
+                EBOrePlacement.commonOrePlacement(5, //veins per chunk
                         HeightRangePlacement.uniform(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(128))));
 
     }

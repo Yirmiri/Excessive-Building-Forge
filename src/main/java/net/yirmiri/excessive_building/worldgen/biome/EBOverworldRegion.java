@@ -21,6 +21,7 @@ public class EBOverworldRegion extends Region {
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<Climate.ParameterPoint, ResourceKey<Biome>>> mapper) {
         this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
             modifiedVanillaOverworldBuilder.replaceBiome(Biomes.TAIGA, EBBiomes.MAPLE_FOREST);
+            modifiedVanillaOverworldBuilder.replaceBiome(Biomes.SNOWY_TAIGA, EBBiomes.SNOWY_MAPLE_FOREST);
             modifiedVanillaOverworldBuilder.replaceBiome(Biomes.BIRCH_FOREST, EBBiomes.GOLDEN_BIRCH_FOREST);
         });
     }

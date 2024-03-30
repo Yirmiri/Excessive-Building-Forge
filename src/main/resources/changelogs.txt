@@ -4,9 +4,12 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release v2.1.4.2 (Forge/NeoForge: 1.20.1)
+Version Release v2.2.0 (Forge/NeoForge: 1.20.1)
+Finale... for now
 
   Additions
+•   Added simple config options, will probably end up adding some more whenever I come back to update the mod again
+•   Added a snowy variant of maple forests with the same properties other than that it does not generate villages but instead igloos
 •   Added marble, a new blockset that generates in mountain biomes and can be turned into various building blocks
 •   Added new sandstone blocks such as tiles, pillars, chiseled variants, and more!
 •   Added all missing knitted wool variants (textures thanks to @Milk_Furr)
@@ -16,10 +19,12 @@ Version Release v2.1.4.2 (Forge/NeoForge: 1.20.1)
 •   Added ru_ru translations (thanks to @bricker_man)
 
   Changes
+•   Maple forests can now generate taiga villages & are biased to by strongholds
 •   Reduced spawn rates of Nether geodes
 •   Reduced the spawn rate and size of brimstone blobs, brimstone blobs can no longer spawn below y16
 •   Kyanite is no longer considered a soul block
 •   Increased the chances of getting an ancient sapling from 2.5% to 25%
+•   Brimstone's recipe now outputs 4 blocks instead of 2
 •   Changed a SINGLE pixel on knitted blue wool
 •   Changed the textures of all sandstone blocks in EB
 •   Changed the texture of asphalt

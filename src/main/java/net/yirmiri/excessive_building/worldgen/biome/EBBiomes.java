@@ -14,6 +14,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBBiomes {
     public static final ResourceKey<Biome> MAPLE_FOREST = ResourceKey.create(Registries.BIOME, new ResourceLocation(ExcessiveBuilding.MODID, "maple_forest"));
+    public static final ResourceKey<Biome> SNOWY_MAPLE_FOREST = ResourceKey.create(Registries.BIOME, new ResourceLocation(ExcessiveBuilding.MODID, "snowy_maple_forest"));
     public static final ResourceKey<Biome> GOLDEN_BIRCH_FOREST = ResourceKey.create(Registries.BIOME, new ResourceLocation(ExcessiveBuilding.MODID, "golden_birch_forest"));
 
     public static void globalOverworldGeneration(BiomeGenerationSettings.Builder builder) {
@@ -27,6 +28,7 @@ public class EBBiomes {
 
     public static void boostrap(BootstapContext<Biome> context) {
         context.register(MAPLE_FOREST, mapleForest(context));
+        context.register(SNOWY_MAPLE_FOREST, snowyMapleForest(context));
         context.register(GOLDEN_BIRCH_FOREST, goldenBirchForest(context));
     }
 
@@ -112,5 +114,47 @@ public class EBBiomes {
                 .waterFogColor(0x3f76e4)
                 .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
                 .backgroundMusic(Musics.createGameMusic(SoundEvents.MUSIC_BIOME_MEADOW)).build()).build();
+    }
+
+    //SNOWY MAPLE FOREST BIOME
+    public static Biome snowyMapleForest(BootstapContext<Biome> context) {
+        MobSpawnSettings.Builder spawnBuilder = new MobSpawnSettings.Builder();
+
+        //CREATURES
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.WOLF, 8, 4, 4));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.FOX, 8, 2, 4));
+        spawnBuilder.addSpawn(MobCategory.CREATURE, new MobSpawnSettings.SpawnerData(EntityType.RABBIT, 4, 2, 3));
+
+        BiomeDefaultFeatures.commonSpawns(spawnBuilder);
+        BiomeDefaultFeatures.snowySpawns(spawnBuilder);
+
+        BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder(context.lookup(Registries.PLACED_FEATURE), context.lookup(Registries.CONFIGURED_CARVER));
+
+        globalOverworldGeneration(biomeBuilder);
+        BiomeDefaultFeatures.addForestFlowers(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultOres(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultSoftDisks(biomeBuilder);
+        BiomeDefaultFeatures.addPlainVegetation(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultFlowers(biomeBuilder);
+        BiomeDefaultFeatures.addForestGrass(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultMushrooms(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultExtraVegetation(biomeBuilder);
+        BiomeDefaultFeatures.addFrozenSprings(biomeBuilder);
+
+        return new Biome.BiomeBuilder()
+                .hasPrecipitation(true)
+                .downfall(0.4f)
+                .temperature(-0.5f)
+                .generationSettings(biomeBuilder.build())
+                .mobSpawnSettings(spawnBuilder.build())
+                .specialEffects((new BiomeSpecialEffects.Builder())
+                        .skyColor(0x79a6ff)
+                        .fogColor(0xc0d8ff)
+                        .grassColorOverride(0xcac056)
+                        .foliageColorOverride(0xae9f2a)
+                        .waterColor(0x3f76e4)
+                        .waterFogColor(0x3f76e4)
+                        .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
+                        .backgroundMusic(Musics.createGameMusic(SoundEvents.MUSIC_BIOME_MEADOW)).build()).build();
     }
 }

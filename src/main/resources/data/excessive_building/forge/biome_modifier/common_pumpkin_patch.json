@@ -2,6 +2,7 @@
   "type": "forge:add_features",
   "biomes": [
     "excessive_building:maple_forest",
+    "excessive_building:snowy_maple_forest",
     "excessive_building:golden_birch_forest"
   ],
   "features": "excessive_building:common_pumpkin_patch_placed",
