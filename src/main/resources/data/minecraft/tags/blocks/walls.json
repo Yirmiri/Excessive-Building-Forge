@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "excessive_building:cobblestone_brick_wall",
     "excessive_building:blackstone_brick_wall",

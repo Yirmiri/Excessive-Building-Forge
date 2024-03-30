@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "excessive_building:cobbled_andesite",
     "excessive_building:cobbled_granite",

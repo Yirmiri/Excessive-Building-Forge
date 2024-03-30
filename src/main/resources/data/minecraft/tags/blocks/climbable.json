@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "excessive_building:ancient_ladder",
     "excessive_building:spruce_ladder",

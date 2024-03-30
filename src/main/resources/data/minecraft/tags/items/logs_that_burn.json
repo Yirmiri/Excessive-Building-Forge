@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "#excessive_building:ancient_logs",
     "#excessive_building:willow_logs",

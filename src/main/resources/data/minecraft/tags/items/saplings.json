@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "excessive_building:ancient_sapling",
     "excessive_building:willow_sapling",

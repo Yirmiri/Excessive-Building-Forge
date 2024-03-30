@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "excessive_building:potion_shelf",
     "excessive_building:alchemist_shelf",
