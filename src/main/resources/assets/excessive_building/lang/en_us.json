@@ -1257,6 +1257,8 @@
   "trim_material.excessive_building.fiery": "Fiery Material",
   "trim_material.excessive_building.kyanite": "Kyanite Material",
   "trim_material.excessive_building.miralen": "Miralen Material",
+  "trim_material.excessive_building.prismarine": "Prismarine Material",
+  "trim_material.excessive_building.crying": "Crying Material",
 
   "item.excessive_building.excessive_banner_pattern": "Banner Pattern",
   "item.excessive_building.excessive_banner_pattern.desc": "Excessive",

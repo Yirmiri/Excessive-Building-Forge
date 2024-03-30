@@ -1689,6 +1689,7 @@ public class ExcessiveBuilding {
             event.accept(EBItems.ANCIENT_FRUIT);
             event.accept(EBItems.FIERY_SHARDS);
             event.accept(EBItems.KYANITE_SHARDS);
+            event.accept(EBItems.MIRALEN_SHARDS);
             event.accept(EBItems.EXCESSIVE_BANNER_PATTERN);
 
             event.accept(EBBlocks.SMOOTH_STONE_BRICK_PEDESTAL);

@@ -2,6 +2,8 @@
   "values": [
     "excessive_building:fiery_shards",
     "excessive_building:miralen_shards",
+    "minecraft:prismarine_crystals",
+    "minecraft:crying_obsidian",
     "excessive_building:kyanite_shards"
   ]
 }

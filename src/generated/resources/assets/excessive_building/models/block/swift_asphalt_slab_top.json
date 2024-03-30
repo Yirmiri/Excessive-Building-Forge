@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab_top",
-  "textures": {
-    "bottom": "excessive_building:block/swift_asphalt",
-    "side": "excessive_building:block/swift_asphalt",
-    "top": "excessive_building:block/swift_asphalt"
-  }
-}

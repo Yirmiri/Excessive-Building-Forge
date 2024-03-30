@@ -14,6 +14,7 @@ Version Release v2.2.0 (Forge/NeoForge: 1.20.1)
 •   Added new sandstone blocks such as tiles, pillars, chiseled variants, and more!
 •   Added all missing knitted wool variants (textures thanks to @Milk_Furr)
 •   Added willow leaves which makes willow saplings finally obtainable (texture by @Milk_Furr)
+•   Added crying obsidian and prismarine crystals as trim materials
 •   Added some custom sounds to a few blocks
 •   Added a bunch of missing recipes
 •   Added ru_ru translations (thanks to @bricker_man)
@@ -38,6 +39,7 @@ Version Release v2.2.0 (Forge/NeoForge: 1.20.1)
 •   Fixed inconsistent hardness & blast protection values on blocks
 •   Fixed snow brick variants not requiring a shovel
 •   Fixed golden birch leaves loot table
+•   Fixed missing items from missing creative tabs
 •   Removed duplicate translations which may have caused issues
 
   Notes

@@ -4,7 +4,9 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.register.EBItems;
@@ -22,6 +24,8 @@ public class EBItemTagProvider extends ItemTagsProvider {
         this.tag(ItemTags.TRIM_MATERIALS).add(
                 EBItems.FIERY_SHARDS.get(),
                 EBItems.MIRALEN_SHARDS.get(),
+                Items.PRISMARINE_CRYSTALS,
+                Blocks.CRYING_OBSIDIAN.asItem(),
                 EBItems.KYANITE_SHARDS.get());
     }
 }

@@ -3,16 +3,18 @@
         {
             "type": "paletted_permutations",
             "textures": [
-                "trims/items/leggings_trim",
-                "trims/items/chestplate_trim",
-                "trims/items/helmet_trim",
-                "trims/items/boots_trim"
+                "minecraft:trims/items/leggings_trim",
+                "minecraft:trims/items/chestplate_trim",
+                "minecraft:trims/items/helmet_trim",
+                "minecraft:trims/items/boots_trim"
             ],
             "palette_key": "trims/color_palettes/trim_palette",
             "permutations": {
                 "fiery": "excessive_building:trims/color_palettes/fiery",
                 "kyanite": "excessive_building:trims/color_palettes/kyanite",
-                "miralen": "excessive_building:trims/color_palettes/miralen"
+                "miralen": "excessive_building:trims/color_palettes/miralen",
+                "prismarine": "excessive_building:trims/color_palettes/prismarine",
+                "crying": "excessive_building:trims/color_palettes/crying"
             }
         }
     ]

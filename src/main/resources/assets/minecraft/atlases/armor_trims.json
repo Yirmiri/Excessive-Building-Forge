@@ -40,7 +40,9 @@
             "permutations": {
                 "fiery": "excessive_building:trims/color_palettes/fiery",
                 "kyanite": "excessive_building:trims/color_palettes/kyanite",
-                "miralen": "excessive_building:trims/color_palettes/miralen"
+                "miralen": "excessive_building:trims/color_palettes/miralen",
+                "prismarine": "excessive_building:trims/color_palettes/prismarine",
+                "crying": "excessive_building:trims/color_palettes/crying"
             }
         }
     ]
