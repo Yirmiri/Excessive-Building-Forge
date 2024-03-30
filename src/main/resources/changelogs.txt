@@ -5,7 +5,7 @@ Literally just a secret .txt file of every single update's changelog
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Version Release v2.2.0 (Forge/NeoForge: 1.20.1)
-Finale... for now
+1 Year Anniversary & 200,000 Update!
 
   Additions
 •   Added simple config options, will probably end up adding some more whenever I come back to update the mod again
@@ -23,15 +23,12 @@ Finale... for now
 •   Reduced spawn rates of Nether geodes
 •   Reduced the spawn rate and size of brimstone blobs, brimstone blobs can no longer spawn below y16
 •   Kyanite is no longer considered a soul block
-•   Increased the chances of getting an ancient sapling from 2.5% to 25%
+•   Increased the chances of getting an ancient sapling from 25% to 30%
 •   Brimstone's recipe now outputs 4 blocks instead of 2
 •   Changed a SINGLE pixel on knitted blue wool
-•   Changed the textures of all sandstone blocks in EB
-•   Changed the texture of asphalt
-•   Changed the textures of iron and gold grates
-•   Slightly tweaked chiseled planks to allow better tiling
+•   Changed the textures of EB sandstone blocks, iron/gold grates and asphalt (asphalt texture by @Milk_Furr)
+•   Slightly tweaked chiseled planks and kyanite tiles to allow better tiling
 •   Slightly tweaked fiery & miralen trim colors
-•   Slightly tweaked kyanite tiles texture
 •   Changed advancement names and descriptions to include references to other things I like :P
 
   Bug Fixes
@@ -42,6 +39,14 @@ Finale... for now
 •   Fixed snow brick variants not requiring a shovel
 •   Fixed golden birch leaves loot table
 •   Removed duplicate translations which may have caused issues
+
+  Notes
+  •   Well here we are, Excessive Building is officially 1 year old and in the last year we managed to reach 200K downloads on this mod which is just unbelievable to me
+  I never in my life would believe I would make it this far with any project. I appreciate you all so much and I am glad you the reader (maybe) enjoys this silly block mod.
+
+  Excessive Building has no plans of being discontinued but for the past while I have expressed my want to work on new projects
+  ...so take this update as one final love letter to the mod... for now, thank you for playing Excessive Building.
+      - Yirmiri <3
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
