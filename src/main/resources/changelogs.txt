@@ -42,6 +42,9 @@ Version Release v2.2.0 (Forge/NeoForge: 1.20.1)
 •   Fixed missing items from missing creative tabs
 •   Removed duplicate translations which may have caused issues
 
+  Compat
+•   [Farmer's Delight] Soul magma blocks are now counted as a heat source
+
   Notes
   •   Well here we are, Excessive Building is officially 1 year old and in the last year we managed to reach 200K downloads on this mod which is just unbelievable to me
   I never in my life would believe I would make it this far with any project. I appreciate you all so much and I am glad you the reader (maybe) enjoys this silly block mod.

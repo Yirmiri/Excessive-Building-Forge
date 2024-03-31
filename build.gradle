@@ -115,9 +115,9 @@ dependencies {
     implementation fg.deobf("curse.maven:worldedit-225608:4586218")
     implementation fg.deobf("curse.maven:embeddium-908741:5034486")
     implementation fg.deobf("curse.maven:oculus-581495:4952626")
-    implementation fg.deobf("curse.maven:botania-225643:5002307")
-    implementation fg.deobf("curse.maven:curios-309927:5175956")
-    implementation fg.deobf("curse.maven:patchouli-306770:4966125")
+    //implementation fg.deobf("curse.maven:botania-225643:5002307")
+    //implementation fg.deobf("curse.maven:curios-309927:5175956")
+    //implementation fg.deobf("curse.maven:patchouli-306770:4966125")
 }
 
 jar {
