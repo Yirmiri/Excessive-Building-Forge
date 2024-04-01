@@ -26,6 +26,7 @@ Version Release v2.2.0 (Forge/NeoForge: 1.20.1)
 •   Kyanite is no longer considered a soul block
 •   Increased the chances of getting an ancient sapling from 25% to 30%
 •   Brimstone's recipe now outputs 4 blocks instead of 2
+•   Made all resource bricks much cheaper
 •   Changed a SINGLE pixel on knitted blue wool
 •   Changed the textures of EB sandstone blocks, iron/gold grates and asphalt (asphalt texture by @Milk_Furr)
 •   Slightly tweaked chiseled planks and kyanite tiles to allow better tiling
@@ -41,6 +42,7 @@ Version Release v2.2.0 (Forge/NeoForge: 1.20.1)
 •   Fixed golden birch leaves loot table
 •   Fixed missing items from missing creative tabs
 •   Removed duplicate translations which may have caused issues
+•   Fixed many different tags being overridden (Issue #13)
 
   Compat
 •   [Farmer's Delight] Soul magma blocks are now counted as a heat source

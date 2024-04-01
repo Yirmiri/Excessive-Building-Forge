@@ -863,10 +863,10 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .pattern("###")
                 .pattern("###").unlockedBy(getHasName(EBBlocks.STRIPPED_ANCIENT_LOG.get()), has(EBBlocks.STRIPPED_ANCIENT_LOG.get())).save(recipeOutput);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.EMERALD_BRICKS.get(), 4)
-                .define('#', Blocks.EMERALD_BLOCK)
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.EMERALD_BRICKS.get(), 1)
+                .define('#', Items.EMERALD)
                 .pattern("##")
-                .pattern("##").unlockedBy(getHasName(Blocks.EMERALD_BLOCK), has(Blocks.EMERALD_BLOCK)).save(recipeOutput);
+                .pattern("##").unlockedBy(getHasName(Items.EMERALD), has(Items.EMERALD)).save(recipeOutput);
 
         stairBuilder(EBBlocks.EMERALD_BRICK_STAIRS.get(), Ingredient.of(EBBlocks.EMERALD_BRICKS.get()))
                 .unlockedBy(getHasName(EBBlocks.EMERALD_BRICKS.get()), has(EBBlocks.EMERALD_BRICKS.get())).save(recipeOutput);

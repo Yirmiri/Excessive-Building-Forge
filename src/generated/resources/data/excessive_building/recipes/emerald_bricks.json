@@ -3,7 +3,7 @@
   "category": "building",
   "key": {
     "#": {
-      "item": "minecraft:emerald_block"
+      "item": "minecraft:emerald"
     }
   },
   "pattern": [
@@ -11,7 +11,6 @@
     "##"
   ],
   "result": {
-    "count": 4,
     "item": "excessive_building:emerald_bricks"
   },
   "show_notification": true

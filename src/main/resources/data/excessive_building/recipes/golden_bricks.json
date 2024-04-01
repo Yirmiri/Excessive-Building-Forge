@@ -6,11 +6,11 @@
     ],
   "key": {
     "#": {
-      "item": "minecraft:gold_block"
+      "item": "minecraft:gold_ingot"
     }
   },
   "result": {
-    "count": 4,
+    "count": 1,
     "item": "excessive_building:golden_bricks"
   }
 }
