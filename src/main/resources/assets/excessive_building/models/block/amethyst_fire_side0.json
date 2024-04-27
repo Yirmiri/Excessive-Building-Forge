@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fire_side",
+  "textures": {
+    "fire": "excessive_building:block/amethyst_fire_0"
+  }
+}
