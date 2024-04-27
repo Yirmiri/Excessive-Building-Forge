@@ -39,7 +39,7 @@ import terrablender.api.Regions;
 @Mod(ExcessiveBuilding.MODID)
 public class ExcessiveBuilding {
     public static final String MODID = "excessive_building";
-
+//TODO: VANILLA CREATIVE TABS || BOOKSHELVES INTO VARIANTS
     public ExcessiveBuilding() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EBConfig.COMMON);

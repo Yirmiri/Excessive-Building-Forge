@@ -33,6 +33,7 @@ Previously this was a required dependancy but is now optional.
 
   Compat
 •   [Create] Added alternate recipe for andesite alloys
+•   [Corail's Woodcutter] Compatibility is no longer supported, sorry v_v
 
   Bug Fixes
 •   Added chiseled smooth stone bricks to mineable/pickaxe tag

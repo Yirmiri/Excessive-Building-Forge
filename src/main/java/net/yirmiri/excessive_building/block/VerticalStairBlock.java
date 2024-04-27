@@ -28,12 +28,12 @@ public class VerticalStairBlock extends HorizontalDirectionalBlock implements Si
     }
 
     @Override
-    public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+    public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
         return Shapes.empty();
     }
 
     @Override
-    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+    public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
         return switch (state.getValue(FACING)) {
             default -> Shapes.or(box(8, 0, 0, 16, 16, 8),
                     box(0, 0, 0, 8, 16, 16));
@@ -50,13 +50,13 @@ public class VerticalStairBlock extends HorizontalDirectionalBlock implements Si
     }
 
     @Override
-    public BlockState updateShape(BlockState canSurvive, Direction direction, BlockState blockState, LevelAccessor levelAccessor, BlockPos blockPos, BlockPos blockPos1) {
+    public BlockState updateShape(BlockState canSurvive, Direction direction, BlockState state, LevelAccessor accessor, BlockPos pos, BlockPos blockPos) {
         if (canSurvive.getValue(WATERLOGGED)) {
-            levelAccessor.scheduleTick(blockPos, Fluids.WATER, Fluids.WATER.getTickDelay(levelAccessor));
+            accessor.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(accessor));
         }
 
-        return direction == canSurvive.getValue(FACING).getOpposite() && !canSurvive.canSurvive(levelAccessor, blockPos) ? Blocks.AIR.defaultBlockState() :
-                super.updateShape(canSurvive, direction, blockState, levelAccessor, blockPos, blockPos1);
+        return direction == canSurvive.getValue(FACING).getOpposite() && !canSurvive.canSurvive(accessor, pos) ? Blocks.AIR.defaultBlockState() :
+                super.updateShape(canSurvive, direction, state, accessor, pos, blockPos);
     }
 
     @Override
@@ -71,20 +71,20 @@ public class VerticalStairBlock extends HorizontalDirectionalBlock implements Si
     }
 
     @Nullable
-    public BlockState getStateForPlacement(BlockPlaceContext blockPlaceContext) {
-        LevelAccessor levelaccessor = blockPlaceContext.getLevel();
-        BlockPos blockpos = blockPlaceContext.getClickedPos();
+    public BlockState getStateForPlacement(BlockPlaceContext ctx) {
+        LevelAccessor levelaccessor = ctx.getLevel();
+        BlockPos blockpos = ctx.getClickedPos();
         return this.defaultBlockState().setValue(WATERLOGGED, Boolean.valueOf(levelaccessor.getFluidState(blockpos).getType() == Fluids.WATER))
-                .setValue(FACING, blockPlaceContext.getHorizontalDirection().getOpposite());
+                .setValue(FACING, ctx.getHorizontalDirection().getOpposite());
     }
 
     @Override
-    public BlockState rotate(BlockState pState, Rotation pRotation) {
-        return pState.setValue(FACING, pRotation.rotate(pState.getValue(FACING)));
+    public BlockState rotate(BlockState pState, Rotation rotation) {
+        return pState.setValue(FACING, rotation.rotate(pState.getValue(FACING)));
     }
 
     @Override
-    public BlockState mirror(BlockState pState, Mirror pMirror) {
-        return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
+    public BlockState mirror(BlockState pState, Mirror mirror) {
+        return pState.rotate(mirror.getRotation(pState.getValue(FACING)));
     }
 }
