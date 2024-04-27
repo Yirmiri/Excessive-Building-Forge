@@ -31,7 +31,7 @@ public class EBConfig {
                 .define("enableReachingPotions", true);
         ENABLE_BIOMES = COMMON_BUILDER
                 .comment("Should Excessive Building's new biomes generate? (Requires Terrablender)")
-                .define("enableEBBiomes", false);
+                .define("enableEBBiomes", true);
 
         COMMON = COMMON_BUILDER.build();
     }
