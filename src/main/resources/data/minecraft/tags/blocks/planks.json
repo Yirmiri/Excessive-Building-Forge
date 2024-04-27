@@ -3,6 +3,6 @@
   "values": [
     "excessive_building:ancient_planks",
     "excessive_building:willow_planks",
-    "excessive_building:maple_planks"
+{ "id": "excessive_building:maple_planks", "required": false }
   ]
 }

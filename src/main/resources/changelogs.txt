@@ -4,6 +4,54 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v3.0.0 (Forge/NeoForge: 1.20.1)
+Major Update
+
+--- IMPORTANT NOTE ---
+•   This update is very likely to break a lot of builds using previous versions of the mod as a large chunk of it is being cut off to reduce bloat. 
+A full list of removals is provided at the bottom of this log.
+
+•   Many world generation aspects such as new biomes and the entire maple woodset are now only enabled if Terrablender is installed. 
+Previously this was a required dependancy but is now optional.
+
+  Additions
+•   Added all of the new paintings coming the next Minecraft update
+•   Added one of my personal paintings
+•   Added original painting variants
+•   Added new configurations; enableReachingPotions, enableEBBiomes
+
+  Changes
+•   Pedestals can now be rotated in any direction
+•   Changed the textures for a crap ton of old blocks
+•   Changed the recipe of most resource bricks to seem more fair
+•   Resource brick stairs/vertical stairs can now be used as a beacon base block
+•   Moved all blocks added by mod compatibility into a seperate tab
+•   Ancient fruit are now always edible
+•   Removed custom panorama
+•   Made configs actually human readable
+•   Special capes now check for the player's UUID rather than the username so changing your username should no longer remove your cape
+
+  Compat
+•   [Create] Added alternate recipe for andesite alloys
+
+  Bug Fixes
+•   Added chiseled smooth stone bricks to mineable/pickaxe tag
+
+  Removals
+•   Cobbled granite/diorite/andesite bricks
+•   Sulfuric brimstone and all of its variants
+•   Colored crafting table variants
+•   Cracked polished brimstone brick stairs/slabs
+•   Dripstone bricks and tiles
+•   Brickshelf and all wood variants for brickshelves
+•   Iron bar doors and trapdoors
+•   Construction tables
+•   Reaching lanterns
+•   Netherrack, end stone, and smooth basalt stairs/slabs
+•   Ancient cabinets (from Farmer's Delight compatibility)
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v2.2.0 (Forge/NeoForge: 1.20.1)
 1 Year Anniversary & 200,000 Update!
 

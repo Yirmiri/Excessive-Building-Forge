@@ -13,7 +13,7 @@
     "excessive_building:ancient_mosaic_slab",
     "excessive_building:willow_slab",
     "excessive_building:willow_mosaic_slab",
-    "excessive_building:maple_slab",
-    "excessive_building:maple_mosaic_slab"
+    { "id": "excessive_building:maple_slab", "required": false },
+    { "id": "excessive_building:maple_mosaic_slab", "required": false }
   ]
 }

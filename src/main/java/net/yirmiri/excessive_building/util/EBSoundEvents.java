@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.other;
+package net.yirmiri.excessive_building.util;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;

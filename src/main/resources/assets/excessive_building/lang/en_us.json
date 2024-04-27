@@ -1254,6 +1254,24 @@
   "advancements.husbandry.ancient_fruit.title": "Hey What's The Expiration Date?",
   "advancements.husbandry.ancient_fruit.description": "FEED on an ancient fruit and discover its magical capabilities",
 
+  "painting.excessive_building.forgotten_kingdom.author": "Yirmiri",
+  "painting.excessive_building.stage_original.author": "Kristoffer Zetterstrand",
+  "painting.excessive_building.courbet_original.author": "Kristoffer Zetterstrand",
+  "painting.excessive_building.unpacked.author": "Sarah Boeving",
+  "painting.excessive_building.humble.author": "Sarah Boeving",
+  "painting.excessive_building.meditative.author": "Sarah Boeving",
+  "painting.excessive_building.prairie_ride.author": "Sarah Boeving",
+  "painting.excessive_building.baroque.author": "Sarah Boeving",
+
+  "painting.excessive_building.forgotten_kingdom.title": "Forgotten Kingdom",
+  "painting.excessive_building.stage_original.title": "Stage (Original)",
+  "painting.excessive_building.courbet_original.title": "Courbet (Original)",
+  "painting.excessive_building.unpacked.title": "Unpacked",
+  "painting.excessive_building.humble.title": "Humble",
+  "painting.excessive_building.meditative.title": "Meditative",
+  "painting.excessive_building.prairie_ride.title": "Prairie Ride",
+  "painting.excessive_building.baroque.title": "Baroque",
+
   "trim_material.excessive_building.fiery": "Fiery Material",
   "trim_material.excessive_building.kyanite": "Kyanite Material",
   "trim_material.excessive_building.miralen": "Miralen Material",
@@ -1291,7 +1309,6 @@
   "block.excessive_building.polished_jade_tile_vertical_stairs": "Polished Jade Tile Vertical Stairs",
   "block.excessive_building.polished_jade_shingle_vertical_stairs": "Polished Jade Shingle Vertical Stairs",
 
-  "block.excessive_building.ancient_cabinet": "Ancient Cabinet",
   "item.excessive_building.ancient_cider": "Ancient Cider",
 
   "eb_wooden_blocks_tab": "EB Wooden Blocks",
@@ -1300,5 +1317,6 @@
   "eb_natural_blocks_tab": "EB Natural Blocks",
   "eb_functional_blocks_tab": "EB Functional Blocks",
   "eb_misc_tab": "EB Misc",
+  "eb_compat_tab": "EB Compatibility",
   "excessive_building_tab": "Excessive Building"
 }

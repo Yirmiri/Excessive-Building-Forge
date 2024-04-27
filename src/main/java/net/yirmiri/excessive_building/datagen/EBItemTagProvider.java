@@ -20,7 +20,7 @@ public class EBItemTagProvider extends ItemTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider pProvider) {
+    protected void addTags(HolderLookup.Provider provider) {
         this.tag(ItemTags.TRIM_MATERIALS).add(
                 EBItems.FIERY_SHARDS.get(),
                 EBItems.MIRALEN_SHARDS.get(),

@@ -3,6 +3,6 @@
   "values": [
     "excessive_building:ancient_button",
     "excessive_building:willow_button",
-    "excessive_building:maple_button"
+    { "id": "excessive_building:maple_button", "required": false }
   ]
 }

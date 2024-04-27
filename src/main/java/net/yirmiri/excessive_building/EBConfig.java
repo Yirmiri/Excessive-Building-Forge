@@ -7,17 +7,31 @@ import net.minecraftforge.fml.common.Mod;
 public class EBConfig {
     public static ForgeConfigSpec COMMON;
     public static final String CONTENT = "content";
-    public static ForgeConfigSpec.BooleanValue ENABLE_DUG_ANCIENT_SAPLINGS;
+    public static ForgeConfigSpec.BooleanValue ENABLE_EB_SNIFFER_DROPS;
     public static ForgeConfigSpec.BooleanValue ENABLE_EB_VILLAGER_TRADES;
     public static ForgeConfigSpec.BooleanValue ENABLE_EB_WANDERING_TRADES;
+    public static ForgeConfigSpec.BooleanValue ENABLE_REACHING_POTIONS;
+    public static ForgeConfigSpec.BooleanValue ENABLE_BIOMES;
 
     static {
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
 
         COMMON_BUILDER.comment("Content Toggles").push(CONTENT);
-        ENABLE_DUG_ANCIENT_SAPLINGS = COMMON_BUILDER.comment("Should sniffers be able to dig up ancient saplings? (disabling this removes access to all ancient content)").define("enableDugAncientSaplings", true);
-        ENABLE_EB_VILLAGER_TRADES = COMMON_BUILDER.comment("Should villagers have the ability to sell and buy new stuff from Excessive Building?").define("enableEBVillagerTrades", true);
-        ENABLE_EB_WANDERING_TRADES = COMMON_BUILDER.comment("Should wandering traders have the ability to sell and buy new stuff from Excessive Building?").define("enableEBWanderingTrades", true);
+        ENABLE_EB_SNIFFER_DROPS = COMMON_BUILDER
+                .comment("Should sniffers be able to dig up new unique items?")
+                .define("enableSnifferDrops", true);
+        ENABLE_EB_VILLAGER_TRADES = COMMON_BUILDER
+                .comment("Should villagers have new unique offers?")
+                .define("enableEBVillagerTrades", true);
+        ENABLE_EB_WANDERING_TRADES = COMMON_BUILDER
+                .comment("Should wandering traders have new unique offers?")
+                .define("enableEBWanderingTrades", true);
+        ENABLE_REACHING_POTIONS = COMMON_BUILDER
+                .comment("Should reaching potions be craftable?")
+                .define("enableReachingPotions", true);
+        ENABLE_BIOMES = COMMON_BUILDER
+                .comment("Should Excessive Building's new biomes generate? (Requires Terrablender)")
+                .define("enableEBBiomes", false);
 
         COMMON = COMMON_BUILDER.build();
     }

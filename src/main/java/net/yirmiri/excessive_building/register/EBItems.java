@@ -7,7 +7,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.datagen.EBBannerTagProvider;
-import net.yirmiri.excessive_building.other.EBProperties;
+import net.yirmiri.excessive_building.util.EBProperties;
 
 public class EBItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ExcessiveBuilding.MODID);

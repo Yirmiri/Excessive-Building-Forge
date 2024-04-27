@@ -27,7 +27,7 @@ public class AddLootModifier extends LootModifier {
 
     @Override
     protected @NotNull ObjectArrayList<ItemStack> doApply(ObjectArrayList<ItemStack> generatedLoot, LootContext context) {
-        if (EBConfig.ENABLE_DUG_ANCIENT_SAPLINGS.get())
+        if (EBConfig.ENABLE_EB_SNIFFER_DROPS.get())
             for (LootItemCondition condition : this.conditions) {
                 if (!condition.test(context)) {
                     return generatedLoot;

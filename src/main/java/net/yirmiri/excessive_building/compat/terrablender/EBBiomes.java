@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.worldgen.biome;
+package net.yirmiri.excessive_building.compat.terrablender;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BiomeDefaultFeatures;
@@ -10,6 +10,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBBiomes {
@@ -156,5 +157,8 @@ public class EBBiomes {
                         .waterFogColor(0x3f76e4)
                         .ambientMoodSound(AmbientMoodSettings.LEGACY_CAVE_SETTINGS)
                         .backgroundMusic(Musics.createGameMusic(SoundEvents.MUSIC_BIOME_MEADOW)).build()).build();
+    }
+
+    public static void register(IEventBus eventBus) {
     }
 }

@@ -13,7 +13,7 @@
     "excessive_building:ancient_mosaic_stairs",
     "excessive_building:willow_stairs",
     "excessive_building:willow_mosaic_stairs",
-    "excessive_building:maple_stairs",
-    "excessive_building:maple_mosaic_stairs"
+    { "id": "excessive_building:maple_stairs", "required": false },
+    { "id": "excessive_building:maple_mosaic_stairs", "required": false }
   ]
 }

@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.other;
+package net.yirmiri.excessive_building.util;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.level.block.SoundType;

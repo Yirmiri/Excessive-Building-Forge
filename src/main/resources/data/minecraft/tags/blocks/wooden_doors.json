@@ -3,6 +3,6 @@
   "values": [
     "excessive_building:ancient_door",
     "excessive_building:willow_door",
-    "excessive_building:maple_door"
+    { "id": "excessive_building:maple_door", "required": false }
   ]
 }

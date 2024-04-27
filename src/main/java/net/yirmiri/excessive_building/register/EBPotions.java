@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.potion;
+package net.yirmiri.excessive_building.register;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.alchemy.Potion;

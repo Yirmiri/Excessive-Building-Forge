@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.other;
+package net.yirmiri.excessive_building.register;
 
 
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
@@ -14,8 +14,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.register.EBBlocks;
-import net.yirmiri.excessive_building.register.EBItems;
 
 import java.util.List;
 
@@ -37,7 +35,7 @@ public class EBVillagerTrades {
                         new ItemStack(Items.EMERALD, 1), new ItemStack(EBBlocks.COBBLED_DEEPSLATE_BRICKS.get(), 24),
                         16, 2, 0.05F));
             }
-
+//TODO: CLEAN THIS GARBAGE
             if (event.getType() == VillagerProfession.MASON) {
                 Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
                 int villagerLevel = 2;
@@ -148,24 +146,24 @@ public class EBVillagerTrades {
                         8, 5, 0.05f));
 
                 genericTrades.add((pTrader, prandomom) -> new MerchantOffer(
-                        new ItemStack(Items.EMERALD, 5), new ItemStack(EBBlocks.RED_MAPLE_SAPLING.get(), 1),
-                        8, 5, 0.05f));
-
-                genericTrades.add((pTrader, prandomom) -> new MerchantOffer(
-                        new ItemStack(Items.EMERALD, 5), new ItemStack(EBBlocks.ORANGE_MAPLE_SAPLING.get(), 1),
-                        8, 5, 0.05f));
-
-                genericTrades.add((pTrader, prandomom) -> new MerchantOffer(
-                        new ItemStack(Items.EMERALD, 5), new ItemStack(EBBlocks.YELLOW_MAPLE_SAPLING.get(), 1),
-                        8, 5, 0.05f));
-
-                genericTrades.add((pTrader, prandomom) -> new MerchantOffer(
-                        new ItemStack(Items.EMERALD, 5), new ItemStack(EBBlocks.ACORN.get(), 1),
-                        16, 5, 0.05f));
-
-                genericTrades.add((pTrader, prandomom) -> new MerchantOffer(
                         new ItemStack(Items.EMERALD, 5), new ItemStack(EBBlocks.GOLDEN_BIRCH_SAPLING.get(), 1),
                         8, 5, 0.05f));
-            }
+
+                    genericTrades.add((pTrader, prandomom) -> new MerchantOffer(
+                            new ItemStack(Items.EMERALD, 5), new ItemStack(EBBlocks.RED_MAPLE_SAPLING.get(), 1),
+                            8, 5, 0.05f));
+
+                    genericTrades.add((pTrader, prandomom) -> new MerchantOffer(
+                            new ItemStack(Items.EMERALD, 5), new ItemStack(EBBlocks.ORANGE_MAPLE_SAPLING.get(), 1),
+                            8, 5, 0.05f));
+
+                    genericTrades.add((pTrader, prandomom) -> new MerchantOffer(
+                            new ItemStack(Items.EMERALD, 5), new ItemStack(EBBlocks.YELLOW_MAPLE_SAPLING.get(), 1),
+                            8, 5, 0.05f));
+
+                    genericTrades.add((pTrader, prandomom) -> new MerchantOffer(
+                            new ItemStack(Items.EMERALD, 5), new ItemStack(EBBlocks.ACORN.get(), 1),
+                            16, 5, 0.05f));
+                }
         }
 }

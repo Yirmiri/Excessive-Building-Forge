@@ -3,10 +3,10 @@
   "values": [
     "excessive_building:ancient_sapling",
     "excessive_building:willow_sapling",
-    "excessive_building:red_maple_sapling",
-    "excessive_building:orange_maple_sapling",
-    "excessive_building:yellow_maple_sapling",
-    "excessive_building:golden_birch_sapling",
-    "excessive_building:acorn"
+    { "id": "excessive_building:red_maple_sapling", "required": false },
+    { "id": "excessive_building:orange_maple_sapling", "required": false },
+    { "id": "excessive_building:yellow_maple_sapling", "required": false },
+    { "id": "excessive_building:acorn", "required": false },
+    "excessive_building:golden_birch_sapling"
   ]
 }

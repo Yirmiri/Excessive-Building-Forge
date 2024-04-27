@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.other;
+package net.yirmiri.excessive_building.util;
 
 import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
@@ -13,7 +13,7 @@ import net.yirmiri.excessive_building.register.EBBlockEntities;
 public class ModEventBusClientEvents {
 
     @SubscribeEvent
-    public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+    public static void register(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(EBBlockEntities.EB_SIGN.get(), SignRenderer::new);
         event.registerBlockEntityRenderer(EBBlockEntities.EB_HANGING_SIGN.get(), HangingSignRenderer::new);
     }

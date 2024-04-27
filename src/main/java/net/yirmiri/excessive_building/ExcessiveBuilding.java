@@ -26,35 +26,22 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.yirmiri.excessive_building.block.GrassSlabBlock;
 import net.yirmiri.excessive_building.compat.EBCompatRegistries;
-import net.yirmiri.excessive_building.compat.FarmersDelightCompat;
-import net.yirmiri.excessive_building.compat.SullysModCompat;
+import net.yirmiri.excessive_building.compat.FDCompat;
+import net.yirmiri.excessive_building.compat.SMCompat;
+import net.yirmiri.excessive_building.compat.terrablender.EBOverworldRegion;
 import net.yirmiri.excessive_building.datagen.loot.EBLootTableModifiers;
-import net.yirmiri.excessive_building.other.EBBlockTypes;
-import net.yirmiri.excessive_building.other.EBSoundEvents;
 import net.yirmiri.excessive_building.potion.EBBrewingRecipe;
-import net.yirmiri.excessive_building.potion.EBMobEffects;
-import net.yirmiri.excessive_building.potion.EBPotions;
 import net.yirmiri.excessive_building.register.*;
-import net.yirmiri.excessive_building.worldgen.biome.EBOverworldRegion;
+import net.yirmiri.excessive_building.util.EBBlockTypes;
+import net.yirmiri.excessive_building.util.EBSoundEvents;
 import terrablender.api.Regions;
-
-import java.util.List;
 
 @Mod(ExcessiveBuilding.MODID)
 public class ExcessiveBuilding {
     public static final String MODID = "excessive_building";
 
-    //Capes For devs, contributors, and supporters of Excessive Building
-    public static final List<String> AZURUNE = List.of("Dev", "Yirmiri", "Nullmiri"); //Developers
-    public static final List<String> COTTON_CANDY = List.of("Milkyfur"); //Artist
-    public static final List<String> RU_RU_TRANSLATORS = List.of("BrickerNick"); //Russian Translators
-    public static final List<String> UK_UA_TRANSLATORS = List.of("Unroman"); //Ukrainian Translators
-    public static final List<String> CONTRIBUTORS = List.of(); //Contributors
-    public static final List<String> SUPPORTERS = List.of(); //Supporters
-
     public ExcessiveBuilding() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EBConfig.COMMON);
 
         EBBlocks.register(modEventBus);
@@ -68,6 +55,7 @@ public class ExcessiveBuilding {
         EBBannerPatterns.register(modEventBus);
         EBCompatRegistries.register(modEventBus);
         EBSoundEvents.register(modEventBus);
+        EBPaintings.register(modEventBus);
 
         modEventBus.addListener(this::addCreative);
         modEventBus.addListener(this::setup);
@@ -85,23 +73,24 @@ public class ExcessiveBuilding {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.WHITE_ROSE.getId(), EBBlocks.POTTED_WHITE_ROSE);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.WILLOW_SAPLING.getId(), EBBlocks.POTTED_WILLOW_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.ROSE_BUNDLE.getId(), EBBlocks.POTTED_ROSE_BUNDLE);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.MARIGOLD.getId(), EBBlocks.POTTED_MARIGOLD);
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.GOLDEN_BIRCH_SAPLING.getId(), EBBlocks.POTTED_GOLDEN_BIRCH_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.RED_MAPLE_SAPLING.getId(), EBBlocks.POTTED_RED_MAPLE_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.ORANGE_MAPLE_SAPLING.getId(), EBBlocks.POTTED_ORANGE_MAPLE_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.YELLOW_MAPLE_SAPLING.getId(), EBBlocks.POTTED_YELLOW_MAPLE_SAPLING);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.MARIGOLD.getId(), EBBlocks.POTTED_MARIGOLD);
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.GOLDEN_BIRCH_SAPLING.getId(), EBBlocks.POTTED_GOLDEN_BIRCH_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.ACORN.getId(), EBBlocks.POTTED_ACORN);
 
-            BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.WATER, EBItems.ANCIENT_FRUIT.get(), Potions.MUNDANE));
-            BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.AWKWARD, EBItems.ANCIENT_FRUIT.get(), EBPotions.REACHING_POTION.get()));
-            BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(EBPotions.REACHING_POTION.get(), Items.REDSTONE, EBPotions.LONG_REACHING_POTION.get()));
-
-            Regions.register(new EBOverworldRegion(new ResourceLocation(MODID, "overworld"), 4));
+            if (EBConfig.ENABLE_REACHING_POTIONS.get()) {
+                BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.WATER, EBItems.ANCIENT_FRUIT.get(), Potions.MUNDANE));
+                BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.AWKWARD, EBItems.ANCIENT_FRUIT.get(), EBPotions.REACHING_POTION.get()));
+                BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(EBPotions.REACHING_POTION.get(), Items.REDSTONE, EBPotions.LONG_REACHING_POTION.get()));
+            }
         });
     }
 
     @SubscribeEvent
     public void onClientSetup(FMLClientSetupEvent event) {
+        //TRANSLUCENT
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.FIERY_GLASS.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.AMETHYST_GLASS.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.PRISMARINE_GLASS.get(), RenderType.translucent());
@@ -112,7 +101,7 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.RAINBOW_STAINED_GLASS_PANE.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.KYANITE_GLASS.get(), RenderType.translucent());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.KYANITE_GLASS_PANE.get(), RenderType.translucent());
-
+        //CUTOUT
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.SPRUCE_LADDER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.BIRCH_LADDER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.BAMBOO_LADDER.get(), RenderType.cutout());
@@ -128,7 +117,23 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.GRASS_SLAB.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.WILLOW_LADDER.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.MAPLE_LADDER.get(), RenderType.cutout());
-
+        //CUTOUT MIPPED
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.RED_MAPLE_SAPLING.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_RED_MAPLE_SAPLING.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ORANGE_MAPLE_SAPLING.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_ORANGE_MAPLE_SAPLING.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.YELLOW_MAPLE_SAPLING.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_YELLOW_MAPLE_SAPLING.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.RED_MAPLE_LEAVES.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ORANGE_MAPLE_LEAVES.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.YELLOW_MAPLE_LEAVES.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.MAPLE_DOOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.MAPLE_TRAPDOOR.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.RED_MAPLE_LEAVES_PILE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ORANGE_MAPLE_LEAVES_PILE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.YELLOW_MAPLE_LEAVES_PILE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ACORN.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_ACORN.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.COPPER_GRATE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.EXPOSED_COPPER_GRATE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.WEATHERED_COPPER_GRATE.get(), RenderType.cutoutMipped());
@@ -165,25 +170,8 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.WILLOW_TRAPDOOR.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.ROSE_BUNDLE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_ROSE_BUNDLE.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.RED_MAPLE_SAPLING.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_RED_MAPLE_SAPLING.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ORANGE_MAPLE_SAPLING.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_ORANGE_MAPLE_SAPLING.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.YELLOW_MAPLE_SAPLING.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_YELLOW_MAPLE_SAPLING.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.RED_MAPLE_LEAVES.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ORANGE_MAPLE_LEAVES.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.YELLOW_MAPLE_LEAVES.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.MAPLE_DOOR.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.MAPLE_TRAPDOOR.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.MARIGOLD.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_MARIGOLD.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.RED_MAPLE_LEAVES_PILE.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ORANGE_MAPLE_LEAVES_PILE.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.YELLOW_MAPLE_LEAVES_PILE.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.IRON_BAR_DOOR.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.IRON_BAR_TRAPDOOR.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.REACHING_LANTERN.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.MIRALEN_CLUSTER.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.LARGE_MIRALEN_BUD.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.MEDIUM_MIRALEN_BUD.get(), RenderType.cutoutMipped());
@@ -191,18 +179,30 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.GOLDEN_BIRCH_LEAVES.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.GOLDEN_BIRCH_SAPLING.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_GOLDEN_BIRCH_SAPLING.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ACORN.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_VINE.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_ACORN.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.WILLOW_LEAVES.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.SMOOTH_STONE_BRICK_PEDESTAL.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.TUFF_BRICK_PEDESTAL.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.MARBLE_PEDESTAL.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.MARQUINA_MARBLE_PEDESTAL.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.SANDSTONE_PEDESTAL.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.RED_SANDSTONE_PEDESTAL.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.SOUL_SANDSTONE_PEDESTAL.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.POLISHED_BRIMSTONE_PEDESTAL.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.QUARTZ_PEDESTAL.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.PURPUR_PEDESTAL.get(), RenderType.cutoutMipped());
 
         Sheets.addWoodType(EBBlockTypes.ANCIENT);
         Sheets.addWoodType(EBBlockTypes.WILLOW);
         Sheets.addWoodType(EBBlockTypes.MAPLE);
 
         if (EBCompatRegistries.sullysMod) {
-            ItemBlockRenderTypes.setRenderLayer(SullysModCompat.JADE_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(SullysModCompat.JADE_GLASS_PANE.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(SMCompat.JADE_GLASS.get(), RenderType.translucent());
+            ItemBlockRenderTypes.setRenderLayer(SMCompat.JADE_GLASS_PANE.get(), RenderType.translucent());
+        }
+
+        if (EBConfig.ENABLE_BIOMES.get() && EBCompatRegistries.terrablender) {
+            Regions.register(new EBOverworldRegion(new ResourceLocation(ExcessiveBuilding.MODID, "overworld"), 4));
         }
     }
 
@@ -211,7 +211,6 @@ public class ExcessiveBuilding {
             AxeItem.STRIPPABLES = new ImmutableMap.Builder<Block, Block>().putAll(AxeItem.STRIPPABLES)
                     .put(EBBlocks.ANCIENT_LOG.get(), EBBlocks.STRIPPED_ANCIENT_LOG.get()).put(EBBlocks.ANCIENT_WOOD.get(), EBBlocks.STRIPPED_ANCIENT_WOOD.get())
                     .put(EBBlocks.WILLOW_LOG.get(), EBBlocks.STRIPPED_WILLOW_LOG.get()).put(EBBlocks.WILLOW_WOOD.get(), EBBlocks.STRIPPED_WILLOW_WOOD.get())
-                    .put(EBBlocks.MAPLE_LOG.get(), EBBlocks.STRIPPED_MAPLE_LOG.get()).put(EBBlocks.MAPLE_WOOD.get(), EBBlocks.STRIPPED_MAPLE_WOOD.get())
                     .put(EBBlocks.HOLLOW_OAK_LOG.get(), EBBlocks.HOLLOW_STRIPPED_OAK_LOG.get())
                     .put(EBBlocks.HOLLOW_SPRUCE_LOG.get(), EBBlocks.HOLLOW_STRIPPED_SPRUCE_LOG.get())
                     .put(EBBlocks.HOLLOW_BIRCH_LOG.get(), EBBlocks.HOLLOW_STRIPPED_BIRCH_LOG.get())
@@ -219,12 +218,13 @@ public class ExcessiveBuilding {
                     .put(EBBlocks.HOLLOW_ACACIA_LOG.get(), EBBlocks.HOLLOW_STRIPPED_ACACIA_LOG.get())
                     .put(EBBlocks.HOLLOW_DARK_OAK_LOG.get(), EBBlocks.HOLLOW_STRIPPED_DARK_OAK_LOG.get())
                     .put(EBBlocks.HOLLOW_WILLOW_LOG.get(), EBBlocks.HOLLOW_STRIPPED_WILLOW_LOG.get())
-                    .put(EBBlocks.HOLLOW_MAPLE_LOG.get(), EBBlocks.HOLLOW_STRIPPED_MAPLE_LOG.get())
                     .put(EBBlocks.HOLLOW_ANCIENT_LOG.get(), EBBlocks.HOLLOW_STRIPPED_ANCIENT_LOG.get())
                     .put(EBBlocks.HOLLOW_MANGROVE_LOG.get(), EBBlocks.HOLLOW_STRIPPED_MANGROVE_LOG.get())
                     .put(EBBlocks.HOLLOW_CHERRY_LOG.get(), EBBlocks.HOLLOW_STRIPPED_CHERRY_LOG.get())
                     .put(EBBlocks.HOLLOW_CRIMSON_STEM.get(), EBBlocks.HOLLOW_STRIPPED_CRIMSON_STEM.get())
                     .put(EBBlocks.HOLLOW_WARPED_STEM.get(), EBBlocks.HOLLOW_STRIPPED_WARPED_STEM.get())
+                    .put(EBBlocks.MAPLE_LOG.get(), EBBlocks.STRIPPED_MAPLE_LOG.get()).put(EBBlocks.MAPLE_WOOD.get(), EBBlocks.STRIPPED_MAPLE_WOOD.get())
+                    .put(EBBlocks.HOLLOW_MAPLE_LOG.get(), EBBlocks.HOLLOW_STRIPPED_MAPLE_LOG.get())
                     .build();
         });
     }
@@ -403,8 +403,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.WATER_POTION_SHELF);
             event.accept(EBBlocks.POTION_SHELF);
             event.accept(EBBlocks.ALCHEMIST_SHELF);
-            event.accept(EBBlocks.BRICKSHELF);
-            event.accept(EBBlocks.NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.SPRUCE_BOOKSHELF);
             event.accept(EBBlocks.SPRUCE_EMPTY_SHELF);
@@ -412,8 +410,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.SPRUCE_WATER_POTION_SHELF);
             event.accept(EBBlocks.SPRUCE_POTION_SHELF);
             event.accept(EBBlocks.SPRUCE_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.SPRUCE_BRICKSHELF);
-            event.accept(EBBlocks.SPRUCE_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.BIRCH_BOOKSHELF);
             event.accept(EBBlocks.BIRCH_EMPTY_SHELF);
@@ -421,8 +417,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.BIRCH_WATER_POTION_SHELF);
             event.accept(EBBlocks.BIRCH_POTION_SHELF);
             event.accept(EBBlocks.BIRCH_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.BIRCH_BRICKSHELF);
-            event.accept(EBBlocks.BIRCH_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.JUNGLE_BOOKSHELF);
             event.accept(EBBlocks.JUNGLE_EMPTY_SHELF);
@@ -430,8 +424,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.JUNGLE_WATER_POTION_SHELF);
             event.accept(EBBlocks.JUNGLE_POTION_SHELF);
             event.accept(EBBlocks.JUNGLE_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.JUNGLE_BRICKSHELF);
-            event.accept(EBBlocks.JUNGLE_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.ACACIA_BOOKSHELF);
             event.accept(EBBlocks.ACACIA_EMPTY_SHELF);
@@ -439,8 +431,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.ACACIA_WATER_POTION_SHELF);
             event.accept(EBBlocks.ACACIA_POTION_SHELF);
             event.accept(EBBlocks.ACACIA_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.ACACIA_BRICKSHELF);
-            event.accept(EBBlocks.ACACIA_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.DARK_OAK_BOOKSHELF);
             event.accept(EBBlocks.DARK_OAK_EMPTY_SHELF);
@@ -448,8 +438,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.DARK_OAK_WATER_POTION_SHELF);
             event.accept(EBBlocks.DARK_OAK_POTION_SHELF);
             event.accept(EBBlocks.DARK_OAK_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.DARK_OAK_BRICKSHELF);
-            event.accept(EBBlocks.DARK_OAK_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.MANGROVE_BOOKSHELF);
             event.accept(EBBlocks.MANGROVE_EMPTY_SHELF);
@@ -457,8 +445,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.MANGROVE_WATER_POTION_SHELF);
             event.accept(EBBlocks.MANGROVE_POTION_SHELF);
             event.accept(EBBlocks.MANGROVE_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.MANGROVE_BRICKSHELF);
-            event.accept(EBBlocks.MANGROVE_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.CHERRY_BOOKSHELF);
             event.accept(EBBlocks.CHERRY_EMPTY_SHELF);
@@ -466,8 +452,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.CHERRY_WATER_POTION_SHELF);
             event.accept(EBBlocks.CHERRY_POTION_SHELF);
             event.accept(EBBlocks.CHERRY_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.CHERRY_BRICKSHELF);
-            event.accept(EBBlocks.CHERRY_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.MAPLE_BOOKSHELF);
             event.accept(EBBlocks.MAPLE_EMPTY_SHELF);
@@ -475,8 +459,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.MAPLE_WATER_POTION_SHELF);
             event.accept(EBBlocks.MAPLE_POTION_SHELF);
             event.accept(EBBlocks.MAPLE_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.MAPLE_BRICKSHELF);
-            event.accept(EBBlocks.MAPLE_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.WILLOW_BOOKSHELF);
             event.accept(EBBlocks.WILLOW_EMPTY_SHELF);
@@ -484,8 +466,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.WILLOW_WATER_POTION_SHELF);
             event.accept(EBBlocks.WILLOW_POTION_SHELF);
             event.accept(EBBlocks.WILLOW_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.WILLOW_BRICKSHELF);
-            event.accept(EBBlocks.WILLOW_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.ANCIENT_BOOKSHELF);
             event.accept(EBBlocks.ANCIENT_EMPTY_SHELF);
@@ -493,8 +473,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.ANCIENT_WATER_POTION_SHELF);
             event.accept(EBBlocks.ANCIENT_POTION_SHELF);
             event.accept(EBBlocks.ANCIENT_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.ANCIENT_BRICKSHELF);
-            event.accept(EBBlocks.ANCIENT_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.BAMBOO_BOOKSHELF);
             event.accept(EBBlocks.BAMBOO_EMPTY_SHELF);
@@ -502,8 +480,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.BAMBOO_WATER_POTION_SHELF);
             event.accept(EBBlocks.BAMBOO_POTION_SHELF);
             event.accept(EBBlocks.BAMBOO_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.BAMBOO_BRICKSHELF);
-            event.accept(EBBlocks.BAMBOO_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.CRIMSON_BOOKSHELF);
             event.accept(EBBlocks.CRIMSON_EMPTY_SHELF);
@@ -511,8 +487,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.CRIMSON_WATER_POTION_SHELF);
             event.accept(EBBlocks.CRIMSON_POTION_SHELF);
             event.accept(EBBlocks.CRIMSON_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.CRIMSON_BRICKSHELF);
-            event.accept(EBBlocks.CRIMSON_NETHER_BRICKSHELF);
 
             event.accept(EBBlocks.WARPED_BOOKSHELF);
             event.accept(EBBlocks.WARPED_EMPTY_SHELF);
@@ -520,48 +494,20 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.WARPED_WATER_POTION_SHELF);
             event.accept(EBBlocks.WARPED_POTION_SHELF);
             event.accept(EBBlocks.WARPED_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.WARPED_BRICKSHELF);
-            event.accept(EBBlocks.WARPED_NETHER_BRICKSHELF);
-
-            event.accept(EBBlocks.OAK_CRAFTING_TABLE);
 
             event.accept(EBBlocks.SPRUCE_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_SPRUCE_CRAFTING_TABLE);
-
             event.accept(EBBlocks.BIRCH_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_BIRCH_CRAFTING_TABLE);
-
             event.accept(EBBlocks.JUNGLE_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_JUNGLE_CRAFTING_TABLE);
-
             event.accept(EBBlocks.ACACIA_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_ACACIA_CRAFTING_TABLE);
-
             event.accept(EBBlocks.DARK_OAK_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_DARK_OAK_CRAFTING_TABLE);
-
             event.accept(EBBlocks.MANGROVE_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_MANGROVE_CRAFTING_TABLE);
-
             event.accept(EBBlocks.BAMBOO_CRAFTING_TABLE);
-
             event.accept(EBBlocks.CHERRY_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_CHERRY_CRAFTING_TABLE);
-
             event.accept(EBBlocks.MAPLE_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_MAPLE_CRAFTING_TABLE);
-
             event.accept(EBBlocks.WILLOW_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_WILLOW_CRAFTING_TABLE);
-
             event.accept(EBBlocks.ANCIENT_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_ANCIENT_CRAFTING_TABLE);
-
             event.accept(EBBlocks.CRIMSON_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_CRIMSON_CRAFTING_TABLE);
-
             event.accept(EBBlocks.WARPED_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_WARPED_CRAFTING_TABLE);
         }
 
         if (event.getTab() == EBItemGroups.EB_STONE_BLOCKS.get()) {
@@ -615,13 +561,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.COBBLED_GRANITE_SLAB);
             event.accept(EBBlocks.COBBLED_GRANITE_WALL);
 
-            event.accept(EBBlocks.COBBLED_GRANITE_BRICKS);
-            event.accept(EBBlocks.CRACKED_COBBLED_GRANITE_BRICKS);
-            event.accept(EBBlocks.COBBLED_GRANITE_BRICK_STAIRS);
-            event.accept(EBBlocks.COBBLED_GRANITE_BRICK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.COBBLED_GRANITE_BRICK_SLAB);
-            event.accept(EBBlocks.COBBLED_GRANITE_BRICK_WALL);
-
             event.accept(EBBlocks.POLISHED_GRANITE_BRICKS);
             event.accept(EBBlocks.POLISHED_GRANITE_BRICK_STAIRS);
             event.accept(EBBlocks.POLISHED_GRANITE_BRICK_VERTICAL_STAIRS);
@@ -634,13 +573,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.COBBLED_DIORITE_SLAB);
             event.accept(EBBlocks.COBBLED_DIORITE_WALL);
 
-            event.accept(EBBlocks.COBBLED_DIORITE_BRICKS);
-            event.accept(EBBlocks.CRACKED_COBBLED_DIORITE_BRICKS);
-            event.accept(EBBlocks.COBBLED_DIORITE_BRICK_STAIRS);
-            event.accept(EBBlocks.COBBLED_DIORITE_BRICK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.COBBLED_DIORITE_BRICK_SLAB);
-            event.accept(EBBlocks.COBBLED_DIORITE_BRICK_WALL);
-
             event.accept(EBBlocks.POLISHED_DIORITE_BRICKS);
             event.accept(EBBlocks.POLISHED_DIORITE_BRICK_STAIRS);
             event.accept(EBBlocks.POLISHED_DIORITE_BRICK_VERTICAL_STAIRS);
@@ -652,13 +584,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.COBBLED_ANDESITE_VERTICAL_STAIRS);
             event.accept(EBBlocks.COBBLED_ANDESITE_SLAB);
             event.accept(EBBlocks.COBBLED_ANDESITE_WALL);
-
-            event.accept(EBBlocks.COBBLED_ANDESITE_BRICKS);
-            event.accept(EBBlocks.CRACKED_COBBLED_ANDESITE_BRICKS);
-            event.accept(EBBlocks.COBBLED_ANDESITE_BRICK_STAIRS);
-            event.accept(EBBlocks.COBBLED_ANDESITE_BRICK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.COBBLED_ANDESITE_BRICK_SLAB);
-            event.accept(EBBlocks.COBBLED_ANDESITE_BRICK_WALL);
 
             event.accept(EBBlocks.POLISHED_ANDESITE_BRICKS);
             event.accept(EBBlocks.POLISHED_ANDESITE_BRICK_STAIRS);
@@ -707,17 +632,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.TUFF_TILE_SLAB);
             event.accept(EBBlocks.TUFF_TILE_WALL);
             event.accept(EBBlocks.TUFF_BRICK_PILLAR);
-
-            event.accept(EBBlocks.DRIPSTONE_BRICKS);
-            event.accept(EBBlocks.DRIPSTONE_BRICK_STAIRS);
-            event.accept(EBBlocks.DRIPSTONE_BRICK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.DRIPSTONE_BRICK_SLAB);
-            event.accept(EBBlocks.DRIPSTONE_BRICK_WALL);
-            event.accept(EBBlocks.DRIPSTONE_TILES);
-            event.accept(EBBlocks.DRIPSTONE_TILE_STAIRS);
-            event.accept(EBBlocks.DRIPSTONE_TILE_VERTICAL_STAIRS);
-            event.accept(EBBlocks.DRIPSTONE_TILE_SLAB);
-            event.accept(EBBlocks.DRIPSTONE_TILE_WALL);
 
             event.accept(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
             event.accept(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
@@ -897,36 +811,11 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.POLISHED_BRIMSTONE_BRICK_SLAB);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_BRICK_WALL);
             event.accept(EBBlocks.CRACKED_POLISHED_BRIMSTONE_BRICKS);
-            event.accept(EBBlocks.CRACKED_POLISHED_BRIMSTONE_BRICK_STAIRS);
-            event.accept(EBBlocks.CRACKED_POLISHED_BRIMSTONE_BRICK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.CRACKED_POLISHED_BRIMSTONE_BRICK_SLAB);
-            event.accept(EBBlocks.CRACKED_POLISHED_BRIMSTONE_BRICK_WALL);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_TILES);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_TILE_STAIRS);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_TILE_VERTICAL_STAIRS);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_TILE_SLAB);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_TILE_WALL);
-
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE_STAIRS);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE_VERTICAL_STAIRS);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE_SLAB);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_PILLAR);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_STAIRS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_VERTICAL_STAIRS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_SLAB);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_WALL);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICKS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_STAIRS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_SLAB);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_WALL);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILES);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_STAIRS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_VERTICAL_STAIRS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_SLAB);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_WALL);
 
             event.accept(EBBlocks.NETHER_TILES);
             event.accept(EBBlocks.NETHER_TILE_STAIRS);
@@ -1435,16 +1324,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.ORANGE_MAPLE_LEAVES_PILE);
             event.accept(EBBlocks.YELLOW_MAPLE_LEAVES_PILE);
 
-            event.accept(EBBlocks.NETHERRACK_STAIRS);
-            event.accept(EBBlocks.NETHERRACK_SLAB);
-            event.accept(EBBlocks.NETHERRACK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.END_STONE_STAIRS);
-            event.accept(EBBlocks.END_STONE_SLAB);
-            event.accept(EBBlocks.END_STONE_VERTICAL_STAIRS);
-            event.accept(EBBlocks.SMOOTH_BASALT_STAIRS);
-            event.accept(EBBlocks.SMOOTH_BASALT_SLAB);
-            event.accept(EBBlocks.SMOOTH_BASALT_VERTICAL_STAIRS);
-
             event.accept(EBBlocks.QUARTZ_ORE);
             event.accept(EBBlocks.DEEPSLATE_QUARTZ_ORE);
 
@@ -1496,16 +1375,12 @@ public class ExcessiveBuilding {
         }
 
         if (event.getTab() == EBItemGroups.EB_FUNCTIONAL_BLOCKS.get()) {
-            event.accept(EBBlocks.REACHING_LANTERN);
-
             event.accept(EBBlocks.STONE_LAMP);
             event.accept(EBBlocks.DEEPSLATE_LAMP);
             event.accept(EBBlocks.BLACKSTONE_LAMP);
             event.accept(EBBlocks.BLACKSTONE_WINDOW);
             event.accept(EBBlocks.BRIMSTONE_LAMP);
             event.accept(EBBlocks.BRIMSTONE_WINDOW);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE_LAMP);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE_WINDOW);
             event.accept(EBBlocks.FIERY_LAMP);
             event.accept(EBBlocks.KYANITE_LAMP);
             event.accept(EBBlocks.AMETHYST_LAMP);
@@ -1557,34 +1432,19 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.WARPED_POTION_SHELF);
             event.accept(EBBlocks.WARPED_ALCHEMIST_SHELF);
 
-            event.accept(EBBlocks.OAK_CRAFTING_TABLE);
             event.accept(EBBlocks.SPRUCE_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_SPRUCE_CRAFTING_TABLE);
             event.accept(EBBlocks.BIRCH_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_BIRCH_CRAFTING_TABLE);
             event.accept(EBBlocks.JUNGLE_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_JUNGLE_CRAFTING_TABLE);
             event.accept(EBBlocks.ACACIA_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_ACACIA_CRAFTING_TABLE);
             event.accept(EBBlocks.DARK_OAK_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_DARK_OAK_CRAFTING_TABLE);
             event.accept(EBBlocks.MANGROVE_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_MANGROVE_CRAFTING_TABLE);
             event.accept(EBBlocks.BAMBOO_CRAFTING_TABLE);
             event.accept(EBBlocks.CHERRY_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_CHERRY_CRAFTING_TABLE);
             event.accept(EBBlocks.MAPLE_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_MAPLE_CRAFTING_TABLE);
             event.accept(EBBlocks.WILLOW_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_WILLOW_CRAFTING_TABLE);
             event.accept(EBBlocks.ANCIENT_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_ANCIENT_CRAFTING_TABLE);
             event.accept(EBBlocks.CRIMSON_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_CRIMSON_CRAFTING_TABLE);
             event.accept(EBBlocks.WARPED_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_WARPED_CRAFTING_TABLE);
-
-            event.accept(EBBlocks.CONSTRUCTION_TABLE);
 
             event.accept(EBBlocks.SPRUCE_LADDER);
             event.accept(EBBlocks.BIRCH_LADDER);
@@ -1615,8 +1475,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.BLACKSTONE_WINDOW);
             event.accept(EBBlocks.BRIMSTONE_LAMP);
             event.accept(EBBlocks.BRIMSTONE_WINDOW);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE_LAMP);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE_WINDOW);
             event.accept(EBBlocks.FIERY_LAMP);
             event.accept(EBBlocks.FIERY_GLASS);
             event.accept(EBBlocks.FIERY_GLASS_PANE);
@@ -1637,8 +1495,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.IRON_BRICK_VERTICAL_STAIRS);
             event.accept(EBBlocks.IRON_BRICK_SLAB);
             event.accept(EBBlocks.IRON_GRATE);
-            event.accept(EBBlocks.IRON_BAR_DOOR);
-            event.accept(EBBlocks.IRON_BAR_TRAPDOOR);
             event.accept(EBBlocks.GOLDEN_BRICKS);
             event.accept(EBBlocks.GOLDEN_BRICK_STAIRS);
             event.accept(EBBlocks.GOLDEN_BRICK_VERTICAL_STAIRS);
@@ -1700,7 +1556,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.RED_SANDSTONE_PEDESTAL);
             event.accept(EBBlocks.SOUL_SANDSTONE_PEDESTAL);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_PEDESTAL);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_PEDESTAL);
             event.accept(EBBlocks.QUARTZ_PEDESTAL);
             event.accept(EBBlocks.PURPUR_PEDESTAL);
 
@@ -1949,12 +1804,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.COBBLED_GRANITE_VERTICAL_STAIRS);
             event.accept(EBBlocks.COBBLED_GRANITE_SLAB);
             event.accept(EBBlocks.COBBLED_GRANITE_WALL);
-            event.accept(EBBlocks.COBBLED_GRANITE_BRICKS);
-            event.accept(EBBlocks.CRACKED_COBBLED_GRANITE_BRICKS);
-            event.accept(EBBlocks.COBBLED_GRANITE_BRICK_STAIRS);
-            event.accept(EBBlocks.COBBLED_GRANITE_BRICK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.COBBLED_GRANITE_BRICK_SLAB);
-            event.accept(EBBlocks.COBBLED_GRANITE_BRICK_WALL);
             event.accept(EBBlocks.POLISHED_GRANITE_BRICKS);
             event.accept(EBBlocks.POLISHED_GRANITE_BRICK_STAIRS);
             event.accept(EBBlocks.POLISHED_GRANITE_BRICK_VERTICAL_STAIRS);
@@ -1965,12 +1814,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.COBBLED_DIORITE_VERTICAL_STAIRS);
             event.accept(EBBlocks.COBBLED_DIORITE_SLAB);
             event.accept(EBBlocks.COBBLED_DIORITE_WALL);
-            event.accept(EBBlocks.COBBLED_DIORITE_BRICKS);
-            event.accept(EBBlocks.CRACKED_COBBLED_DIORITE_BRICKS);
-            event.accept(EBBlocks.COBBLED_DIORITE_BRICK_STAIRS);
-            event.accept(EBBlocks.COBBLED_DIORITE_BRICK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.COBBLED_DIORITE_BRICK_SLAB);
-            event.accept(EBBlocks.COBBLED_DIORITE_BRICK_WALL);
             event.accept(EBBlocks.POLISHED_DIORITE_BRICKS);
             event.accept(EBBlocks.POLISHED_DIORITE_BRICK_STAIRS);
             event.accept(EBBlocks.POLISHED_DIORITE_BRICK_VERTICAL_STAIRS);
@@ -1981,12 +1824,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.COBBLED_ANDESITE_VERTICAL_STAIRS);
             event.accept(EBBlocks.COBBLED_ANDESITE_SLAB);
             event.accept(EBBlocks.COBBLED_ANDESITE_WALL);
-            event.accept(EBBlocks.COBBLED_ANDESITE_BRICKS);
-            event.accept(EBBlocks.CRACKED_COBBLED_ANDESITE_BRICKS);
-            event.accept(EBBlocks.COBBLED_ANDESITE_BRICK_STAIRS);
-            event.accept(EBBlocks.COBBLED_ANDESITE_BRICK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.COBBLED_ANDESITE_BRICK_SLAB);
-            event.accept(EBBlocks.COBBLED_ANDESITE_BRICK_WALL);
             event.accept(EBBlocks.POLISHED_ANDESITE_BRICKS);
             event.accept(EBBlocks.POLISHED_ANDESITE_BRICK_STAIRS);
             event.accept(EBBlocks.POLISHED_ANDESITE_BRICK_VERTICAL_STAIRS);
@@ -2031,16 +1868,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.TUFF_TILE_SLAB);
             event.accept(EBBlocks.TUFF_TILE_WALL);
             event.accept(EBBlocks.TUFF_BRICK_PILLAR);
-            event.accept(EBBlocks.DRIPSTONE_BRICKS);
-            event.accept(EBBlocks.DRIPSTONE_BRICK_STAIRS);
-            event.accept(EBBlocks.DRIPSTONE_BRICK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.DRIPSTONE_BRICK_SLAB);
-            event.accept(EBBlocks.DRIPSTONE_BRICK_WALL);
-            event.accept(EBBlocks.DRIPSTONE_TILES);
-            event.accept(EBBlocks.DRIPSTONE_TILE_STAIRS);
-            event.accept(EBBlocks.DRIPSTONE_TILE_VERTICAL_STAIRS);
-            event.accept(EBBlocks.DRIPSTONE_TILE_SLAB);
-            event.accept(EBBlocks.DRIPSTONE_TILE_WALL);
             event.accept(EBBlocks.COBBLED_DEEPSLATE_BRICKS);
             event.accept(EBBlocks.CRACKED_COBBLED_DEEPSLATE_BRICKS);
             event.accept(EBBlocks.COBBLED_DEEPSLATE_BRICK_STAIRS);
@@ -2204,35 +2031,11 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.POLISHED_BRIMSTONE_BRICK_SLAB);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_BRICK_WALL);
             event.accept(EBBlocks.CRACKED_POLISHED_BRIMSTONE_BRICKS);
-            event.accept(EBBlocks.CRACKED_POLISHED_BRIMSTONE_BRICK_STAIRS);
-            event.accept(EBBlocks.CRACKED_POLISHED_BRIMSTONE_BRICK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.CRACKED_POLISHED_BRIMSTONE_BRICK_SLAB);
-            event.accept(EBBlocks.CRACKED_POLISHED_BRIMSTONE_BRICK_WALL);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_TILES);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_TILE_STAIRS);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_TILE_VERTICAL_STAIRS);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_TILE_SLAB);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_TILE_WALL);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE_STAIRS);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE_VERTICAL_STAIRS);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE_SLAB);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_PILLAR);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_STAIRS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_VERTICAL_STAIRS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_SLAB);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_WALL);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICKS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_STAIRS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_SLAB);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_BRICK_WALL);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILES);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_STAIRS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_VERTICAL_STAIRS);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_SLAB);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_TILE_WALL);
             event.accept(EBBlocks.NETHER_TILES);
             event.accept(EBBlocks.NETHER_TILE_STAIRS);
             event.accept(EBBlocks.NETHER_TILE_VERTICAL_STAIRS);
@@ -2307,8 +2110,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.IRON_BRICK_VERTICAL_STAIRS);
             event.accept(EBBlocks.IRON_BRICK_SLAB);
             event.accept(EBBlocks.IRON_GRATE);
-            event.accept(EBBlocks.IRON_BAR_DOOR);
-            event.accept(EBBlocks.IRON_BAR_TRAPDOOR);
             event.accept(EBBlocks.GOLDEN_BRICKS);
             event.accept(EBBlocks.GOLDEN_BRICK_STAIRS);
             event.accept(EBBlocks.GOLDEN_BRICK_VERTICAL_STAIRS);
@@ -2359,15 +2160,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.ORANGE_MAPLE_LEAVES_PILE);
             event.accept(EBBlocks.YELLOW_MAPLE_LEAVES_PILE);
             event.accept(EBItems.ANCIENT_FRUIT);
-            event.accept(EBBlocks.NETHERRACK_STAIRS);
-            event.accept(EBBlocks.NETHERRACK_SLAB);
-            event.accept(EBBlocks.NETHERRACK_VERTICAL_STAIRS);
-            event.accept(EBBlocks.END_STONE_STAIRS);
-            event.accept(EBBlocks.END_STONE_SLAB);
-            event.accept(EBBlocks.END_STONE_VERTICAL_STAIRS);
-            event.accept(EBBlocks.SMOOTH_BASALT_STAIRS);
-            event.accept(EBBlocks.SMOOTH_BASALT_SLAB);
-            event.accept(EBBlocks.SMOOTH_BASALT_VERTICAL_STAIRS);
             event.accept(EBBlocks.QUARTZ_ORE);
             event.accept(EBBlocks.DEEPSLATE_QUARTZ_ORE);
             event.accept(EBBlocks.QUARTZ_BRICK_STAIRS);
@@ -2626,15 +2418,12 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.PINK_TERRACOTTA_TILES);
             event.accept(EBBlocks.PINK_TERRACOTTA_TILE_STAIRS);
             event.accept(EBBlocks.PINK_TERRACOTTA_TILE_SLAB);
-            event.accept(EBBlocks.REACHING_LANTERN);
             event.accept(EBBlocks.STONE_LAMP);
             event.accept(EBBlocks.DEEPSLATE_LAMP);
             event.accept(EBBlocks.BLACKSTONE_LAMP);
             event.accept(EBBlocks.BLACKSTONE_WINDOW);
             event.accept(EBBlocks.BRIMSTONE_LAMP);
             event.accept(EBBlocks.BRIMSTONE_WINDOW);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE_LAMP);
-            event.accept(EBBlocks.SULFURIC_BRIMSTONE_WINDOW);
             event.accept(EBBlocks.SMOOTH_STONE_BRICK_PEDESTAL);
             event.accept(EBBlocks.TUFF_BRICK_PEDESTAL);
             event.accept(EBBlocks.MARBLE_PEDESTAL);
@@ -2643,7 +2432,6 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.RED_SANDSTONE_PEDESTAL);
             event.accept(EBBlocks.SOUL_SANDSTONE_PEDESTAL);
             event.accept(EBBlocks.POLISHED_BRIMSTONE_PEDESTAL);
-            event.accept(EBBlocks.POLISHED_SULFURIC_BRIMSTONE_PEDESTAL);
             event.accept(EBBlocks.QUARTZ_PEDESTAL);
             event.accept(EBBlocks.PURPUR_PEDESTAL);
             event.accept(EBBlocks.SOUL_MAGMA_BLOCK);
@@ -2772,139 +2560,97 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.WATER_POTION_SHELF);
             event.accept(EBBlocks.POTION_SHELF);
             event.accept(EBBlocks.ALCHEMIST_SHELF);
-            event.accept(EBBlocks.BRICKSHELF);
-            event.accept(EBBlocks.NETHER_BRICKSHELF);
             event.accept(EBBlocks.SPRUCE_BOOKSHELF);
             event.accept(EBBlocks.SPRUCE_EMPTY_SHELF);
             event.accept(EBBlocks.SPRUCE_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.SPRUCE_WATER_POTION_SHELF);
             event.accept(EBBlocks.SPRUCE_POTION_SHELF);
             event.accept(EBBlocks.SPRUCE_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.SPRUCE_BRICKSHELF);
-            event.accept(EBBlocks.SPRUCE_NETHER_BRICKSHELF);
             event.accept(EBBlocks.BIRCH_BOOKSHELF);
             event.accept(EBBlocks.BIRCH_EMPTY_SHELF);
             event.accept(EBBlocks.BIRCH_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.BIRCH_WATER_POTION_SHELF);
             event.accept(EBBlocks.BIRCH_POTION_SHELF);
             event.accept(EBBlocks.BIRCH_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.BIRCH_BRICKSHELF);
-            event.accept(EBBlocks.BIRCH_NETHER_BRICKSHELF);
             event.accept(EBBlocks.JUNGLE_BOOKSHELF);
             event.accept(EBBlocks.JUNGLE_EMPTY_SHELF);
             event.accept(EBBlocks.JUNGLE_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.JUNGLE_WATER_POTION_SHELF);
             event.accept(EBBlocks.JUNGLE_POTION_SHELF);
             event.accept(EBBlocks.JUNGLE_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.JUNGLE_BRICKSHELF);
-            event.accept(EBBlocks.JUNGLE_NETHER_BRICKSHELF);
             event.accept(EBBlocks.ACACIA_BOOKSHELF);
             event.accept(EBBlocks.ACACIA_EMPTY_SHELF);
             event.accept(EBBlocks.ACACIA_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.ACACIA_WATER_POTION_SHELF);
             event.accept(EBBlocks.ACACIA_POTION_SHELF);
             event.accept(EBBlocks.ACACIA_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.ACACIA_BRICKSHELF);
-            event.accept(EBBlocks.ACACIA_NETHER_BRICKSHELF);
             event.accept(EBBlocks.DARK_OAK_BOOKSHELF);
             event.accept(EBBlocks.DARK_OAK_EMPTY_SHELF);
             event.accept(EBBlocks.DARK_OAK_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.DARK_OAK_WATER_POTION_SHELF);
             event.accept(EBBlocks.DARK_OAK_POTION_SHELF);
             event.accept(EBBlocks.DARK_OAK_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.DARK_OAK_BRICKSHELF);
-            event.accept(EBBlocks.DARK_OAK_NETHER_BRICKSHELF);
             event.accept(EBBlocks.MANGROVE_BOOKSHELF);
             event.accept(EBBlocks.MANGROVE_EMPTY_SHELF);
             event.accept(EBBlocks.MANGROVE_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.MANGROVE_WATER_POTION_SHELF);
             event.accept(EBBlocks.MANGROVE_POTION_SHELF);
             event.accept(EBBlocks.MANGROVE_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.MANGROVE_BRICKSHELF);
-            event.accept(EBBlocks.MANGROVE_NETHER_BRICKSHELF);
             event.accept(EBBlocks.CHERRY_BOOKSHELF);
             event.accept(EBBlocks.CHERRY_EMPTY_SHELF);
             event.accept(EBBlocks.CHERRY_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.CHERRY_WATER_POTION_SHELF);
             event.accept(EBBlocks.CHERRY_POTION_SHELF);
             event.accept(EBBlocks.CHERRY_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.CHERRY_BRICKSHELF);
-            event.accept(EBBlocks.CHERRY_NETHER_BRICKSHELF);
             event.accept(EBBlocks.MAPLE_BOOKSHELF);
             event.accept(EBBlocks.MAPLE_EMPTY_SHELF);
             event.accept(EBBlocks.MAPLE_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.MAPLE_WATER_POTION_SHELF);
             event.accept(EBBlocks.MAPLE_POTION_SHELF);
             event.accept(EBBlocks.MAPLE_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.MAPLE_BRICKSHELF);
-            event.accept(EBBlocks.MAPLE_NETHER_BRICKSHELF);
             event.accept(EBBlocks.WILLOW_BOOKSHELF);
             event.accept(EBBlocks.WILLOW_EMPTY_SHELF);
             event.accept(EBBlocks.WILLOW_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.WILLOW_WATER_POTION_SHELF);
             event.accept(EBBlocks.WILLOW_POTION_SHELF);
             event.accept(EBBlocks.WILLOW_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.WILLOW_BRICKSHELF);
-            event.accept(EBBlocks.WILLOW_NETHER_BRICKSHELF);
             event.accept(EBBlocks.ANCIENT_BOOKSHELF);
             event.accept(EBBlocks.ANCIENT_EMPTY_SHELF);
             event.accept(EBBlocks.ANCIENT_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.ANCIENT_WATER_POTION_SHELF);
             event.accept(EBBlocks.ANCIENT_POTION_SHELF);
             event.accept(EBBlocks.ANCIENT_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.ANCIENT_BRICKSHELF);
-            event.accept(EBBlocks.ANCIENT_NETHER_BRICKSHELF);
             event.accept(EBBlocks.BAMBOO_BOOKSHELF);
             event.accept(EBBlocks.BAMBOO_EMPTY_SHELF);
             event.accept(EBBlocks.BAMBOO_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.BAMBOO_WATER_POTION_SHELF);
             event.accept(EBBlocks.BAMBOO_POTION_SHELF);
             event.accept(EBBlocks.BAMBOO_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.BAMBOO_BRICKSHELF);
-            event.accept(EBBlocks.BAMBOO_NETHER_BRICKSHELF);
             event.accept(EBBlocks.CRIMSON_BOOKSHELF);
             event.accept(EBBlocks.CRIMSON_EMPTY_SHELF);
             event.accept(EBBlocks.CRIMSON_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.CRIMSON_WATER_POTION_SHELF);
             event.accept(EBBlocks.CRIMSON_POTION_SHELF);
             event.accept(EBBlocks.CRIMSON_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.CRIMSON_BRICKSHELF);
-            event.accept(EBBlocks.CRIMSON_NETHER_BRICKSHELF);
             event.accept(EBBlocks.WARPED_BOOKSHELF);
             event.accept(EBBlocks.WARPED_EMPTY_SHELF);
             event.accept(EBBlocks.WARPED_EMPTY_POTION_SHELF);
             event.accept(EBBlocks.WARPED_WATER_POTION_SHELF);
             event.accept(EBBlocks.WARPED_POTION_SHELF);
             event.accept(EBBlocks.WARPED_ALCHEMIST_SHELF);
-            event.accept(EBBlocks.WARPED_BRICKSHELF);
-            event.accept(EBBlocks.WARPED_NETHER_BRICKSHELF);
-            event.accept(EBBlocks.OAK_CRAFTING_TABLE);
             event.accept(EBBlocks.SPRUCE_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_SPRUCE_CRAFTING_TABLE);
             event.accept(EBBlocks.BIRCH_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_BIRCH_CRAFTING_TABLE);
             event.accept(EBBlocks.JUNGLE_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_JUNGLE_CRAFTING_TABLE);
             event.accept(EBBlocks.ACACIA_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_ACACIA_CRAFTING_TABLE);
             event.accept(EBBlocks.DARK_OAK_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_DARK_OAK_CRAFTING_TABLE);
             event.accept(EBBlocks.MANGROVE_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_MANGROVE_CRAFTING_TABLE);
             event.accept(EBBlocks.BAMBOO_CRAFTING_TABLE);
             event.accept(EBBlocks.CHERRY_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_CHERRY_CRAFTING_TABLE);
             event.accept(EBBlocks.MAPLE_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_MAPLE_CRAFTING_TABLE);
             event.accept(EBBlocks.WILLOW_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_WILLOW_CRAFTING_TABLE);
             event.accept(EBBlocks.ANCIENT_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_ANCIENT_CRAFTING_TABLE);
             event.accept(EBBlocks.CRIMSON_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_CRIMSON_CRAFTING_TABLE);
             event.accept(EBBlocks.WARPED_CRAFTING_TABLE);
-            event.accept(EBBlocks.COLORED_WARPED_CRAFTING_TABLE);
-            event.accept(EBBlocks.CONSTRUCTION_TABLE);
             event.accept(EBItems.EXCESSIVE_BANNER_PATTERN);
             event.accept(EBBlocks.OAK_VERTICAL_STAIRS);
             event.accept(EBBlocks.SPRUCE_VERTICAL_STAIRS);
@@ -2953,52 +2699,22 @@ public class ExcessiveBuilding {
             event.accept(EBBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS);
         }
 
-        if (event.getTab() == EBItemGroups.EB_STONE_BLOCKS.get() && (EBCompatRegistries.sullysMod)) {
-            event.accept(SullysModCompat.SMOOTHED_ROUGH_JADE_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.ROUGH_JADE_BRICK_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.ROUGH_JADE_TILE_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.POLISHED_JADE_BRICK_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.POLISHED_JADE_TILE_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.POLISHED_SMALL_JADE_BRICK_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.POLISHED_JADE_SHINGLE_VERTICAL_STAIRS);
+        if (event.getTab() == EBItemGroups.EB_COMPAT_TAB.get() && (EBCompatRegistries.sullysMod)) {
+            event.accept(SMCompat.JADE_LAMP);
+            event.accept(SMCompat.JADE_GLASS);
+            event.accept(SMCompat.JADE_GLASS_PANE);
+            event.accept(SMCompat.POLISHED_JADE_PEDESTAL);
+            event.accept(SMCompat.SMOOTHED_ROUGH_JADE_VERTICAL_STAIRS);
+            event.accept(SMCompat.ROUGH_JADE_BRICK_VERTICAL_STAIRS);
+            event.accept(SMCompat.ROUGH_JADE_TILE_VERTICAL_STAIRS);
+            event.accept(SMCompat.POLISHED_JADE_BRICK_VERTICAL_STAIRS);
+            event.accept(SMCompat.POLISHED_JADE_TILE_VERTICAL_STAIRS);
+            event.accept(SMCompat.POLISHED_SMALL_JADE_BRICK_VERTICAL_STAIRS);
+            event.accept(SMCompat.POLISHED_JADE_SHINGLE_VERTICAL_STAIRS);
         }
 
-        if (event.getTab() == EBItemGroups.EB_FUNCTIONAL_BLOCKS.get() && (EBCompatRegistries.sullysMod)) {
-            event.accept(SullysModCompat.JADE_LAMP);
-        }
-
-        if (event.getTab() == EBItemGroups.EB_MISC_TAB.get() && (EBCompatRegistries.sullysMod)) {
-            event.accept(SullysModCompat.JADE_LAMP);
-            event.accept(SullysModCompat.JADE_GLASS);
-            event.accept(SullysModCompat.JADE_GLASS_PANE);
-            event.accept(SullysModCompat.POLISHED_JADE_PEDESTAL);
-        }
-
-        if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get() && (EBCompatRegistries.sullysMod)) {
-            event.accept(SullysModCompat.JADE_LAMP);
-            event.accept(SullysModCompat.JADE_GLASS);
-            event.accept(SullysModCompat.JADE_GLASS_PANE);
-            event.accept(SullysModCompat.POLISHED_JADE_PEDESTAL);
-            event.accept(SullysModCompat.SMOOTHED_ROUGH_JADE_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.ROUGH_JADE_BRICK_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.ROUGH_JADE_TILE_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.POLISHED_JADE_BRICK_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.POLISHED_JADE_TILE_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.POLISHED_SMALL_JADE_BRICK_VERTICAL_STAIRS);
-            event.accept(SullysModCompat.POLISHED_JADE_SHINGLE_VERTICAL_STAIRS);
-        }
-
-        if (event.getTab() == EBItemGroups.EB_FUNCTIONAL_BLOCKS.get() && (EBCompatRegistries.farmersDelight)) {
-            event.accept(FarmersDelightCompat.ANCIENT_CABINET);
-        }
-
-        if (event.getTab() == EBItemGroups.EB_MISC_TAB.get() && (EBCompatRegistries.farmersDelight)) {
-            event.accept(FarmersDelightCompat.ANCIENT_CIDER);
-        }
-
-        if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get() && (EBCompatRegistries.farmersDelight)) {
-            event.accept(FarmersDelightCompat.ANCIENT_CABINET);
-            event.accept(FarmersDelightCompat.ANCIENT_CIDER);
+        if (event.getTab() == EBItemGroups.EB_COMPAT_TAB.get() && (EBCompatRegistries.farmersDelight)) {
+            event.accept(FDCompat.ANCIENT_CIDER);
         }
     }
 

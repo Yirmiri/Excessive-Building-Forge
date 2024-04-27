@@ -3,6 +3,6 @@
   "values": [
     "excessive_building:ancient_trapdoor",
     "excessive_building:willow_trapdoor",
-    "excessive_building:maple_trapdoor"
+    { "id": "excessive_building:maple_trapdoor", "required": false }
   ]
 }

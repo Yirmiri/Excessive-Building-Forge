@@ -8,7 +8,7 @@ import net.minecraftforge.common.data.DatapackBuiltinEntriesProvider;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.worldgen.feature.EBConfiguredFeatures;
 import net.yirmiri.excessive_building.worldgen.feature.EBPlacedFeatures;
-import net.yirmiri.excessive_building.worldgen.biome.EBBiomes;
+import net.yirmiri.excessive_building.compat.terrablender.EBBiomes;
 
 import java.util.Set;
 import java.util.concurrent.CompletableFuture;

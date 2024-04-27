@@ -11,7 +11,7 @@ import net.yirmiri.excessive_building.block.PedestalBlock;
 import net.yirmiri.excessive_building.block.VerticalStairBlock;
 import net.yirmiri.excessive_building.register.EBBlocks;
 
-public class SullysModCompat {
+public class SMCompat {
 
     public static final RegistryObject<Block> POLISHED_JADE_PEDESTAL = EBBlocks.register("polished_jade_pedestal",
             () -> new PedestalBlock(SMProperties.Blocks.POLISHED_JADE_BLOCKS));
