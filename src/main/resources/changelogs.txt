@@ -11,10 +11,13 @@ Major Update
 •   This update is very likely to break a lot of builds using previous versions of the mod as a large chunk of it is being cut off to reduce bloat. 
 A full list of removals is provided at the bottom of this log.
 
-•   Many world generation aspects such as new biomes and the entire maple woodset are now only enabled if Terrablender is installed. 
+•   Many world generation aspects such as new biomes are now only enabled if Terrablender is installed. 
 Previously this was a required dependancy but is now optional.
 
   Additions
+•   Added decorative shelves, decorated shelves can be clicked to change variants (bookshelf variants are no longer seperate blocks)
+•   Added a new collector's shelf variant
+•   Added amethyst fire, similar to soul fire but when fire is placed ontop of amethyst blocks
 •   Added all of the new paintings coming the next Minecraft update
 •   Added one of my personal paintings
 •   Added original painting variants
@@ -23,6 +26,7 @@ Previously this was a required dependancy but is now optional.
   Changes
 •   Pedestals can now be rotated in any direction
 •   Changed the textures for a crap ton of old blocks
+•   Alchemist shelves with pearls in them no longer animate
 •   Changed the recipe of most resource bricks to seem more fair
 •   Resource brick stairs/vertical stairs can now be used as a beacon base block
 •   Moved all blocks added by mod compatibility into a seperate tab
@@ -39,6 +43,7 @@ Previously this was a required dependancy but is now optional.
 •   Added chiseled smooth stone bricks to mineable/pickaxe tag
 
   Removals
+•   Bookshelf variants are now condensed into one block that cycles variants
 •   Cobbled granite/diorite/andesite bricks
 •   Sulfuric brimstone and all of its variants
 •   Colored crafting table variants

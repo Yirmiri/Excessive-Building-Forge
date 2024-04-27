@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:oak_planks"
+    },
+    "@": {
+      "item": "minecraft:potion"
+    }
+  },
+  "pattern": [
+    "###",
+    "@@@",
+    "###"
+  ],
+  "result": {
+    "item": "excessive_building:potion_shelf"
+  },
+  "show_notification": true
+}

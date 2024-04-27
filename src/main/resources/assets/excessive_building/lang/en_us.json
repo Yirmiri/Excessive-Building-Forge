@@ -1228,6 +1228,20 @@
   "block.excessive_building.marble_tile_vertical_stairs": "Marble Tile Vertical Stairs",
   "block.excessive_building.marble_tile_slab": "Marble Tile Slab",
   "block.excessive_building.marble_tile_wall": "Marble Tile Wall",
+  "block.excessive_building.decorative_shelf": "Decorative Shelf",
+  "block.excessive_building.spruce_decorative_shelf": "Spruce Decorative Shelf",
+  "block.excessive_building.birch_decorative_shelf": "Birch Decorative Shelf",
+  "block.excessive_building.jungle_decorative_shelf": "Jungle Decorative Shelf",
+  "block.excessive_building.acacia_decorative_shelf": "Acacia Decorative Shelf",
+  "block.excessive_building.dark_oak_decorative_shelf": "Dark Oak Decorative Shelf",
+  "block.excessive_building.mangrove_decorative_shelf": "Mangrove Decorative Shelf",
+  "block.excessive_building.cherry_decorative_shelf": "Cherry Decorative Shelf",
+  "block.excessive_building.bamboo_decorative_shelf": "Bamboo Decorative Shelf",
+  "block.excessive_building.crimson_decorative_shelf": "Crimson Decorative Shelf",
+  "block.excessive_building.warped_decorative_shelf": "Warped Decorative Shelf",
+  "block.excessive_building.ancient_decorative_shelf": "Ancient Decorative Shelf",
+  "block.excessive_building.maple_decorative_shelf": "Maple Decorative Shelf",
+  "block.excessive_building.willow_decorative_shelf": "Willow Decorative Shelf",
 
   "item.excessive_building.fiery_shards": "Fiery Shards",
   "item.excessive_building.kyanite_shards": "Kyanite Shards",
@@ -1318,5 +1332,10 @@
   "eb_functional_blocks_tab": "EB Functional Blocks",
   "eb_misc_tab": "EB Misc",
   "eb_compat_tab": "EB Compatibility",
-  "excessive_building_tab": "Excessive Building"
+  "excessive_building_tab": "Excessive Building",
+
+  "tooltip.block.interact": "Upon Interaction:",
+  "tooltip.block.variant": "Cycles Block Variants",
+
+  "effect.excessive_building.reaching.description": "Allows the user to interact and build further, this does not affect attack reach."
 }

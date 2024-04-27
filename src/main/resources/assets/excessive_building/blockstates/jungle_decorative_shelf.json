@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "variant=0": { "model": "excessive_building:block/jungle_empty_shelf" },
+    "variant=1": { "model": "excessive_building:block/jungle_collectors_shelf" },
+    "variant=2": { "model": "excessive_building:block/jungle_alchemist_shelf" },
+    "variant=3": { "model": "excessive_building:block/jungle_empty_potion_shelf" },
+    "variant=4": { "model": "excessive_building:block/jungle_water_potion_shelf" },
+    "variant=5": { "model": "excessive_building:block/jungle_potion_shelf" },
+    "variant=6": { "model": "excessive_building:block/jungle_brickshelf" },
+    "variant=7": { "model": "excessive_building:block/jungle_nether_brickshelf" }
+  }
+}

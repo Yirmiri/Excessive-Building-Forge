@@ -1,0 +1,9 @@
+{
+  "asset_name": "crying",
+  "description": {
+    "color": "#6006ab",
+    "translate": "trim_material.excessive_building.crying"
+  },
+  "ingredient": "minecraft:crying_obsidian",
+  "item_model_index": 0.05
+}

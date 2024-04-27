@@ -10,6 +10,7 @@ public class EBConfig {
     public static ForgeConfigSpec.BooleanValue ENABLE_EB_SNIFFER_DROPS;
     public static ForgeConfigSpec.BooleanValue ENABLE_EB_VILLAGER_TRADES;
     public static ForgeConfigSpec.BooleanValue ENABLE_EB_WANDERING_TRADES;
+    public static ForgeConfigSpec.IntValue DECORATIVE_ENCHANT_BONUS;
     public static ForgeConfigSpec.BooleanValue ENABLE_REACHING_POTIONS;
     public static ForgeConfigSpec.BooleanValue ENABLE_BIOMES;
 
@@ -26,6 +27,9 @@ public class EBConfig {
         ENABLE_EB_WANDERING_TRADES = COMMON_BUILDER
                 .comment("Should wandering traders have new unique offers?")
                 .define("enableEBWanderingTrades", true);
+        DECORATIVE_ENCHANT_BONUS = COMMON_BUILDER
+                .comment("Enchantment power potion decorative shelves should grant? (Range: 0 ~ 30 || Default: 2")
+                .defineInRange("decorativeEnchantBonus", 2, 0, 30);
         ENABLE_REACHING_POTIONS = COMMON_BUILDER
                 .comment("Should reaching potions be craftable?")
                 .define("enableReachingPotions", true);

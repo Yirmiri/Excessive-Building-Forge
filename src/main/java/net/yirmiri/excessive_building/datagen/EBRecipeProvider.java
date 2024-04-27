@@ -1006,396 +1006,6 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.BROWN_TERRACOTTA_BRICKS.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.SMOOTH_BROWN_TERRACOTTA_BRICKS.get(), 0.1F, 200)
                 .unlockedBy(getHasName(EBBlocks.BROWN_TERRACOTTA_BRICKS.get()), has(EBBlocks.BROWN_TERRACOTTA_BRICKS.get())).save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.EMPTY_SHELF.get())
-                .define('#', Blocks.OAK_PLANKS)
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.EMPTY_POTION_SHELF.get())
-                .define('#', Blocks.OAK_PLANKS).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WATER_POTION_SHELF.get())
-                .define('#', Blocks.OAK_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.POTION_SHELF.get())
-                .define('#', Blocks.OAK_PLANKS).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ALCHEMIST_SHELF.get())
-                .define('#', Blocks.OAK_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_EMPTY_SHELF.get())
-                .define('#', Blocks.SPRUCE_PLANKS)
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_BOOKSHELF.get())
-                .define('#', Blocks.SPRUCE_PLANKS).define('@', Items.BOOK)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_EMPTY_POTION_SHELF.get())
-                .define('#', Blocks.SPRUCE_PLANKS).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_WATER_POTION_SHELF.get())
-                .define('#', Blocks.SPRUCE_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_POTION_SHELF.get())
-                .define('#', Blocks.SPRUCE_PLANKS).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.SPRUCE_ALCHEMIST_SHELF.get())
-                .define('#', Blocks.SPRUCE_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_EMPTY_SHELF.get())
-                .define('#', Blocks.MANGROVE_PLANKS)
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_BOOKSHELF.get())
-                .define('#', Blocks.MANGROVE_PLANKS).define('@', Items.BOOK)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_EMPTY_POTION_SHELF.get())
-                .define('#', Blocks.MANGROVE_PLANKS).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_WATER_POTION_SHELF.get())
-                .define('#', Blocks.MANGROVE_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_POTION_SHELF.get())
-                .define('#', Blocks.MANGROVE_PLANKS).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MANGROVE_ALCHEMIST_SHELF.get())
-                .define('#', Blocks.MANGROVE_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_EMPTY_SHELF.get())
-                .define('#', Blocks.CHERRY_PLANKS)
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_BOOKSHELF.get())
-                .define('#', Blocks.CHERRY_PLANKS).define('@', Items.BOOK)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_EMPTY_POTION_SHELF.get())
-                .define('#', Blocks.CHERRY_PLANKS).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_WATER_POTION_SHELF.get())
-                .define('#', Blocks.CHERRY_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_POTION_SHELF.get())
-                .define('#', Blocks.CHERRY_PLANKS).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CHERRY_ALCHEMIST_SHELF.get())
-                .define('#', Blocks.CHERRY_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_EMPTY_SHELF.get())
-                .define('#', Blocks.DARK_OAK_PLANKS)
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_BOOKSHELF.get())
-                .define('#', Blocks.DARK_OAK_PLANKS).define('@', Items.BOOK)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_EMPTY_POTION_SHELF.get())
-                .define('#', Blocks.DARK_OAK_PLANKS).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_WATER_POTION_SHELF.get())
-                .define('#', Blocks.DARK_OAK_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_POTION_SHELF.get())
-                .define('#', Blocks.DARK_OAK_PLANKS).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.DARK_OAK_ALCHEMIST_SHELF.get())
-                .define('#', Blocks.DARK_OAK_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_EMPTY_SHELF.get())
-                .define('#', Blocks.ACACIA_PLANKS)
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_BOOKSHELF.get())
-                .define('#', Blocks.ACACIA_PLANKS).define('@', Items.BOOK)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_EMPTY_POTION_SHELF.get())
-                .define('#', Blocks.ACACIA_PLANKS).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_WATER_POTION_SHELF.get())
-                .define('#', Blocks.ACACIA_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_POTION_SHELF.get())
-                .define('#', Blocks.ACACIA_PLANKS).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ACACIA_ALCHEMIST_SHELF.get())
-                .define('#', Blocks.ACACIA_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_EMPTY_SHELF.get())
-                .define('#', Blocks.JUNGLE_PLANKS)
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_BOOKSHELF.get())
-                .define('#', Blocks.JUNGLE_PLANKS).define('@', Items.BOOK)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_EMPTY_POTION_SHELF.get())
-                .define('#', Blocks.JUNGLE_PLANKS).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_WATER_POTION_SHELF.get())
-                .define('#', Blocks.JUNGLE_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_POTION_SHELF.get())
-                .define('#', Blocks.JUNGLE_PLANKS).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.JUNGLE_ALCHEMIST_SHELF.get())
-                .define('#', Blocks.JUNGLE_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_EMPTY_SHELF.get())
-                .define('#', Blocks.BIRCH_PLANKS)
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_BOOKSHELF.get())
-                .define('#', Blocks.BIRCH_PLANKS).define('@', Items.BOOK)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_EMPTY_POTION_SHELF.get())
-                .define('#', Blocks.BIRCH_PLANKS).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_WATER_POTION_SHELF.get())
-                .define('#', Blocks.BIRCH_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_POTION_SHELF.get())
-                .define('#', Blocks.BIRCH_PLANKS).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BIRCH_ALCHEMIST_SHELF.get())
-                .define('#', Blocks.BIRCH_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_EMPTY_SHELF.get())
-                .define('#', EBBlocks.ANCIENT_PLANKS.get())
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_BOOKSHELF.get())
-                .define('#', EBBlocks.ANCIENT_PLANKS.get()).define('@', Items.BOOK)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_EMPTY_POTION_SHELF.get())
-                .define('#', EBBlocks.ANCIENT_PLANKS.get()).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_WATER_POTION_SHELF.get())
-                .define('#', EBBlocks.ANCIENT_PLANKS.get()).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_POTION_SHELF.get())
-                .define('#', EBBlocks.ANCIENT_PLANKS.get()).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_ALCHEMIST_SHELF.get())
-                .define('#', EBBlocks.ANCIENT_PLANKS.get()).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_EMPTY_SHELF.get())
-                .define('#', Blocks.CRIMSON_PLANKS)
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_BOOKSHELF.get())
-                .define('#', Blocks.CRIMSON_PLANKS).define('@', Items.BOOK)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_EMPTY_POTION_SHELF.get())
-                .define('#', Blocks.CRIMSON_PLANKS).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_WATER_POTION_SHELF.get())
-                .define('#', Blocks.CRIMSON_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_POTION_SHELF.get())
-                .define('#', Blocks.CRIMSON_PLANKS).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.CRIMSON_ALCHEMIST_SHELF.get())
-                .define('#', Blocks.CRIMSON_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_EMPTY_SHELF.get())
-                .define('#', Blocks.WARPED_PLANKS)
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_BOOKSHELF.get())
-                .define('#', Blocks.WARPED_PLANKS).define('@', Items.BOOK)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_EMPTY_POTION_SHELF.get())
-                .define('#', Blocks.WARPED_PLANKS).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_WATER_POTION_SHELF.get())
-                .define('#', Blocks.WARPED_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_POTION_SHELF.get())
-                .define('#', Blocks.WARPED_PLANKS).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WARPED_ALCHEMIST_SHELF.get())
-                .define('#', Blocks.WARPED_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(output);
-
         EBmosaicBuilder(EBBlocks.SMOOTH_STONE_BRICK_PILLAR.get(), Ingredient.of(EBBlocks.SMOOTH_STONE_BRICK_SLAB.get()))
                 .unlockedBy(getHasName(EBBlocks.SMOOTH_STONE_BRICK_SLAB.get()), has(EBBlocks.SMOOTH_STONE_BRICK_SLAB.get())).save(output);
 
@@ -1487,49 +1097,13 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .pattern("###")
                 .pattern("###").unlockedBy(getHasName(EBBlocks.STRIPPED_WILLOW_LOG.get()), has(EBBlocks.STRIPPED_WILLOW_LOG.get())).save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_EMPTY_SHELF.get())
-                .define('#', EBBlocks.WILLOW_PLANKS.get())
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_BOOKSHELF.get())
-                .define('#', EBBlocks.WILLOW_PLANKS.get()).define('@', Items.BOOK)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_EMPTY_POTION_SHELF.get())
-                .define('#', EBBlocks.WILLOW_PLANKS.get()).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_WATER_POTION_SHELF.get())
-                .define('#', EBBlocks.WILLOW_PLANKS.get()).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_POTION_SHELF.get())
-                .define('#', EBBlocks.WILLOW_PLANKS.get()).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.WILLOW_ALCHEMIST_SHELF.get())
-                .define('#', EBBlocks.WILLOW_PLANKS.get()).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(output);
-
         ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.ROSE_BUNDLE.get(), 4)
                 .define('#', EBBlocks.ROSE.get()).define('@', Blocks.ROSE_BUSH)
                 .pattern("#@#").unlockedBy(getHasName(EBBlocks.ROSE.get()), has(EBBlocks.ROSE.get())).save(output);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, EBItems.EXCESSIVE_BANNER_PATTERN.get(), 1).requires(EBBlocks.COBBLESTONE_BRICKS.get())
-                .requires(EBBlocks.CRIMSON_MOSAIC.get()).requires(EBBlocks.ALCHEMIST_SHELF.get())
-                .unlockedBy(getHasName(EBBlocks.ALCHEMIST_SHELF.get()), has(EBBlocks.ALCHEMIST_SHELF.get())).save(output);
+                .requires(EBBlocks.CRIMSON_MOSAIC.get()).requires(EBBlocks.DECORATIVE_SHELF.get())
+                .unlockedBy(getHasName(EBBlocks.DECORATIVE_SHELF.get()), has(EBBlocks.DECORATIVE_SHELF.get())).save(output);
 
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.HOLLOW_OAK_LOG.get(), 8)
                 .define('#', Blocks.OAK_LOG)
@@ -1831,42 +1405,6 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
         chiseledBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHISELED_TUFF_BRICKS.get(), Ingredient.of(EBBlocks.TUFF_BRICK_SLAB.get()))
                 .unlockedBy(getHasName(EBBlocks.TUFF_BRICK_SLAB.get()), has(EBBlocks.TUFF_BRICK_SLAB.get())).save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_EMPTY_SHELF.get())
-                .define('#', Blocks.BAMBOO_PLANKS)
-                .pattern("###")
-                .pattern("   ")
-                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_BOOKSHELF.get())
-                .define('#', Blocks.BAMBOO_PLANKS).define('@', Items.BOOK)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_EMPTY_POTION_SHELF.get())
-                .define('#', Blocks.BAMBOO_PLANKS).define('@', Items.GLASS_BOTTLE)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_WATER_POTION_SHELF.get())
-                .define('#', Blocks.BAMBOO_PLANKS).define('@', Items.GLASS_BOTTLE).define('$', Items.WATER_BUCKET)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_POTION_SHELF.get())
-                .define('#', Blocks.BAMBOO_PLANKS).define('@', Items.POTION)
-                .pattern("###")
-                .pattern("@@@")
-                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(output);
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.BAMBOO_ALCHEMIST_SHELF.get())
-                .define('#', Blocks.BAMBOO_PLANKS).define('@', Items.POTION).define('$', Items.BREWING_STAND)
-                .pattern("###")
-                .pattern("@$@")
-                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(output);
-
         fourforfourBuilder(EBBlocks.KNITTED_LIGHT_BLUE_WOOL.get(), Ingredient.of(Blocks.LIGHT_BLUE_WOOL))
                 .unlockedBy(getHasName(Blocks.LIGHT_BLUE_WOOL), has(Blocks.LIGHT_BLUE_WOOL)).save(output);
 
@@ -2060,6 +1598,90 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
 
         verticalstairBuilder(EBBlocks.POLISHED_MARQUINA_MARBLE_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.POLISHED_MARQUINA_MARBLE.get()))
                 .unlockedBy(getHasName(EBBlocks.POLISHED_MARQUINA_MARBLE.get()), has(EBBlocks.POLISHED_MARQUINA_MARBLE.get())).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DECORATIVE_SHELF.get(), 1)
+                .define('#', Blocks.OAK_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.OAK_PLANKS), has(Blocks.OAK_PLANKS)).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SPRUCE_DECORATIVE_SHELF.get(), 1)
+                .define('#', Blocks.SPRUCE_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.SPRUCE_PLANKS), has(Blocks.SPRUCE_PLANKS)).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BIRCH_DECORATIVE_SHELF.get(), 1)
+                .define('#', Blocks.BIRCH_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.BIRCH_PLANKS), has(Blocks.BIRCH_PLANKS)).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.JUNGLE_DECORATIVE_SHELF.get(), 1)
+                .define('#', Blocks.JUNGLE_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.JUNGLE_PLANKS), has(Blocks.JUNGLE_PLANKS)).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ACACIA_DECORATIVE_SHELF.get(), 1)
+                .define('#', Blocks.ACACIA_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.ACACIA_PLANKS), has(Blocks.ACACIA_PLANKS)).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.DARK_OAK_DECORATIVE_SHELF.get(), 1)
+                .define('#', Blocks.DARK_OAK_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.DARK_OAK_PLANKS), has(Blocks.DARK_OAK_PLANKS)).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MANGROVE_DECORATIVE_SHELF.get(), 1)
+                .define('#', Blocks.MANGROVE_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.MANGROVE_PLANKS), has(Blocks.MANGROVE_PLANKS)).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHERRY_DECORATIVE_SHELF.get(), 1)
+                .define('#', Blocks.CHERRY_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.CHERRY_PLANKS), has(Blocks.CHERRY_PLANKS)).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.BAMBOO_DECORATIVE_SHELF.get(), 1)
+                .define('#', Blocks.BAMBOO_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.BAMBOO_PLANKS), has(Blocks.BAMBOO_PLANKS)).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CRIMSON_DECORATIVE_SHELF.get(), 1)
+                .define('#', Blocks.CRIMSON_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.CRIMSON_PLANKS), has(Blocks.CRIMSON_PLANKS)).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WARPED_DECORATIVE_SHELF.get(), 1)
+                .define('#', Blocks.WARPED_PLANKS)
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(Blocks.WARPED_PLANKS), has(Blocks.WARPED_PLANKS)).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.ANCIENT_DECORATIVE_SHELF.get(), 1)
+                .define('#', EBBlocks.ANCIENT_PLANKS.get())
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.ANCIENT_PLANKS.get()), has(EBBlocks.ANCIENT_PLANKS.get())).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.MAPLE_DECORATIVE_SHELF.get(), 1)
+                .define('#', EBBlocks.MAPLE_PLANKS.get())
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MAPLE_PLANKS.get()), has(EBBlocks.MAPLE_PLANKS.get())).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.WILLOW_DECORATIVE_SHELF.get(), 1)
+                .define('#', EBBlocks.WILLOW_PLANKS.get())
+                .pattern("###")
+                .pattern("   ")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(output);
     }
 
     protected static RecipeBuilder fourforfourBuilder(ItemLike itemLike, Ingredient ingredient) {

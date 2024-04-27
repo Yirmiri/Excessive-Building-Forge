@@ -1,0 +1,9 @@
+{
+  "asset_name": "prismarine",
+  "description": {
+    "color": "#b4d8ca",
+    "translate": "trim_material.excessive_building.prismarine"
+  },
+  "ingredient": "minecraft:prismarine_crystals",
+  "item_model_index": 0.04
+}

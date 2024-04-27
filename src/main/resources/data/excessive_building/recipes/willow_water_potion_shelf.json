@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "excessive_building:willow_planks"
+    },
+    "$": {
+      "item": "minecraft:water_bucket"
+    },
+    "@": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "pattern": [
+    "###",
+    "@$@",
+    "###"
+  ],
+  "result": {
+    "item": "excessive_building:willow_water_potion_shelf"
+  },
+  "show_notification": true
+}

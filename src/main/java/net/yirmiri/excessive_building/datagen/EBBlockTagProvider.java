@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
@@ -15,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.concurrent.CompletableFuture;
 
 public class EBBlockTagProvider extends BlockTagsProvider {
-    public static final TagKey<Block> PEDESTALS = tag("pedestals");
+    public static final TagKey<Block> AMETHYST_FIRE_BASE_BLOCKS = tag("amethyst_fire_base_blocks");
 
     public EBBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, ExcessiveBuilding.MODID, existingFileHelper);
@@ -23,11 +24,19 @@ public class EBBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
-        this.tag(EBBlockTagProvider.PEDESTALS).add(
-                EBBlocks.POLISHED_BRIMSTONE_PEDESTAL.get(),
-                EBBlocks.SMOOTH_STONE_BRICK_PEDESTAL.get(),
-                EBBlocks.QUARTZ_PEDESTAL.get(),
-                EBBlocks.PURPUR_PEDESTAL.get()
+        this.tag(EBBlockTagProvider.AMETHYST_FIRE_BASE_BLOCKS).add(
+                Blocks.AMETHYST_BLOCK,
+                Blocks.BUDDING_AMETHYST,
+                EBBlocks.AMETHYST_BRICKS.get(),
+                EBBlocks.AMETHYST_BRICK_STAIRS.get(),
+                EBBlocks.AMETHYST_BRICK_SLAB.get(),
+                EBBlocks.AMETHYST_BRICK_VERTICAL_STAIRS.get(),
+                EBBlocks.AMETHYST_TILES.get(),
+                EBBlocks.AMETHYST_TILE_STAIRS.get(),
+                EBBlocks.AMETHYST_TILE_SLAB.get(),
+                EBBlocks.AMETHYST_TILE_VERTICAL_STAIRS.get(),
+                EBBlocks.AMETHYST_GLASS.get(),
+                EBBlocks.AMETHYST_LAMP.get()
         );
     }
 

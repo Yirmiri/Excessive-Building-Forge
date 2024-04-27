@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "excessive_building:ancient_planks"
+    },
+    "$": {
+      "item": "minecraft:brewing_stand"
+    },
+    "@": {
+      "item": "minecraft:potion"
+    }
+  },
+  "pattern": [
+    "###",
+    "@$@",
+    "###"
+  ],
+  "result": {
+    "item": "excessive_building:ancient_alchemist_shelf"
+  },
+  "show_notification": true
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:warped_planks"
+    },
+    "@": {
+      "item": "minecraft:potion"
+    }
+  },
+  "pattern": [
+    "###",
+    "@@@",
+    "###"
+  ],
+  "result": {
+    "item": "excessive_building:warped_potion_shelf"
+  },
+  "show_notification": true
+}

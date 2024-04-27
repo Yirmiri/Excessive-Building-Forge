@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "excessive_building:block/maple_slab"
+    },
+    "type=double": {
+      "model": "excessive_building:block/maple_planks"
+    },
+    "type=top": {
+      "model": "excessive_building:block/maple_slab_top"
+    }
+  }
+}

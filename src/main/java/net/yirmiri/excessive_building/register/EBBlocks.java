@@ -17,10 +17,10 @@ import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.*;
 import net.yirmiri.excessive_building.block.flammable.*;
-import net.yirmiri.excessive_building.block.sign.EBCeilingHangingSignBlock;
-import net.yirmiri.excessive_building.block.sign.EBStandingSignBlock;
-import net.yirmiri.excessive_building.block.sign.EBWallHangingSignBlock;
-import net.yirmiri.excessive_building.block.sign.EBWallSignBlock;
+import net.yirmiri.excessive_building.block.EBCeilingHangingSignBlock;
+import net.yirmiri.excessive_building.block.EBStandingSignBlock;
+import net.yirmiri.excessive_building.block.EBWallHangingSignBlock;
+import net.yirmiri.excessive_building.block.EBWallSignBlock;
 import net.yirmiri.excessive_building.util.EBBlockTypes;
 import net.yirmiri.excessive_building.util.EBProperties;
 import net.yirmiri.excessive_building.worldgen.feature.tree.*;
@@ -269,6 +269,7 @@ public class EBBlocks {
     public static final RegistryObject<Block> GOLDEN_BIRCH_SAPLING = register("golden_birch_sapling", () -> new SaplingBlock(new GoldenBirchTreeGrower(), BlockBehaviour.Properties.copy(Blocks.BIRCH_SAPLING)));
     public static final RegistryObject<Block> POTTED_GOLDEN_BIRCH_SAPLING = BLOCKS.register("potted_golden_birch_sapling", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.GOLDEN_BIRCH_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_BIRCH_SAPLING)));
     public static final RegistryObject<Block> ASPHALT = register("asphalt", () -> new Block(EBProperties.BlockProperties.ASPHALT));
+    public static final RegistryObject<Block> AMETHYST_FIRE = register("amethyst_fire", () -> new AmethystFireBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_FIRE).lightLevel(state -> 15)));
 
     //RESOURCE
     public static final RegistryObject<Block> GOLDEN_BRICKS = register("golden_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
@@ -1415,186 +1416,6 @@ public class EBBlocks {
     public static final RegistryObject<Block> LARGE_KYANITE_BUD = register("large_kyanite_bud",
             () -> new AmethystClusterBlock(5, 3, BlockBehaviour.Properties.copy(Blocks.LARGE_AMETHYST_BUD)));
 
-    public static final RegistryObject<Block> SPRUCE_BOOKSHELF = register("spruce_bookshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> SPRUCE_EMPTY_SHELF = register("spruce_empty_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> SPRUCE_EMPTY_POTION_SHELF = register("spruce_empty_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> SPRUCE_WATER_POTION_SHELF = register("spruce_water_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> SPRUCE_POTION_SHELF = register("spruce_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> SPRUCE_ALCHEMIST_SHELF = register("spruce_alchemist_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BIRCH_BOOKSHELF = register("birch_bookshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BIRCH_EMPTY_SHELF = register("birch_empty_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BIRCH_EMPTY_POTION_SHELF = register("birch_empty_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BIRCH_WATER_POTION_SHELF = register("birch_water_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BIRCH_POTION_SHELF = register("birch_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> BIRCH_ALCHEMIST_SHELF = register("birch_alchemist_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> ACACIA_BOOKSHELF = register("acacia_bookshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> ACACIA_EMPTY_SHELF = register("acacia_empty_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> ACACIA_EMPTY_POTION_SHELF = register("acacia_empty_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> ACACIA_WATER_POTION_SHELF = register("acacia_water_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> ACACIA_POTION_SHELF = register("acacia_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> ACACIA_ALCHEMIST_SHELF = register("acacia_alchemist_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> ANCIENT_BOOKSHELF = register("ancient_bookshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> ANCIENT_EMPTY_SHELF = register("ancient_empty_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> ANCIENT_EMPTY_POTION_SHELF = register("ancient_empty_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> ANCIENT_WATER_POTION_SHELF = register("ancient_water_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> ANCIENT_POTION_SHELF = register("ancient_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> ANCIENT_ALCHEMIST_SHELF = register("ancient_alchemist_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(EBBlocks.ANCIENT_PLANKS.get()).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> JUNGLE_BOOKSHELF = register("jungle_bookshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> JUNGLE_EMPTY_SHELF = register("jungle_empty_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> JUNGLE_EMPTY_POTION_SHELF = register("jungle_empty_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> JUNGLE_WATER_POTION_SHELF = register("jungle_water_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> JUNGLE_POTION_SHELF = register("jungle_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> JUNGLE_ALCHEMIST_SHELF = register("jungle_alchemist_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> DARK_OAK_BOOKSHELF = register("dark_oak_bookshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> DARK_OAK_EMPTY_SHELF = register("dark_oak_empty_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> DARK_OAK_EMPTY_POTION_SHELF = register("dark_oak_empty_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> DARK_OAK_WATER_POTION_SHELF = register("dark_oak_water_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> DARK_OAK_POTION_SHELF = register("dark_oak_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> DARK_OAK_ALCHEMIST_SHELF = register("dark_oak_alchemist_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> MANGROVE_BOOKSHELF = register("mangrove_bookshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> MANGROVE_EMPTY_SHELF = register("mangrove_empty_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> MANGROVE_EMPTY_POTION_SHELF = register("mangrove_empty_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> MANGROVE_WATER_POTION_SHELF = register("mangrove_water_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> MANGROVE_POTION_SHELF = register("mangrove_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> MANGROVE_ALCHEMIST_SHELF = register("mangrove_alchemist_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> CHERRY_BOOKSHELF = register("cherry_bookshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> CHERRY_EMPTY_SHELF = register("cherry_empty_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> CHERRY_EMPTY_POTION_SHELF = register("cherry_empty_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> CHERRY_WATER_POTION_SHELF = register("cherry_water_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> CHERRY_POTION_SHELF = register("cherry_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> CHERRY_ALCHEMIST_SHELF = register("cherry_alchemist_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.CHERRY_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> CRIMSON_BOOKSHELF = register("crimson_bookshelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
-
-    public static final RegistryObject<Block> CRIMSON_EMPTY_SHELF = register("crimson_empty_shelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
-
-    public static final RegistryObject<Block> CRIMSON_EMPTY_POTION_SHELF = register("crimson_empty_potion_shelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
-
-    public static final RegistryObject<Block> CRIMSON_WATER_POTION_SHELF = register("crimson_water_potion_shelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
-
-    public static final RegistryObject<Block> CRIMSON_POTION_SHELF = register("crimson_potion_shelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
-
-    public static final RegistryObject<Block> CRIMSON_ALCHEMIST_SHELF = register("crimson_alchemist_shelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
-
-    public static final RegistryObject<Block> WARPED_BOOKSHELF = register("warped_bookshelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
-
-    public static final RegistryObject<Block> WARPED_EMPTY_SHELF = register("warped_empty_shelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
-
-    public static final RegistryObject<Block> WARPED_EMPTY_POTION_SHELF = register("warped_empty_potion_shelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
-
-    public static final RegistryObject<Block> WARPED_WATER_POTION_SHELF = register("warped_water_potion_shelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
-
-    public static final RegistryObject<Block> WARPED_POTION_SHELF = register("warped_potion_shelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
-
-    public static final RegistryObject<Block> WARPED_ALCHEMIST_SHELF = register("warped_alchemist_shelf",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.CRIMSON_PLANKS)));
-
     public static final RegistryObject<Block> DIRT_SLAB = register("dirt_slab",
             () -> new SodSlabBlock(BlockBehaviour.Properties.copy(Blocks.DIRT)));
 
@@ -1717,24 +1538,6 @@ public class EBBlocks {
     public static final RegistryObject<Block> WILLOW_LADDER = register("willow_ladder",
             () -> new LadderBlock(BlockBehaviour.Properties.copy(Blocks.LADDER)));
 
-    public static final RegistryObject<Block> WILLOW_BOOKSHELF = register("willow_bookshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> WILLOW_EMPTY_SHELF = register("willow_empty_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> WILLOW_EMPTY_POTION_SHELF = register("willow_empty_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> WILLOW_WATER_POTION_SHELF = register("willow_water_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> WILLOW_POTION_SHELF = register("willow_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> WILLOW_ALCHEMIST_SHELF = register("willow_alchemist_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
     public static final RegistryObject<Block> WILLOW_SIGN = BLOCKS.register("willow_sign",
             () -> new EBStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), EBBlockTypes.WILLOW));
 
@@ -1829,24 +1632,6 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> MAPLE_LADDER = register("maple_ladder",
             () -> new LadderBlock(BlockBehaviour.Properties.copy(Blocks.LADDER)));
-
-    public static final RegistryObject<Block> MAPLE_BOOKSHELF = register("maple_bookshelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> MAPLE_EMPTY_SHELF = register("maple_empty_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> MAPLE_EMPTY_POTION_SHELF = register("maple_empty_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> MAPLE_WATER_POTION_SHELF = register("maple_water_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> MAPLE_POTION_SHELF = register("maple_potion_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
-
-    public static final RegistryObject<Block> MAPLE_ALCHEMIST_SHELF = register("maple_alchemist_shelf",
-            () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).ignitedByLava(), 30, 20));
 
     public static final RegistryObject<Block> MAPLE_SIGN = BLOCKS.register("maple_sign",
             () -> new EBStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), EBBlockTypes.MAPLE));
@@ -2022,18 +1807,36 @@ public class EBBlocks {
     public static final RegistryObject<Block> ASPHALT_VERTICAL_STAIRS = register("asphalt_vertical_stairs",
             () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
 
-    //SHELVES
-    public static final RegistryObject<Block> EMPTY_SHELF = register("empty_shelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
-    public static final RegistryObject<Block> EMPTY_POTION_SHELF = register("empty_potion_shelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
-    public static final RegistryObject<Block> WATER_POTION_SHELF = register("water_potion_shelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
-    public static final RegistryObject<Block> POTION_SHELF = register("potion_shelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
-    public static final RegistryObject<Block> ALCHEMIST_SHELF = register("alchemist_shelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    //DECORATIVE SHELVES
+    public static final RegistryObject<Block> DECORATIVE_SHELF = register("decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> SPRUCE_DECORATIVE_SHELF = register("spruce_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> BIRCH_DECORATIVE_SHELF = register("birch_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> JUNGLE_DECORATIVE_SHELF = register("jungle_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> ACACIA_DECORATIVE_SHELF = register("acacia_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> DARK_OAK_DECORATIVE_SHELF = register("dark_oak_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> MANGROVE_DECORATIVE_SHELF = register("mangrove_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> CHERRY_DECORATIVE_SHELF = register("cherry_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.CHERRY_SHELF, 30, 20));
+    public static final RegistryObject<Block> BAMBOO_DECORATIVE_SHELF = register("bamboo_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.BAMBOO_SHELF, 30, 20));
+    public static final RegistryObject<Block> CRIMSON_DECORATIVE_SHELF = register("crimson_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.CRIMSON_SHELF, 0, 0));
+    public static final RegistryObject<Block> WARPED_DECORATIVE_SHELF = register("warped_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.WARPED_SHELF, 0, 0));
+    public static final RegistryObject<Block> ANCIENT_DECORATIVE_SHELF = register("ancient_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.ANCIENT_SHELF, 30, 20));
+    public static final RegistryObject<Block> MAPLE_DECORATIVE_SHELF = register("maple_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> WILLOW_DECORATIVE_SHELF = register("willow_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+
+    //BOOKSHELVES
+    public static final RegistryObject<Block> SPRUCE_BOOKSHELF = register("spruce_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> BIRCH_BOOKSHELF = register("birch_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> ACACIA_BOOKSHELF = register("acacia_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> JUNGLE_BOOKSHELF = register("jungle_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> DARK_OAK_BOOKSHELF = register("dark_oak_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> MANGROVE_BOOKSHELF = register("mangrove_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> CHERRY_BOOKSHELF = register("cherry_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.CHERRY_SHELF, 30, 20));
+    public static final RegistryObject<Block> CRIMSON_BOOKSHELF = register("crimson_bookshelf", () -> new Block(EBProperties.BlockProperties.CRIMSON_SHELF));
+    public static final RegistryObject<Block> WARPED_BOOKSHELF = register("warped_bookshelf", () -> new Block(EBProperties.BlockProperties.WARPED_SHELF));
     public static final RegistryObject<Block> BAMBOO_BOOKSHELF = register("bamboo_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.BAMBOO_SHELF, 30, 20));
-    public static final RegistryObject<Block> BAMBOO_EMPTY_SHELF = register("bamboo_empty_shelf", () -> new FlammableBlock(EBProperties.BlockProperties.BAMBOO_SHELF, 30, 20));
-    public static final RegistryObject<Block> BAMBOO_EMPTY_POTION_SHELF = register("bamboo_empty_potion_shelf", () -> new FlammableBlock(EBProperties.BlockProperties.BAMBOO_SHELF, 30, 20));
-    public static final RegistryObject<Block> BAMBOO_WATER_POTION_SHELF = register("bamboo_water_potion_shelf", () -> new FlammableBlock(EBProperties.BlockProperties.BAMBOO_SHELF, 30, 20));
-    public static final RegistryObject<Block> BAMBOO_POTION_SHELF = register("bamboo_potion_shelf", () -> new FlammableBlock(EBProperties.BlockProperties.BAMBOO_SHELF, 30, 20));
-    public static final RegistryObject<Block> BAMBOO_ALCHEMIST_SHELF = register("bamboo_alchemist_shelf", () -> new FlammableBlock(EBProperties.BlockProperties.BAMBOO_SHELF, 30, 20));
+    public static final RegistryObject<Block> ANCIENT_BOOKSHELF = register("ancient_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.ANCIENT_SHELF, 30, 20));
+    public static final RegistryObject<Block> WILLOW_BOOKSHELF = register("willow_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+    public static final RegistryObject<Block> MAPLE_BOOKSHELF = register("maple_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
 
     //KNITTED WOOL
     public static final RegistryObject<Block> KNITTED_RED_WOOL = register("knitted_red_wool", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
