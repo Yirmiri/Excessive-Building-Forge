@@ -6,14 +6,18 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.alchemy.PotionUtils;
 import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.brewing.BrewingRecipe;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -30,7 +34,6 @@ import net.yirmiri.excessive_building.compat.FDCompat;
 import net.yirmiri.excessive_building.compat.SMCompat;
 import net.yirmiri.excessive_building.compat.terrablender.EBOverworldRegion;
 import net.yirmiri.excessive_building.datagen.loot.EBLootTableModifiers;
-import net.yirmiri.excessive_building.potion.EBBrewingRecipe;
 import net.yirmiri.excessive_building.register.*;
 import net.yirmiri.excessive_building.util.EBBlockTypes;
 import net.yirmiri.excessive_building.util.EBSoundEvents;
@@ -80,10 +83,13 @@ public class ExcessiveBuilding {
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.YELLOW_MAPLE_SAPLING.getId(), EBBlocks.POTTED_YELLOW_MAPLE_SAPLING);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(EBBlocks.ACORN.getId(), EBBlocks.POTTED_ACORN);
 
+            ItemStack awkwardPotion = PotionUtils.setPotion(new ItemStack(Items.POTION), Potions.AWKWARD);
+            ItemStack reachingPotion = PotionUtils.setPotion(new ItemStack(Items.POTION), EBPotions.REACHING_POTION.get());
+            ItemStack ancientFruit = (new ItemStack(EBItems.ANCIENT_FRUIT.get()));
+
             if (EBConfig.ENABLE_REACHING_POTIONS.get()) {
-                BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.WATER, EBItems.ANCIENT_FRUIT.get(), Potions.MUNDANE));
-                BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(Potions.AWKWARD, EBItems.ANCIENT_FRUIT.get(), EBPotions.REACHING_POTION.get()));
-                BrewingRecipeRegistry.addRecipe(new EBBrewingRecipe(EBPotions.REACHING_POTION.get(), Items.REDSTONE, EBPotions.LONG_REACHING_POTION.get()));
+                BrewingRecipeRegistry.addRecipe(new BrewingRecipe(Ingredient.of(awkwardPotion), Ingredient.of(ancientFruit), PotionUtils.setPotion(new ItemStack(Items.POTION), EBPotions.REACHING_POTION.get())));
+                BrewingRecipeRegistry.addRecipe(new BrewingRecipe(Ingredient.of(reachingPotion), Ingredient.of(Items.REDSTONE), PotionUtils.setPotion(new ItemStack(Items.POTION), EBPotions.LONG_REACHING_POTION.get())));
             }
         });
     }
