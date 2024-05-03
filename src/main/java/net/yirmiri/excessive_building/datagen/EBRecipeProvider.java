@@ -1682,6 +1682,24 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .pattern("###")
                 .pattern("   ")
                 .pattern("###").unlockedBy(getHasName(EBBlocks.WILLOW_PLANKS.get()), has(EBBlocks.WILLOW_PLANKS.get())).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.TERRACOTTA_POT.get(), 4)
+                .define('#', Blocks.TERRACOTTA)
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(Blocks.TERRACOTTA), has(Blocks.TERRACOTTA)).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.TERRACOTTA_POT.get(), 4)
+                .define('#', EBBlocks.MARBLE.get())
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MARBLE.get()), has(EBBlocks.MARBLE.get())).save(output);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.TERRACOTTA_POT.get(), 4)
+                .define('#', EBBlocks.MARQUINA_MARBLE.get())
+                .pattern(" # ")
+                .pattern("# #")
+                .pattern("###").unlockedBy(getHasName(EBBlocks.MARQUINA_MARBLE.get()), has(EBBlocks.MARQUINA_MARBLE.get())).save(output);
     }
 
     protected static RecipeBuilder fourforfourBuilder(ItemLike itemLike, Ingredient ingredient) {

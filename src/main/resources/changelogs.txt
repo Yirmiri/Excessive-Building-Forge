@@ -12,16 +12,18 @@ Major Update
 A full list of removals is provided at the bottom of this log.
 
 •   Many world generation aspects such as new biomes are now only enabled if Terrablender is installed. 
-Previously this was a required dependancy but is now optional.
+Previously this was a required dependency but is now optional.
 
   Additions
+•   Added terracotta pots, can be filled with dirt to hold plants in them or can be lit on fire and never burn out
 •   Added decorative shelves, decorated shelves can be clicked to change variants (bookshelf variants are no longer seperate blocks)
 •   Added a new collector's shelf variant
 •   Added amethyst fire, similar to soul fire but when fire is placed ontop of amethyst blocks
+•   Added Excessive Building items to vanilla creative tabs (can be disabled with configs)
+•   Added new paintings created by my friends and I
 •   Added all of the new paintings coming the next Minecraft update
-•   Added one of my personal paintings
 •   Added original painting variants
-•   Added new configurations; enableReachingPotions, enableEBBiomes
+•   Added a bunch of new configuration options
 
   Changes
 •   Pedestals can now be rotated in any direction
@@ -29,8 +31,9 @@ Previously this was a required dependancy but is now optional.
 •   Alchemist shelves with pearls in them no longer animate
 •   Changed the recipe of most resource bricks to seem more fair
 •   Resource brick stairs/vertical stairs can now be used as a beacon base block
-•   Moved all blocks added by mod compatibility into a seperate tab
+•   Moved all blocks added by mod compatibility into a separate tab
 •   Ancient fruit are now always edible
+•   Base brimstone blocks now stay on fire forever like netherrack
 •   Removed custom panorama
 •   Made configs actually human readable
 •   Special capes now check for the player's UUID rather than the username so changing your username should no longer remove your cape
@@ -41,20 +44,24 @@ Previously this was a required dependancy but is now optional.
 
   Bug Fixes
 •   Added chiseled smooth stone bricks to mineable/pickaxe tag
+•   Fixed Quartz Tile Stairs being named Quartz Tiles T-T (moved to the bottom of the translations to help translators)
+•   Fixed incorrect item model for mossy polished stone brick wall
 
   Removals
+•   Custom creative tabs, are moved to one tab and all other blocks are housed in default tabs
 •   Bookshelf variants are now condensed into one block that cycles variants
 •   Cobbled granite/diorite/andesite bricks
 •   Sulfuric brimstone and all of its variants
 •   Colored crafting table variants
 •   Cracked polished brimstone brick stairs/slabs
 •   Dripstone bricks and tiles
-•   Brickshelf and all wood variants for brickshelves
 •   Iron bar doors and trapdoors
 •   Construction tables
 •   Reaching lanterns
 •   Netherrack, end stone, and smooth basalt stairs/slabs
 •   Ancient cabinets (from Farmer's Delight compatibility)
+
+•   Okay... I'm done with Excessive Building :')... for now
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 

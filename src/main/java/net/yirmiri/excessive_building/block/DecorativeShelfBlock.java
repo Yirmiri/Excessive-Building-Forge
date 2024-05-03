@@ -39,7 +39,11 @@ public class DecorativeShelfBlock extends FlammableBlock {
     }
 
     public float variantPowerBonus(BlockState state) {
-        if ((state.getValue(VARIANT) == 2) || (state.getValue(VARIANT) == 5)) {
+        if (!EBConfig.DECORATIVE_VARIANT_POWER.get()) {
+            if ((state.getValue(VARIANT) == 2) || (state.getValue(VARIANT) == 5)) {
+                return EBConfig.DECORATIVE_ENCHANT_BONUS.get();
+            }
+        } else if (EBConfig.DECORATIVE_VARIANT_POWER.get()) {
             return EBConfig.DECORATIVE_ENCHANT_BONUS.get();
         }
         return 0;

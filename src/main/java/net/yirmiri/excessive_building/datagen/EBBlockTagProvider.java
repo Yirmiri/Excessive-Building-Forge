@@ -23,7 +23,7 @@ public class EBBlockTagProvider extends BlockTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider pProvider) {
+    protected void addTags(HolderLookup.Provider provider) {
         this.tag(EBBlockTagProvider.AMETHYST_FIRE_BASE_BLOCKS).add(
                 Blocks.AMETHYST_BLOCK,
                 Blocks.BUDDING_AMETHYST,
@@ -36,7 +36,9 @@ public class EBBlockTagProvider extends BlockTagsProvider {
                 EBBlocks.AMETHYST_TILE_SLAB.get(),
                 EBBlocks.AMETHYST_TILE_VERTICAL_STAIRS.get(),
                 EBBlocks.AMETHYST_GLASS.get(),
-                EBBlocks.AMETHYST_LAMP.get()
+                EBBlocks.AMETHYST_LAMP.get(),
+                EBBlocks.CRACKED_AMETHYST_TILES.get(),
+                EBBlocks.CRACKED_AMETHYST_BRICKS.get()
         );
     }
 

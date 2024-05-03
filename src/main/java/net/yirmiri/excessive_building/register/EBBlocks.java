@@ -17,10 +17,6 @@ import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.block.*;
 import net.yirmiri.excessive_building.block.flammable.*;
-import net.yirmiri.excessive_building.block.EBCeilingHangingSignBlock;
-import net.yirmiri.excessive_building.block.EBStandingSignBlock;
-import net.yirmiri.excessive_building.block.EBWallHangingSignBlock;
-import net.yirmiri.excessive_building.block.EBWallSignBlock;
 import net.yirmiri.excessive_building.util.EBBlockTypes;
 import net.yirmiri.excessive_building.util.EBProperties;
 import net.yirmiri.excessive_building.worldgen.feature.tree.*;
@@ -29,7 +25,7 @@ import java.util.function.Supplier;
 
 public class EBBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ExcessiveBuilding.MODID);
-
+//TODO: FINISH ORGANIZING REGISTRIES OR ELSE ILL GO FUCKING INSANE
     //WOOD
     public static final RegistryObject<Block> OAK_MOSAIC = register("oak_mosaic", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_WOOD, 20, 5));
     public static final RegistryObject<Block> OAK_MOSAIC_STAIRS = register("oak_mosaic_stairs", () -> new FlammableStairBlock(EBBlocks.OAK_MOSAIC.get().defaultBlockState(), (EBProperties.BlockProperties.GENERIC_WOOD), 20, 5));
@@ -1753,59 +1749,41 @@ public class EBBlocks {
     public static final RegistryObject<Block> HOLLOW_STRIPPED_WILLOW_LOG = register("hollow_stripped_willow_log",
             () -> new FlammableHollowRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).ignitedByLava().sound(SoundType.WOOD), 5, 5));
 
-    public static final RegistryObject<Block> HOLLOW_CRIMSON_STEM = register("hollow_crimson_stem",
-            () -> new HollowRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_STEM).sound(SoundType.NETHER_WOOD)));
+    public static final RegistryObject<Block> HOLLOW_CRIMSON_STEM = register("hollow_crimson_stem", () -> new HollowRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_STEM).sound(SoundType.NETHER_WOOD)));
 
-    public static final RegistryObject<Block> HOLLOW_STRIPPED_CRIMSON_STEM = register("hollow_stripped_crimson_stem",
-            () -> new HollowRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_STEM).sound(SoundType.NETHER_WOOD)));
+    public static final RegistryObject<Block> HOLLOW_STRIPPED_CRIMSON_STEM = register("hollow_stripped_crimson_stem", () -> new HollowRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.CRIMSON_STEM).sound(SoundType.NETHER_WOOD)));
 
-    public static final RegistryObject<Block> HOLLOW_WARPED_STEM = register("hollow_warped_stem",
-            () -> new HollowRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM).sound(SoundType.NETHER_WOOD)));
+    public static final RegistryObject<Block> HOLLOW_WARPED_STEM = register("hollow_warped_stem", () -> new HollowRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM).sound(SoundType.NETHER_WOOD)));
 
-    public static final RegistryObject<Block> HOLLOW_STRIPPED_WARPED_STEM = register("hollow_stripped_warped_stem",
-            () -> new HollowRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM).sound(SoundType.NETHER_WOOD)));
+    public static final RegistryObject<Block> HOLLOW_STRIPPED_WARPED_STEM = register("hollow_stripped_warped_stem", () -> new HollowRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM).sound(SoundType.NETHER_WOOD)));
 
-    public static final RegistryObject<Block> TUFF_BRICK_PILLAR = register("tuff_brick_pillar",
-            () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(EBBlocks.TUFF_BRICKS.get())));
+    public static final RegistryObject<Block> TUFF_BRICK_PILLAR = register("tuff_brick_pillar", () -> new RotatedPillarBlock(BlockBehaviour.Properties.copy(EBBlocks.TUFF_BRICKS.get())));
 
-    public static final RegistryObject<Block> TUFF_BRICK_PEDESTAL = register("tuff_brick_pedestal",
-            () -> new PedestalBlock(BlockBehaviour.Properties.copy(EBBlocks.TUFF_BRICK_PILLAR.get())));
+    public static final RegistryObject<Block> TUFF_BRICK_PEDESTAL = register("tuff_brick_pedestal", () -> new PedestalBlock(BlockBehaviour.Properties.copy(EBBlocks.TUFF_BRICK_PILLAR.get())));
 
-    public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICKS = register("mossy_polished_stone_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_STONE_BRICKS.get()).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICKS = register("mossy_polished_stone_bricks", () -> new Block(BlockBehaviour.Properties.copy(EBBlocks.POLISHED_STONE_BRICKS.get()).requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICK_STAIRS = register("mossy_polished_stone_brick_stairs",
-            () -> new StairBlock(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())));
+    public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICK_STAIRS = register("mossy_polished_stone_brick_stairs", () -> new StairBlock(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())));
 
-    public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICK_SLAB = register("mossy_polished_stone_brick_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())));
+    public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICK_SLAB = register("mossy_polished_stone_brick_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())));
 
-    public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICK_WALL = register("mossy_polished_stone_brick_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())));
+    public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICK_WALL = register("mossy_polished_stone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())));
 
-    public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICK_VERTICAL_STAIRS = register("mossy_polished_stone_brick_vertical_stairs",
-            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())));
+    public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICK_VERTICAL_STAIRS = register("mossy_polished_stone_brick_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())));
 
-    public static final RegistryObject<Block> SWIFT_ASPHALT = register("swift_asphalt",
-            () -> new SpeedBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get()).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> SWIFT_ASPHALT = register("swift_asphalt", () -> new SpeedBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get()).requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block> SWIFT_ASPHALT_STAIRS = register("swift_asphalt_stairs",
-            () -> new SpeedStairBlock(EBBlocks.SWIFT_ASPHALT.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> SWIFT_ASPHALT_STAIRS = register("swift_asphalt_stairs", () -> new SpeedStairBlock(EBBlocks.SWIFT_ASPHALT.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
 
-    public static final RegistryObject<Block> SWIFT_ASPHALT_SLAB = register("swift_asphalt_slab",
-            () -> new SpeedSlabBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> SWIFT_ASPHALT_SLAB = register("swift_asphalt_slab", () -> new SpeedSlabBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
 
-    public static final RegistryObject<Block> SWIFT_ASPHALT_VERTICAL_STAIRS = register("swift_asphalt_vertical_stairs",
-            () -> new SpeedVerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> SWIFT_ASPHALT_VERTICAL_STAIRS = register("swift_asphalt_vertical_stairs", () -> new SpeedVerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
 
-    public static final RegistryObject<Block> ASPHALT_STAIRS = register("asphalt_stairs",
-            () -> new StairBlock(EBBlocks.ASPHALT.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> ASPHALT_STAIRS = register("asphalt_stairs", () -> new StairBlock(EBBlocks.ASPHALT.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
 
-    public static final RegistryObject<Block> ASPHALT_SLAB = register("asphalt_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> ASPHALT_SLAB = register("asphalt_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
 
-    public static final RegistryObject<Block> ASPHALT_VERTICAL_STAIRS = register("asphalt_vertical_stairs",
-            () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> ASPHALT_VERTICAL_STAIRS = register("asphalt_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
 
     //DECORATIVE SHELVES
     public static final RegistryObject<Block> DECORATIVE_SHELF = register("decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
@@ -1837,6 +1815,12 @@ public class EBBlocks {
     public static final RegistryObject<Block> ANCIENT_BOOKSHELF = register("ancient_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.ANCIENT_SHELF, 30, 20));
     public static final RegistryObject<Block> WILLOW_BOOKSHELF = register("willow_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
     public static final RegistryObject<Block> MAPLE_BOOKSHELF = register("maple_bookshelf", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
+
+    //POTS
+    public static final RegistryObject<Block> TERRACOTTA_POT = register("terracotta_pot", () -> new PotBlock(EBProperties.BlockProperties.POT));
+    public static final RegistryObject<Block> MARBLE_POT = register("marble_pot", () -> new PotBlock(EBProperties.BlockProperties.POT));
+    public static final RegistryObject<Block> MARQUINA_MARBLE_POT = register("marquina_marble_pot", () -> new PotBlock(EBProperties.BlockProperties.POT));
+    //TODO: ADD DYED VARIANTS (these will be done for v3.0.1)
 
     //KNITTED WOOL
     public static final RegistryObject<Block> KNITTED_RED_WOOL = register("knitted_red_wool", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));

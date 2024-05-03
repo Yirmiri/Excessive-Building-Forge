@@ -58,6 +58,9 @@ public class EBProperties {
         //MARBLE
         public static final BlockBehaviour.Properties MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.SNOW).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(EBSoundEvents.EBSoundTypes.MARBLE).requiresCorrectToolForDrops();
         public static final BlockBehaviour.Properties MARQUINA_MARBLE = BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK).instrument(NoteBlockInstrument.BASS).strength(1.0F, 3.0F).sound(EBSoundEvents.EBSoundTypes.MARBLE).requiresCorrectToolForDrops();
+
+        //MISC
+        public static final BlockBehaviour.Properties POT = BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(0.5F).sound(SoundType.DECORATED_POT_CRACKED);
     }
 
     public class Foods {

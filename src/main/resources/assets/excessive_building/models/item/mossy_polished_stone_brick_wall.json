@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/wall_inventory",
   "textures": {
-    "wall": "excessive_building:block/polished_stone_bricks"
+    "wall": "excessive_building:block/mossy_polished_stone_bricks"
   }
 }

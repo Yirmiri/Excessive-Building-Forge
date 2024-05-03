@@ -686,6 +686,9 @@
     "excessive_building:polished_marquina_marble_vertical_stairs",
     "excessive_building:marquina_marble_vertical_stairs",
     "excessive_building:marquina_marble_brick_vertical_stairs",
-    "excessive_building:chiseled_smooth_stone_bricks"
+    "excessive_building:chiseled_smooth_stone_bricks",
+    "excessive_building:terracotta_pot",
+    "excessive_building:marble_pot",
+    "excessive_building:marquina_marble_pot"
   ]
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "excessive_building:custom/template_pot",
+  "textures": {
+    "particle": "excessive_building:block/marble",
+    "0": "excessive_building:block/marble_pot_filled"
+  }
+}

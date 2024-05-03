@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "filled=false": { "model": "excessive_building:block/marble_pot" },
+    "filled=true": { "model": "excessive_building:block/marble_pot_filled" }
+  }
+}

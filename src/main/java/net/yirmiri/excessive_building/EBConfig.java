@@ -7,35 +7,52 @@ import net.minecraftforge.fml.common.Mod;
 public class EBConfig {
     public static ForgeConfigSpec COMMON;
     public static final String CONTENT = "content";
+    public static final String BALANCING = "balancing";
+    public static ForgeConfigSpec.BooleanValue ENABLE_EB_CREATIVE_TAB;
+    public static ForgeConfigSpec.BooleanValue ENABLE_CUSTOM_TAB;
     public static ForgeConfigSpec.BooleanValue ENABLE_EB_SNIFFER_DROPS;
-    public static ForgeConfigSpec.BooleanValue ENABLE_EB_VILLAGER_TRADES;
-    public static ForgeConfigSpec.BooleanValue ENABLE_EB_WANDERING_TRADES;
+    public static ForgeConfigSpec.BooleanValue ENABLE_BIOMES;
+    public static ForgeConfigSpec.BooleanValue DECORATIVE_VARIANT_POWER;
     public static ForgeConfigSpec.IntValue DECORATIVE_ENCHANT_BONUS;
     public static ForgeConfigSpec.BooleanValue ENABLE_REACHING_POTIONS;
-    public static ForgeConfigSpec.BooleanValue ENABLE_BIOMES;
+    public static ForgeConfigSpec.BooleanValue ENABLE_EB_VILLAGER_TRADES;
+    public static ForgeConfigSpec.BooleanValue ENABLE_EB_WANDERING_TRADES;
 
     static {
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
 
         COMMON_BUILDER.comment("Content Toggles").push(CONTENT);
+        ENABLE_EB_CREATIVE_TAB = COMMON_BUILDER
+                .comment("Should Excessive Building's items be placed in vanilla's tabs? (default: true)")
+                .define("enableEBTabs", true);
+        ENABLE_CUSTOM_TAB = COMMON_BUILDER
+                .comment("Should there be a custom creative tab for Excessive Building? (default: true)")
+                .define("enableCustomTab", true);
         ENABLE_EB_SNIFFER_DROPS = COMMON_BUILDER
-                .comment("Should sniffers be able to dig up new unique items?")
+                .comment("Should sniffers be able to dig up new unique items? (default: true)")
                 .define("enableSnifferDrops", true);
-        ENABLE_EB_VILLAGER_TRADES = COMMON_BUILDER
-                .comment("Should villagers have new unique offers?")
-                .define("enableEBVillagerTrades", true);
-        ENABLE_EB_WANDERING_TRADES = COMMON_BUILDER
-                .comment("Should wandering traders have new unique offers?")
-                .define("enableEBWanderingTrades", true);
+        ENABLE_BIOMES = COMMON_BUILDER
+                .comment("Should Excessive Building's new biomes generate if Terrablender is installed (default: true)")
+                .define("enableEBBiomes", true);
+        COMMON_BUILDER.pop();
+
+        COMMON_BUILDER.comment("Balance Toggles").push(BALANCING);
+        DECORATIVE_VARIANT_POWER = COMMON_BUILDER
+                .comment("Should all decorative shelves grant an enchantment bonus or only potion shelves (default: false)?")
+                .define("decorativeVariantPower", false);
         DECORATIVE_ENCHANT_BONUS = COMMON_BUILDER
-                .comment("Enchantment power potion decorative shelves should grant? (Range: 0 ~ 30 || Default: 2")
+                .comment("Level of enchantment power decorative shelves should grant? (default: 2)")
                 .defineInRange("decorativeEnchantBonus", 2, 0, 30);
         ENABLE_REACHING_POTIONS = COMMON_BUILDER
-                .comment("Should reaching potions be craftable?")
+                .comment("Should reaching potions be craftable? (default: true)")
                 .define("enableReachingPotions", true);
-        ENABLE_BIOMES = COMMON_BUILDER
-                .comment("Should Excessive Building's new biomes generate? (Requires Terrablender)")
-                .define("enableEBBiomes", true);
+        ENABLE_EB_VILLAGER_TRADES = COMMON_BUILDER
+                .comment("Should villagers have new unique offers? (default: true)")
+                .define("enableEBVillagerTrades", true);
+        ENABLE_EB_WANDERING_TRADES = COMMON_BUILDER
+                .comment("Should wandering traders have new unique offers? (default: true)")
+                .define("enableEBWanderingTrades", true);
+        COMMON_BUILDER.pop();
 
         COMMON = COMMON_BUILDER.build();
     }
