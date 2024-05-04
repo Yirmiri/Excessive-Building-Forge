@@ -13,6 +13,9 @@ public class EBPaintings {
     //YIRMIRI'S PAINTINGS
     public static final RegistryObject<PaintingVariant> FORGOTTEN_KINGDOM = PAINTING_VARIANTS.register("forgotten_kingdom", () -> new PaintingVariant(32, 16));
 
+    //HECCO'S PAINTINGS
+    public static final RegistryObject<PaintingVariant> PALEOBOTANY = PAINTING_VARIANTS.register("paleobotany", () -> new PaintingVariant(48, 48));
+
     //MILKYFUR'S PAINTINGS
     public static final RegistryObject<PaintingVariant> FAKER_ON_FIRE = PAINTING_VARIANTS.register("faker_on_fire", () -> new PaintingVariant(64, 64));
     public static final RegistryObject<PaintingVariant> SOMETHING_WICKED = PAINTING_VARIANTS.register("something_wicked", () -> new PaintingVariant(48, 48));

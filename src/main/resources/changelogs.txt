@@ -14,13 +14,19 @@ A full list of removals is provided at the bottom of this log.
 •   Many world generation aspects such as new biomes are now only enabled if Terrablender is installed. 
 Previously this was a required dependency but is now optional.
 
+  Paintings (created by other artists from the community!)
+•   "Forgotten Kingdom" (@yirmiris)
+•   "Paleobotany" (@Hecco)
+•   "Kolos Bug" (@Kolosman420)
+•   "Faker on Fire" (@Milk_Furr)
+•   "Thine Holy Peanut" (@YesMan2)
+
   Additions
 •   Added terracotta pots, can be filled with dirt to hold plants in them or can be lit on fire and never burn out
 •   Added decorative shelves, decorated shelves can be clicked to change variants (bookshelf variants are no longer seperate blocks)
 •   Added a new collector's shelf variant
 •   Added amethyst fire, similar to soul fire but when fire is placed ontop of amethyst blocks
 •   Added Excessive Building items to vanilla creative tabs (can be disabled with configs)
-•   Added new paintings created by my friends and I
 •   Added all of the new paintings coming the next Minecraft update
 •   Added original painting variants
 •   Added a bunch of new configuration options
