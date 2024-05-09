@@ -2061,18 +2061,20 @@ public class EBBlocks {
     public static final RegistryObject<Block> SMOOTH_STONE_BRICK_VERTICAL_STAIRS = register("smooth_stone_brick_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.SMOOTH_STONE_BRICKS.get())));
     public static final RegistryObject<Block> SMOOTH_STONE_TILE_VERTICAL_STAIRS = register("smooth_stone_tile_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.SMOOTH_STONE_TILES.get())));
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICK_VERTICAL_STAIRS = register("mossy_deepslate_brick_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.MOSSY_DEEPSLATE_BRICKS.get())));
+//TODO: POT LOOT TABLE FIX & CREATIVE DIRT
+//TODO: SOUL MAGMA UNIQUE
+//TODO: COOLER PEDESTALS
+   public static <B extends Block>RegistryObject<B> register(String name, Supplier<B> block) {
+        RegistryObject<B> toReturn = BLOCKS.register(name, block);
+        registryBlockItem(name, toReturn);
+        return toReturn;
+   }
 
-    public static <B extends Block>RegistryObject<B> register(String name, Supplier<B> block) {
-                RegistryObject<B> toReturn = BLOCKS.register(name, block);
-                registryBlockItem(name, toReturn);
-                return toReturn;
-            }
+   private static <B extends Block> void registryBlockItem(String name, RegistryObject<B> block) {
+        EBItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
+   }
 
-            private static <B extends Block> void registryBlockItem(String name, RegistryObject<B> block) {
-                EBItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
-            }
-
-            public static void register(IEventBus eventBus) {
-                BLOCKS.register(eventBus);
-            }
+   public static void register(IEventBus eventBus) {
+        BLOCKS.register(eventBus);
+   }
 }

@@ -12,19 +12,21 @@ public class EBPaintings {
 
     //YIRMIRI'S PAINTINGS
     public static final RegistryObject<PaintingVariant> FORGOTTEN_KINGDOM = PAINTING_VARIANTS.register("forgotten_kingdom", () -> new PaintingVariant(32, 16));
+    public static final RegistryObject<PaintingVariant> SOMETHING_WICKED = PAINTING_VARIANTS.register("something_wicked", () -> new PaintingVariant(64, 32));
+    public static final RegistryObject<PaintingVariant> FIT_FOR_A_QUEEN = PAINTING_VARIANTS.register("fit_for_a_queen", () -> new PaintingVariant(16, 16));
 
-    //HECCO'S PAINTINGS
-    public static final RegistryObject<PaintingVariant> PALEOBOTANY = PAINTING_VARIANTS.register("paleobotany", () -> new PaintingVariant(48, 48));
-
-    //MILKYFUR'S PAINTINGS
-    public static final RegistryObject<PaintingVariant> FAKER_ON_FIRE = PAINTING_VARIANTS.register("faker_on_fire", () -> new PaintingVariant(64, 64));
-    public static final RegistryObject<PaintingVariant> SOMETHING_WICKED = PAINTING_VARIANTS.register("something_wicked", () -> new PaintingVariant(48, 48));
-
-    //KOLOS' PAINTINGS
-    public static final RegistryObject<PaintingVariant> BUST = PAINTING_VARIANTS.register("bust", () -> new PaintingVariant(32, 32));
-
-    //YESMAN2'S PAINTINGS
-    public static final RegistryObject<PaintingVariant> THINE_HOLY_PEANUT = PAINTING_VARIANTS.register("thine_holy_peanut", () -> new PaintingVariant(32, 16));
+    //COMMUNITY PAINTINGS
+    public static final RegistryObject<PaintingVariant> PALEOBOTANY = PAINTING_VARIANTS.register("paleobotany", () -> new PaintingVariant(48, 48)); //Hecco
+    public static final RegistryObject<PaintingVariant> BUST = PAINTING_VARIANTS.register("bust", () -> new PaintingVariant(32, 32)); //Kolos
+    public static final RegistryObject<PaintingVariant> CRASH_LANDING = PAINTING_VARIANTS.register("crash_landing", () -> new PaintingVariant(80, 48)); //BackupCup
+    public static final RegistryObject<PaintingVariant> THINE_HOLY_PEANUT = PAINTING_VARIANTS.register("thine_holy_peanut", () -> new PaintingVariant(32, 16)); //YesMan2
+    public static final RegistryObject<PaintingVariant> PUFFERLIGHT = PAINTING_VARIANTS.register("pufferlight", () -> new PaintingVariant(64, 32)); //Pepagg
+    public static final RegistryObject<PaintingVariant> HORIZON = PAINTING_VARIANTS.register("horizon", () -> new PaintingVariant(32, 32)); //HaWii
+    public static final RegistryObject<PaintingVariant> THE_LONE_TREE = PAINTING_VARIANTS.register("the_lone_tree", () -> new PaintingVariant(32, 32)); //SuperMightByte
+    public static final RegistryObject<PaintingVariant> SNIFFING_IN_THE_PINE_FOREST = PAINTING_VARIANTS.register("sniffing_in_the_pine_forest", () -> new PaintingVariant(64, 48)); //Brickerman
+    public static final RegistryObject<PaintingVariant> IMMINENT_DETONATION = PAINTING_VARIANTS.register("imminent_detonation", () -> new PaintingVariant(80, 48)); //BackupCup
+    public static final RegistryObject<PaintingVariant> WHY_DO_MY_EYES_HURT = PAINTING_VARIANTS.register("why_do_my_eyes_hurt", () -> new PaintingVariant(80, 48)); //BackupCup
+    public static final RegistryObject<PaintingVariant> LONE_BRIDGE = PAINTING_VARIANTS.register("lone_bridge", () -> new PaintingVariant(64, 42)); //Nebula
 
     //ORIGINAL PORTS
     public static final RegistryObject<PaintingVariant> COURBET_ORIGINAL = PAINTING_VARIANTS.register("courbet_original", () -> new PaintingVariant(32, 16));

@@ -14,12 +14,20 @@ A full list of removals is provided at the bottom of this log.
 •   Many world generation aspects such as new biomes are now only enabled if Terrablender is installed. 
 Previously this was a required dependency but is now optional.
 
-  Paintings (created by other artists from the community!)
+  Community Paintings (created by other artists from the community!)
 •   "Forgotten Kingdom" (@yirmiris)
+•   "Fit for a Queen!" (@yirmiris)
 •   "Paleobotany" (@Hecco)
+•   "Sniffing in the Pine Forest" (@Bricker_Man)
 •   "Kolos Bug" (@Kolosman420)
-•   "Faker on Fire" (@Milk_Furr)
+•   "Crash Landing" (@CupBackup)
+•   "Detonation Imminent" (CupBackup)
+•   "Why do my eyes hurt?" (@CupBackup)
+•   "Pufferlight" (@PepaggsThings)
+•   "Lone Bridge" (@NebulaIsMine)
+•   "The Lone Tree" (@SuperMightByte)
 •   "Thine Holy Peanut" (@YesMan2)
+•   "Horizon" (@HaWii)
 
   Additions
 •   Added terracotta pots, can be filled with dirt to hold plants in them or can be lit on fire and never burn out
@@ -52,6 +60,7 @@ Previously this was a required dependency but is now optional.
 •   Added chiseled smooth stone bricks to mineable/pickaxe tag
 •   Fixed Quartz Tile Stairs being named Quartz Tiles T-T (moved to the bottom of the translations to help translators)
 •   Fixed incorrect item model for mossy polished stone brick wall
+•   Fixed some vertical stairs not being uvlocked
 
   Removals
 •   Custom creative tabs, are moved to one tab and all other blocks are housed in default tabs
