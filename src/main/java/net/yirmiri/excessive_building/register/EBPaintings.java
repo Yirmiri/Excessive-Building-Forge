@@ -26,7 +26,7 @@ public class EBPaintings {
     public static final RegistryObject<PaintingVariant> SNIFFING_IN_THE_PINE_FOREST = PAINTING_VARIANTS.register("sniffing_in_the_pine_forest", () -> new PaintingVariant(64, 48)); //Brickerman
     public static final RegistryObject<PaintingVariant> IMMINENT_DETONATION = PAINTING_VARIANTS.register("imminent_detonation", () -> new PaintingVariant(80, 48)); //BackupCup
     public static final RegistryObject<PaintingVariant> WHY_DO_MY_EYES_HURT = PAINTING_VARIANTS.register("why_do_my_eyes_hurt", () -> new PaintingVariant(80, 48)); //BackupCup
-    public static final RegistryObject<PaintingVariant> LONE_BRIDGE = PAINTING_VARIANTS.register("lone_bridge", () -> new PaintingVariant(64, 42)); //Nebula
+    public static final RegistryObject<PaintingVariant> LONE_BRIDGE = PAINTING_VARIANTS.register("lone_bridge", () -> new PaintingVariant(64, 32)); //Nebula
 
     //ORIGINAL PORTS
     public static final RegistryObject<PaintingVariant> COURBET_ORIGINAL = PAINTING_VARIANTS.register("courbet_original", () -> new PaintingVariant(32, 16));

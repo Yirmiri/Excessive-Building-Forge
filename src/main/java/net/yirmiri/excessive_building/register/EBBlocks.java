@@ -264,8 +264,11 @@ public class EBBlocks {
     public static final RegistryObject<Block> POTTED_ACORN = BLOCKS.register("potted_acorn", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.ACORN, BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
     public static final RegistryObject<Block> GOLDEN_BIRCH_SAPLING = register("golden_birch_sapling", () -> new SaplingBlock(new GoldenBirchTreeGrower(), BlockBehaviour.Properties.copy(Blocks.BIRCH_SAPLING)));
     public static final RegistryObject<Block> POTTED_GOLDEN_BIRCH_SAPLING = BLOCKS.register("potted_golden_birch_sapling", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.GOLDEN_BIRCH_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_BIRCH_SAPLING)));
-    public static final RegistryObject<Block> ASPHALT = register("asphalt", () -> new Block(EBProperties.BlockProperties.ASPHALT));
     public static final RegistryObject<Block> AMETHYST_FIRE = register("amethyst_fire", () -> new AmethystFireBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_FIRE).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> ASPHALT = register("swift_asphalt", () -> new SpeedBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get()).requiresCorrectToolForDrops()));
+    public static final RegistryObject<Block> ASPHALT_STAIRS = register("swift_asphalt_stairs", () -> new SpeedStairBlock(EBBlocks.ASPHALT.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> ASPHALT_SLAB = register("swift_asphalt_slab", () -> new SpeedSlabBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> ASPHALT_VERTICAL_STAIRS = register("swift_asphalt_vertical_stairs", () -> new SpeedVerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
 
     //RESOURCE
     public static final RegistryObject<Block> GOLDEN_BRICKS = register("golden_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
@@ -330,7 +333,7 @@ public class EBBlocks {
     //NATURAL
     public static final RegistryObject<Block> QUARTZ_ORE = register("quartz_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_QUARTZ_ORE).strength(3.0F).explosionResistance(3.0F), UniformInt.of(2, 5)));
     public static final RegistryObject<Block> DEEPSLATE_QUARTZ_ORE = register("deepslate_quartz_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(EBBlocks.QUARTZ_ORE.get()).sound(SoundType.DEEPSLATE).strength(4.5F).explosionResistance(3.0F), UniformInt.of(2, 5)));
-    public static final RegistryObject<Block> SOUL_MAGMA_BLOCK = register("soul_magma_block", () -> new MagmaBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK)));
+    public static final RegistryObject<Block> SOUL_MAGMA_BLOCK = register("soul_magma_block", () -> new SoulMagmaBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK)));
     public static final RegistryObject<Block> ANCIENT_VINE = register("ancient_vine", () -> new VineBlock(BlockBehaviour.Properties.copy(Blocks.VINE).lightLevel(state -> 4)));
     public static final RegistryObject<Block> GOLDEN_BIRCH_LEAVES = register("golden_birch_leaves", () -> new YellowMapleLeavesBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_LEAVES).mapColor(MapColor.COLOR_YELLOW)));
 
@@ -1771,20 +1774,6 @@ public class EBBlocks {
 
     public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICK_VERTICAL_STAIRS = register("mossy_polished_stone_brick_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())));
 
-    public static final RegistryObject<Block> SWIFT_ASPHALT = register("swift_asphalt", () -> new SpeedBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get()).requiresCorrectToolForDrops()));
-
-    public static final RegistryObject<Block> SWIFT_ASPHALT_STAIRS = register("swift_asphalt_stairs", () -> new SpeedStairBlock(EBBlocks.SWIFT_ASPHALT.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
-
-    public static final RegistryObject<Block> SWIFT_ASPHALT_SLAB = register("swift_asphalt_slab", () -> new SpeedSlabBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
-
-    public static final RegistryObject<Block> SWIFT_ASPHALT_VERTICAL_STAIRS = register("swift_asphalt_vertical_stairs", () -> new SpeedVerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
-
-    public static final RegistryObject<Block> ASPHALT_STAIRS = register("asphalt_stairs", () -> new StairBlock(EBBlocks.ASPHALT.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
-
-    public static final RegistryObject<Block> ASPHALT_SLAB = register("asphalt_slab", () -> new SlabBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
-
-    public static final RegistryObject<Block> ASPHALT_VERTICAL_STAIRS = register("asphalt_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
-
     //DECORATIVE SHELVES
     public static final RegistryObject<Block> DECORATIVE_SHELF = register("decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
     public static final RegistryObject<Block> SPRUCE_DECORATIVE_SHELF = register("spruce_decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));
@@ -2061,9 +2050,7 @@ public class EBBlocks {
     public static final RegistryObject<Block> SMOOTH_STONE_BRICK_VERTICAL_STAIRS = register("smooth_stone_brick_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.SMOOTH_STONE_BRICKS.get())));
     public static final RegistryObject<Block> SMOOTH_STONE_TILE_VERTICAL_STAIRS = register("smooth_stone_tile_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.SMOOTH_STONE_TILES.get())));
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICK_VERTICAL_STAIRS = register("mossy_deepslate_brick_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.MOSSY_DEEPSLATE_BRICKS.get())));
-//TODO: POT LOOT TABLE FIX & CREATIVE DIRT
-//TODO: SOUL MAGMA UNIQUE
-//TODO: COOLER PEDESTALS
+
    public static <B extends Block>RegistryObject<B> register(String name, Supplier<B> block) {
         RegistryObject<B> toReturn = BLOCKS.register(name, block);
         registryBlockItem(name, toReturn);

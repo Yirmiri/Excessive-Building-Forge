@@ -281,22 +281,6 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .pattern("@%@")
                 .pattern("#@#").unlockedBy(getHasName(EBItems.FIERY_SHARDS.get()), has(EBItems.FIERY_SHARDS.get())).save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SWIFT_ASPHALT.get(), 8)
-                .requires(EBBlocks.ASPHALT.get(), 8).requires(Items.SUGAR)
-                .unlockedBy(getHasName(EBBlocks.ASPHALT.get()), has(EBBlocks.ASPHALT.get())).save(output);
-
-        SimpleCookingRecipeBuilder.smelting(Ingredient.of(EBBlocks.SWIFT_ASPHALT.get()), RecipeCategory.BUILDING_BLOCKS, EBBlocks.ASPHALT.get(), 0.1F, 200)
-                .unlockedBy(getHasName(EBBlocks.ASPHALT.get()), has(EBBlocks.ASPHALT.get())).save(output);
-
-        stairBuilder(EBBlocks.SWIFT_ASPHALT_STAIRS.get(), Ingredient.of(EBBlocks.SWIFT_ASPHALT.get()))
-                .unlockedBy(getHasName(EBBlocks.SWIFT_ASPHALT.get()), has(EBBlocks.SWIFT_ASPHALT.get())).save(output);
-
-        slabBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.SWIFT_ASPHALT_SLAB.get(), Ingredient.of(EBBlocks.SWIFT_ASPHALT.get()))
-                .unlockedBy(getHasName(EBBlocks.SWIFT_ASPHALT.get()), has(EBBlocks.SWIFT_ASPHALT.get())).save(output);
-
-        verticalstairBuilder(EBBlocks.SWIFT_ASPHALT_VERTICAL_STAIRS.get(), Ingredient.of(EBBlocks.SWIFT_ASPHALT.get()))
-                .unlockedBy(getHasName(EBBlocks.SWIFT_ASPHALT.get()), has(EBBlocks.SWIFT_ASPHALT.get())).save(output);
-
         stairBuilder(EBBlocks.ASPHALT_STAIRS.get(), Ingredient.of(EBBlocks.ASPHALT.get()))
                 .unlockedBy(getHasName(EBBlocks.ASPHALT.get()), has(EBBlocks.ASPHALT.get())).save(output);
 

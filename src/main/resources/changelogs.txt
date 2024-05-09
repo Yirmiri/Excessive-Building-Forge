@@ -40,12 +40,15 @@ Previously this was a required dependency but is now optional.
 •   Added a bunch of new configuration options
 
   Changes
+•   Sugar can now be placed on asphalt to increase it's movement speed
 •   Pedestals can now be rotated in any direction
 •   Changed the textures for a crap ton of old blocks
 •   Alchemist shelves with pearls in them no longer animate
 •   Changed the recipe of most resource bricks to seem more fair
 •   Resource brick stairs/vertical stairs can now be used as a beacon base block
 •   Moved all blocks added by mod compatibility into a separate tab
+•   Soul magma blocks now have bubble columns
+•   Soul magma blocks now deal double damage
 •   Ancient fruit are now always edible
 •   Base brimstone blocks now stay on fire forever like netherrack
 •   Removed custom panorama
@@ -67,6 +70,7 @@ Previously this was a required dependency but is now optional.
 •   Bookshelf variants are now condensed into one block that cycles variants
 •   Cobbled granite/diorite/andesite bricks
 •   Sulfuric brimstone and all of its variants
+•   Swift asphalt (built into normal asphalt)
 •   Colored crafting table variants
 •   Cracked polished brimstone brick stairs/slabs
 •   Dripstone bricks and tiles

@@ -74,18 +74,36 @@ public class PotBlock extends Block implements SimpleWaterloggedBlock {
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack itemstack = player.getItemInHand(hand);
         if (!state.getValue(FILLED) && itemstack.is(Items.DIRT)) {
-            level.setBlockAndUpdate(pos, state.setValue(FILLED, true));
-            level.playSound(null, pos, SoundEvents.ROOTED_DIRT_PLACE, SoundSource.BLOCKS, 1, 1);
-            itemstack.shrink(1);
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            addFilling(state, level, pos);
+            if (!player.isCreative()) {
+                itemstack.shrink(1);
+            }
         }
+
         if (state.getValue(FILLED)) {
-            popResource(level, pos, new ItemStack(Items.DIRT));
-            level.setBlockAndUpdate(pos, state.setValue(FILLED, false));
-            level.playSound(null, pos, SoundEvents.ROOTED_DIRT_BREAK, SoundSource.BLOCKS, 1, 1);
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            removeFilling(state, level, pos);
+            if (!player.isCreative()) {
+                popResource(level, pos, new ItemStack(Items.DIRT));
+            }
+            
+        } else {
+            return InteractionResult.CONSUME;
         }
         return InteractionResult.sidedSuccess(level.isClientSide);
+    }
+
+    private static void addFilling(BlockState state, Level level, BlockPos pos) {
+        if (!level.isClientSide) {
+            level.setBlockAndUpdate(pos, state.setValue(FILLED, true));
+            level.playSound(null, pos, SoundEvents.ROOTED_DIRT_PLACE, SoundSource.BLOCKS, 1, 1);
+        }
+    }
+
+    private static void removeFilling(BlockState state, Level level, BlockPos pos) {
+        if (!level.isClientSide) {
+            level.setBlockAndUpdate(pos, state.setValue(FILLED, false));
+            level.playSound(null, pos, SoundEvents.ROOTED_DIRT_BREAK, SoundSource.BLOCKS, 1, 1);
+        }
     }
 
     @Override

@@ -35,7 +35,7 @@ public class EBVillagerTrades {
                         new ItemStack(Items.EMERALD, 1), new ItemStack(EBBlocks.COBBLED_DEEPSLATE_BRICKS.get(), 24),
                         16, 2, 0.05F));
             }
-//TODO: CLEAN THIS GARBAGE
+
             if (event.getType() == VillagerProfession.MASON) {
                 Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
                 int villagerLevel = 2;
