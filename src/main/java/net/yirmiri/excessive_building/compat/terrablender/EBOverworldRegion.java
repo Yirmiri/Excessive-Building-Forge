@@ -8,8 +8,14 @@ import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.Climate;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.ExcessiveBuilding;
+import net.yirmiri.excessive_building.compat.EBCompatRegistries;
 import terrablender.api.Region;
 import terrablender.api.RegionType;
+import terrablender.api.Regions;
 
 import java.util.function.Consumer;
 
@@ -25,6 +31,15 @@ public class EBOverworldRegion extends Region {
             modifiedVanillaOverworldBuilder.replaceBiome(Biomes.SNOWY_TAIGA, EBBiomes.SNOWY_MAPLE_FOREST);
             modifiedVanillaOverworldBuilder.replaceBiome(Biomes.BIRCH_FOREST, EBBiomes.GOLDEN_BIRCH_FOREST);
         });
+    }
+
+    @SubscribeEvent
+    public static void onClientSetup(FMLClientSetupEvent event) {
+        if (EBCompatRegistries.terrablender) {
+            if (EBConfig.ENABLE_BIOMES.get()) {
+                Regions.register(new EBOverworldRegion(new ResourceLocation(ExcessiveBuilding.MODID, "overworld"), 4));
+            }
+        }
     }
 
     public static void register(IEventBus eventBus) {

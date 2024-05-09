@@ -4,7 +4,6 @@ import com.google.common.collect.ImmutableMap;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -36,7 +35,6 @@ import net.yirmiri.excessive_building.register.*;
 import net.yirmiri.excessive_building.util.EBBlockTypes;
 import net.yirmiri.excessive_building.util.EBCreativeModeTabs;
 import net.yirmiri.excessive_building.util.EBSoundEvents;
-import terrablender.api.Regions;
 
 @Mod(ExcessiveBuilding.MODID)
 public class ExcessiveBuilding {
@@ -63,6 +61,10 @@ public class ExcessiveBuilding {
         modEventBus.addListener(this::setup);
         modEventBus.addListener(this::onClientSetup);
         modEventBus.addListener(this::commonSetup);
+
+        if (EBCompatRegistries.terrablender) {
+            modEventBus.addListener(EBOverworldRegion::onClientSetup);
+        }
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -204,10 +206,6 @@ public class ExcessiveBuilding {
         if (EBCompatRegistries.sullysMod) {
             ItemBlockRenderTypes.setRenderLayer(SMCompat.JADE_GLASS.get(), RenderType.translucent());
             ItemBlockRenderTypes.setRenderLayer(SMCompat.JADE_GLASS_PANE.get(), RenderType.translucent());
-        }
-
-        if (EBConfig.ENABLE_BIOMES.get() && EBCompatRegistries.terrablender) {
-            Regions.register(new EBOverworldRegion(new ResourceLocation(ExcessiveBuilding.MODID, "overworld"), 4));
         }
     }
 
