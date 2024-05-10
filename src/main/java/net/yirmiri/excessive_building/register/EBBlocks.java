@@ -330,7 +330,7 @@ public class EBBlocks {
     public static final RegistryObject<Block> ANCIENT_VINES = registerBlock("ancient_vines", () -> new AncientVinesBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES).lightLevel(state -> 4)));
     public static final RegistryObject<Block> ANCIENT_VINES_PLANT = registerBlockWithoutItem("ancient_vines_plant", () -> new AncientVinesPlantBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES_PLANT).lightLevel(state -> 4)));
 
-    public static final RegistryObject<Block> LOGO_BLOCK = registerBlockWithoutItem("logo_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK)));
+    public static final RegistryObject<Block> LOGO_BLOCK = registerBlock("logo_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK)));
     public static final RegistryObject<Block> ACORN = registerBlock("acorn", () -> new SaplingBlock(new AcornTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> POTTED_ACORN = registerBlockWithoutItem("potted_acorn", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.ACORN, BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
     public static final RegistryObject<Block> GOLDEN_BIRCH_SAPLING = registerBlock("golden_birch_sapling", () -> new SaplingBlock(new GoldenBirchTreeGrower(), BlockBehaviour.Properties.copy(Blocks.BIRCH_SAPLING)));

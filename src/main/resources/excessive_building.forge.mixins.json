@@ -6,7 +6,6 @@
   "mixins": [
     "BaseFireBlockMixin",
     "BubbleColumnBlockMixin",
-    ,
     "GrowingPlantBlockMixin"
   ],
   "client": [
