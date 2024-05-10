@@ -262,18 +262,6 @@ public class EBBlocks {
     public static final RegistryObject<Block> SMOOTH_BRICK_WALL = registerBlock("smooth_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> CRACKED_SMOOTH_BRICKS = registerBlock("cracked_smooth_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
 
-    //MISC
-    public static final RegistryObject<Block> LOGO_BLOCK = registerBlock("logo_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK)));
-    public static final RegistryObject<Block> ACORN = registerBlock("acorn", () -> new SaplingBlock(new AcornTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
-    public static final RegistryObject<Block> POTTED_ACORN = registerBlockWithoutItem("potted_acorn", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.ACORN, BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
-    public static final RegistryObject<Block> GOLDEN_BIRCH_SAPLING = registerBlock("golden_birch_sapling", () -> new SaplingBlock(new GoldenBirchTreeGrower(), BlockBehaviour.Properties.copy(Blocks.BIRCH_SAPLING)));
-    public static final RegistryObject<Block> POTTED_GOLDEN_BIRCH_SAPLING = registerBlockWithoutItem("potted_golden_birch_sapling", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.GOLDEN_BIRCH_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_BIRCH_SAPLING)));
-    public static final RegistryObject<Block> AMETHYST_FIRE = registerBlockWithoutItem("amethyst_fire", () -> new AmethystFireBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_FIRE).lightLevel(state -> 15)));
-    public static final RegistryObject<Block> ASPHALT = registerBlock("asphalt", () -> new SpeedBlock(EBProperties.BlockProperties.ASPHALT));
-    public static final RegistryObject<Block> ASPHALT_STAIRS = registerBlock("asphalt_stairs", () -> new SpeedStairBlock(EBBlocks.ASPHALT.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
-    public static final RegistryObject<Block> ASPHALT_SLAB = registerBlock("asphalt_slab", () -> new SpeedSlabBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
-    public static final RegistryObject<Block> ASPHALT_VERTICAL_STAIRS = registerBlock("asphalt_vertical_stairs", () -> new SpeedVerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
-
     //RESOURCE
     public static final RegistryObject<Block> GOLDEN_BRICKS = registerBlock("golden_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
     public static final RegistryObject<Block> GOLDEN_BRICK_STAIRS = registerBlock("golden_brick_stairs", () -> new StairBlock(() -> EBBlocks.GOLDEN_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));
@@ -341,6 +329,18 @@ public class EBBlocks {
     public static final RegistryObject<Block> GOLDEN_BIRCH_LEAVES = registerBlock("golden_birch_leaves", () -> new YellowMapleLeavesBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_LEAVES).mapColor(MapColor.COLOR_YELLOW)));
     public static final RegistryObject<Block> ANCIENT_VINES = registerBlock("ancient_vines", () -> new AncientVinesBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES).lightLevel(state -> 4)));
     public static final RegistryObject<Block> ANCIENT_VINES_PLANT = registerBlockWithoutItem("ancient_vines_plant", () -> new AncientVinesPlantBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES_PLANT).lightLevel(state -> 4)));
+
+    public static final RegistryObject<Block> LOGO_BLOCK = registerBlockWithoutItem("logo_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK)));
+    public static final RegistryObject<Block> ACORN = registerBlock("acorn", () -> new SaplingBlock(new AcornTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> POTTED_ACORN = registerBlockWithoutItem("potted_acorn", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.ACORN, BlockBehaviour.Properties.copy(Blocks.POTTED_OAK_SAPLING)));
+    public static final RegistryObject<Block> GOLDEN_BIRCH_SAPLING = registerBlock("golden_birch_sapling", () -> new SaplingBlock(new GoldenBirchTreeGrower(), BlockBehaviour.Properties.copy(Blocks.BIRCH_SAPLING)));
+    public static final RegistryObject<Block> POTTED_GOLDEN_BIRCH_SAPLING = registerBlockWithoutItem("potted_golden_birch_sapling", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.GOLDEN_BIRCH_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_BIRCH_SAPLING)));
+    public static final RegistryObject<Block> AMETHYST_FIRE = registerBlockWithoutItem("amethyst_fire", () -> new AmethystFireBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_FIRE).lightLevel(state -> 15)));
+    public static final RegistryObject<Block> ASPHALT = registerBlock("asphalt", () -> new SpeedBlock(EBProperties.BlockProperties.ASPHALT));
+    public static final RegistryObject<Block> ASPHALT_STAIRS = registerBlock("asphalt_stairs", () -> new SpeedStairBlock(EBBlocks.ASPHALT.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> ASPHALT_SLAB = registerBlock("asphalt_slab", () -> new SpeedSlabBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> ASPHALT_VERTICAL_STAIRS = registerBlock("asphalt_vertical_stairs", () -> new SpeedVerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> WOOL_MAT = registerBlockWithoutItem("wool_mat", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK)));
 
     //TERRACOTTA TILES
     public static final RegistryObject<Block> TERRACOTTA_TILES = registerBlock("terracotta_tiles", () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));

@@ -14,6 +14,7 @@
     "excessive_building:bamboo_ladder",
     "excessive_building:willow_ladder",
     "excessive_building:maple_ladder",
-    "excessive_building:ancient_vine"
+    "excessive_building:ancient_vines",
+    "excessive_building:ancient_vines_plant"
   ]
 }

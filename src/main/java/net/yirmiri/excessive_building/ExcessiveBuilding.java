@@ -39,7 +39,7 @@ import net.yirmiri.excessive_building.util.EBSoundEvents;
 @Mod(ExcessiveBuilding.MODID)
 public class ExcessiveBuilding {
     public static final String MODID = "excessive_building";
-//TODO: MORE ANCIENT FLORA || FINISH DYED POTS || QOL TWEAKS || KOLOS CAPE || LEAF PILE 2.0
+//TODO: MORE ANCIENT FLORA || FINISH DYED POTS || QOL TWEAKS || KOLOS CAPE || FIX ANIMATIONS & INTERACTS
     public ExcessiveBuilding() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EBConfig.COMMON);

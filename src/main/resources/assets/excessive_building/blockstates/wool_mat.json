@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "excessive_building:block/wool_mat"
+      },
+      {
+        "model": "excessive_building:block/wool_mat",
+        "y": 90
+      },
+      {
+        "model": "excessive_building:block/wool_mat",
+        "y": 180
+      },
+      {
+        "model": "excessive_building:block/wool_mat",
+        "y": 270
+      }
+    ]
+  }
+}

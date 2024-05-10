@@ -78,6 +78,7 @@ Previously this was a required dependency but is now optional.
 •   Colored crafting table variants
 •   Cracked polished brimstone brick stairs/slabs
 •   Dripstone bricks and tiles
+•   Ancient vine, moved to ancient vines
 •   Iron bar doors and trapdoors
 •   Construction tables
 •   Reaching lanterns
