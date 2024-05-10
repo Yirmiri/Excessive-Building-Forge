@@ -68,7 +68,7 @@ public class AncientLeavesBlock extends LeavesBlock {
     }
 
     public static boolean isGlowing(BlockState state) {
-        return state.getValue(GLOWING);
+        return !state.getValue(GLOWING);
     }
 
     @Override

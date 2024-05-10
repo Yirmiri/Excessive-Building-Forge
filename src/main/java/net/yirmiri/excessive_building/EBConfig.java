@@ -13,6 +13,7 @@ public class EBConfig {
     public static ForgeConfigSpec.BooleanValue ENABLE_EB_SNIFFER_DROPS;
     public static ForgeConfigSpec.BooleanValue ENABLE_BIOMES;
     public static ForgeConfigSpec.BooleanValue ALLOW_SWIFT_ASPHALT;
+    public static ForgeConfigSpec.BooleanValue ALLOW_REDSTONE_BUBBLE_COLUMNS;
     public static ForgeConfigSpec.BooleanValue DECORATIVE_VARIANT_POWER;
     public static ForgeConfigSpec.IntValue DECORATIVE_ENCHANT_BONUS;
     public static ForgeConfigSpec.BooleanValue ENABLE_REACHING_POTIONS;
@@ -41,6 +42,9 @@ public class EBConfig {
         ALLOW_SWIFT_ASPHALT = COMMON_BUILDER
                 .comment("Should players be able to apply a speed paste to asphalt? (default: true)?")
                 .define("allow_swift_asphalt", true);
+        ALLOW_REDSTONE_BUBBLE_COLUMNS = COMMON_BUILDER
+                .comment("Should soul magma act as both upwards and downwards bubble columns? (default: true)?")
+                .define("allow_redstone_bubble_columns", true);
         DECORATIVE_VARIANT_POWER = COMMON_BUILDER
                 .comment("Should all decorative shelves grant an enchantment bonus or only potion shelves (default: false)?")
                 .define("decorativeVariantPower", false);

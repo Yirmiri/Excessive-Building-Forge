@@ -38,7 +38,8 @@ public class SpeedStairBlock extends StairBlock {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter getter, List<Component> list, TooltipFlag flag) {
-        super.appendHoverText(stack, getter, list, flag);
+        if (EBConfig.ALLOW_SWIFT_ASPHALT.get())
+            super.appendHoverText(stack, getter, list, flag);
         list.add(CommonComponents.EMPTY);
         list.add(Component.translatable("tooltip.block.interact_sugar").withStyle(ChatFormatting.GRAY));
         list.add(CommonComponents.space().append(Component.translatable("tooltip.block.swift").withStyle(ChatFormatting.BLUE)));

@@ -1384,6 +1384,8 @@
   "tooltip.block.swift": "Increases Movement Speed",
   "tooltip.block.interact_glow_ink": "Interact with Glow Ink Sac:",
   "tooltip.block.glow": "Adds a Glow",
+  "tooltip.block.when_powered": "When Powered with Redstone:",
+  "tooltip.block.soul_magma": "Creates a Lifting Bubble Column",
 
   "effect.excessive_building.reaching.description": "Allows the user to interact and build further, this does not affect attack reach.",
 

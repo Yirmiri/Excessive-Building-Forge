@@ -1297,6 +1297,7 @@ public class EBCreativeModeTabs {
 
         if (event.getTabKey() == (CreativeModeTabs.REDSTONE_BLOCKS) && EBConfig.ENABLE_EB_CREATIVE_TAB.get()) {
             event.getEntries().putBefore(new ItemStack(Blocks.CHISELED_BOOKSHELF), new ItemStack(EBBlocks.DECORATIVE_SHELF.get()), parentAndSearch);
+            event.getEntries().putBefore(new ItemStack(EBBlocks.DECORATIVE_SHELF.get()), new ItemStack(EBBlocks.SOUL_MAGMA_BLOCK.get()), parentAndSearch);
         }
 
         if (event.getTabKey() == (CreativeModeTabs.FOOD_AND_DRINKS) && EBConfig.ENABLE_EB_CREATIVE_TAB.get()) {

@@ -41,6 +41,8 @@ Previously this was a required dependency but is now optional.
 •   Added Forge common tags
 
   Changes
+•   Soul magma blocks now have bubble columns that by default push up but can be switched with redstone to push down
+•   Soul magma blocks now deal double damage
 •   Sugar can now be placed on asphalt to increase it's movement speed (no longer grants speed effects)
 •   Glow ink sacs can now be placed on ancient leaves to add a faint glow
 •   Pedestals can now be rotated in any direction
@@ -49,8 +51,6 @@ Previously this was a required dependency but is now optional.
 •   Changed the recipe of most resource bricks to seem more fair
 •   Resource brick stairs/vertical stairs can now be used as a beacon base block
 •   Moved all blocks added by mod compatibility into a separate tab
-•   Soul magma blocks now have bubble columns
-•   Soul magma blocks now deal double damage
 •   Ancient fruit are now always edible
 •   Base brimstone blocks now stay on fire forever like netherrack
 •   Removed custom panorama
