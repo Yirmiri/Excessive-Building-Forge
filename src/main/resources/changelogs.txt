@@ -37,12 +37,14 @@ Previously this was a required dependency but is now optional.
 •   Added Excessive Building items to vanilla creative tabs (can be disabled with configs)
 •   Added all of the new paintings coming the next Minecraft update
 •   Added original painting variants
+•   Hanging vine blocks can now be placed under leaves
 •   Added a bunch of new configuration options
 •   Added Forge common tags
 
   Changes
 •   Soul magma blocks now have bubble columns that by default push up but can be switched with redstone to push down
 •   Soul magma blocks now deal double damage
+•   Ancient vines now function like weeping vines
 •   Sugar can now be placed on asphalt to increase it's movement speed (no longer grants speed effects)
 •   Glow ink sacs can now be placed on ancient leaves to add a faint glow
 •   Pedestals can now be rotated in any direction

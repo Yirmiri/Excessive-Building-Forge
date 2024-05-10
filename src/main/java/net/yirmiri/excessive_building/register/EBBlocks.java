@@ -338,8 +338,9 @@ public class EBBlocks {
     public static final RegistryObject<Block> QUARTZ_ORE = registerBlock("quartz_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_QUARTZ_ORE).strength(3.0F).explosionResistance(3.0F), UniformInt.of(2, 5)));
     public static final RegistryObject<Block> DEEPSLATE_QUARTZ_ORE = registerBlock("deepslate_quartz_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(EBBlocks.QUARTZ_ORE.get()).sound(SoundType.DEEPSLATE).strength(4.5F).explosionResistance(3.0F), UniformInt.of(2, 5)));
     public static final RegistryObject<Block> SOUL_MAGMA_BLOCK = registerBlock("soul_magma_block", () -> new SoulMagmaBlock(BlockBehaviour.Properties.copy(Blocks.MAGMA_BLOCK)));
-    public static final RegistryObject<Block> ANCIENT_VINE = registerBlock("ancient_vine", () -> new VineBlock(BlockBehaviour.Properties.copy(Blocks.VINE).lightLevel(state -> 4)));
     public static final RegistryObject<Block> GOLDEN_BIRCH_LEAVES = registerBlock("golden_birch_leaves", () -> new YellowMapleLeavesBlock(BlockBehaviour.Properties.copy(Blocks.BIRCH_LEAVES).mapColor(MapColor.COLOR_YELLOW)));
+    public static final RegistryObject<Block> ANCIENT_VINES = registerBlock("ancient_vines", () -> new AncientVinesBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES).lightLevel(state -> 4)));
+    public static final RegistryObject<Block> ANCIENT_VINES_PLANT = registerBlockWithoutItem("ancient_vines_plant", () -> new AncientVinesPlantBlock(BlockBehaviour.Properties.copy(Blocks.WEEPING_VINES_PLANT).lightLevel(state -> 4)));
 
     //TERRACOTTA TILES
     public static final RegistryObject<Block> TERRACOTTA_TILES = registerBlock("terracotta_tiles", () -> new Block(BlockBehaviour.Properties.copy(Blocks.TERRACOTTA).requiresCorrectToolForDrops()));
@@ -2056,6 +2057,7 @@ public class EBBlocks {
             DYED_TERRACOTTA_POTS.put(colours, registerBlock(colours + "_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(EBBlocks.TERRACOTTA_POT.get()).mapColor(colours))));
         }
     }
+
     public static Block getDyedTerracottaPot(int colours){
         return DYED_TERRACOTTA_POTS.get(DyeColor.byId(colours)).get();
     }

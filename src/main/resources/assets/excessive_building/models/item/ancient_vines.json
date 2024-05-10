@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "excessive_building:block/ancient_vine"
+    "layer0": "excessive_building:block/ancient_vines"
   }
 }

@@ -1380,7 +1380,7 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .pattern(" @ ")
                 .pattern("###").unlockedBy(getHasName(EBBlocks.TUFF_BRICK_SLAB.get()), has(EBBlocks.TUFF_BRICK_SLAB.get())).save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_VINE.get(), 8).requires(EBBlocks.ANCIENT_LEAVES.get(), 2)
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, EBBlocks.ANCIENT_VINES.get(), 8).requires(EBBlocks.ANCIENT_LEAVES.get(), 2)
                 .unlockedBy(getHasName(EBBlocks.ANCIENT_LEAVES.get()), has(EBBlocks.ANCIENT_LEAVES.get())).save(output);
 
         chiseledBuilder(RecipeCategory.BUILDING_BLOCKS, EBBlocks.CHISELED_TUFF_BRICKS.get(), Ingredient.of(EBBlocks.TUFF_BRICK_SLAB.get()))

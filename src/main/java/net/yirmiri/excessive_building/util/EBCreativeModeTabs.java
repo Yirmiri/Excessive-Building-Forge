@@ -1175,7 +1175,7 @@ public class EBCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(Blocks.LILY_OF_THE_VALLEY), new ItemStack(EBBlocks.MARIGOLD.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(Blocks.PINK_PETALS), new ItemStack(EBBlocks.ROSE_BUNDLE.get()), parentAndSearch);
 
-            event.getEntries().putAfter(new ItemStack(Blocks.VINE), new ItemStack(EBBlocks.ANCIENT_VINE.get()), parentAndSearch);
+            event.getEntries().putAfter(new ItemStack(Blocks.VINE), new ItemStack(EBBlocks.ANCIENT_VINES.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(Blocks.GLOW_LICHEN), new ItemStack(EBBlocks.RED_MAPLE_LEAVES_PILE.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(EBBlocks.RED_MAPLE_LEAVES_PILE.get()), new ItemStack(EBBlocks.ORANGE_MAPLE_LEAVES_PILE.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(EBBlocks.ORANGE_MAPLE_LEAVES_PILE.get()), new ItemStack(EBBlocks.YELLOW_MAPLE_LEAVES_PILE.get()), parentAndSearch);
@@ -1857,7 +1857,7 @@ public class EBCreativeModeTabs {
             event.accept(EBBlocks.WILLOW_LEAVES);
             event.accept(EBBlocks.ANCIENT_LEAVES);
             event.accept(EBItems.ALGAE);
-            event.accept(EBBlocks.ANCIENT_VINE);
+            event.accept(EBBlocks.ANCIENT_VINES);
             event.accept(EBBlocks.RED_MAPLE_LEAVES_PILE);
             event.accept(EBBlocks.ORANGE_MAPLE_LEAVES_PILE);
             event.accept(EBBlocks.YELLOW_MAPLE_LEAVES_PILE);
