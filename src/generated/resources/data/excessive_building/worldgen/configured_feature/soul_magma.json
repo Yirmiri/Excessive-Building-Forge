@@ -6,7 +6,10 @@
     "targets": [
       {
         "state": {
-          "Name": "excessive_building:soul_magma_block"
+          "Name": "excessive_building:soul_magma_block",
+          "Properties": {
+            "powered": "false"
+          }
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

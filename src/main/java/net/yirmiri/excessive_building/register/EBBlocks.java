@@ -21,11 +21,15 @@ import net.yirmiri.excessive_building.util.EBBlockTypes;
 import net.yirmiri.excessive_building.util.EBProperties;
 import net.yirmiri.excessive_building.worldgen.feature.tree.*;
 
+import java.util.HashMap;
 import java.util.function.Supplier;
 
 public class EBBlocks {
+    public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_POTS = new HashMap<>();
+
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ExcessiveBuilding.MODID);
 //TODO: FINISH ORGANIZING REGISTRIES OR ELSE ILL GO FUCKING INSANE  (Keke Will go insane as well)
+
     //WOOD
     public static final RegistryObject<Block> OAK_MOSAIC = registerBlock("oak_mosaic", () -> new FlammableBlock(EBProperties.BlockProperties.GENERIC_WOOD, 20, 5));
     public static final RegistryObject<Block> OAK_MOSAIC_STAIRS = registerBlock("oak_mosaic_stairs", () -> new FlammableStairBlock(EBBlocks.OAK_MOSAIC.get().defaultBlockState(), (EBProperties.BlockProperties.GENERIC_WOOD), 20, 5));
@@ -1806,7 +1810,6 @@ public class EBBlocks {
     public static final RegistryObject<Block> TERRACOTTA_POT = registerBlock("terracotta_pot", () -> new PotBlock(EBProperties.BlockProperties.POT));
     public static final RegistryObject<Block> MARBLE_POT = registerBlock("marble_pot", () -> new PotBlock(EBProperties.BlockProperties.POT));
     public static final RegistryObject<Block> MARQUINA_MARBLE_POT = registerBlock("marquina_marble_pot", () -> new PotBlock(EBProperties.BlockProperties.POT));
-    //TODO: ADD DYED VARIANTS (these will be done for v3.0.1)
 
     //KNITTED WOOL
     public static final RegistryObject<Block> KNITTED_RED_WOOL = registerBlock("knitted_red_wool", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.RED_WOOL), 60, 30));
@@ -2047,6 +2050,15 @@ public class EBBlocks {
     public static final RegistryObject<Block> SMOOTH_STONE_BRICK_VERTICAL_STAIRS = registerBlock("smooth_stone_brick_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.SMOOTH_STONE_BRICKS.get())));
     public static final RegistryObject<Block> SMOOTH_STONE_TILE_VERTICAL_STAIRS = registerBlock("smooth_stone_tile_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.SMOOTH_STONE_TILES.get())));
     public static final RegistryObject<Block> MOSSY_DEEPSLATE_BRICK_VERTICAL_STAIRS = registerBlock("mossy_deepslate_brick_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.MOSSY_DEEPSLATE_BRICKS.get())));
+
+    static {
+        for (DyeColor colours : DyeColor.values()) {
+            DYED_TERRACOTTA_POTS.put(colours, registerBlock(colours + "_terracotta_pot", () -> new PotBlock(BlockBehaviour.Properties.copy(EBBlocks.TERRACOTTA_POT.get()).mapColor(colours))));
+        }
+    }
+    public static Block getDyedTerracottaPot(int colours){
+        return DYED_TERRACOTTA_POTS.get(DyeColor.byId(colours)).get();
+    }
 
    public static <B extends Block>RegistryObject<B> registerBlock(String name, Supplier<B> block) {
         RegistryObject<B> toReturn = BLOCKS.register(name, block);
