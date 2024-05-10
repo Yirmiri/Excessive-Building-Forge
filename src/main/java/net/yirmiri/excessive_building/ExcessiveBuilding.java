@@ -39,7 +39,7 @@ import net.yirmiri.excessive_building.util.EBSoundEvents;
 @Mod(ExcessiveBuilding.MODID)
 public class ExcessiveBuilding {
     public static final String MODID = "excessive_building";
-
+//TODO: MORE ANCIENT FLORA || FINISH DYED POTS || QOL TWEAKS || KOLOS CAPE || LEAF PILE 2.0
     public ExcessiveBuilding() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, EBConfig.COMMON);
@@ -185,7 +185,8 @@ public class ExcessiveBuilding {
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.GOLDEN_BIRCH_LEAVES.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.GOLDEN_BIRCH_SAPLING.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.POTTED_GOLDEN_BIRCH_SAPLING.get(), RenderType.cutoutMipped());
-        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_VINE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_VINES.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(EBBlocks.ANCIENT_VINES_PLANT.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.WILLOW_LEAVES.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.SMOOTH_STONE_BRICK_PEDESTAL.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(EBBlocks.TUFF_BRICK_PEDESTAL.get(), RenderType.cutoutMipped());
