@@ -40,7 +40,8 @@ Previously this was a required dependency but is now optional.
 •   Added a bunch of new configuration options
 
   Changes
-•   Sugar can now be placed on asphalt to increase it's movement speed
+•   Sugar can now be placed on asphalt to increase it's movement speed (no longer grants speed effects)
+•   Glow ink sacs can now be placed on ancient leaves to add a faint glow
 •   Pedestals can now be rotated in any direction
 •   Changed the textures for a crap ton of old blocks
 •   Alchemist shelves with pearls in them no longer animate

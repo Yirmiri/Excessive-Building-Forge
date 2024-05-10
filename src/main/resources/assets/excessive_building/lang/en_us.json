@@ -1392,6 +1392,8 @@
   "tooltip.block.fill": "Fills Up Pot",
   "tooltip.block.interact_sugar": "Interact with Sugar:",
   "tooltip.block.swift": "Increases Movement Speed",
+  "tooltip.block.interact_glow_ink": "Interact with Glow Ink Sac:",
+  "tooltip.block.glow": "Adds a Glow",
 
   "effect.excessive_building.reaching.description": "Allows the user to interact and build further, this does not affect attack reach."
 }

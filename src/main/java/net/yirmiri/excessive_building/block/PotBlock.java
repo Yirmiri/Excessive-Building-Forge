@@ -33,6 +33,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.common.IPlantable;
+import net.yirmiri.excessive_building.datagen.EBItemTagProvider;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
@@ -73,7 +74,7 @@ public class PotBlock extends Block implements SimpleWaterloggedBlock {
     @Override @NotNull
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack itemstack = player.getItemInHand(hand);
-        if (!state.getValue(FILLED) && itemstack.is(Items.DIRT)) {
+        if (!state.getValue(FILLED) && itemstack.is(EBItemTagProvider.POT_SOILS)) {
             addFilling(state, level, pos);
             if (!player.isCreative()) {
                 itemstack.shrink(1);
@@ -85,7 +86,7 @@ public class PotBlock extends Block implements SimpleWaterloggedBlock {
             if (!player.isCreative()) {
                 popResource(level, pos, new ItemStack(Items.DIRT));
             }
-            
+
         } else {
             return InteractionResult.CONSUME;
         }

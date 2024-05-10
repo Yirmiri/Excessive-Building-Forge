@@ -868,12 +868,6 @@ public class EBBlocks {
     public static final RegistryObject<Block> WARPED_LADDER = register("warped_ladder",
             () -> new LadderBlock(BlockBehaviour.Properties.copy(Blocks.LADDER).sound(SoundType.NETHER_WOOD)));
 
-    public static final RegistryObject<Block> ANCIENT_LEAVES = register("ancient_leaves",
-            () -> new AncientLeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES).lightLevel(state -> 9)));
-
-    public static final RegistryObject<Block> UNLIT_ANCIENT_LEAVES = register("unlit_ancient_leaves",
-            () -> new AncientLeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES)));
-
     public static final RegistryObject<Block> ALGAE_BLOCK = register("algae_block", () -> new
             AlgaeBlock(BlockBehaviour.Properties.copy(Blocks.LILY_PAD).explosionResistance(0f).sound(SoundType.AZALEA_LEAVES).instabreak().replaceable().noCollission()));
 
@@ -1773,6 +1767,9 @@ public class EBBlocks {
     public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICK_WALL = register("mossy_polished_stone_brick_wall", () -> new WallBlock(BlockBehaviour.Properties.copy(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())));
 
     public static final RegistryObject<Block> MOSSY_POLISHED_STONE_BRICK_VERTICAL_STAIRS = register("mossy_polished_stone_brick_vertical_stairs", () -> new VerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.MOSSY_POLISHED_STONE_BRICKS.get())));
+
+    public static final RegistryObject<Block> ANCIENT_LEAVES = register("ancient_leaves",
+            () -> new AncientLeavesBlock(BlockBehaviour.Properties.copy(Blocks.AZALEA_LEAVES).lightLevel((state) -> { return AncientLeavesBlock.isGlowing(state) ? 0 : 9; })));
 
     //DECORATIVE SHELVES
     public static final RegistryObject<Block> DECORATIVE_SHELF = register("decorative_shelf", () -> new DecorativeShelfBlock(EBProperties.BlockProperties.GENERIC_SHELF, 30, 20));

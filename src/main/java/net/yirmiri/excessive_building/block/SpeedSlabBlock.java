@@ -12,7 +12,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -22,6 +21,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
+import net.yirmiri.excessive_building.EBConfig;
+import net.yirmiri.excessive_building.datagen.EBItemTagProvider;
 import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.Nullable;
@@ -46,7 +47,7 @@ public class SpeedSlabBlock extends SlabBlock {
     @Override @NotNull
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack itemstack = player.getItemInHand(hand);
-        if (!state.getValue(SWIFT) && itemstack.is(Items.SUGAR)) {
+        if (!state.getValue(SWIFT) && itemstack.is(EBItemTagProvider.SPEED_PASTES) && EBConfig.ALLOW_SWIFT_ASPHALT.get()) {
             addSugar(state, level, pos);
             if (!player.isCreative()) {
                 itemstack.shrink(1);

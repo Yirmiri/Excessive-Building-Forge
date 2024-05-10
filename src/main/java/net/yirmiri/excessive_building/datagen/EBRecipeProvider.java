@@ -378,9 +378,6 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .define('#', EBBlocks.RAINBOW_WOOL.get())
                 .pattern("##").unlockedBy(getHasName(EBBlocks.RAINBOW_WOOL.get()), has(EBBlocks.RAINBOW_WOOL.get())).save(output);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, EBBlocks.UNLIT_ANCIENT_LEAVES.get(), 1).requires(EBBlocks.ANCIENT_LEAVES.get())
-                .unlockedBy(getHasName(EBBlocks.ANCIENT_LEAVES.get()), has(EBBlocks.ANCIENT_LEAVES.get())).save(output);
-
         ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, EBBlocks.RAINBOW_TERRACOTTA_BRICKS.get(), 9)
                 .define('R', EBBlocks.RED_TERRACOTTA_BRICKS.get()).define('O', EBBlocks.ORANGE_TERRACOTTA_BRICKS.get()).define('Y', EBBlocks.YELLOW_TERRACOTTA_BRICKS.get())
                 .define('L', EBBlocks.LIME_TERRACOTTA_BRICKS.get()).define('G', EBBlocks.GREEN_TERRACOTTA_BRICKS.get()).define('C', EBBlocks.LIGHT_BLUE_TERRACOTTA_BRICKS.get())
