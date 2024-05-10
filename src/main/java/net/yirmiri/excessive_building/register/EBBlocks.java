@@ -265,10 +265,10 @@ public class EBBlocks {
     public static final RegistryObject<Block> GOLDEN_BIRCH_SAPLING = register("golden_birch_sapling", () -> new SaplingBlock(new GoldenBirchTreeGrower(), BlockBehaviour.Properties.copy(Blocks.BIRCH_SAPLING)));
     public static final RegistryObject<Block> POTTED_GOLDEN_BIRCH_SAPLING = BLOCKS.register("potted_golden_birch_sapling", () -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), EBBlocks.GOLDEN_BIRCH_SAPLING, BlockBehaviour.Properties.copy(Blocks.POTTED_BIRCH_SAPLING)));
     public static final RegistryObject<Block> AMETHYST_FIRE = register("amethyst_fire", () -> new AmethystFireBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_FIRE).lightLevel(state -> 15)));
-    public static final RegistryObject<Block> ASPHALT = register("swift_asphalt", () -> new SpeedBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get()).requiresCorrectToolForDrops()));
-    public static final RegistryObject<Block> ASPHALT_STAIRS = register("swift_asphalt_stairs", () -> new SpeedStairBlock(EBBlocks.ASPHALT.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
-    public static final RegistryObject<Block> ASPHALT_SLAB = register("swift_asphalt_slab", () -> new SpeedSlabBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
-    public static final RegistryObject<Block> ASPHALT_VERTICAL_STAIRS = register("swift_asphalt_vertical_stairs", () -> new SpeedVerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> ASPHALT = register("asphalt", () -> new SpeedBlock(EBProperties.BlockProperties.ASPHALT));
+    public static final RegistryObject<Block> ASPHALT_STAIRS = register("asphalt_stairs", () -> new SpeedStairBlock(EBBlocks.ASPHALT.get().defaultBlockState(), BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> ASPHALT_SLAB = register("asphalt_slab", () -> new SpeedSlabBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
+    public static final RegistryObject<Block> ASPHALT_VERTICAL_STAIRS = register("asphalt_vertical_stairs", () -> new SpeedVerticalStairBlock(BlockBehaviour.Properties.copy(EBBlocks.ASPHALT.get())));
 
     //RESOURCE
     public static final RegistryObject<Block> GOLDEN_BRICKS = register("golden_bricks", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK)));

@@ -20,6 +20,7 @@
         "Name": "excessive_building:red_maple_leaves",
         "Properties": {
           "distance": "7",
+          "glowing": "false",
           "persistent": "false",
           "waterlogged": "false"
         }

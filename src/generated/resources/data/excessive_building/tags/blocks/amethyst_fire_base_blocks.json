@@ -1,7 +1,5 @@
 {
   "values": [
-    "minecraft:amethyst_block",
-    "minecraft:budding_amethyst",
     "excessive_building:amethyst_bricks",
     "excessive_building:amethyst_brick_stairs",
     "excessive_building:amethyst_brick_slab",
@@ -11,6 +9,8 @@
     "excessive_building:amethyst_tile_slab",
     "excessive_building:amethyst_tile_vertical_stairs",
     "excessive_building:amethyst_glass",
-    "excessive_building:amethyst_lamp"
+    "excessive_building:amethyst_lamp",
+    "excessive_building:cracked_amethyst_tiles",
+    "excessive_building:cracked_amethyst_bricks"
   ]
 }

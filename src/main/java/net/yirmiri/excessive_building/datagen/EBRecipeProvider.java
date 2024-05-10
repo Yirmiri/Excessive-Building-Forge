@@ -1670,13 +1670,13 @@ public class EBRecipeProvider extends RecipeProvider implements IConditionBuilde
                 .pattern("# #")
                 .pattern("###").unlockedBy(getHasName(Blocks.TERRACOTTA), has(Blocks.TERRACOTTA)).save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.TERRACOTTA_POT.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MARBLE_POT.get(), 4)
                 .define('#', EBBlocks.MARBLE.get())
                 .pattern(" # ")
                 .pattern("# #")
                 .pattern("###").unlockedBy(getHasName(EBBlocks.MARBLE.get()), has(EBBlocks.MARBLE.get())).save(output);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.TERRACOTTA_POT.get(), 4)
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, EBBlocks.MARQUINA_MARBLE_POT.get(), 4)
                 .define('#', EBBlocks.MARQUINA_MARBLE.get())
                 .pattern(" # ")
                 .pattern("# #")

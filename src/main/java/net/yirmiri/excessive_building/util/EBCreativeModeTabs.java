@@ -640,11 +640,6 @@ public class EBCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(EBBlocks.ASPHALT_STAIRS.get()), new ItemStack(EBBlocks.ASPHALT_VERTICAL_STAIRS.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(EBBlocks.ASPHALT_VERTICAL_STAIRS.get()), new ItemStack(EBBlocks.ASPHALT_SLAB.get()), parentAndSearch);
 
-            event.getEntries().putAfter(new ItemStack(EBBlocks.ASPHALT_SLAB.get()), new ItemStack(EBBlocks.SWIFT_ASPHALT.get()), parentAndSearch);
-            event.getEntries().putAfter(new ItemStack(EBBlocks.SWIFT_ASPHALT.get()), new ItemStack(EBBlocks.SWIFT_ASPHALT_STAIRS.get()), parentAndSearch);
-            event.getEntries().putAfter(new ItemStack(EBBlocks.SWIFT_ASPHALT_STAIRS.get()), new ItemStack(EBBlocks.SWIFT_ASPHALT_VERTICAL_STAIRS.get()), parentAndSearch);
-            event.getEntries().putAfter(new ItemStack(EBBlocks.SWIFT_ASPHALT_VERTICAL_STAIRS.get()), new ItemStack(EBBlocks.SWIFT_ASPHALT_SLAB.get()), parentAndSearch);
-
             event.getEntries().putAfter(new ItemStack(Blocks.IRON_BLOCK), new ItemStack(EBBlocks.IRON_BRICKS.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(EBBlocks.IRON_BRICKS.get()), new ItemStack(EBBlocks.IRON_BRICK_STAIRS.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(EBBlocks.IRON_BRICK_STAIRS.get()), new ItemStack(EBBlocks.IRON_BRICK_VERTICAL_STAIRS.get()), parentAndSearch);
@@ -1166,7 +1161,6 @@ public class EBCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(EBBlocks.ORANGE_MAPLE_LEAVES.get()), new ItemStack(EBBlocks.YELLOW_MAPLE_LEAVES.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(EBBlocks.YELLOW_MAPLE_LEAVES.get()), new ItemStack(EBBlocks.WILLOW_LEAVES.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(EBBlocks.WILLOW_LEAVES.get()), new ItemStack(EBBlocks.ANCIENT_LEAVES.get()), parentAndSearch);
-            event.getEntries().putAfter(new ItemStack(EBBlocks.ANCIENT_LEAVES.get()), new ItemStack(EBBlocks.UNLIT_ANCIENT_LEAVES.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(Blocks.BIRCH_SAPLING), new ItemStack(EBBlocks.GOLDEN_BIRCH_SAPLING.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(Blocks.CHERRY_SAPLING), new ItemStack(EBBlocks.RED_MAPLE_SAPLING.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(EBBlocks.RED_MAPLE_SAPLING.get()), new ItemStack(EBBlocks.ORANGE_MAPLE_SAPLING.get()), parentAndSearch);
@@ -1813,10 +1807,6 @@ public class EBCreativeModeTabs {
             event.accept(EBBlocks.ASPHALT_STAIRS);
             event.accept(EBBlocks.ASPHALT_SLAB);
             event.accept(EBBlocks.ASPHALT_VERTICAL_STAIRS);
-            event.accept(EBBlocks.SWIFT_ASPHALT);
-            event.accept(EBBlocks.SWIFT_ASPHALT_STAIRS);
-            event.accept(EBBlocks.SWIFT_ASPHALT_SLAB);
-            event.accept(EBBlocks.SWIFT_ASPHALT_VERTICAL_STAIRS);
             event.accept(EBBlocks.IRON_BRICKS);
             event.accept(EBBlocks.IRON_BRICK_STAIRS);
             event.accept(EBBlocks.IRON_BRICK_VERTICAL_STAIRS);
@@ -1865,7 +1855,6 @@ public class EBCreativeModeTabs {
             event.accept(EBBlocks.GOLDEN_BIRCH_LEAVES);
             event.accept(EBBlocks.WILLOW_LEAVES);
             event.accept(EBBlocks.ANCIENT_LEAVES);
-            event.accept(EBBlocks.UNLIT_ANCIENT_LEAVES);
             event.accept(EBItems.ALGAE);
             event.accept(EBBlocks.ANCIENT_VINE);
             event.accept(EBBlocks.RED_MAPLE_LEAVES_PILE);

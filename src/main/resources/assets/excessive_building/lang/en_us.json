@@ -1370,6 +1370,23 @@
   "block.minecraft.banner.excessive_building.excessive.magenta": "Magenta Excessive",
   "block.minecraft.banner.excessive_building.excessive.pink": "Pink Excessive",
 
+  "excessive_building_tab": "Excessive Building",
+
+  "biome.excessive_building.golden_birch_forest": "Golden Birch Forest",
+  "biome.excessive_building.maple_forest": "Maple Forest",
+  "biome.excessive_building.snowy_maple_forest": "Snowy Maple Forest",
+
+  "tooltip.block.interact": "Upon Interaction:",
+  "tooltip.block.variant": "Cycles Block Variants",
+  "tooltip.block.interact_dirt": "Interact with Dirt:",
+  "tooltip.block.fill": "Fills Up Pot",
+  "tooltip.block.interact_sugar": "Interact with Sugar:",
+  "tooltip.block.swift": "Increases Movement Speed",
+  "tooltip.block.interact_glow_ink": "Interact with Glow Ink Sac:",
+  "tooltip.block.glow": "Adds a Glow",
+
+  "effect.excessive_building.reaching.description": "Allows the user to interact and build further, this does not affect attack reach.",
+
   "block.excessive_building.polished_jade_pedestal": "Polished Jade Pedestal",
   "block.excessive_building.jade_lamp": "Jade Lamp",
   "block.excessive_building.jade_glass": "Jade Glass",
@@ -1382,18 +1399,5 @@
   "block.excessive_building.polished_jade_tile_vertical_stairs": "Polished Jade Tile Vertical Stairs",
   "block.excessive_building.polished_jade_shingle_vertical_stairs": "Polished Jade Shingle Vertical Stairs",
 
-  "item.excessive_building.ancient_cider": "Ancient Cider",
-
-  "excessive_building_tab": "Excessive Building",
-
-  "tooltip.block.interact": "Upon Interaction:",
-  "tooltip.block.variant": "Cycles Block Variants",
-  "tooltip.block.interact_dirt": "Interact with Dirt:",
-  "tooltip.block.fill": "Fills Up Pot",
-  "tooltip.block.interact_sugar": "Interact with Sugar:",
-  "tooltip.block.swift": "Increases Movement Speed",
-  "tooltip.block.interact_glow_ink": "Interact with Glow Ink Sac:",
-  "tooltip.block.glow": "Adds a Glow",
-
-  "effect.excessive_building.reaching.description": "Allows the user to interact and build further, this does not affect attack reach."
+  "item.excessive_building.ancient_cider": "Ancient Cider"
 }

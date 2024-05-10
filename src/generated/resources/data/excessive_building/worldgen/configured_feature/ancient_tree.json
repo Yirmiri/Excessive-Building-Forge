@@ -24,6 +24,7 @@
         "Name": "excessive_building:ancient_leaves",
         "Properties": {
           "distance": "7",
+          "glowing": "false",
           "persistent": "false",
           "waterlogged": "false"
         }

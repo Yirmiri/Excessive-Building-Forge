@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_asphalt": {
+    "has_marble": {
       "conditions": {
         "items": [
           {
             "items": [
-              "excessive_building:asphalt"
+              "excessive_building:marble"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "excessive_building:swift_asphalt"
+        "recipe": "excessive_building:marble_pot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_asphalt",
+      "has_marble",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "excessive_building:swift_asphalt"
+      "excessive_building:marble_pot"
     ]
   },
   "sends_telemetry_event": false

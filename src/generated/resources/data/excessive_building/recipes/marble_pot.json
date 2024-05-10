@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "building",
+  "category": "misc",
   "key": {
     "#": {
-      "item": "excessive_building:swift_asphalt"
+      "item": "excessive_building:marble"
     }
   },
   "pattern": [
-    "#  ",
-    "## ",
+    " # ",
+    "# #",
     "###"
   ],
   "result": {
     "count": 4,
-    "item": "excessive_building:swift_asphalt_stairs"
+    "item": "excessive_building:marble_pot"
   },
   "show_notification": true
 }
