@@ -42,6 +42,6 @@ public class EBOverworldRegion extends Region {
         }
     }
 
-    public static void register(IEventBus eventBus) {
+    public static void register() {
     }
 }

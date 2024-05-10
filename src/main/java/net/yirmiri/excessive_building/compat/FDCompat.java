@@ -12,6 +12,6 @@ public class FDCompat {
     //FOODS
     public static final RegistryObject<Item> ANCIENT_CIDER = EBItems.ITEMS.register("ancient_cider", () -> new DrinkableItem(new Item.Properties().food(EBProperties.Foods.ANCIENT_CIDER)));
 
-    public static void register(IEventBus eventBus) {
+    public static void register() {
     }
 }

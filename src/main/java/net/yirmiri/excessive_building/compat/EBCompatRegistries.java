@@ -18,11 +18,11 @@ public class EBCompatRegistries {
     }
 
     public static void register(IEventBus eventBus) {
-        if (sullysMod) SMCompat.register(eventBus);
-        if (farmersDelight) FDCompat.register(eventBus);
+        if (sullysMod) SMCompat.register();
+        if (farmersDelight) FDCompat.register();
 
         //TERRABLENDER
-        if (terrablender) EBBiomes.register(eventBus);
-        if (terrablender) EBOverworldRegion.register(eventBus);
+        if (terrablender) EBBiomes.register();
+        if (terrablender) EBOverworldRegion.register();
     }
 }

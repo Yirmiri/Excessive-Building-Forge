@@ -159,6 +159,6 @@ public class EBBiomes {
                         .backgroundMusic(Musics.createGameMusic(SoundEvents.MUSIC_BIOME_MEADOW)).build()).build();
     }
 
-    public static void register(IEventBus eventBus) {
+    public static void register() {
     }
 }
