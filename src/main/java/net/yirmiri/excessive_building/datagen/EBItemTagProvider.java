@@ -19,7 +19,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class EBItemTagProvider extends ItemTagsProvider {
     public static final TagKey<Item> POT_SOILS = tag("pot_soils");
-    public static final TagKey<Item> GLOW_PASTES = tag("glow_pastes");
+    public static final TagKey<Item> GLOW_REMOVALS = tag("glow_removals");
     public static final TagKey<Item> SPEED_PASTES = tag("speed_pastes");
 
     public EBItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> aSuper, CompletableFuture<TagLookup<Block>> future, @Nullable ExistingFileHelper existingFileHelper) {
@@ -37,11 +37,13 @@ public class EBItemTagProvider extends ItemTagsProvider {
         );
 
         this.tag(EBItemTagProvider.POT_SOILS).add(
-                Items.DIRT
+                Items.DIRT,
+                Items.ROOTED_DIRT,
+                Items.COARSE_DIRT
         );
 
-        this.tag(EBItemTagProvider.GLOW_PASTES).add(
-                Items.GLOW_INK_SAC
+        this.tag(EBItemTagProvider.GLOW_REMOVALS).add(
+                Items.PAPER
         );
 
         this.tag(EBItemTagProvider.SPEED_PASTES).add(

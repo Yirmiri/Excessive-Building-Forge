@@ -1391,12 +1391,12 @@
 
   "tooltip.block.interact": "Upon Interaction:",
   "tooltip.block.variant": "Cycles Block Variants",
-  "tooltip.block.interact_dirt": "Interact with Dirt:",
-  "tooltip.block.fill": "Fills Up Pot",
   "tooltip.block.interact_sugar": "Interact with Sugar:",
   "tooltip.block.swift": "Increases Movement Speed",
-  "tooltip.block.interact_glow_ink": "Interact with Glow Ink Sac:",
-  "tooltip.block.glow": "Adds a Glow",
+  "tooltip.block.interact_soil": "Interact with Dirt:",
+  "tooltip.block.fill": "Fills Up Pot",
+  "tooltip.block.interact_glow_removals": "Interact with Paper:",
+  "tooltip.block.glow_removal": "Removes the Glow",
   "tooltip.block.when_powered": "When Powered with Redstone:",
   "tooltip.block.soul_magma": "Creates a Lifting Bubble Column",
 

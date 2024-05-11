@@ -67,7 +67,7 @@ public class PotBlock extends Block implements SimpleWaterloggedBlock {
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter getter, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(stack, getter, list, flag);
         list.add(CommonComponents.EMPTY);
-        list.add(Component.translatable("tooltip.block.interact_dirt").withStyle(ChatFormatting.GRAY));
+        list.add(Component.translatable("tooltip.block.interact_soil").withStyle(ChatFormatting.GRAY));
         list.add(CommonComponents.space().append(Component.translatable("tooltip.block.fill").withStyle(ChatFormatting.BLUE)));
     }
 

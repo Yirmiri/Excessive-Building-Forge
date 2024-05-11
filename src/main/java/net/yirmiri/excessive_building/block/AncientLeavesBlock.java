@@ -42,14 +42,14 @@ public class AncientLeavesBlock extends LeavesBlock {
     public void appendHoverText(ItemStack stack, @Nullable BlockGetter getter, List<Component> list, TooltipFlag flag) {
         super.appendHoverText(stack, getter, list, flag);
         list.add(CommonComponents.EMPTY);
-        list.add(Component.translatable("tooltip.block.interact_glow_ink").withStyle(ChatFormatting.GRAY));
-        list.add(CommonComponents.space().append(Component.translatable("tooltip.block.glow").withStyle(ChatFormatting.BLUE)));
+        list.add(Component.translatable("tooltip.block.interact_glow_removals").withStyle(ChatFormatting.GRAY));
+        list.add(CommonComponents.space().append(Component.translatable("tooltip.block.glow_removal").withStyle(ChatFormatting.BLUE)));
     }
 
     @Override @NotNull
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack itemstack = player.getItemInHand(hand);
-        if (!state.getValue(GLOWING) && itemstack.is(EBItemTagProvider.GLOW_PASTES)) {
+        if (!state.getValue(GLOWING) && itemstack.is(EBItemTagProvider.GLOW_REMOVALS)) {
             addGlow(state, level, pos);
             if (!player.isCreative()) {
                 itemstack.shrink(1);
@@ -63,12 +63,12 @@ public class AncientLeavesBlock extends LeavesBlock {
     private static void addGlow(BlockState state, Level level, BlockPos pos) {
         if (!level.isClientSide) {
             level.setBlockAndUpdate(pos, state.setValue(GLOWING, true));
-            level.playSound(null, pos, SoundEvents.GLOW_INK_SAC_USE, SoundSource.BLOCKS, 1, 1);
+            level.playSound(null, pos, SoundEvents.DYE_USE, SoundSource.BLOCKS, 1, 1);
         }
     }
 
     public static boolean isGlowing(BlockState state) {
-        return !state.getValue(GLOWING);
+        return state.getValue(GLOWING);
     }
 
     @Override
