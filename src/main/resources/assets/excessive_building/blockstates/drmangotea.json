@@ -1,7 +1,23 @@
 {
   "variants": {
-    "": {
-      "model": "excessive_building:block/drmangotea"
+    "facing=north": {
+      "model": "excessive_building:block/drmangotea",
+      "uvlock": false
+    },
+    "facing=south": {
+      "model": "excessive_building:block/drmangotea",
+      "y": 180,
+      "uvlock": false
+    },
+    "facing=west": {
+      "model": "excessive_building:block/drmangotea",
+      "y": 270,
+      "uvlock": false
+    },
+    "facing=east": {
+      "model": "excessive_building:block/drmangotea",
+      "y": 90,
+      "uvlock": false
     }
   }
 }
