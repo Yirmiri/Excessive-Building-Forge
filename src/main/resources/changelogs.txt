@@ -19,15 +19,18 @@ Previously this was a required dependency but is now optional.
 •   "Fit for a Queen!" (@yirmiris)
 •   "Paleobotany" (@Hecco)
 •   "Sniffing in the Pine Forest" (@Bricker_Man)
+•   "Beacon of the Desert" + trimmed variant (@Bricker_Man)
 •   "Kolos Bug" (@Kolosman420)
-•   "Crash Landing" (@CupBackup)
-•   "Detonation Imminent" (CupBackup)
-•   "Why do my eyes hurt?" (@CupBackup)
 •   "Pufferlight" (@PepaggsThings)
 •   "Lone Bridge" (@NebulaIsMine)
 •   "The Lone Tree" (@SuperMightByte)
 •   "Thine Holy Peanut" (@YesMan2)
 •   "Horizon" (@HaWii)
+•   "Crash Landing" (@CupBackup)
+•   "Detonation Imminent" (CupBackup)
+•   "Why do my eyes hurt?" (@CupBackup)
+•   "The End" (@CupBackup)
+•   "Scourage Bringer" (@CupBackup)
 
   Additions
 •   Added terracotta pots, can be filled with dirt to hold plants in them or can be lit on fire and never burn out

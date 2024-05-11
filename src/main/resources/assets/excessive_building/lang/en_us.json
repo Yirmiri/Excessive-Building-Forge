@@ -1311,6 +1311,10 @@
   "painting.excessive_building.fit_for_a_queen.author": "Yirmiri",
   "painting.excessive_building.lone_bridge.author": "Nebula",
   "painting.excessive_building.rebellious.author": "Rebel",
+  "painting.excessive_building.the_end.author": "BackupCup",
+  "painting.excessive_building.scourage_bringer.author": "BackupCup",
+  "painting.excessive_building.beacon_of_the_desert.author": "Brickerman",
+  "painting.excessive_building.beacon_of_the_desert_trimmed.author": "Brickerman",
 
   "painting.excessive_building.forgotten_kingdom.title": "Forgotten Kingdom",
   "painting.excessive_building.stage_original.title": "Stage (Original)",
@@ -1349,6 +1353,10 @@
   "painting.excessive_building.fit_for_a_queen.title": "Fit for a Queen!",
   "painting.excessive_building.lone_bridge.title": "Lone Bridge",
   "painting.excessive_building.rebellious.title": "Rebellious",
+  "painting.excessive_building.the_end.title": "The End",
+  "painting.excessive_building.scourage_bringer.title": "Scourage Bringer",
+  "painting.excessive_building.beacon_of_the_desert.title": "Beacon of the Desert",
+  "painting.excessive_building.beacon_of_the_desert_trimmed.title": "Beacon of the Desert (Trimmed)",
 
   "trim_material.excessive_building.fiery": "Fiery Material",
   "trim_material.excessive_building.kyanite": "Kyanite Material",

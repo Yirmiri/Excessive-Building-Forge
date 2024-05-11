@@ -35,6 +35,10 @@
     "excessive_building:imminent_detonation",
     "excessive_building:fit_for_a_queen",
     "excessive_building:why_do_my_eyes_hurt",
-    "excessive_building:lone_bridge"
+    "excessive_building:lone_bridge",
+    "excessive_building:scourge_bringer",
+    "excessive_building:the_end",
+    "excessive_building:beacon_of_the_desert",
+    "excessive_building:beacon_of_the_desert_trimmed"
   ]
 }
