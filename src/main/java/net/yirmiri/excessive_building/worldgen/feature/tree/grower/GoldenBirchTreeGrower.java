@@ -1,4 +1,4 @@
-package net.yirmiri.excessive_building.worldgen.feature.tree;
+package net.yirmiri.excessive_building.worldgen.feature.tree.grower;
 
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
@@ -7,14 +7,9 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.yirmiri.excessive_building.worldgen.feature.EBConfiguredFeatures;
 import org.jetbrains.annotations.Nullable;
 
-public class AcornTreeGrower extends AbstractTreeGrower {
+public class GoldenBirchTreeGrower extends AbstractTreeGrower {
     @Nullable @Override
     protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource randomSource, boolean b) {
-        if (Math.random() < 0.4) {
-        return EBConfiguredFeatures.RED_MAPLE_TREE;
-        } else if (Math.random() < 0.45) {
-        return EBConfiguredFeatures.ORANGE_MAPLE_TREE;
-        }
-        else return EBConfiguredFeatures.YELLOW_MAPLE_TREE;
+        return b ? EBConfiguredFeatures.GOLDEN_BIRCH_TREE_BEES_01 : EBConfiguredFeatures.GOLDEN_BIRCH_TREE;
     }
 }

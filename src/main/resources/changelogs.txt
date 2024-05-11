@@ -49,7 +49,7 @@ Previously this was a required dependency but is now optional.
 •   Soul magma blocks now deal double damage
 •   Ancient vines now function like weeping vines
 •   Sugar can now be placed on asphalt to increase it's movement speed (no longer grants speed effects)
-•   Glow ink sacs can now be placed on ancient leaves to add a faint glow
+•   Paper can now be used to remove the glow of ancient leaves
 •   Pedestals can now be rotated in any direction
 •   Changed the textures for a crap ton of old blocks
 •   Alchemist shelves with pearls in them no longer animate

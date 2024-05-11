@@ -19,7 +19,7 @@ import net.yirmiri.excessive_building.block.*;
 import net.yirmiri.excessive_building.block.flammable.*;
 import net.yirmiri.excessive_building.util.EBBlockTypes;
 import net.yirmiri.excessive_building.util.EBProperties;
-import net.yirmiri.excessive_building.worldgen.feature.tree.*;
+import net.yirmiri.excessive_building.worldgen.feature.tree.grower.*;
 
 import java.util.HashMap;
 import java.util.function.Supplier;
