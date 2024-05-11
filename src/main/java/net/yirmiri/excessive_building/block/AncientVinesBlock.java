@@ -11,7 +11,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.yirmiri.excessive_building.register.EBBlocks;
 
 public class AncientVinesBlock extends GrowingPlantHeadBlock {
-    protected static final VoxelShape SHAPE = Block.box(4.0, 9.0, 4.0, 12.0, 16.0, 12.0);
+    public static final VoxelShape SHAPE = Block.box(1.0, 0.0, 1.0, 15.0, 16.0, 15.0);
 
     public AncientVinesBlock(BlockBehaviour.Properties properties) {
         super(properties, Direction.DOWN, SHAPE, false, 0.1);
