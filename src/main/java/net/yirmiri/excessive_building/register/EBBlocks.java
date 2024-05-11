@@ -1833,7 +1833,7 @@ public class EBBlocks {
     public static final RegistryObject<Block> KNITTED_GREEN_CARPET = registerBlock("knitted_green_carpet", () -> new FlammableWoolCarpetBlock(DyeColor.GREEN, BlockBehaviour.Properties.copy(Blocks.GREEN_CARPET), 20, 60));
     public static final RegistryObject<Block> KNITTED_GREEN_STAIRS = registerBlock("knitted_green_stairs", () -> new FlammableStairBlock(EBBlocks.KNITTED_GREEN_WOOL.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.GREEN_WOOL), 60, 30));
     public static final RegistryObject<Block> KNITTED_GREEN_SLAB = registerBlock("knitted_green_slab", () -> new FlammableSlabBlock(BlockBehaviour.Properties.copy(Blocks.GREEN_WOOL), 60, 30));
-    public static final RegistryObject<Block> DRMANGOTEA = registerBlock("drmangotea", () -> new HorizontalDirectionalBlock(BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL)) {});
+    public static final RegistryObject<Block> DRMANGOTEA = registerBlock("drmangotea", () -> new DrMangoWool(BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL)));
     public static final RegistryObject<Block> KNITTED_CYAN_WOOL = registerBlock("knitted_cyan_wool", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
     public static final RegistryObject<Block> KNITTED_CYAN_CARPET = registerBlock("knitted_cyan_carpet", () -> new FlammableWoolCarpetBlock(DyeColor.CYAN, BlockBehaviour.Properties.copy(Blocks.CYAN_CARPET), 20, 60));
     public static final RegistryObject<Block> KNITTED_CYAN_STAIRS = registerBlock("knitted_cyan_stairs", () -> new FlammableStairBlock(EBBlocks.KNITTED_CYAN_WOOL.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.CYAN_WOOL), 60, 30));
