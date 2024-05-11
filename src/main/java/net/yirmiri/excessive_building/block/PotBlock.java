@@ -74,37 +74,32 @@ public class PotBlock extends Block implements SimpleWaterloggedBlock {
     @Override @NotNull
     public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         ItemStack itemstack = player.getItemInHand(hand);
-        if (!state.getValue(FILLED) && itemstack.is(EBItemTagProvider.POT_SOILS)) {
-            addFilling(state, level, pos);
-            if (!player.isCreative()) {
-                itemstack.shrink(1);
+        if (!level.isClientSide) {
+            if (!state.getValue(FILLED) && itemstack.is(EBItemTagProvider.POT_SOILS)) {
+                addFilling(state, level, pos);
+                if (!player.isCreative()) {
+                    itemstack.shrink(1);
+                }
+            } else if (state.getValue(FILLED)) {
+                removeFilling(state, level, pos);
+                if (!player.isCreative()) {
+                    popResource(level, pos, new ItemStack(Items.DIRT));
+                }
+            } else {
+                return InteractionResult.PASS;
             }
-        }
-
-        if (state.getValue(FILLED)) {
-            removeFilling(state, level, pos);
-            if (!player.isCreative()) {
-                popResource(level, pos, new ItemStack(Items.DIRT));
-            }
-
-        } else if (!itemstack.is(EBItemTagProvider.POT_SOILS)) {
-            return InteractionResult.PASS;
         }
         return InteractionResult.sidedSuccess(level.isClientSide);
     }
 
     private static void addFilling(BlockState state, Level level, BlockPos pos) {
-        if (!level.isClientSide) {
             level.setBlockAndUpdate(pos, state.setValue(FILLED, true));
             level.playSound(null, pos, SoundEvents.ROOTED_DIRT_PLACE, SoundSource.BLOCKS, 1, 1);
-        }
     }
 
     private static void removeFilling(BlockState state, Level level, BlockPos pos) {
-        if (!level.isClientSide) {
             level.setBlockAndUpdate(pos, state.setValue(FILLED, false));
             level.playSound(null, pos, SoundEvents.ROOTED_DIRT_BREAK, SoundSource.BLOCKS, 1, 1);
-        }
     }
 
     @Override
