@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "excessive_building:ancient_vine"
+        "recipe": "excessive_building:ancient_vines"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "excessive_building:ancient_vine"
+      "excessive_building:ancient_vines"
     ]
   },
   "sends_telemetry_event": false
