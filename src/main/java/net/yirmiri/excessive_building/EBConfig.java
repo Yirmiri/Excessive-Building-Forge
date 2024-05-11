@@ -49,8 +49,8 @@ public class EBConfig {
                 .comment("Should all decorative shelves grant an enchantment bonus or only potion shelves (default: false)?")
                 .define("decorativeVariantPower", false);
         DECORATIVE_ENCHANT_BONUS = COMMON_BUILDER
-                .comment("Level of enchantment power decorative shelves should grant? (default: 2)")
-                .defineInRange("decorativeEnchantBonus", 2, 0, 30);
+                .comment("Level of enchantment power decorative shelves should grant? (default: 1)")
+                .defineInRange("decorativeEnchantBonus", 1, 0, 30);
         ENABLE_REACHING_POTIONS = COMMON_BUILDER
                 .comment("Should reaching potions be craftable? (default: true)")
                 .define("enableReachingPotions", true);

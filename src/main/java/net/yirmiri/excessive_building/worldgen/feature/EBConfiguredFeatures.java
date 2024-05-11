@@ -104,12 +104,12 @@ public class EBConfiguredFeatures {
 
 
         register(context, ANCIENT_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(EBBlocks.ANCIENT_LOG.get()),
-                new CherryTrunkPlacer(7, 1, 1,
+                new CherryTrunkPlacer(7, 1, 0,
                 new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder().add(ConstantInt.of(1), 1)
                 .add(ConstantInt.of(2), 1).add(ConstantInt.of(3), 1).build()),
                 UniformInt.of(2, 4), UniformInt.of(-4, -3), UniformInt.of(-1, 0)),
                 BlockStateProvider.simple(EBBlocks.ANCIENT_LEAVES.get()), new CherryFoliagePlacer(ConstantInt.of(4),
-                ConstantInt.of(0), ConstantInt.of(5), 0.25F, 0.5F, 0.26666667F, 0.53333334F),
+                ConstantInt.of(0), ConstantInt.of(5), 0.25F, 0.5F, 0.16666667F, 0.33333334F),
                 new TwoLayersFeatureSize(1, 0, 2)).ignoreVines().build());
 
         register(context, ROSE, Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,

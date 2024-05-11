@@ -87,8 +87,8 @@ public class PotBlock extends Block implements SimpleWaterloggedBlock {
                 popResource(level, pos, new ItemStack(Items.DIRT));
             }
 
-        } else {
-            return InteractionResult.CONSUME;
+        } else if (!itemstack.is(EBItemTagProvider.POT_SOILS)) {
+            return InteractionResult.PASS;
         }
         return InteractionResult.sidedSuccess(level.isClientSide);
     }

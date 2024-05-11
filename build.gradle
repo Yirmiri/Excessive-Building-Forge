@@ -82,8 +82,8 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
     maven { url = 'https://repo.spongepowered.org/repository/maven-public/' }
-    maven { url "https://www.cursemaven.com" }
-    maven { url "https://maven.firstdarkdev.xyz/snapshots" }
+    maven { url = "https://www.cursemaven.com" }
+    maven { url = "https://maven.firstdarkdev.xyz/snapshots" }
 }
 
 dependencies {
@@ -107,20 +107,11 @@ dependencies {
     runtimeOnly fg.deobf("curse.maven:farmers-delight-${farmersdelight_version}")
     compileOnly fg.deobf("curse.maven:farmers-delight-${farmersdelight_version}")
 
-    runtimeOnly fg.deobf("curse.maven:built-${built_version}")
-    compileOnly fg.deobf("curse.maven:built-${built_version}")
-
-    runtimeOnly fg.deobf("curse.maven:hearth-and-home-${hearth_and_home_version}")
-    compileOnly fg.deobf("curse.maven:hearth-and-home-${hearth_and_home_version}")
-
     //Dev Client
     implementation fg.deobf("curse.maven:jei-238222:4712868")
     implementation fg.deobf("curse.maven:worldedit-225608:4586218")
     implementation fg.deobf("curse.maven:embeddium-908741:5034486")
     implementation fg.deobf("curse.maven:oculus-581495:4952626")
-    //implementation fg.deobf("curse.maven:botania-225643:5002307")
-    //implementation fg.deobf("curse.maven:curios-309927:5175956")
-    //implementation fg.deobf("curse.maven:patchouli-306770:4966125")
 }
 
 jar {

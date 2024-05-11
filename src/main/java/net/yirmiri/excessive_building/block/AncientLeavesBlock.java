@@ -55,7 +55,7 @@ public class AncientLeavesBlock extends LeavesBlock {
                 itemstack.shrink(1);
             }
         } else {
-            return InteractionResult.CONSUME;
+            return InteractionResult.PASS;
         }
         return InteractionResult.sidedSuccess(level.isClientSide);
     }
