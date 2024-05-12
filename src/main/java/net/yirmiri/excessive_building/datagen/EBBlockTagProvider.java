@@ -6,6 +6,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
@@ -24,6 +25,8 @@ public class EBBlockTagProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(EBBlockTagProvider.AMETHYST_FIRE_BASE_BLOCKS).add(
+                Blocks.AMETHYST_BLOCK,
+                Blocks.BUDDING_AMETHYST,
                 EBBlocks.AMETHYST_BRICKS.get(),
                 EBBlocks.AMETHYST_BRICK_STAIRS.get(),
                 EBBlocks.AMETHYST_BRICK_SLAB.get(),
