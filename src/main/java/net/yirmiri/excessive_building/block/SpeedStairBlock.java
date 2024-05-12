@@ -71,7 +71,7 @@ public class SpeedStairBlock extends StairBlock {
         if (state.getValue(SWIFT) && entity instanceof LivingEntity) {
             double d0 = Math.abs(entity.getDeltaMovement().y);
             if (d0 < 1.1) {
-                double d1 = 1.2 + d0 * 1.2;
+                double d1 = 1.3 + d0 * 1.2;
                 entity.setDeltaMovement(entity.getDeltaMovement().multiply(d1, 1.0, d1));
             }
             super.stepOn(level, pos, state, entity);
