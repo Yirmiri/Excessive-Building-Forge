@@ -1,5 +1,7 @@
 {
   "values": [
+    "minecraft:amethyst_block",
+    "minecraft:budding_amethyst",
     "excessive_building:amethyst_bricks",
     "excessive_building:amethyst_brick_stairs",
     "excessive_building:amethyst_brick_slab",

@@ -20,6 +20,7 @@ Previously this was a required dependency but is now optional.
 •   "Paleobotany" (@Hecco)
 •   "Sniffing in the Pine Forest" (@Bricker_Man)
 •   "Beacon of the Desert" + trimmed variant (@Bricker_Man)
+•   "Burrito" (@DrIsFish)
 •   "Praise ðe Pufferfish" (@PepaggsThings)
 •   "Kolos Bug" (@Kolosman420)
 •   "Lone Bridge" (@NebulaIsMine)
@@ -45,8 +46,8 @@ Previously this was a required dependency but is now optional.
 •   Added Forge common tags
 
   Changes
-•   Soul magma blocks now have bubble columns that by default push up but can be switched with redstone to push down
-•   Soul magma blocks now deal double damage
+•   Soul magma blocks now have bubble columns that by default push down but can be switched with redstone to push up
+•   Soul magma blocks now deals double damage
 •   Ancient vines now function like weeping vines
 •   Sugar can now be placed on asphalt to increase it's movement speed (no longer grants speed effects)
 •   Paper can now be used to remove the glow of ancient leaves
@@ -55,7 +56,6 @@ Previously this was a required dependency but is now optional.
 •   Alchemist shelves with pearls in them no longer animate
 •   Changed the recipe of most resource bricks to seem more fair
 •   Resource brick stairs/vertical stairs can now be used as a beacon base block
-•   Moved all blocks added by mod compatibility into a separate tab
 •   Ancient fruit are now always edible
 •   Base brimstone blocks now stay on fire forever like netherrack
 •   Removed custom panorama
