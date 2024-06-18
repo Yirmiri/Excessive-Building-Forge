@@ -10,6 +10,7 @@ Small Update
   Do note that this mod is in the process of being rewritten to support MultiLoader (since I mostly use Fabric now), I am also rethinking the mod from the base up so yeah :P
 
   Additions
+•   Updated the Excessive Building logo
 •   Added "Long Trips" painting (@SmillyBlade1)
 •   Added "Floors" painting (@Bricker_Man)
 
