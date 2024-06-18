@@ -8,7 +8,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.yirmiri.excessive_building.EBConfig;
-import net.yirmiri.excessive_building.compat.EBCompatRegistries;
 import net.yirmiri.excessive_building.register.EBBlocks;
 import net.yirmiri.excessive_building.register.EBItemGroups;
 import net.yirmiri.excessive_building.register.EBItems;
@@ -1306,7 +1305,6 @@ public class EBCreativeModeTabs {
             event.getEntries().putAfter(new ItemStack(Items.AMETHYST_SHARD), new ItemStack(EBItems.FIERY_SHARDS.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(EBItems.FIERY_SHARDS.get()), new ItemStack(EBItems.KYANITE_SHARDS.get()), parentAndSearch);
             event.getEntries().putAfter(new ItemStack(EBItems.KYANITE_SHARDS.get()), new ItemStack(EBItems.MIRALEN_SHARDS.get()), parentAndSearch);
-            event.getEntries().putAfter(new ItemStack(Items.GLOBE_BANNER_PATTERN), new ItemStack(EBItems.EXCESSIVE_BANNER_PATTERN.get()), parentAndSearch);
         }
 
         if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get() && EBConfig.ENABLE_CUSTOM_TAB.get()) {
@@ -2298,7 +2296,6 @@ public class EBCreativeModeTabs {
             event.accept(EBBlocks.ANCIENT_CRAFTING_TABLE);
             event.accept(EBBlocks.CRIMSON_CRAFTING_TABLE);
             event.accept(EBBlocks.WARPED_CRAFTING_TABLE);
-            event.accept(EBItems.EXCESSIVE_BANNER_PATTERN);
             event.accept(EBBlocks.OAK_VERTICAL_STAIRS);
             event.accept(EBBlocks.SPRUCE_VERTICAL_STAIRS);
             event.accept(EBBlocks.BIRCH_VERTICAL_STAIRS);

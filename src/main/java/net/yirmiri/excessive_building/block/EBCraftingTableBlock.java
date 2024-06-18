@@ -3,7 +3,6 @@ package net.yirmiri.excessive_building.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.stats.Stats;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.SimpleMenuProvider;
@@ -23,13 +22,13 @@ public class EBCraftingTableBlock extends CraftingTableBlock {
     }
 
     @Override
-    public InteractionResult use(BlockState state, Level worldIn, BlockPos pos, Player player, InteractionHand handIn, BlockHitResult hit) {
-        if (worldIn.isClientSide) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult result) {
+        if (level.isClientSide) {
             return InteractionResult.SUCCESS;
         }
 
         else {
-            player.openMenu(state.getMenuProvider(worldIn, pos));
+            player.openMenu(state.getMenuProvider(level, pos));
             player.awardStat(Stats.INTERACT_WITH_CRAFTING_TABLE);
             return InteractionResult.CONSUME;
         }

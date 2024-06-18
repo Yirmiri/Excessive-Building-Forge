@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -24,7 +25,7 @@ public class LeavesPileBlock extends BushBlock implements BonemealableBlock {
         return AABB;
     }
 
-    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean bl) {
+    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState) {
         return true;
     }
 
@@ -34,5 +35,12 @@ public class LeavesPileBlock extends BushBlock implements BonemealableBlock {
 
     public void performBonemeal(ServerLevel serverLevel, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
         popResource(serverLevel, blockPos, new ItemStack((ItemLike) this));
+    }
+
+    public static final MapCodec<LeavesPileBlock> CODEC = simpleCodec(LeavesPileBlock::new);
+
+    @Override
+    public MapCodec<LeavesPileBlock> codec() {
+        return CODEC;
     }
 }

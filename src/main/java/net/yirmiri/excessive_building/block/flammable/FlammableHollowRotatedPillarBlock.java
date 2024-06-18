@@ -7,8 +7,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.yirmiri.excessive_building.block.HollowRotatedPillarBlock;
 
 public class FlammableHollowRotatedPillarBlock extends HollowRotatedPillarBlock {
-    private final int flammability;
-    private final int spreadingSpeed;
+    public final int flammability;
+    public final int spreadingSpeed;
 
     public FlammableHollowRotatedPillarBlock(Properties properties, int flammability, int spreadingSpeed) {
         super(properties);

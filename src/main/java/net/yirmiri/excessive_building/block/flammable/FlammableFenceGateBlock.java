@@ -8,11 +8,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.WoodType;
 
 public class FlammableFenceGateBlock extends FenceGateBlock {
-    private final int flammability;
-    private final int spreadingSpeed;
+    public final int flammability;
+    public final int spreadingSpeed;
 
-    public FlammableFenceGateBlock(Properties properties, WoodType woodType, int flammability, int spreadingSpeed) {
-        super(properties, woodType);
+    public FlammableFenceGateBlock(Properties properties, WoodType type, int flammability, int spreadingSpeed) {
+        super(type, properties);
         this.flammability = flammability;
         this.spreadingSpeed = spreadingSpeed;
     }

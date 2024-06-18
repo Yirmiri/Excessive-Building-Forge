@@ -9,9 +9,10 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.EntityTypeTags;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
@@ -64,15 +65,15 @@ public class PotBlock extends Block implements SimpleWaterloggedBlock {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter getter, List<Component> list, TooltipFlag flag) {
-        super.appendHoverText(stack, getter, list, flag);
+    public void appendHoverText(ItemStack stack, @Nullable Item.TooltipContext ctx, List<Component> list, TooltipFlag flag) {
+        super.appendHoverText(stack, ctx, list, flag);
         list.add(CommonComponents.EMPTY);
         list.add(Component.translatable("tooltip.block.interact_soil").withStyle(ChatFormatting.GRAY));
         list.add(CommonComponents.space().append(Component.translatable("tooltip.block.fill").withStyle(ChatFormatting.BLUE)));
     }
 
     @Override @NotNull
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
         ItemStack itemstack = player.getItemInHand(hand);
         if (!level.isClientSide) {
             if (!state.getValue(FILLED) && itemstack.is(EBItemTagProvider.POT_SOILS)) {
@@ -86,10 +87,10 @@ public class PotBlock extends Block implements SimpleWaterloggedBlock {
                     popResource(level, pos, new ItemStack(Items.DIRT));
                 }
             } else {
-                return InteractionResult.PASS;
+                return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
             }
         }
-        return InteractionResult.sidedSuccess(level.isClientSide);
+        return ItemInteractionResult.sidedSuccess(level.isClientSide);
     }
 
     private static void addFilling(BlockState state, Level level, BlockPos pos) {

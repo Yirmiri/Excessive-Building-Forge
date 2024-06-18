@@ -9,11 +9,10 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
@@ -37,15 +36,16 @@ public class SoulMagmaBlock extends Block {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter getter, List<Component> list, TooltipFlag flag) {
-        super.appendHoverText(stack, getter, list, flag);
+    public void appendHoverText(ItemStack stack, @Nullable Item.TooltipContext ctx, List<Component> list, TooltipFlag flag) {
+        super.appendHoverText(stack, ctx, list, flag);
         list.add(CommonComponents.EMPTY);
         list.add(Component.translatable("tooltip.block.when_powered").withStyle(ChatFormatting.GRAY));
         list.add(CommonComponents.space().append(Component.translatable("tooltip.block.soul_magma").withStyle(ChatFormatting.BLUE)));
     }
 
+    @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
-        if (!entity.isSteppingCarefully() && entity instanceof LivingEntity && !EnchantmentHelper.hasFrostWalker((LivingEntity)entity)) {
+        if (!entity.isSteppingCarefully() && entity instanceof LivingEntity) {
             entity.hurt(level.damageSources().hotFloor(), 2.0F);
         }
 

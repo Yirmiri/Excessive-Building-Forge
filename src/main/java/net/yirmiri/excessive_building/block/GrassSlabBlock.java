@@ -106,11 +106,11 @@ public class GrassSlabBlock extends SlabBlock implements BonemealableBlock {
     }
 
     @Override
-    public boolean isValidBonemealTarget(LevelReader levelReader, BlockPos blockPos, BlockState blockState, boolean bl) {
-        if(blockState.getValue(SlabBlock.TYPE) == SlabType.BOTTOM)
+    public boolean isValidBonemealTarget(LevelReader reader, BlockPos pos, BlockState state) {
+        if(state.getValue(SlabBlock.TYPE) == SlabType.BOTTOM)
             return false;
 
-        return levelReader.getBlockState(blockPos.above()).isAir();
+        return reader.getBlockState(pos.above()).isAir();
     }
 
     public boolean isBonemealSuccess(Level level, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
@@ -119,7 +119,7 @@ public class GrassSlabBlock extends SlabBlock implements BonemealableBlock {
 
     public void performBonemeal(ServerLevel serverLevel, RandomSource randomSource, BlockPos blockPos, BlockState blockState) {
         BlockPos blockpos = blockPos.above();
-        BlockState blockstate = Blocks.GRASS.defaultBlockState();
+        BlockState blockstate = Blocks.SHORT_GRASS.defaultBlockState();
         Optional<Holder.Reference<PlacedFeature>> optional = serverLevel.registryAccess().registryOrThrow(Registries.PLACED_FEATURE).getHolder(VegetationPlacements.GRASS_BONEMEAL);
 
         label49:

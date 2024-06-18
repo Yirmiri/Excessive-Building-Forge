@@ -8,8 +8,8 @@ import net.minecraft.world.level.block.WoolCarpetBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class FlammableWoolCarpetBlock extends WoolCarpetBlock {
-    private final int flammability;
-    private final int spreadingSpeed;
+    public final int flammability;
+    public final int spreadingSpeed;
 
     public FlammableWoolCarpetBlock(DyeColor dyeColor, Properties properties, int flammability, int spreadingSpeed) {
         super(dyeColor, properties);

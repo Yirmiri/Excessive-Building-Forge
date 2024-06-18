@@ -7,13 +7,13 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -36,16 +36,16 @@ public class SpeedBlock extends Block {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter getter, List<Component> list, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, @Nullable Item.TooltipContext ctx, List<Component> list, TooltipFlag flag) {
         if (EBConfig.ALLOW_SWIFT_ASPHALT.get())
-            super.appendHoverText(stack, getter, list, flag);
+            super.appendHoverText(stack, ctx, list, flag);
         list.add(CommonComponents.EMPTY);
         list.add(Component.translatable("tooltip.block.interact_sugar").withStyle(ChatFormatting.GRAY));
         list.add(CommonComponents.space().append(Component.translatable("tooltip.block.swift").withStyle(ChatFormatting.BLUE)));
     }
 
     @Override @NotNull
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
         ItemStack itemstack = player.getItemInHand(hand);
         if (!state.getValue(SWIFT) && itemstack.is(EBItemTagProvider.SPEED_PASTES) && EBConfig.ALLOW_SWIFT_ASPHALT.get()) {
             addSugar(state, level, pos);
@@ -53,9 +53,9 @@ public class SpeedBlock extends Block {
                 itemstack.shrink(1);
             }
         } else {
-            return InteractionResult.PASS;
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
-        return InteractionResult.sidedSuccess(level.isClientSide);
+        return ItemInteractionResult.sidedSuccess(level.isClientSide);
     }
 
     private static void addSugar(BlockState state, Level level, BlockPos pos) {

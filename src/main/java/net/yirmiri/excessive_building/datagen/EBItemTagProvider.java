@@ -52,6 +52,6 @@ public class EBItemTagProvider extends ItemTagsProvider {
     }
 
     private static TagKey<Item> tag(String name) {
-        return ItemTags.create(new ResourceLocation(ExcessiveBuilding.MOD_ID, name));
+        return ItemTags.create(ResourceLocation.fromNamespaceAndPath(ExcessiveBuilding.MOD_ID, name));
     }
 }

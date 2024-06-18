@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.LevelAccessor;
@@ -29,5 +30,12 @@ public class AmethystFireBlock extends BaseFireBlock {
 
     protected boolean canBurn(BlockState blockState) {
         return true;
+    }
+
+    public static final MapCodec<AmethystFireBlock> CODEC = simpleCodec(AmethystFireBlock::new);
+
+    @Override
+    public MapCodec<AmethystFireBlock> codec() {
+        return CODEC;
     }
 }

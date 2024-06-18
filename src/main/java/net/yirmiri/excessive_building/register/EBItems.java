@@ -6,7 +6,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.datagen.EBBannerTagProvider;
 import net.yirmiri.excessive_building.util.EBProperties;
 
 public class EBItems {
@@ -28,8 +27,6 @@ public class EBItems {
     //MISC
     public static final RegistryObject<Item> ANCIENT_FRUIT = ITEMS.register("ancient_fruit", () -> new Item(new Item.Properties().food(EBProperties.Foods.ANCIENT_FRUIT)));
     public static final RegistryObject<Item> ALGAE = ITEMS.register("algae", () -> new PlaceOnWaterBlockItem(EBBlocks.ALGAE_BLOCK.get(), new Item.Properties()));
-    public static final RegistryObject<Item> EXCESSIVE_BANNER_PATTERN = ITEMS.register("excessive_banner_pattern", () -> new BannerPatternItem(EBBannerTagProvider.EXCESSIVE_BANNER_PATTERN, (new Item.Properties().stacksTo(1))));
-
 
     public static void register(IEventBus eventBus) {
             ITEMS.register(eventBus);

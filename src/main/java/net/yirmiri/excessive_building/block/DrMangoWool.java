@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -53,5 +54,12 @@ public class DrMangoWool extends HorizontalDirectionalBlock {
     @Override
     public BlockState mirror(BlockState pState, Mirror mirror) {
         return pState.rotate(mirror.getRotation(pState.getValue(FACING)));
+    }
+
+    public static final MapCodec<DrMangoWool> CODEC = simpleCodec(DrMangoWool::new);
+
+    @Override
+    public MapCodec<DrMangoWool> codec() {
+        return CODEC;
     }
 }

@@ -6,12 +6,11 @@ import net.minecraft.network.chat.CommonComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
@@ -50,8 +49,8 @@ public class DecorativeShelfBlock extends FlammableBlock {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter getter, List<Component> list, TooltipFlag flag) {
-        super.appendHoverText(stack, getter, list, flag);
+    public void appendHoverText(ItemStack stack, @Nullable Item.TooltipContext ctx, List<Component> list, TooltipFlag flag) {
+        super.appendHoverText(stack, ctx, list, flag);
         list.add(CommonComponents.EMPTY);
         list.add(Component.translatable("tooltip.block.interact").withStyle(ChatFormatting.GRAY));
         list.add(CommonComponents.space().append(Component.translatable("tooltip.block.variant").withStyle(ChatFormatting.BLUE)));
@@ -63,7 +62,7 @@ public class DecorativeShelfBlock extends FlammableBlock {
     }
 
     @Override @NotNull
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult result) {
         level.setBlockAndUpdate(pos, state.cycle(VARIANT));
         level.playSound(null, pos, SoundEvents.BOOK_PUT, SoundSource.BLOCKS, 1, 1);
         return InteractionResult.SUCCESS;

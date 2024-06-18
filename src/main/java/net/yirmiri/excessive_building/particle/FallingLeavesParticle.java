@@ -40,11 +40,11 @@ public class FallingLeavesParticle extends TextureSheetParticle {
         if (!this.removed) {
             float f = (float)(300 - this.lifetime);
             float f1 = Math.min(f / 300.0F, 1.0F);
-            double d0 = Math.cos(Math.toRadians((double)(this.particleRandom * 60.0F))) * 2.0D * Math.pow((double)f1, 1.25D);
-            double d1 = Math.sin(Math.toRadians((double)(this.particleRandom * 60.0F))) * 2.0D * Math.pow((double)f1, 1.25D);
+            double d0 = Math.cos(Math.toRadians((this.particleRandom * 60.0F))) * 2.0D * Math.pow(f1, 1.25D);
+            double d1 = Math.sin(Math.toRadians((this.particleRandom * 60.0F))) * 2.0D * Math.pow(f1, 1.25D);
             this.xd += d0 * (double)0.0025F;
             this.zd += d1 * (double)0.0025F;
-            this.yd -= (double)this.gravity;
+            this.yd -= this.gravity;
             this.rotSpeed += this.spinAcceleration / 20.0F;
             this.oRoll = this.roll;
             this.roll += this.rotSpeed / 20.0F;
@@ -54,9 +54,9 @@ public class FallingLeavesParticle extends TextureSheetParticle {
             }
 
             if (!this.removed) {
-                this.xd *= (double)this.friction;
-                this.yd *= (double)this.friction;
-                this.zd *= (double)this.friction;
+                this.xd *= this.friction;
+                this.yd *= this.friction;
+                this.zd *= this.friction;
             }
         }
     }

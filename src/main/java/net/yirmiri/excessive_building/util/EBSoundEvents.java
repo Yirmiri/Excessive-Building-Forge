@@ -19,7 +19,7 @@ public class EBSoundEvents {
     public static final RegistryObject<SoundEvent> MARBLE_FALL = register("block.marble.fall");
 
     private static RegistryObject<SoundEvent> register(String name) {
-        return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(ExcessiveBuilding.MOD_ID, name)));
+        return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath(ExcessiveBuilding.MOD_ID, name)));
     }
 
     public static void register(IEventBus eventBus) {

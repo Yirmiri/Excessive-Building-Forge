@@ -8,8 +8,6 @@ import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
-import net.yirmiri.excessive_building.compat.EBCompatRegistries;
-import net.yirmiri.excessive_building.datagen.loot.EBGlobalLootModifiersProvider;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -22,16 +20,15 @@ public class EBDataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
-        generator.addProvider(event.includeServer(), new EBRecipeProvider(packOutput));
+        //generator.addProvider(event.includeServer(), new EBRecipeProvider(packOutput));
         generator.addProvider(event.includeClient(), new EBBlockStateProvider(packOutput, existingFileHelper));
         generator.addProvider(event.includeClient(), new EBItemModelProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeServer(), new EBGlobalLootModifiersProvider(packOutput));
+        //generator.addProvider(event.includeServer(), new EBGlobalLootModifiersProvider(packOutput));
         EBBlockTagProvider blockTagGenerator = generator.addProvider(event.includeServer(), new EBBlockTagProvider(packOutput, lookupProvider, existingFileHelper));
-        EBBannerTagProvider bannerTagProvider = generator.addProvider(event.includeServer(), new EBBannerTagProvider(packOutput, lookupProvider, existingFileHelper));
         generator.addProvider(event.includeServer(), new EBItemTagProvider(packOutput, lookupProvider, blockTagGenerator.contentsGetter(), existingFileHelper));
 
-        if (EBCompatRegistries.terrablender) {
-            generator.addProvider(event.includeServer(), new EBWorldGenProvider(packOutput, lookupProvider));
-        }
+//        if (EBCompatRegistries.terrablender) {
+//            generator.addProvider(event.includeServer(), new EBWorldGenProvider(packOutput, lookupProvider));
+//        }
     }
 }

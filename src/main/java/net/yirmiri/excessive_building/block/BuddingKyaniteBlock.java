@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -46,5 +47,12 @@ public class BuddingKyaniteBlock extends AmethystBlock {
 
     public static boolean canClusterGrowAtState(BlockState blockState) {
         return blockState.isAir() || blockState.is(Blocks.WATER) && blockState.getFluidState().getAmount() == 8;
+    }
+
+    public static final MapCodec<BuddingKyaniteBlock> CODEC = simpleCodec(BuddingKyaniteBlock::new);
+
+    @Override
+    public MapCodec<BuddingKyaniteBlock> codec() {
+        return CODEC;
     }
 }

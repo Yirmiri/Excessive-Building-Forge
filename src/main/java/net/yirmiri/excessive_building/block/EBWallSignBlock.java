@@ -8,8 +8,8 @@ import net.minecraft.world.level.block.state.properties.WoodType;
 import net.yirmiri.excessive_building.block.entity.EBSignBlockEntity;
 
 public class EBWallSignBlock extends WallSignBlock {
-    public EBWallSignBlock(Properties pProperties, WoodType type) {
-        super(pProperties, type);
+    public EBWallSignBlock(Properties properties, WoodType type) {
+        super(type, properties);
     }
 
     @Override

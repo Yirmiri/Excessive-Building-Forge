@@ -43,6 +43,6 @@ public class EBBlockTagProvider extends BlockTagsProvider {
     }
 
     private static TagKey<Block> tag(String name) {
-        return BlockTags.create(new ResourceLocation(ExcessiveBuilding.MOD_ID, name));
+        return BlockTags.create(ResourceLocation.fromNamespaceAndPath(ExcessiveBuilding.MOD_ID, name));
     }
 }

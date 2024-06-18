@@ -7,8 +7,8 @@ import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class FlammableStairBlock extends StairBlock {
-    private final int flammability;
-    private final int spreadingSpeed;
+    public final int flammability;
+    public final int spreadingSpeed;
 
     public FlammableStairBlock(BlockState blockState, Properties properties, int flammability, int spreadingSpeed) {
         super(blockState, properties);

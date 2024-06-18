@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -30,6 +31,13 @@ public class VerticalStairBlock extends HorizontalDirectionalBlock implements Si
     @Override
     public VoxelShape getVisualShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext ctx) {
         return Shapes.empty();
+    }
+
+    public static final MapCodec<VerticalStairBlock> CODEC = simpleCodec(VerticalStairBlock::new);
+
+    @Override
+    public MapCodec<VerticalStairBlock> codec() {
+        return CODEC;
     }
 
     @Override

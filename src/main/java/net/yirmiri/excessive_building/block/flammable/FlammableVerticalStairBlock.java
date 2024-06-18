@@ -7,8 +7,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.yirmiri.excessive_building.block.VerticalStairBlock;
 
 public class FlammableVerticalStairBlock extends VerticalStairBlock {
-    private final int flammability;
-    private final int spreadingSpeed;
+    public final int flammability;
+    public final int spreadingSpeed;
 
     public FlammableVerticalStairBlock(Properties properties, int flammability, int spreadingSpeed) {
         super(properties);

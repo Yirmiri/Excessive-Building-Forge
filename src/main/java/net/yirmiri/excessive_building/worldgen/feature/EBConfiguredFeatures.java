@@ -2,7 +2,7 @@ package net.yirmiri.excessive_building.worldgen.feature;
 
 import com.google.common.collect.ImmutableList;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
@@ -68,7 +68,7 @@ public class EBConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ALGAE_SMALL = registerKey("algae_small");
     public static final ResourceKey<ConfiguredFeature<?, ?>> MARBLE = registerKey("marble");
 
-    public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
+    public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> ctx) {
         RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest soulReplaceables = new TagMatchTest(BlockTags.SOUL_FIRE_BASE_BLOCKS);
@@ -77,10 +77,10 @@ public class EBConfiguredFeatures {
         List<OreConfiguration.TargetBlockState> overworldQuartzOres = List.of(OreConfiguration.target(stoneReplaceables, EBBlocks.QUARTZ_ORE.get().defaultBlockState()), OreConfiguration.target(deepslateReplaceables, EBBlocks.DEEPSLATE_QUARTZ_ORE.get().defaultBlockState()));
         List<OreConfiguration.TargetBlockState> marbleBlob = List.of(OreConfiguration.target(stoneReplaceables, EBBlocks.MARBLE.get().defaultBlockState()), OreConfiguration.target(deepslateReplaceables, EBBlocks.MARQUINA_MARBLE.get().defaultBlockState()));
 
-        register(context, QUARTZ_ORE, Feature.ORE, new OreConfiguration(overworldQuartzOres, 8)); //vein size
-        register(context, SOUL_MAGMA, Feature.ORE, new OreConfiguration(soulReplaceables, EBBlocks.SOUL_MAGMA_BLOCK.get().defaultBlockState(), 16)); //vein size
+        register(ctx, QUARTZ_ORE, Feature.ORE, new OreConfiguration(overworldQuartzOres, 8)); //vein size
+        register(ctx, SOUL_MAGMA, Feature.ORE, new OreConfiguration(soulReplaceables, EBBlocks.SOUL_MAGMA_BLOCK.get().defaultBlockState(), 16)); //vein size
 
-        register(context, FIERY_GEODE, Feature.GEODE,
+        FeatureUtils.register(ctx, FIERY_GEODE, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                 BlockStateProvider.simple(EBBlocks.FIERY_BLOCK.get()), BlockStateProvider.simple(EBBlocks.BUDDING_FIERY_BLOCK.get()),
                 BlockStateProvider.simple(EBBlocks.BRIMSTONE.get()), BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
@@ -91,7 +91,7 @@ public class EBConfiguredFeatures {
                 new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6),
                 UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
-        register(context, KYANITE_GEODE, Feature.GEODE,
+        FeatureUtils.register(ctx, KYANITE_GEODE, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                 BlockStateProvider.simple(EBBlocks.KYANITE_BLOCK.get()), BlockStateProvider.simple(EBBlocks.BUDDING_KYANITE_BLOCK.get()),
                 BlockStateProvider.simple(EBBlocks.BRIMSTONE.get()), BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
@@ -103,7 +103,7 @@ public class EBConfiguredFeatures {
                 UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
 
-        register(context, ANCIENT_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(EBBlocks.ANCIENT_LOG.get()),
+        FeatureUtils.register(ctx, ANCIENT_TREE, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(EBBlocks.ANCIENT_LOG.get()),
                 new CherryTrunkPlacer(7, 1, 0,
                 new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder().add(ConstantInt.of(1), 1)
                 .add(ConstantInt.of(2), 1).add(ConstantInt.of(3), 1).build()),
@@ -112,45 +112,45 @@ public class EBConfiguredFeatures {
                 ConstantInt.of(0), ConstantInt.of(5), 0.25F, 0.5F, 0.16666667F, 0.33333334F),
                 new TwoLayersFeatureSize(1, 0, 2)).ignoreVines().build());
 
-        register(context, ROSE, Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        FeatureUtils.register(ctx, ROSE, Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.ROSE.get())))));
 
-        register(context, CYAN_ROSE, Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        FeatureUtils.register(ctx, CYAN_ROSE, Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.CYAN_ROSE.get())))));
 
-        register(context, WHITE_ROSE, Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        FeatureUtils.register(ctx, WHITE_ROSE, Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.WHITE_ROSE.get())))));
 
-        register(context, WILLOW_TREE, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(EBBlocks.WILLOW_LOG.get()),
+        FeatureUtils.register(ctx, WILLOW_TREE, Feature.TREE, (new TreeConfiguration.TreeConfigurationBuilder(BlockStateProvider.simple(EBBlocks.WILLOW_LOG.get()),
                 new BendingTrunkPlacer(4, 2, 0, 3, UniformInt.of(1, 2)),
                 BlockStateProvider.simple(EBBlocks.WILLOW_LEAVES.get()), new RandomSpreadFoliagePlacer(ConstantInt.of(3), ConstantInt.of(0), ConstantInt.of(2), 50),
                 new TwoLayersFeatureSize(1, 0, 1))).decorators(ImmutableList.of(new LeaveVineDecorator(0.25F))).build());
 
-        register(context, RED_MAPLE_TREE, Feature.TREE, createFancyRed().build());
-        register(context, ORANGE_MAPLE_TREE, Feature.TREE, createFancyOrange().build());
-        register(context, YELLOW_MAPLE_TREE, Feature.TREE, createFancyYellow().build());
+        FeatureUtils.register(ctx, RED_MAPLE_TREE, Feature.TREE, createFancyRed().build());
+        FeatureUtils.register(ctx, ORANGE_MAPLE_TREE, Feature.TREE, createFancyOrange().build());
+        FeatureUtils.register(ctx, YELLOW_MAPLE_TREE, Feature.TREE, createFancyYellow().build());
 
-        register(context, MARIGOLD, Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        FeatureUtils.register(ctx, MARIGOLD, Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.MARIGOLD.get())))));
 
-        register(context, RED_MAPLE_PILE, Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        FeatureUtils.register(ctx, RED_MAPLE_PILE, Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.RED_MAPLE_LEAVES_PILE.get())))));
 
-        register(context, ORANGE_MAPLE_PILE, Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        FeatureUtils.register(ctx, ORANGE_MAPLE_PILE, Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.ORANGE_MAPLE_LEAVES_PILE.get())))));
 
-        register(context, YELLOW_MAPLE_PILE, Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        FeatureUtils.register(ctx, YELLOW_MAPLE_PILE, Feature.FLOWER, new RandomPatchConfiguration(64, 6, 2, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.YELLOW_MAPLE_LEAVES_PILE.get())))));
 
-        register(context, COMMON_PUMPKIN_PATCH, Feature.RANDOM_PATCH, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
+        FeatureUtils.register(ctx, COMMON_PUMPKIN_PATCH, Feature.RANDOM_PATCH, FeatureUtils.simplePatchConfiguration(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(Blocks.PUMPKIN)), List.of(Blocks.GRASS_BLOCK)));
 
-        register(context, BRIMSTONE, Feature.ORE, new OreConfiguration(netherrackReplaceables, EBBlocks.BRIMSTONE.get().defaultBlockState(), 48)); //vein size
+        FeatureUtils.register(ctx, BRIMSTONE, Feature.ORE, new OreConfiguration(netherrackReplaceables, EBBlocks.BRIMSTONE.get().defaultBlockState(), 48)); //vein size
 
-        register(context, GOLDEN_BIRCH_TREE, Feature.TREE, createGoldenBirch().build());
-        register(context, GOLDEN_BIRCH_TREE_BEES_01, Feature.TREE, createGoldenBirch().decorators(List.of(goldenBirchHiveDecorator)).build());
+        FeatureUtils.register(ctx, GOLDEN_BIRCH_TREE, Feature.TREE, createGoldenBirch().build());
+        FeatureUtils.register(ctx, GOLDEN_BIRCH_TREE_BEES_01, Feature.TREE, createGoldenBirch().decorators(List.of(goldenBirchHiveDecorator)).build());
 
-        register(context, MIRALEN_GEODE, Feature.GEODE,
+        FeatureUtils.register(ctx, MIRALEN_GEODE, Feature.GEODE,
                 new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
                         BlockStateProvider.simple(EBBlocks.MIRALEN_BLOCK.get()), BlockStateProvider.simple(EBBlocks.BUDDING_MIRALEN_BLOCK.get()),
                         BlockStateProvider.simple(Blocks.CALCITE), BlockStateProvider.simple(Blocks.SMOOTH_BASALT),
@@ -161,13 +161,13 @@ public class EBConfiguredFeatures {
                         new GeodeCrackSettings(0.95D, 2.0D, 2), 0.35D, 0.083D, true, UniformInt.of(4, 6),
                         UniformInt.of(3, 4), UniformInt.of(1, 2), -16, 16, 0.05D, 1));
 
-        register(context, ALGAE, Feature.RANDOM_PATCH, new RandomPatchConfiguration(10, 7, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        FeatureUtils.register(ctx, ALGAE, Feature.RANDOM_PATCH, new RandomPatchConfiguration(10, 7, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.ALGAE_BLOCK.get())))));
 
-        register(context, ALGAE_SMALL, Feature.RANDOM_PATCH, new RandomPatchConfiguration(12, 3, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
+        FeatureUtils.register(ctx, ALGAE_SMALL, Feature.RANDOM_PATCH, new RandomPatchConfiguration(12, 3, 3, PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK,
                 new SimpleBlockConfiguration(BlockStateProvider.simple(EBBlocks.ALGAE_BLOCK.get())))));
 
-        register(context, MARBLE, Feature.ORE, new OreConfiguration(marbleBlob, 48)); //vein size
+        FeatureUtils.register(ctx, MARBLE, Feature.ORE, new OreConfiguration(marbleBlob, 48)); //vein size
 
     }
 
@@ -199,10 +199,10 @@ public class EBConfiguredFeatures {
 
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(ExcessiveBuilding.MOD_ID, name));
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.fromNamespaceAndPath(ExcessiveBuilding.MOD_ID, name));
     }
 
-    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstapContext<ConfiguredFeature<?, ?>> context,
+    private static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(BootstrapContext<ConfiguredFeature<?, ?>> context,
                             ResourceKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }

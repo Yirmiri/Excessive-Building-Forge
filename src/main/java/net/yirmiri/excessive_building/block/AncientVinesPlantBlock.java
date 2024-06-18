@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.GrowingPlantBodyBlock;
@@ -17,5 +18,12 @@ public class AncientVinesPlantBlock extends GrowingPlantBodyBlock {
 
     protected GrowingPlantHeadBlock getHeadBlock() {
         return (GrowingPlantHeadBlock) EBBlocks.ANCIENT_VINES.get();
+    }
+
+    public static final MapCodec<AncientVinesPlantBlock> CODEC = simpleCodec(AncientVinesPlantBlock::new);
+
+    @Override
+    public MapCodec<AncientVinesPlantBlock> codec() {
+        return CODEC;
     }
 }

@@ -1,7 +1,8 @@
 plugins {
     id 'eclipse'
+    id 'idea'
     id 'maven-publish'
-    id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'net.minecraftforge.gradle' version '[6.0.24,6.2)'
     id 'org.spongepowered.mixin' version '0.7.+'
 }
 
@@ -15,7 +16,7 @@ version = "${minecraft_version}-${mod_version}"
 group = "${group}"
 archivesBaseName = "${mod_name} ${minecraft_version}"
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 
@@ -89,29 +90,32 @@ repositories {
 dependencies {
     //Required Dependents
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-    implementation fg.deobf("com.github.glitchfiend:TerraBlender-forge:${minecraft_version}-${terrablender_version}")
+    implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
 
     //Mixin
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
+    //Optional Dependents
+    //implementation fg.deobf("com.github.glitchfiend:TerraBlender-forge:${minecraft_version}-${terrablender_version}")
+
     //Compat
-    runtimeOnly fg.deobf("curse.maven:sullys-mod-${sullysmod_version}")
-    compileOnly fg.deobf("curse.maven:sullys-mod-${sullysmod_version}")
+    //runtimeOnly fg.deobf("curse.maven:sullys-mod-${sullysmod_version}")
+    //compileOnly fg.deobf("curse.maven:sullys-mod-${sullysmod_version}")
 
-    runtimeOnly fg.deobf("curse.maven:geckolib-${geckolib_version}")
-    compileOnly fg.deobf("curse.maven:geckolib-${geckolib_version}")
+    //runtimeOnly fg.deobf("curse.maven:geckolib-${geckolib_version}")
+    //compileOnly fg.deobf("curse.maven:geckolib-${geckolib_version}")
 
-    runtimeOnly fg.deobf("curse.maven:blueprint-${blueprint_version}")
-    compileOnly fg.deobf("curse.maven:blueprint-${blueprint_version}")
+    //runtimeOnly fg.deobf("curse.maven:blueprint-${blueprint_version}")
+    //compileOnly fg.deobf("curse.maven:blueprint-${blueprint_version}")
 
-    runtimeOnly fg.deobf("curse.maven:farmers-delight-${farmersdelight_version}")
-    compileOnly fg.deobf("curse.maven:farmers-delight-${farmersdelight_version}")
+    //runtimeOnly fg.deobf("curse.maven:farmers-delight-${farmersdelight_version}")
+    //compileOnly fg.deobf("curse.maven:farmers-delight-${farmersdelight_version}")
 
     //Dev Client
-    implementation fg.deobf("curse.maven:jei-238222:4712868")
-    implementation fg.deobf("curse.maven:worldedit-225608:4586218")
-    implementation fg.deobf("curse.maven:embeddium-908741:5034486")
-    implementation fg.deobf("curse.maven:oculus-581495:4952626")
+    //implementation fg.deobf("curse.maven:jei-238222:4712868")
+    //implementation fg.deobf("curse.maven:worldedit-225608:4586218")
+    //implementation fg.deobf("curse.maven:embeddium-908741:5034486")
+    //implementation fg.deobf("curse.maven:oculus-581495:4952626")
 }
 
 jar {

@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.core.Direction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Block;
@@ -27,5 +28,12 @@ public class AncientVinesBlock extends GrowingPlantHeadBlock {
 
     protected boolean canGrowInto(BlockState state) {
         return NetherVines.isValidGrowthState(state);
+    }
+
+    public static final MapCodec<AncientVinesBlock> CODEC = simpleCodec(AncientVinesBlock::new);
+
+    @Override
+    public MapCodec<AncientVinesBlock> codec() {
+        return CODEC;
     }
 }

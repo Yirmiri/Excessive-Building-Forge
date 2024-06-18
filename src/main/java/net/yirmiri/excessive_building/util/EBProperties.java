@@ -1,12 +1,12 @@
 package net.yirmiri.excessive_building.util;
 
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
-import net.yirmiri.excessive_building.register.EBMobEffects;
 
 public class EBProperties {
 
@@ -65,7 +65,6 @@ public class EBProperties {
 
     public class Foods {
         //FOOD PROPERTIES
-        public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().alwaysEat().nutrition(4).saturationMod(0.2f).effect(new MobEffectInstance(EBMobEffects.REACHING.get(), 200, 0), 1.0F).build();
-        public static final FoodProperties ANCIENT_CIDER = new FoodProperties.Builder().alwaysEat().effect(new MobEffectInstance(EBMobEffects.REACHING.get(), 6000, 0), 1.0F).build();
+        public static final FoodProperties ANCIENT_FRUIT = new FoodProperties.Builder().alwaysEdible().nutrition(4).saturationModifier(0.2f).effect(new MobEffectInstance(MobEffects.DIG_SPEED, 3000, 0), 1.0F).build();
     }
 }

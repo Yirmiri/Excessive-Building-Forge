@@ -1,5 +1,6 @@
 package net.yirmiri.excessive_building.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -10,11 +11,11 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.ParticleUtils;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.LeavesBlock;
@@ -38,16 +39,23 @@ public class AncientLeavesBlock extends LeavesBlock {
         registerDefaultState(defaultBlockState().setValue(GLOWING, false));
     }
 
+    public static final MapCodec<AncientLeavesBlock> CODEC = simpleCodec(AncientLeavesBlock::new);
+
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable BlockGetter getter, List<Component> list, TooltipFlag flag) {
-        super.appendHoverText(stack, getter, list, flag);
+    public MapCodec<AncientLeavesBlock> codec() {
+        return CODEC;
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, @Nullable Item.TooltipContext ctx, List<Component> list, TooltipFlag flag) {
+        super.appendHoverText(stack, ctx, list, flag);
         list.add(CommonComponents.EMPTY);
         list.add(Component.translatable("tooltip.block.interact_glow_removals").withStyle(ChatFormatting.GRAY));
         list.add(CommonComponents.space().append(Component.translatable("tooltip.block.glow_removal").withStyle(ChatFormatting.BLUE)));
     }
 
     @Override @NotNull
-    public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    public ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult result) {
         ItemStack itemstack = player.getItemInHand(hand);
         if (!state.getValue(GLOWING) && itemstack.is(EBItemTagProvider.GLOW_REMOVALS)) {
             addGlow(state, level, pos);
@@ -55,9 +63,9 @@ public class AncientLeavesBlock extends LeavesBlock {
                 itemstack.shrink(1);
             }
         } else {
-            return InteractionResult.PASS;
+            return ItemInteractionResult.PASS_TO_DEFAULT_BLOCK_INTERACTION;
         }
-        return InteractionResult.sidedSuccess(level.isClientSide);
+        return ItemInteractionResult.sidedSuccess(level.isClientSide);
     }
 
     private static void addGlow(BlockState state, Level level, BlockPos pos) {

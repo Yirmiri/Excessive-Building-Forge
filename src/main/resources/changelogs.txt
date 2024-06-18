@@ -4,7 +4,25 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Version Release v3.0.1 (Forge/NeoForge: 1.20.1)
+Version Release v3.0.2 Forge-1.21
+Small Update
+
+  Changes
+•   Changed acorns to grow golden birch
+•   Temporarily removed biomes from TerraBlender compat
+•   Temporarily removed reaching effect
+
+  Removals
+•   Removed 1.21 backported paintings
+•   Removed "Excessive" banner pattern
+•   Removed maple forest advancement
+
+  Fixes
+•   Fixed "Long Trips" and "Floors" paintings not being placeable
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Version Release v3.0.1 Forge/NeoForge-1.20.1
 Small Update
 
   Do note that this mod is in the process of being rewritten to support MultiLoader (since I mostly use Fabric now), I am also rethinking the mod from the base up so yeah :P
