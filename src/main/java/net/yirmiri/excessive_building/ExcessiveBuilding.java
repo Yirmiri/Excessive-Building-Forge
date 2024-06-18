@@ -28,17 +28,20 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.yirmiri.excessive_building.block.GrassSlabBlock;
 import net.yirmiri.excessive_building.compat.EBCompatRegistries;
-import net.yirmiri.excessive_building.compat.SMCompat;
 import net.yirmiri.excessive_building.compat.terrablender.EBOverworldRegion;
 import net.yirmiri.excessive_building.datagen.loot.EBLootTableModifiers;
 import net.yirmiri.excessive_building.register.*;
 import net.yirmiri.excessive_building.util.EBBlockTypes;
 import net.yirmiri.excessive_building.util.EBCreativeModeTabs;
 import net.yirmiri.excessive_building.util.EBSoundEvents;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Mod(ExcessiveBuilding.MODID)
 public class ExcessiveBuilding {
     public static final String MODID = "excessive_building";
+    public static final String MOD_NAME = "TipsyLib";
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
 
     public ExcessiveBuilding() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -202,11 +205,6 @@ public class ExcessiveBuilding {
         Sheets.addWoodType(EBBlockTypes.ANCIENT);
         Sheets.addWoodType(EBBlockTypes.WILLOW);
         Sheets.addWoodType(EBBlockTypes.MAPLE);
-
-        if (EBCompatRegistries.sullysMod) {
-            ItemBlockRenderTypes.setRenderLayer(SMCompat.JADE_GLASS.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(SMCompat.JADE_GLASS_PANE.get(), RenderType.translucent());
-        }
     }
 
     private void setup(final FMLCommonSetupEvent event) {

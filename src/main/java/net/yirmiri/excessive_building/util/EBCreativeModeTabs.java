@@ -9,8 +9,6 @@ import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.yirmiri.excessive_building.EBConfig;
 import net.yirmiri.excessive_building.compat.EBCompatRegistries;
-import net.yirmiri.excessive_building.compat.FDCompat;
-import net.yirmiri.excessive_building.compat.SMCompat;
 import net.yirmiri.excessive_building.register.EBBlocks;
 import net.yirmiri.excessive_building.register.EBItemGroups;
 import net.yirmiri.excessive_building.register.EBItems;
@@ -2346,24 +2344,6 @@ public class EBCreativeModeTabs {
             event.accept(EBBlocks.PURPUR_VERTICAL_STAIRS);
             event.accept(EBBlocks.QUARTZ_VERTICAL_STAIRS);
             event.accept(EBBlocks.SMOOTH_QUARTZ_VERTICAL_STAIRS);
-        }
-
-        if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get() && EBConfig.ENABLE_EB_CREATIVE_TAB.get() && (EBCompatRegistries.sullysMod)) {
-            event.accept(SMCompat.JADE_LAMP);
-            event.accept(SMCompat.JADE_GLASS);
-            event.accept(SMCompat.JADE_GLASS_PANE);
-            event.accept(SMCompat.POLISHED_JADE_PEDESTAL);
-            event.accept(SMCompat.SMOOTHED_ROUGH_JADE_VERTICAL_STAIRS);
-            event.accept(SMCompat.ROUGH_JADE_BRICK_VERTICAL_STAIRS);
-            event.accept(SMCompat.ROUGH_JADE_TILE_VERTICAL_STAIRS);
-            event.accept(SMCompat.POLISHED_JADE_BRICK_VERTICAL_STAIRS);
-            event.accept(SMCompat.POLISHED_JADE_TILE_VERTICAL_STAIRS);
-            event.accept(SMCompat.POLISHED_SMALL_JADE_BRICK_VERTICAL_STAIRS);
-            event.accept(SMCompat.POLISHED_JADE_SHINGLE_VERTICAL_STAIRS);
-        }
-
-        if (event.getTab() == EBItemGroups.EXCESSIVE_BUILDING.get() && EBConfig.ENABLE_EB_CREATIVE_TAB.get() && (EBCompatRegistries.farmersDelight)) {
-            event.getEntries().putAfter(new ItemStack(EBItems.ANCIENT_FRUIT.get()), new ItemStack(FDCompat.ANCIENT_CIDER.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 }

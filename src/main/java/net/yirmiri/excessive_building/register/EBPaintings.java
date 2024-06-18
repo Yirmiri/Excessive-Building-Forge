@@ -32,6 +32,8 @@ public class EBPaintings {
     public static final RegistryObject<PaintingVariant> BEACON_OF_THE_DESERT_TRIMMED = PAINTING_VARIANTS.register("beacon_of_the_desert_trimmed", () -> new PaintingVariant(16, 32)); //Brickerman
     public static final RegistryObject<PaintingVariant> SOMETHING_WICKED = PAINTING_VARIANTS.register("something_wicked", () -> new PaintingVariant(64, 32)); //Something wicked comes this way
     public static final RegistryObject<PaintingVariant> BURRITO = PAINTING_VARIANTS.register("burrito", () -> new PaintingVariant(16, 16)); //DrIsFish, its not a burrito.
+    public static final RegistryObject<PaintingVariant> FLOORS = PAINTING_VARIANTS.register("floors", () -> new PaintingVariant(16, 16)); //Brickerman
+    public static final RegistryObject<PaintingVariant> LONG_TRIPS = PAINTING_VARIANTS.register("long_trips", () -> new PaintingVariant(64, 96)); //SmillyScarfs
 
     //CREATIVE PAINTINGS
     public static final RegistryObject<PaintingVariant> REBELLIOUS = PAINTING_VARIANTS.register("rebellious", () -> new PaintingVariant(128, 128)); //CreekWanderer

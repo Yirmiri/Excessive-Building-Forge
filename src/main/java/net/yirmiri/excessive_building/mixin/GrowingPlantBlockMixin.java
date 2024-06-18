@@ -22,9 +22,9 @@ public abstract class GrowingPlantBlockMixin {
     @Shadow protected abstract Block getBodyBlock();
 
     @Inject(at = @At("RETURN"), method = "canSurvive", cancellable = true)
-    private void canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos, CallbackInfoReturnable ci) {
+    private void canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos, CallbackInfoReturnable cir) {
         BlockPos blockpos = blockPos.relative(growthDirection.getOpposite());
         BlockState blockstate = levelReader.getBlockState(blockpos);
-        ci.setReturnValue(blockstate.is(BlockTags.LEAVES) || blockstate.is(this.getHeadBlock()) || blockstate.is(this.getBodyBlock()) || blockstate.isFaceSturdy(levelReader, blockpos, this.growthDirection));
+        cir.setReturnValue(blockstate.is(BlockTags.LEAVES) || blockstate.is(this.getHeadBlock()) || blockstate.is(this.getBodyBlock()) || blockstate.isFaceSturdy(levelReader, blockpos, this.growthDirection));
     }
 }

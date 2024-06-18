@@ -10,7 +10,7 @@ public class EBConfig {
     public static final String BALANCING = "balancing";
     public static ForgeConfigSpec.BooleanValue ENABLE_EB_CREATIVE_TAB;
     public static ForgeConfigSpec.BooleanValue ENABLE_CUSTOM_TAB;
-    public static ForgeConfigSpec.BooleanValue ENABLE_EB_SNIFFER_DROPS;
+    public static ForgeConfigSpec.BooleanValue ENABLE_EB_LOOT_MODIFIERS;
     public static ForgeConfigSpec.BooleanValue ENABLE_BIOMES;
     public static ForgeConfigSpec.BooleanValue ALLOW_SWIFT_ASPHALT;
     public static ForgeConfigSpec.BooleanValue ALLOW_REDSTONE_BUBBLE_COLUMNS;
@@ -30,7 +30,7 @@ public class EBConfig {
         ENABLE_CUSTOM_TAB = COMMON_BUILDER
                 .comment("Should there be a custom creative tab for Excessive Building? (default: true)")
                 .define("enableCustomTab", true);
-        ENABLE_EB_SNIFFER_DROPS = COMMON_BUILDER
+        ENABLE_EB_LOOT_MODIFIERS = COMMON_BUILDER
                 .comment("Should sniffers be able to dig up new unique items? (default: true)")
                 .define("enableSnifferDrops", true);
         ENABLE_BIOMES = COMMON_BUILDER

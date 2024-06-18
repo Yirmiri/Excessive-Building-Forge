@@ -4,6 +4,24 @@ Literally just a secret .txt file of every single update's changelog
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Version Release v3.0.1 (Forge/NeoForge: 1.20.1)
+Small Update
+
+  Do note that this mod is in the process of being rewritten to support MultiLoader (since I mostly use Fabric now), I am also rethinking the mod from the base up so yeah :P
+
+  Additions
+•   Added "Long Trips" painting (@SmillyBlade1)
+•   Added "Floors" painting (@Bricker_Man)
+
+  Changes
+•   Removed all compatibility features (these will return in the future with better implementation)
+•   Updated maple leaves textures (@Hecco)
+•   Updated cobbled brick textures (mossy variants are still the same for the time being)
+•   Updated polished sandstone textures
+•   Updated ancient fruit texture
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Version Release v3.0.0 (Forge/NeoForge: 1.20.1)
 Major Update
 
