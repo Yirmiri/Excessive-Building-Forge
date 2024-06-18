@@ -14,7 +14,6 @@ public class EBCompatRegistries {
     }
 
     public static void register(IEventBus eventBus) {
-
         //TERRABLENDER
         if (terrablender) EBBiomes.register();
         if (terrablender) EBOverworldRegion.register();
