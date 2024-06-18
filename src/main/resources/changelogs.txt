@@ -15,6 +15,7 @@ Small Update
 
   Changes
 •   Removed all compatibility features (these will return in the future with better implementation)
+•   Removed the search bar in the creative Excessive Building tab
 •   Updated maple leaves textures (@Hecco)
 •   Updated cobbled brick textures (mossy variants are still the same for the time being)
 •   Updated polished sandstone textures
