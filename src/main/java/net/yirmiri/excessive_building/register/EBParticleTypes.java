@@ -14,9 +14,9 @@ import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 import net.yirmiri.excessive_building.particle.FallingLeavesParticle;
 
-@Mod.EventBusSubscriber(modid = ExcessiveBuilding.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = ExcessiveBuilding.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class EBParticleTypes {
-    public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, ExcessiveBuilding.MODID);
+    public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, ExcessiveBuilding.MOD_ID);
 
     public static final RegistryObject<SimpleParticleType> ANCIENT_PARTICLE = PARTICLE_TYPES.register("ancient_particle",
             () -> new SimpleParticleType(true));

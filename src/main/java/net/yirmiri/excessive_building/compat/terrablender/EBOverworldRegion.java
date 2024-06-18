@@ -7,7 +7,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.biome.Climate;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.yirmiri.excessive_building.EBConfig;
@@ -37,7 +36,7 @@ public class EBOverworldRegion extends Region {
     public static void onClientSetup(FMLClientSetupEvent event) {
         if (EBCompatRegistries.terrablender) {
             if (EBConfig.ENABLE_BIOMES.get()) {
-                Regions.register(new EBOverworldRegion(new ResourceLocation(ExcessiveBuilding.MODID, "overworld"), 4));
+                Regions.register(new EBOverworldRegion(new ResourceLocation(ExcessiveBuilding.MOD_ID, "overworld"), 4));
             }
         }
     }

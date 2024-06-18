@@ -18,6 +18,6 @@ public class EBWorldGenProvider extends DatapackBuiltinEntriesProvider {
          .add(Registries.CONFIGURED_FEATURE, EBConfiguredFeatures::bootstrap).add(Registries.PLACED_FEATURE, EBPlacedFeatures::bootstrap).add(Registries.BIOME, EBBiomes::boostrap);
 
     public EBWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BUILDER, Set.of(ExcessiveBuilding.MODID));
+        super(output, registries, BUILDER, Set.of(ExcessiveBuilding.MOD_ID));
     }
 }

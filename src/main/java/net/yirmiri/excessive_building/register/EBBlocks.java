@@ -27,7 +27,7 @@ import java.util.function.Supplier;
 public class EBBlocks {
     public static final HashMap<DyeColor, Supplier<Block>> DYED_TERRACOTTA_POTS = new HashMap<>();
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ExcessiveBuilding.MODID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, ExcessiveBuilding.MOD_ID);
 //TODO: FINISH ORGANIZING REGISTRIES OR ELSE ILL GO FUCKING INSANE  (Keke Will go insane as well)
 
     //WOOD

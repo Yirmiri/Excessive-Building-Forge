@@ -10,7 +10,7 @@ import net.yirmiri.excessive_building.datagen.EBBannerTagProvider;
 import net.yirmiri.excessive_building.util.EBProperties;
 
 public class EBItems {
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ExcessiveBuilding.MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, ExcessiveBuilding.MOD_ID);
 
     //SHARDS
     public static final RegistryObject<Item> FIERY_SHARDS = ITEMS.register("fiery_shards", () -> new Item(new Item.Properties()));

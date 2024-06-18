@@ -43,24 +43,24 @@ public abstract class AbstractClientPlayerMixin extends Player {
 
     @Inject(method = "getCloakTextureLocation", at = @At(value = "HEAD"), cancellable = true)
     public void tipsylib_getCloakTextureLocation(CallbackInfoReturnable<ResourceLocation> cir) {
-        if (AZURUNE.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/azurune.png"));
-        if (REDEYEVAIN.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/redeyevain.png"));
-        if (BEETROOT.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/beetroot.png"));
-        if (DEMONHEART.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/demonheart.png"));
-        if (ACCURSED.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/accursed.png"));
-        if (DICE.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/dice.png"));
-        if (HEX.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/hex.png"));
-        if (PUMPKIN_QUEEN.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/pumpkin_queen.png"));
-        if (SAD_CLOUD.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/sad_cloud.png"));
-        if (WRATHFUL.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/wrathful.png"));
-        if (BUG.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/bug.png"));
-        if (AXOLOTL.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/axolotl.png"));
-        if (LIGHTNING.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/lightning.png"));
-        if (REBELLIOUS.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/rebellious.png"));
-        if (FUDGE_SUNDAE.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/fudge_sundae.png"));
-        if (RU_RU_TRANSLATORS.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/eb_contributors_ru_ru.png"));
-        if (UK_UA_TRANSLATORS.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/eb_contributors_uk_ua.png"));
-        if (CONTRIBUTORS.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/eb_contributors.png"));
-        if (SUPPORTERS.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MODID, "textures/capes/eb_supporters.png"));
+        if (AZURUNE.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/azurune.png"));
+        if (REDEYEVAIN.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/redeyevain.png"));
+        if (BEETROOT.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/beetroot.png"));
+        if (DEMONHEART.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/demonheart.png"));
+        if (ACCURSED.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/accursed.png"));
+        if (DICE.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/dice.png"));
+        if (HEX.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/hex.png"));
+        if (PUMPKIN_QUEEN.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/pumpkin_queen.png"));
+        if (SAD_CLOUD.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/sad_cloud.png"));
+        if (WRATHFUL.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/wrathful.png"));
+        if (BUG.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/bug.png"));
+        if (AXOLOTL.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/axolotl.png"));
+        if (LIGHTNING.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/lightning.png"));
+        if (REBELLIOUS.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/rebellious.png"));
+        if (FUDGE_SUNDAE.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/fudge_sundae.png"));
+        if (RU_RU_TRANSLATORS.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/eb_contributors_ru_ru.png"));
+        if (UK_UA_TRANSLATORS.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/eb_contributors_uk_ua.png"));
+        if (CONTRIBUTORS.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/eb_contributors.png"));
+        if (SUPPORTERS.contains(stringUUID)) cir.setReturnValue(new ResourceLocation(ExcessiveBuilding.MOD_ID, "textures/capes/eb_supporters.png"));
     }
 }

@@ -13,7 +13,7 @@ import net.yirmiri.excessive_building.datagen.loot.EBGlobalLootModifiersProvider
 
 import java.util.concurrent.CompletableFuture;
 
-@Mod.EventBusSubscriber(modid = ExcessiveBuilding.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(modid = ExcessiveBuilding.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class EBDataGenerators {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent event) {

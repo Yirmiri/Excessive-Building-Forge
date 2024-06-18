@@ -17,7 +17,7 @@ import net.yirmiri.excessive_building.register.EBBlocks;
 
 public class EBBlockStateProvider extends BlockStateProvider {
     public EBBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
-        super(output, ExcessiveBuilding.MODID, exFileHelper);
+        super(output, ExcessiveBuilding.MOD_ID, exFileHelper);
     }
 
     @Override

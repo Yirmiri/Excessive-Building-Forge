@@ -8,7 +8,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBPaintings {
-    public static final DeferredRegister<PaintingVariant> PAINTING_VARIANTS = DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS, ExcessiveBuilding.MODID);
+    public static final DeferredRegister<PaintingVariant> PAINTING_VARIANTS = DeferredRegister.create(ForgeRegistries.PAINTING_VARIANTS, ExcessiveBuilding.MOD_ID);
 
     //YIRMIRI'S PAINTINGS
     public static final RegistryObject<PaintingVariant> FORGOTTEN_KINGDOM = PAINTING_VARIANTS.register("forgotten_kingdom", () -> new PaintingVariant(32, 16));

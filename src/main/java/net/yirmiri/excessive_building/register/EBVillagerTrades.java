@@ -17,7 +17,7 @@ import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = ExcessiveBuilding.MODID)
+@Mod.EventBusSubscriber(modid = ExcessiveBuilding.MOD_ID)
 public class EBVillagerTrades {
 
     @SubscribeEvent

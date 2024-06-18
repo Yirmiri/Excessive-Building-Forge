@@ -37,9 +37,9 @@ import net.yirmiri.excessive_building.util.EBSoundEvents;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Mod(ExcessiveBuilding.MODID)
+@Mod(ExcessiveBuilding.MOD_ID)
 public class ExcessiveBuilding {
-    public static final String MODID = "excessive_building";
+    public static final String MOD_ID = "excessive_building";
     public static final String MOD_NAME = "TipsyLib";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_NAME);
 

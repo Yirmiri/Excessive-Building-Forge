@@ -10,13 +10,12 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.*;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBBiomes {
-    public static final ResourceKey<Biome> MAPLE_FOREST = ResourceKey.create(Registries.BIOME, new ResourceLocation(ExcessiveBuilding.MODID, "maple_forest"));
-    public static final ResourceKey<Biome> SNOWY_MAPLE_FOREST = ResourceKey.create(Registries.BIOME, new ResourceLocation(ExcessiveBuilding.MODID, "snowy_maple_forest"));
-    public static final ResourceKey<Biome> GOLDEN_BIRCH_FOREST = ResourceKey.create(Registries.BIOME, new ResourceLocation(ExcessiveBuilding.MODID, "golden_birch_forest"));
+    public static final ResourceKey<Biome> MAPLE_FOREST = ResourceKey.create(Registries.BIOME, new ResourceLocation(ExcessiveBuilding.MOD_ID, "maple_forest"));
+    public static final ResourceKey<Biome> SNOWY_MAPLE_FOREST = ResourceKey.create(Registries.BIOME, new ResourceLocation(ExcessiveBuilding.MOD_ID, "snowy_maple_forest"));
+    public static final ResourceKey<Biome> GOLDEN_BIRCH_FOREST = ResourceKey.create(Registries.BIOME, new ResourceLocation(ExcessiveBuilding.MOD_ID, "golden_birch_forest"));
 
     public static void globalOverworldGeneration(BiomeGenerationSettings.Builder builder) {
         BiomeDefaultFeatures.addDefaultCarversAndLakes(builder);

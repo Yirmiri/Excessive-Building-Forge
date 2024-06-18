@@ -23,7 +23,7 @@ public class EBItemTagProvider extends ItemTagsProvider {
     public static final TagKey<Item> SPEED_PASTES = tag("speed_pastes");
 
     public EBItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> aSuper, CompletableFuture<TagLookup<Block>> future, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, aSuper, future, ExcessiveBuilding.MODID, existingFileHelper);
+        super(output, aSuper, future, ExcessiveBuilding.MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -52,6 +52,6 @@ public class EBItemTagProvider extends ItemTagsProvider {
     }
 
     private static TagKey<Item> tag(String name) {
-        return ItemTags.create(new ResourceLocation(ExcessiveBuilding.MODID, name));
+        return ItemTags.create(new ResourceLocation(ExcessiveBuilding.MOD_ID, name));
     }
 }

@@ -9,7 +9,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBLootTableModifiers {
-    public static final DeferredRegister<Codec<? extends IGlobalLootModifier>> LOOT_MODIFIER_SERIALIZERS = DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, ExcessiveBuilding.MODID);
+    public static final DeferredRegister<Codec<? extends IGlobalLootModifier>> LOOT_MODIFIER_SERIALIZERS = DeferredRegister.create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, ExcessiveBuilding.MOD_ID);
 
     public static final RegistryObject<Codec<? extends IGlobalLootModifier>> ADD_ITEM = LOOT_MODIFIER_SERIALIZERS.register("add_item", AddLootModifier.CODEC);
 

@@ -10,7 +10,7 @@ import net.yirmiri.excessive_building.block.entity.EBHangingSignBlockEntity;
 import net.yirmiri.excessive_building.block.entity.EBSignBlockEntity;
 
 public class EBBlockEntities {
-    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, ExcessiveBuilding.MODID);
+    public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, ExcessiveBuilding.MOD_ID);
 
     public static final RegistryObject<BlockEntityType<EBSignBlockEntity>> EB_SIGN = BLOCK_ENTITIES.register("eb_sign", () -> BlockEntityType.Builder.of(EBSignBlockEntity::new,
             EBBlocks.ANCIENT_SIGN.get(), EBBlocks.ANCIENT_WALL_SIGN.get(), EBBlocks.WILLOW_SIGN.get(), EBBlocks.WILLOW_WALL_SIGN.get(), EBBlocks.MAPLE_SIGN.get(), EBBlocks.MAPLE_WALL_SIGN.get()).build(null));

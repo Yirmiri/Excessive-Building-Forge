@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBSoundEvents {
-    public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, ExcessiveBuilding.MODID);
+    public static final DeferredRegister<SoundEvent> SOUND_EVENTS = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, ExcessiveBuilding.MOD_ID);
 
     public static final RegistryObject<SoundEvent> MARBLE_BREAK = register("block.marble.break");
     public static final RegistryObject<SoundEvent> MARBLE_STEP = register("block.marble.step");
@@ -19,7 +19,7 @@ public class EBSoundEvents {
     public static final RegistryObject<SoundEvent> MARBLE_FALL = register("block.marble.fall");
 
     private static RegistryObject<SoundEvent> register(String name) {
-        return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(ExcessiveBuilding.MODID, name)));
+        return SOUND_EVENTS.register(name, () -> SoundEvent.createVariableRangeEvent(new ResourceLocation(ExcessiveBuilding.MOD_ID, name)));
     }
 
     public static void register(IEventBus eventBus) {

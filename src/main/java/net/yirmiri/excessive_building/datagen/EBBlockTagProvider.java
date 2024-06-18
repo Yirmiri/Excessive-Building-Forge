@@ -19,7 +19,7 @@ public class EBBlockTagProvider extends BlockTagsProvider {
     public static final TagKey<Block> AMETHYST_FIRE_BASE_BLOCKS = tag("amethyst_fire_base_blocks");
 
     public EBBlockTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
-        super(output, lookupProvider, ExcessiveBuilding.MODID, existingFileHelper);
+        super(output, lookupProvider, ExcessiveBuilding.MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -43,6 +43,6 @@ public class EBBlockTagProvider extends BlockTagsProvider {
     }
 
     private static TagKey<Block> tag(String name) {
-        return BlockTags.create(new ResourceLocation(ExcessiveBuilding.MODID, name));
+        return BlockTags.create(new ResourceLocation(ExcessiveBuilding.MOD_ID, name));
     }
 }

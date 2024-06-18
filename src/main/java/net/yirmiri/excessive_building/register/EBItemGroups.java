@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBItemGroups {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ExcessiveBuilding.MODID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ExcessiveBuilding.MOD_ID);
 
     public static RegistryObject<CreativeModeTab> EXCESSIVE_BUILDING = CREATIVE_MODE_TABS.register("x_excessive_building_tab", () -> CreativeModeTab.builder().icon(() -> new ItemStack(EBBlocks.LOGO_BLOCK.get())).title(Component.translatable("excessive_building_tab")).build());
 

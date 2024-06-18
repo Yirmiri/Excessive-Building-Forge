@@ -8,7 +8,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.yirmiri.excessive_building.ExcessiveBuilding;
 
 public class EBBannerPatterns {
-    public static final DeferredRegister<BannerPattern> BANNER_PATTERNS = DeferredRegister.create(Registries.BANNER_PATTERN, ExcessiveBuilding.MODID);
+    public static final DeferredRegister<BannerPattern> BANNER_PATTERNS = DeferredRegister.create(Registries.BANNER_PATTERN, ExcessiveBuilding.MOD_ID);
 
     public static final RegistryObject<BannerPattern> EXCESSIVE = BANNER_PATTERNS.register("excessive", () -> new BannerPattern("excessive"));
 

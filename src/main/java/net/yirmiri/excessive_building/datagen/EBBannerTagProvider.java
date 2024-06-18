@@ -17,7 +17,7 @@ public class EBBannerTagProvider extends TagsProvider<BannerPattern> {
     public static final TagKey<BannerPattern> EXCESSIVE_BANNER_PATTERN = tag("pattern_item/excessive");
 
     public EBBannerTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> provider, ExistingFileHelper existingFileHelper) {
-        super(output, Registries.BANNER_PATTERN, provider, ExcessiveBuilding.MODID, existingFileHelper);
+        super(output, Registries.BANNER_PATTERN, provider, ExcessiveBuilding.MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -26,6 +26,6 @@ public class EBBannerTagProvider extends TagsProvider<BannerPattern> {
     }
 
     private static TagKey<BannerPattern> tag(String name) {
-        return TagKey.create(Registries.BANNER_PATTERN, (new ResourceLocation(ExcessiveBuilding.MODID, name)));
+        return TagKey.create(Registries.BANNER_PATTERN, (new ResourceLocation(ExcessiveBuilding.MOD_ID, name)));
     }
 }

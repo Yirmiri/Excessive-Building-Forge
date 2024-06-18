@@ -36,7 +36,7 @@ public class EBItemModelProvider extends ItemModelProvider {
     }
 
     public EBItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
-        super(output, ExcessiveBuilding.MODID, existingFileHelper);
+        super(output, ExcessiveBuilding.MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -47,17 +47,17 @@ public class EBItemModelProvider extends ItemModelProvider {
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(ExcessiveBuilding.MODID,"item/" + item.getId().getPath()));
+                new ResourceLocation(ExcessiveBuilding.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     public void evenSimplerBlockItem(RegistryObject<Block> block) {
-        this.withExistingParent(ExcessiveBuilding.MODID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+        this.withExistingParent(ExcessiveBuilding.MOD_ID + ":" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 modLoc("block/" + ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
     }
 
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture",  new ResourceLocation(ExcessiveBuilding.MODID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture",  new ResourceLocation(ExcessiveBuilding.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void trapdoorItem(RegistryObject<Block> block) {
@@ -67,28 +67,28 @@ public class EBItemModelProvider extends ItemModelProvider {
 
     public void buttonItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/button_inventory"))
-                .texture("texture",  new ResourceLocation(ExcessiveBuilding.MODID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture",  new ResourceLocation(ExcessiveBuilding.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/wall_inventory"))
-                .texture("wall",  new ResourceLocation(ExcessiveBuilding.MODID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("wall",  new ResourceLocation(ExcessiveBuilding.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(ExcessiveBuilding.MODID,"item/" + item.getId().getPath()));
+                new ResourceLocation(ExcessiveBuilding.MOD_ID,"item/" + item.getId().getPath()));
     }
 
     private ItemModelBuilder simpleBlockItemBlockTexture(RegistryObject<Block> item) {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
-                new ResourceLocation(ExcessiveBuilding.MODID,"block/" + item.getId().getPath()));
+                new ResourceLocation(ExcessiveBuilding.MOD_ID,"block/" + item.getId().getPath()));
     }
 
     private void trimmedArmorItem(RegistryObject<Item> itemRegistryObject) {
-        final String MODID = ExcessiveBuilding.MODID;
+        final String MODID = ExcessiveBuilding.MOD_ID;
 
         if (itemRegistryObject.get() instanceof ArmorItem armorItem) { trimMaterials.entrySet().forEach(entry -> {
             ResourceKey<TrimMaterial> trimMaterial = entry.getKey();
